@@ -2,38 +2,110 @@
 import type {Dictionary} from "@/pages/main-page/MainPage.tsx";
 import type {Type} from "pokenode-ts";
 import {cn} from "@/lib/utils.ts";
-import {useState} from "react";
-import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip.tsx";
-import { motion } from "motion/react"
+import {useEffect, useRef, useState} from "react";
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip.tsx";
+import {motion, useMotionValue} from "motion/react"
 import {Button} from "@/components/ui/button.tsx";
+
+interface Tip {
+    attacking: string,
+    defending: string,
+    tip: string,
+    mutual: boolean
+}
 
 function TypesTable({types}: { types: Dictionary<Type> }) {
 
-    const hoverBg = "bg-gray-400";
+    const tips: Tip[] = [
+        {
+            attacking: "ghost",
+            defending: "normal",
+            tip: "Les vivants et les morts ne peuvent pas interagir entre eux.",
+            mutual: true
+        }
+    ]
+
+    const topRowRef = useRef(null);
+    const tbodyRef = useRef(null);
+
+    const hoverBg = "bg-gray-600";
     const noDamageBg = "bg-gray-800";
     const halfDamageBg = "bg-red-800";
-    const doubleDamageBg = "bg-green-800";
+    const doubleDamageBg = "bg-green-500";
 
+    const hoveredRef = useRef(null)
     const [hoverAttackingType, setHoverAttackingType] = useState<Type>();
     const [hoverDefendingType, setHoverDefendingType] = useState<Type>();
     const [tooltipOpen, setTooltipOpen] = useState(false);
+
+    const [topOffset, setTopOffset] = useState(0);
+    const [leftOffset, setLeftOffset] = useState(0);
+
+
+    const [relations, setRelations] = useState<Dictionary<number[]>>();
+
+    const [tooltipOffset, setTooltipOffset] = useState([0, 0]);
     const [currentTip, setCurrentTip] = useState("");
+
+    useEffect(() => {
+        if (!types)
+            return;
+        let relations: Dictionary<number[]> = {};
+        Object.entries(types).map(([key, value]) => {
+            relations[key] = GetRelations(value);
+        });
+        setRelations(relations);
+    }, [types]);
+
+    function FindTip(attacking: Type, defending: Type) {
+        const tip = tips.find(tip => (tip.attacking === attacking.name && tip.defending === defending.name)
+            || (tip.attacking === defending.name && tip.defending === attacking.name && tip.mutual));
+
+        return tip ? tip.tip : undefined;
+    }
 
     function GetTypeFromName(name: string): Type {
         return Object.entries(types)
             .find(pair => pair[1].name === name)![1];
     }
 
-    function GetSprite(type: Type): string {
-        /*
-        console.log(type);
-        const spritesKeys = Object.keys(type.sprites);
-        const games = type.sprites[spritesKeys[Object.keys(spritesKeys).length-1]];
-        const gamesKeys = Object.keys(games);
-        return games[gamesKeys[Object.keys(gamesKeys).length-1]].name_icon;
-        
-         */
-        return type.sprites["generation-ix"]["scarlet-violet"].name_icon;
+    function GetTypeFromIndex(ind: number): Type {
+        return Object.entries(types)[ind][1];
+    }
+
+
+    function OnHoverAttacking(type: Type) {
+        if (hoverDefendingType)
+            return;
+        setHoverAttackingType(type);
+
+        if (type == undefined) {
+            setTopOffset(0);
+        } else {
+            setTopOffset(topRowRef.current.clientHeight * (type.id - 1));
+        }
+    }
+
+    function OnHoverDefending(type: Type) {
+        if (hoverAttackingType)
+            return;
+        setHoverDefendingType(type);
+
+        if (type == undefined) {
+            setLeftOffset(0);
+        } else {
+            setLeftOffset(tbodyRef.current.firstChild.firstChild.clientWidth * (type.id - 1));
+        }
+    }
+
+    function OnHoverCell(attackingType: Type, defendingTypeIndex: number) {
+        const defendingType = GetTypeFromIndex(defendingTypeIndex);
+        const tip = FindTip(attackingType, defendingType);
+        if (!tip)
+            return;
+        setCurrentTip(tip);
+        setTooltipOffset([tbodyRef.current.firstChild.firstChild.clientWidth / 2 + tbodyRef.current.firstChild.firstChild.clientWidth * (defendingType.id), topRowRef.current.clientHeight * (attackingType.id)]);
+        setTooltipOpen(true);
     }
 
     function GetRelations(type: Type): number[] {
@@ -54,95 +126,114 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
 
     return (
         <div className="relative overflow-x-auto w-fit">
+            <TooltipProvider>
 
+                <table className="relative text-sm border [&_td]:border bg-accent">
+                    <Tooltip open={tooltipOpen} onOpenChange={setTooltipOpen}>
+                        <TooltipTrigger asChild>
+                            <div
+                                className={"absolute opacity-0"}
+                                style={{
+                                    top: tooltipOffset[1],
+                                    left: tooltipOffset[0],
+                                }}>
+                                .
+                            </div>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                            <p>{currentTip}</p>
+                        </TooltipContent>
+                    </Tooltip>
+                    <motion.thead className={"z-50 relative"}
+                                  animate={{y: topOffset}}
+                                  transition={{ease: "easeOut", duration: 0.2}}>
+                        <tr ref={topRowRef}>
+                            <th className={"pointer-events-none"}></th>
+                            {
+                                types && Object.entries(types).map(([key, value]) => {
+                                    return (
+                                        <th key={key}
+                                            onMouseEnter={() => OnHoverDefending(value)}
+                                            onMouseLeave={() => OnHoverDefending(hoverDefendingType == value ? undefined : value)}
+                                            className={cn(
+                                                "relative z-50 bg-accent",
+                                            )}
+                                        >
+                                            <img src={`./types-icons/${value.name}.png`} alt="Logo"
+                                                 className={cn(hoverAttackingType && relations[hoverAttackingType.id][value.id - 1] == 1 && "opacity-20")}/>
+                                            {
+                                                /*
+                                                { hoverAttackingType && GetRelations(hoverAttackingType)[value.id - 1] == 0.5 && <div className={"absolute bg-red-600 w-full h-full top-0 opacity-60"}></div>}
+                                                { hoverAttackingType && GetRelations(hoverAttackingType)[value.id - 1] == 2 && <div className={"absolute bg-green-400 w-full h-full top-0 opacity-60"}></div>}
+                                                */
+                                            }
+                                        </th>);
+                                })
+                            }
+                        </tr>
+                    </motion.thead>
 
-            <table className="text-sm border [&_td]:border bg-accent ">
-                <thead>
-                <tr>
-                    <th></th>
+                    <tbody className={"relative"} ref={tbodyRef}>
                     {
-                        types && Object.entries(types).map(([key, value]) => {
-                            return (
-                                <th key={key}
-                                    onMouseEnter={() => setHoverDefendingType(value)}
-                                    onMouseLeave={() => setHoverDefendingType(hoverDefendingType == value ? undefined : value)}
-                                    className={cn(
-                                        hoverAttackingType && GetRelations(hoverAttackingType)[value.id - 1] == 1 && "opacity-20"
-                                    )}
-                                >
-                                    <img src={`./types-icons/${value.name}.png`} alt="Logo"/>
-                                </th>);
+                        types && Object.entries(types).map(([_, rowType]) => {
+                            return (<tr className={cn(
+                                    "relative font-bold bg-accent",
+                                )}>
+
+                                    <motion.td
+                                        animate={{x: leftOffset}}
+                                        transition={{ease: "easeOut", duration: 0.2}}
+                                        onMouseEnter={() => OnHoverAttacking(rowType)}
+                                        onMouseLeave={() => OnHoverAttacking(hoverAttackingType == rowType ? undefined : rowType)
+                                        }
+                                        className={"relative z-10 bg-accent"}>
+                                        <img src={`./types-icons/${rowType.name}.png`} alt="Logo"
+                                             className={cn(hoverDefendingType && relations[rowType.id][hoverDefendingType.id - 1] == 1 && "opacity-20")}/>
+                                    </motion.td>
+                                    {
+                                        relations && relations[rowType.id].map((relationValue, index) => {
+                                            if (relationValue != 1) {
+
+                                                return (
+                                                    <td key={index} className={cn(
+                                                        "transition-all",
+                                                        hoverAttackingType == rowType && hoverBg,
+                                                        hoverDefendingType && hoverDefendingType.id == index + 1 && hoverBg,
+                                                        relationValue == 0 && noDamageBg,
+                                                        relationValue == 0.5 && halfDamageBg,
+                                                        relationValue == 2 && doubleDamageBg,
+                                                        hoverAttackingType && hoverAttackingType != rowType && "opacity-60",
+                                                        hoverDefendingType && hoverDefendingType.id != index + 1 && "opacity-60",
+                                                    )}
+                                                        onMouseEnter={() => OnHoverCell(rowType, index)}
+                                                        onMouseLeave={() => setTooltipOpen(false)}
+
+                                                    >
+                                                        {relationValue != 1 && `x${relationValue}`}
+                                                    </td>
+                                                );
+                                            } else {
+                                                return (
+                                                    <td key={index} className={cn(
+                                                        hoverAttackingType == rowType && hoverBg,
+                                                        hoverDefendingType && hoverDefendingType.id == index + 1 && hoverBg,
+                                                        hoverAttackingType && hoverAttackingType != rowType && "opacity-50",
+                                                        hoverDefendingType && hoverDefendingType.id != index + 1 && "opacity-50",
+                                                    )}
+                                                    >
+                                                        {relationValue != 1 && relationValue}
+                                                    </td>
+                                                );
+                                            }
+                                        })
+                                    }
+                                </tr>
+                            );
                         })
                     }
-                </tr>
-                </thead>
-                <tbody>
-                {
-                    types && Object.entries(types).map(([key, value]) => {
-                        return (<tr className={cn(
-                                "font-bold",
-                            )}>
-                                <td onMouseEnter={() => setHoverAttackingType(value)}
-                                    onMouseLeave={() => setHoverAttackingType(hoverAttackingType == value ? undefined : value)}
-                                    className={cn(
-                                        hoverDefendingType && GetRelations(value)[hoverDefendingType.id - 1] == 1 && "opacity-20"
-                                    )}>
-                                    <img src={`./types-icons/${value.name}.png`} alt="Logo"/>
-                                </td>
-                                {
-                                    (GetRelations(value).map((relationValue, index) => {
-                                        if(relationValue != 1){
-
-                                            return (
-                                                <Tooltip>
-                                                    <TooltipTrigger asChild>
-                                                        <td key={index} className={cn(
-                                                            "transition-all",
-                                                            hoverAttackingType == value && hoverBg,
-                                                            hoverDefendingType && hoverDefendingType.id == index + 1 && hoverBg,
-                                                            relationValue == 0 && noDamageBg,
-                                                            relationValue == 0.5 && halfDamageBg,
-                                                            relationValue == 2 && doubleDamageBg,
-                                                            hoverAttackingType && hoverAttackingType != value && "opacity-50",
-                                                            hoverDefendingType && hoverDefendingType.id != index + 1 && "opacity-50",
-                                                        )}
-                                                            onMouseEnter={() => setTooltipOpen(true)}
-                                                            onMouseLeave={() => setTooltipOpen(false)}
-
-                                                        >
-                                                            {relationValue != 1 && relationValue}
-                                                        </td>
-                                                    </TooltipTrigger>
-                                                    <TooltipContent>
-                                                        <p>{currentTip}</p>
-                                                    </TooltipContent>
-                                                </Tooltip>
-                                            );
-                                        } else {
-                                            return (
-                                                        <td key={index} className={cn(
-                                                            "transition-all",
-                                                            hoverAttackingType == value && hoverBg,
-                                                            hoverDefendingType && hoverDefendingType.id == index + 1 && hoverBg,
-                                                            hoverAttackingType && hoverAttackingType != value && "opacity-50",
-                                                            hoverDefendingType && hoverDefendingType.id != index + 1 && "opacity-50",
-                                                        )}
-                                                            onMouseEnter={() => setTooltipOpen(true)}
-                                                            onMouseLeave={() => setTooltipOpen(false)}
-
-                                                        >
-                                                            {relationValue != 1 && relationValue}
-                                                        </td>
-                                            );
-                                        }
-                                    }))
-                                }
-                            </tr>
-                        );
-                    })
-                }
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </TooltipProvider>
         </div>
     )
 }
