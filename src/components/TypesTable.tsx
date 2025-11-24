@@ -6,6 +6,16 @@ import {useEffect, useRef, useState} from "react";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip.tsx";
 import {motion, useMotionValue} from "motion/react"
 import {Button} from "@/components/ui/button.tsx";
+import {
+    Dialog, DialogClose,
+    DialogContent,
+    DialogDescription, DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger
+} from "@/components/ui/dialog.tsx";
+import {Input} from "@/components/ui/input.tsx";
+import {Checkbox} from "@/components/ui/checkbox.tsx";
 
 interface Tip {
     attacking: string,
@@ -20,9 +30,40 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
         {
             attacking: "ghost",
             defending: "normal",
-            tip: "Les vivants et les morts ne peuvent pas interagir entre eux.",
+            tip: "Les vivants et les morts ne peuvent pas interagir entre eux",
             mutual: true
-        }
+        },
+        {
+            attacking: "fighting",
+            defending: "normal",
+            tip: "Un combattant experimenté a l'avantage sur une personne normale",
+            mutual: true
+        },
+        {
+            attacking: "ground",
+            defending: "fire",
+            tip: "On peut éteindre un feu avec de la terre",
+            mutual: false
+        },
+        {
+            attacking: "fire",
+            defending: "water",
+            tip: "L'eau éteint le feu.",
+            mutual: true
+        },
+        {
+            attacking: "electric",
+            defending: "water",
+            tip: "L'eau conduit l'électricité",
+            mutual: true
+        },
+        {
+            attacking: "grass",
+            defending: "water",
+            tip: "Les plantes se nourrissent d'eau",
+            mutual: true
+        },
+        
     ]
 
     const topRowRef = useRef(null);
@@ -47,6 +88,12 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
     const [tooltipOffset, setTooltipOffset] = useState([0, 0]);
     const [currentTip, setCurrentTip] = useState("");
 
+    const [clickAttacking, setClickAttacking] = useState<Type>();
+    const [clickDefending, setClickDefending] = useState<Type>();
+    const [dialogOpen, setDialogOpen] = useState(false);
+    const [newTip, setNewTip] = useState("");
+    const [newTipMutual, setNewTipMutual] = useState(true);
+    const [newTips, setNewTips] = useState("");
     useEffect(() => {
         if (!types)
             return;
@@ -106,8 +153,30 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
         setCurrentTip(tip);
         setTooltipOffset([tbodyRef.current.firstChild.firstChild.clientWidth / 2 + tbodyRef.current.firstChild.firstChild.clientWidth * (defendingType.id), topRowRef.current.clientHeight * (attackingType.id)]);
         setTooltipOpen(true);
+        setClickAttacking(attackingType);
+        setClickDefending(defendingType);
+    }
+    
+    function OnClickCell(attackingType: Type, defendingTypeIndex: number) {
+        const defendingType = GetTypeFromIndex(defendingTypeIndex);
+        setClickAttacking(attackingType);
+        setClickDefending(defendingType);
+        setDialogOpen(true);
     }
 
+    function OnSubmitDialog(){
+        const nTips = newTips+`        {
+            attacking: "${clickAttacking.name}",
+            defending: "${clickDefending.name}",
+            tip: "${newTip}",
+            mutual: ${newTipMutual}
+        },
+        `;
+        setNewTips(nTips);
+        console.log(nTips);
+        setDialogOpen(false);
+    }
+    
     function GetRelations(type: Type): number[] {
         let relations = new Array(Object.keys(types).length).fill(1);
         for (const r of type.damage_relations.double_damage_to) {
@@ -126,6 +195,25 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
 
     return (
         <div className="relative overflow-x-auto w-fit">
+            <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+                <DialogContent>
+                    <DialogHeader>
+                        <DialogTitle>Nouveau tip</DialogTitle>
+                        <DialogDescription>
+                            Tip pour {clickAttacking && clickAttacking.name} sur {clickDefending && clickDefending.name} ?
+                        </DialogDescription>
+                    </DialogHeader>
+                    <Input id="tip" name="tip" onChange={(e) => setNewTip(e.target.value)}/>
+                    <div className={"space-x-4"}><Checkbox id="mutuel" checked={newTipMutual}  onCheckedChange={(value) => setNewTipMutual(value === true)}/><span>Mutuel</span></div>
+                    <DialogFooter>
+                        <DialogClose asChild>
+                            <Button variant="outline">Cancel</Button>
+                        </DialogClose>
+                        <Button onClick={OnSubmitDialog}>Save changes</Button>
+                    </DialogFooter>
+                </DialogContent>
+            </Dialog>
+            
             <TooltipProvider>
 
                 <table className="relative text-sm border [&_td]:border bg-accent">
@@ -206,6 +294,7 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
                                                         hoverDefendingType && hoverDefendingType.id != index + 1 && "opacity-60",
                                                     )}
                                                         onMouseEnter={() => OnHoverCell(rowType, index)}
+                                                        onClick={() => OnClickCell(rowType, index)}
                                                         onMouseLeave={() => setTooltipOpen(false)}
 
                                                     >
