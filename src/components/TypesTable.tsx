@@ -131,7 +131,7 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
         if (type == undefined) {
             setTopOffset(0);
         } else {
-            setTopOffset(topRowRef.current.clientHeight * (type.id - 1));
+            setTopOffset(tbodyRef.current.firstChild.clientHeight * (type.id - 1));
         }
     }
 
@@ -143,7 +143,8 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
         if (type == undefined) {
             setLeftOffset(0);
         } else {
-            setLeftOffset(tbodyRef.current.firstChild.firstChild.clientWidth * (type.id - 1));
+            console.log(tbodyRef.current.firstChild.firstChild);
+            setLeftOffset(topRowRef.current.firstChild.clientWidth * (type.id - 1));
         }
     }
 
@@ -295,8 +296,8 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
                                                         relationValue == 0 && noDamageBg,
                                                         relationValue == 0.5 && halfDamageBg,
                                                         relationValue == 2 && doubleDamageBg,
-                                                        hoverAttackingType && hoverAttackingType != rowType && "opacity-60",
-                                                        hoverDefendingType && hoverDefendingType.id != index + 1 && "opacity-60",
+                                                        hoverAttackingType && hoverAttackingType != rowType && "opacity-40",
+                                                        hoverDefendingType && hoverDefendingType.id != index + 1 && "opacity-40",
                                                     )}
                                                         onMouseEnter={() => OnHoverCell(rowType, index)}
                                                         onClick={() => OnClickCell(rowType, index)}
