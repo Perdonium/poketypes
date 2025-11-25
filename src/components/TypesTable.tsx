@@ -72,11 +72,12 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
     const topRowRef = useRef(null);
     const tbodyRef = useRef(null);
 
-    const hoverBg = "bg-gray-600";
-    const noDamageBg = "bg-gray-800";
-    const halfDamageBg = "bg-red-800";
+    const hoverBg = "bg-accent";
+    const noDamageBg = "bg-muted-foreground";
+    const halfDamageBg = "bg-destructive";
     const doubleDamageBg = "bg-green-500";
-
+    const baseBg = "bg-background";
+    
     const [hoverAttackingType, setHoverAttackingType] = useState<Type>();
     const [hoverDefendingType, setHoverDefendingType] = useState<Type>();
     const [tooltipOpen, setTooltipOpen] = useState(false);
@@ -219,7 +220,7 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
             
             <TooltipProvider>
 
-                <table className="relative text-sm border [&_td]:border bg-accent">
+                <table className={`relative text-sm border [&_td]:border ${baseBg} [&_td]:border-black`}>
                     <Tooltip open={tooltipOpen} onOpenChange={setTooltipOpen}>
                         <TooltipTrigger asChild>
                             <div
@@ -261,11 +262,12 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
                         </tr>
                     </motion.thead>
 
-                    <tbody className={"relative"} ref={tbodyRef}>
+                    <tbody className={"relative "} ref={tbodyRef}>
                     {
                         types && Object.entries(types).map(([_, rowType]) => {
                             return (<tr className={cn(
-                                    "relative font-bold bg-accent",
+                                    "relative font-bold",
+                                    baseBg
                                 )}>
 
                                     <motion.td

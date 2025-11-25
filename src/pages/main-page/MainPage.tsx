@@ -38,8 +38,7 @@ function MainPage() {
 
     return (
         <div className={"w-full"}>
-            <h1>Pokemon Types</h1>
-            <h1>{types && Object.keys(types).length} types</h1>
+            <h1 className={"mb-16 text-4xl font-bold"}>PokeTypes.net</h1>
             <div className={"flex flex-col md:flex-row gap-16 md:h-screen"}>
                 <TypesTable types={types}/>
                 <PokemonList pokemons={pokemons} types={types}/>

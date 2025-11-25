@@ -14,7 +14,7 @@ function PokemonCard({pokemon, types}: { pokemon: Pokemon }) {
 
     return (
         <>
-            <Item variant="outline" className={"gap-0 py-2 my-2"}>
+            <Item variant="outline" className={"gap-0 py-2 my-2 bg-card"}>
                 <ItemContent className={"w-fit h-fit"}>
 
                     <div className={""}>

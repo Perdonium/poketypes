@@ -1,4 +1,4 @@
-﻿import {NamedAPIResource, Pokemon, PokemonClient, Type} from 'pokenode-ts';
+﻿import {NamedAPIResource, Pokemon, PokemonClient, PokemonSpecies, Type} from 'pokenode-ts';
 import * as fs from 'fs';
 import pokemons from './pokemons.json';
 import types from './types.json';
@@ -30,9 +30,10 @@ async function OnTypes(types: NamedAPIResource[]) {
 
 async function GetPokemon(name:string) {
     let pkmn: Pokemon = await api.getPokemonByName(name);
+    let species:PokemonSpecies = await api.getPokemonSpeciesByName(name);
     return {
         id: pkmn.id,
-        name: pkmn.name,
+        name: species.names.find(x => x.language.name == "fr").name,
         sprite: pkmn.sprites["front_default"],
         types: pkmn.types,
         past_types: pkmn.past_types
@@ -54,11 +55,14 @@ async function OnPokemons(pokemons: NamedAPIResource[]) {
         pokemonsDic[cleanedPkmn.id] = cleanedPkmn;
     }
 
+    
     fs.writeFile('pokemons.json', JSON.stringify(pokemonsDic), (error) => {
         if (error) {
             throw error;
         }
     });
+    
+     
 }
 
 async function GetPokemons() {
