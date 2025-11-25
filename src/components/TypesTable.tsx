@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/dialog.tsx";
 import {Input} from "@/components/ui/input.tsx";
 import {Checkbox} from "@/components/ui/checkbox.tsx";
+import TypeIcon from "@/components/TypeIcon.tsx";
 
 interface Tip {
     attacking: string,
@@ -25,6 +26,8 @@ interface Tip {
 }
 
 function TypesTable({types}: { types: Dictionary<Type> }) {
+    const topY = useMotionValue(0);
+    const leftX = useMotionValue(0);
 
     const tips: Tip[] = [
         {
@@ -74,7 +77,6 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
     const halfDamageBg = "bg-red-800";
     const doubleDamageBg = "bg-green-500";
 
-    const hoveredRef = useRef(null)
     const [hoverAttackingType, setHoverAttackingType] = useState<Type>();
     const [hoverDefendingType, setHoverDefendingType] = useState<Type>();
     const [tooltipOpen, setTooltipOpen] = useState(false);
@@ -122,7 +124,7 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
 
 
     function OnHoverAttacking(type: Type) {
-        if (hoverDefendingType)
+        if (hoverDefendingType || leftX.get() != 0)
             return;
         setHoverAttackingType(type);
 
@@ -134,7 +136,7 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
     }
 
     function OnHoverDefending(type: Type) {
-        if (hoverAttackingType)
+        if (hoverAttackingType || topY.get() != 0)
             return;
         setHoverDefendingType(type);
 
@@ -194,7 +196,7 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
     }
 
     return (
-        <div className="relative overflow-x-auto w-fit">
+        <div className="relative md:w-2/3">
             <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
                 <DialogContent>
                     <DialogHeader>
@@ -234,7 +236,9 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
                     </Tooltip>
                     <motion.thead className={"z-50 relative"}
                                   animate={{y: topOffset}}
-                                  transition={{ease: "easeOut", duration: 0.2}}>
+                                  transition={{ease: "easeOut", duration: 0.2}}
+                                  style={{y:topY}}
+                    >
                         <tr ref={topRowRef}>
                             <th className={"pointer-events-none"}></th>
                             {
@@ -244,17 +248,12 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
                                             onMouseEnter={() => OnHoverDefending(value)}
                                             onMouseLeave={() => OnHoverDefending(hoverDefendingType == value ? undefined : value)}
                                             className={cn(
-                                                "relative z-50 bg-accent",
+                                                "relative bg-accent w-10",
                                             )}
                                         >
-                                            <img src={`./types-icons/${value.name}.png`} alt="Logo"
-                                                 className={cn(hoverAttackingType && relations[hoverAttackingType.id][value.id - 1] == 1 && "opacity-20")}/>
-                                            {
-                                                /*
-                                                { hoverAttackingType && GetRelations(hoverAttackingType)[value.id - 1] == 0.5 && <div className={"absolute bg-red-600 w-full h-full top-0 opacity-60"}></div>}
-                                                { hoverAttackingType && GetRelations(hoverAttackingType)[value.id - 1] == 2 && <div className={"absolute bg-green-400 w-full h-full top-0 opacity-60"}></div>}
-                                                */
-                                            }
+                                           <TypeIcon type={value} additionalClass={cn(
+                                               "",
+                                               hoverAttackingType && relations[hoverAttackingType.id][value.id - 1] == 1 ? "opacity-20" : "")}/>
                                         </th>);
                                 })
                             }
@@ -271,15 +270,21 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
                                     <motion.td
                                         animate={{x: leftOffset}}
                                         transition={{ease: "easeOut", duration: 0.2}}
+                                        style={{x:leftX}}
                                         onMouseEnter={() => OnHoverAttacking(rowType)}
                                         onMouseLeave={() => OnHoverAttacking(hoverAttackingType == rowType ? undefined : rowType)
                                         }
                                         className={"relative z-10 bg-accent"}>
-                                        <img src={`./types-icons/${rowType.name}.png`} alt="Logo"
-                                             className={cn(hoverDefendingType && relations[rowType.id][hoverDefendingType.id - 1] == 1 && "opacity-20")}/>
+                                        <div className={"size-10"}>
+                                            
+                                        <TypeIcon type={rowType} 
+                                                  additionalClass={cn(
+                                                      hoverDefendingType && relations[rowType.id][hoverDefendingType.id - 1] == 1 ? "opacity-20" : "")}/>
+                                        </div>
                                     </motion.td>
                                     {
                                         relations && relations[rowType.id].map((relationValue, index) => {
+                                            
                                             if (relationValue != 1) {
 
                                                 return (
@@ -298,21 +303,25 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
                                                         onMouseLeave={() => setTooltipOpen(false)}
 
                                                     >
+                                                        <div className={"size-10 text-center h-fit align-middle"}>
+                                                            
                                                         {relationValue != 1 && `x${relationValue}`}
+                                                        </div>
                                                     </td>
                                                 );
                                             } else {
                                                 return (
                                                     <td key={index} className={cn(
+                                                        "size-10",
                                                         hoverAttackingType == rowType && hoverBg,
                                                         hoverDefendingType && hoverDefendingType.id == index + 1 && hoverBg,
                                                         hoverAttackingType && hoverAttackingType != rowType && "opacity-50",
                                                         hoverDefendingType && hoverDefendingType.id != index + 1 && "opacity-50",
                                                     )}
                                                     >
-                                                        {relationValue != 1 && relationValue}
                                                     </td>
                                                 );
+                                                
                                             }
                                         })
                                     }
