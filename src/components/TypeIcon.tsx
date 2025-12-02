@@ -8,7 +8,9 @@ function TypeIcon({type, additionalClass}:{type:Type, additionalClass:string}) {
 
     return (
         <>
-            <img src={`./types-icons/${type.name ?? type}.png`} alt="Logo"
+            <img
+                loading="lazy"    
+                src={`./types-icons/${type.name ?? type}.png`} alt="Logo"
                  className={cn("aspect-square", additionalClass)}/>
         </>
     )

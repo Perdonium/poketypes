@@ -30,7 +30,8 @@ function PokemonCard({pokemon, types, entry}: { pokemon: Pokemon }) {
                                 <h1 className={"text-lg font-bold"}>{Capitalize(pokemon.name)}</h1>
                                 <h1 className={"text-lg font-bold"}>#{entry}</h1>
                             </div>
-                            <img src={pokemonSpritePrefix+pokemon.sprite}
+                            <img loading="lazy"
+                                 src={pokemonSpritePrefix+pokemon.sprite}
                                  alt={pokemon.name}
                                  className={"w-24 h-24"}/>
 
@@ -38,7 +39,7 @@ function PokemonCard({pokemon, types, entry}: { pokemon: Pokemon }) {
                                 <div className={"flex items-center mx-auto space-x-2"}>
                                     {
                                         Object.values(pokemon.types).map((type) => {
-                                            return <TypeIcon type={type} additionalClass={"w-6"}/>
+                                            return <TypeIcon key={type} type={type} additionalClass={"w-6"}/>
                                         })
                                     }
                                 </div>
@@ -46,7 +47,7 @@ function PokemonCard({pokemon, types, entry}: { pokemon: Pokemon }) {
                         </div>
 
                         <Separator className={""}/>
-                        
+
                         <div className={"flex justify-evenly"}>
                             {pokemon.relations.none &&
                                 <PokemonRelation title="0" relations={pokemon.relations.none} types={types}/>}
@@ -71,4 +72,7 @@ function PokemonCard({pokemon, types, entry}: { pokemon: Pokemon }) {
     )
 }
 
-export default memo(PokemonCard);
+export default memo(PokemonCard, (prev, next) =>
+    prev.pokemon.id === next.pokemon.id &&
+    prev.entry === next.entry
+);

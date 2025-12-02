@@ -17,7 +17,7 @@ function PokemonRelation({relations, title, types}) {
                 relations.length == 1 && "grid-cols-1")}>
                 {
                     relations.map((id) => {
-                        return <TypeIcon type={types && types[id+1]} additionalClass={"w-8"}/>
+                        return <TypeIcon key={id} type={types && types[id+1]} additionalClass={"w-8"}/>
                     })
                 }
             </div>

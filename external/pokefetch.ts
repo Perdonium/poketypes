@@ -187,7 +187,7 @@ async function OnPokedexes(pokedexes: NamedAPIResource[]) {
             id: pkdx.id,
             name: pkdx.name,
             names: pkdx.names,
-            pokemon_entries: pkdx.pokemon_entries,
+            pokemon_entries: pkdx.pokemon_entries.map(x => ({entry:x.entry_number, species:x.pokemon_species.name})),
             region: pkdx.region,
             version_groups: pkdx.version_groups,
             is_main_series: pkdx.is_main_series,
@@ -215,9 +215,9 @@ async function GetPokedexes() {
 
 //GetPokemons();
 
-UpdatePokemonsRelations();
+//UpdatePokemonsRelations();
 
-//GetPokedexes();
+GetPokedexes();
 
 setInterval(() => {
 }, 1_000);

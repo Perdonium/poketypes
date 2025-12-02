@@ -1,7 +1,6 @@
 ﻿import {useEffect, useRef, useState} from "react";
-import type {Dictionary, Pokemon} from "@/pages/main-page/MainPage.tsx";
+import type {Dictionary, Pokedex, Pokemon} from "@/pages/main-page/MainPage.tsx";
 import {usePokedex} from "@/stores/store.tsx";
-import type {Pokedex} from "pokenode-ts";
 import {cn} from "@/lib/utils.ts";
 import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
 import {Button} from "@/components/ui/button.tsx";
