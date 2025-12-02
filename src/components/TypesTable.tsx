@@ -97,6 +97,7 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
     const [newTip, setNewTip] = useState("");
     const [newTipMutual, setNewTipMutual] = useState(true);
     const [newTips, setNewTips] = useState("");
+    
     useEffect(() => {
         if (!types)
             return;
@@ -144,7 +145,6 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
         if (type == undefined) {
             setLeftOffset(0);
         } else {
-            console.log(tbodyRef.current.firstChild.firstChild);
             setLeftOffset(topRowRef.current.firstChild.clientWidth * (type.id - 1));
         }
     }
@@ -198,7 +198,7 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
     }
 
     return (
-        <div className="relative md:w-2/3">
+        <div className="relative md:w-2/3 my-auto">
             <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
                 <DialogContent>
                     <DialogHeader>
@@ -220,7 +220,7 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
             
             <TooltipProvider>
 
-                <table className={`relative text-sm border [&_td]:border ${baseBg} [&_td]:border-black`}>
+                <table className={`relative text-sm border w-1/2 [&_td]:border ${baseBg}`}>
                     <Tooltip open={tooltipOpen} onOpenChange={setTooltipOpen}>
                         <TooltipTrigger asChild>
                             <div
@@ -292,7 +292,7 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
 
                                                 return (
                                                     <td key={index} className={cn(
-                                                        "transition-all",
+                                                        "transition-all cursor-help",
                                                         hoverAttackingType == rowType && hoverBg,
                                                         hoverDefendingType && hoverDefendingType.id == index + 1 && hoverBg,
                                                         relationValue == 0 && noDamageBg,
