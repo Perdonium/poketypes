@@ -11,7 +11,6 @@ function PokemonList({pokemons, types}: { pokemons: Dictionary<Pokemon> }) {
     const [entryMap, setEntryMap] = useState<Record<string, number>>({});
     const pokedex: Pokedex = usePokedex((state) => state.pokedex);
 
-    const scrollRef = useRef<HTMLDivElement>(null);
     
     useEffect(() => {
         if(!pokedex) return;
@@ -30,12 +29,13 @@ function PokemonList({pokemons, types}: { pokemons: Dictionary<Pokemon> }) {
             .sort((a, b) => entryMap[a.species] - entryMap[b.species])
         : [];
 
+    const parentRef = useRef(null)
+    
     const rowVirtualizer = useVirtualizer({
         count: filtered.length,
-        getScrollElement: () => scrollRef.current,
-        estimateSize: () => 230, // hauteur approximative d’une carte
-        overscan: 10
-    });
+        getScrollElement: () => parentRef.current,
+        estimateSize: () => 250,
+    })
     
     return (
         <div className={"h-96 w-90 md:h-[80vh]"}>
@@ -43,40 +43,43 @@ function PokemonList({pokemons, types}: { pokemons: Dictionary<Pokemon> }) {
                    placeholder={"Nom"}
                    value={nameInput}
                    onChange={e => setNameInput(e.target.value)}/>
-            <ScrollArea className="rounded-md h-full border overflow-hidden">
-                {/* Le vrai viewport du ScrollArea */}
-                <div ref={scrollRef} className="h-full w-full">
-                    <div
-                        style={{
-                            height: rowVirtualizer.getTotalSize(),
-                            width: "100%",
-                            position: "relative",
-                        }}
-                    >
-                        {rowVirtualizer.getVirtualItems().map((virtualRow) => {
-                            const pokemon = filtered[virtualRow.index];
-                            return (
-                                <div
-                                    key={pokemon.id}
-                                    style={{
-                                        position: "absolute",
-                                        top: 0,
-                                        left: 0,
-                                        width: "100%",
-                                        transform: `translateY(${virtualRow.start}px)`
-                                    }}
-                                >
-                                    <PokemonCard
-                                        pokemon={pokemon}
-                                        entry={entryMap[pokemon.species]}
-                                        types={types}
-                                    />
-                                </div>
-                            );
-                        })}
-                    </div>
+            {/* The scrollable element for your list */}
+            <div
+                ref={parentRef}
+                className={"overflow-auto h-full border"}
+            >
+                {/* The large inner element to hold all of the items */}
+                <div
+                    style={{
+                        height: `${rowVirtualizer.getTotalSize()}px`,
+                        width: '100%',
+                    }}
+                    
+                    className={"relative"}
+                >
+                    {/* Only the visible items in the virtualizer, manually positioned to be in view */}
+                    {filtered.length > 0 && rowVirtualizer.getVirtualItems().map((virtualItem) => (
+                        <div
+                            key={virtualItem.key}
+                            style={{
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
+                                width: '100%',
+                                height: `${virtualItem.size}px`,
+                                transform: `translateY(${virtualItem.start}px)`,
+                            }}
+                        >
+                            <PokemonCard
+                                pokemon={filtered[virtualItem.index]}
+                                entry={entryMap[filtered[virtualItem.index].species]}
+                                types={types}
+                            />
+                        </div>
+                    ))}
                 </div>
-            </ScrollArea>
+            </div>
+          
         </div>
     )
 }

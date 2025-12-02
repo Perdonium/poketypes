@@ -3,6 +3,7 @@ import type {Name, NamedAPIResource, Type} from 'pokenode-ts';
 import TypesTable from "@/components/TypesTable.tsx";
 import PokemonList from "@/components/PokemonList.tsx";
 import PokedexSelector from "@/components/PokedexSelector.tsx";
+import PokemonListOld from "@/components/PokemonListOld.tsx";
 
 export interface Dictionary<T> {
     [Key: string]: T;

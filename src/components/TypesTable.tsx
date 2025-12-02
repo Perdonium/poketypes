@@ -220,7 +220,7 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
             
             <TooltipProvider>
 
-                <table className={`relative text-sm border w-1/2 [&_td]:border ${baseBg}`}>
+                <table className={`relative text-sm border [&_td]:border ${baseBg}`}>
                     <Tooltip open={tooltipOpen} onOpenChange={setTooltipOpen}>
                         <TooltipTrigger asChild>
                             <div
@@ -259,6 +259,7 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
                                         </th>);
                                 })
                             }
+                            
                         </tr>
                     </motion.thead>
 
