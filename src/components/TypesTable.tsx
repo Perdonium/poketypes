@@ -198,7 +198,10 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
     }
 
     return (
-        <div className="relative md:w-2/3 my-auto">
+        <div className="relative md:w-2/3 my-auto  font-bold
+                 [&_td]:min-w-6 [&_td]:min-h-6 text-xs
+                 [&_td]:md:min-w-7 [&_td]:md:min-h-7 md:text-sm
+        ">
             <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
                 <DialogContent>
                     <DialogHeader>
@@ -220,7 +223,8 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
             
             <TooltipProvider>
 
-                <table className={`relative text-sm border [&_td]:border ${baseBg}`}>
+                <table className={`relative border [&_td]:border ${baseBg}
+                 `}>
                     <Tooltip open={tooltipOpen} onOpenChange={setTooltipOpen}>
                         <TooltipTrigger asChild>
                             <div
@@ -250,7 +254,7 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
                                             onMouseEnter={() => OnHoverDefending(value)}
                                             onMouseLeave={() => OnHoverDefending(hoverDefendingType == value ? undefined : value)}
                                             className={cn(
-                                                "relative bg-accent w-10",
+                                                "relative bg-accent ", //TODO:Here size
                                             )}
                                         >
                                            <TypeIcon type={value} additionalClass={cn(
@@ -267,7 +271,7 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
                     {
                         types && Object.entries(types).map(([_, rowType]) => {
                             return (<tr className={cn(
-                                    "relative font-bold",
+                                    "relative",
                                     baseBg
                                 )}>
 
@@ -279,12 +283,11 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
                                         onMouseLeave={() => OnHoverAttacking(hoverAttackingType == rowType ? undefined : rowType)
                                         }
                                         className={"relative z-10 bg-accent"}>
-                                        <div className={"size-10"}>
                                             
                                         <TypeIcon type={rowType} 
                                                   additionalClass={cn(
+                                                      "w-full h-full",
                                                       hoverDefendingType && relations[rowType.id][hoverDefendingType.id - 1] == 1 ? "opacity-20" : "")}/>
-                                        </div>
                                     </motion.td>
                                     {
                                         relations && relations[rowType.id].map((relationValue, index) => {
@@ -307,16 +310,15 @@ function TypesTable({types}: { types: Dictionary<Type> }) {
                                                         onMouseLeave={() => setTooltipOpen(false)}
 
                                                     >
-                                                        <div className={"size-10 text-center h-fit align-middle"}>
+                                                        <div className={"text-center h-fit align-middle"}>
                                                             
-                                                        {relationValue != 1 && `x${relationValue}`}
+                                                        {relationValue != 1 && `x${relationValue == 0.5 ? ".5":relationValue}`}
                                                         </div>
                                                     </td>
                                                 );
                                             } else {
                                                 return (
                                                     <td key={index} className={cn(
-                                                        "size-10",
                                                         hoverAttackingType == rowType && hoverBg,
                                                         hoverDefendingType && hoverDefendingType.id == index + 1 && hoverBg,
                                                         hoverAttackingType && hoverAttackingType != rowType && "opacity-50",

@@ -1,12 +1,12 @@
 ﻿import {useEffect, useRef, useState} from "react";
-import type {Dictionary, Pokedex, Pokemon} from "@/pages/main-page/MainPage.tsx";
+import type {Dictionary, Pokedex, Pokemon, VersionGroup, Version} from "@/pages/main-page/MainPage.tsx";
 import PokemonCard from "@/components/PokemonCard.tsx";
 import {ScrollArea} from "@/components/ui/scroll-area.tsx";
 import {Input} from "@/components/ui/input.tsx";
 import {useVirtualizer} from "@tanstack/react-virtual";
 import {usePokedex} from "@/stores/store.tsx";
 
-function PokemonList({pokemons, types}: { pokemons: Dictionary<Pokemon> }) {
+function PokemonList({pokemons, types}: { pokemons: Dictionary<Pokemon>}) {
     const [nameInput, setNameInput] = useState("");
     const [entryMap, setEntryMap] = useState<Record<string, number>>({});
     const pokedex: Pokedex = usePokedex((state) => state.pokedex);
@@ -38,7 +38,7 @@ function PokemonList({pokemons, types}: { pokemons: Dictionary<Pokemon> }) {
     })
     
     return (
-        <div className={"h-96 w-90 md:h-[80vh]"}>
+        <div className={"h-[40vh] w-90 md:h-[80vh] mx-auto"}>
             <Input type={"text"}
                    placeholder={"Nom"}
                    value={nameInput}

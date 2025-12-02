@@ -1,0 +1,3202 @@
+{
+  "versions": {
+    "1": {
+      "id": 1,
+      "name": "red",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "赤"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "레드"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "紅"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Rouge"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Rot"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Rojo"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Rossa"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Red"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "紅"
+        }
+      ],
+      "version_group": "red-blue"
+    },
+    "2": {
+      "id": 2,
+      "name": "blue",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "青"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "블루"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "藍"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Bleu"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Blau"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Azul"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Blu"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Blue"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "藍"
+        }
+      ],
+      "version_group": "red-blue"
+    },
+    "3": {
+      "id": 3,
+      "name": "yellow",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "ピカチュウ"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "피카츄"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "皮卡丘"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Jaune"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Gelb"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Amarillo"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Gialla"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Yellow"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "皮卡丘"
+        }
+      ],
+      "version_group": "yellow"
+    },
+    "4": {
+      "id": 4,
+      "name": "gold",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "金"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "골드"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "金"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Or"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Gold"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Oro"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Oro"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Gold"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "金"
+        }
+      ],
+      "version_group": "gold-silver"
+    },
+    "5": {
+      "id": 5,
+      "name": "silver",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "銀"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "실버"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "銀"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Argent"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Silber"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Plata"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Argento"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Silver"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "銀"
+        }
+      ],
+      "version_group": "gold-silver"
+    },
+    "6": {
+      "id": 6,
+      "name": "crystal",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "クリスタル"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "크리스탈"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "水晶"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Cristal"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Kristall"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Cristal"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Cristallo"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Crystal"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "水晶"
+        }
+      ],
+      "version_group": "crystal"
+    },
+    "7": {
+      "id": 7,
+      "name": "ruby",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "ルビー"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "루비"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "紅寶石"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Rubis"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Rubin"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Rubí"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Rubino"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Ruby"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "紅寶石"
+        }
+      ],
+      "version_group": "ruby-sapphire"
+    },
+    "8": {
+      "id": 8,
+      "name": "sapphire",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "サファイア"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "사파이어"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "藍寶石"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Saphir"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Saphir"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Zafiro"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Zaffiro"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Sapphire"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "藍寶石"
+        }
+      ],
+      "version_group": "ruby-sapphire"
+    },
+    "9": {
+      "id": 9,
+      "name": "emerald",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "エメラルド"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "에메랄드"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "綠寶石"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Émeraude"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Smaragd"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Esmeralda"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Smeraldo"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Emerald"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "綠寶石"
+        }
+      ],
+      "version_group": "emerald"
+    },
+    "10": {
+      "id": 10,
+      "name": "firered",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "ファイアレッド"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "파이어레드"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "火紅"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Rouge Feu"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Feuerrot"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Rojo Fuego"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Rosso Fuoco"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "FireRed"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "火紅"
+        }
+      ],
+      "version_group": "firered-leafgreen"
+    },
+    "11": {
+      "id": 11,
+      "name": "leafgreen",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "リーフグリーン"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "리프그린"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "葉綠"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Vert Feuille"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Blattgrün"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Verde Hoja"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Verde Foglia"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "LeafGreen"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "葉綠"
+        }
+      ],
+      "version_group": "firered-leafgreen"
+    },
+    "12": {
+      "id": 12,
+      "name": "diamond",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "ダイヤモンド"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "디아루가"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "鑽石"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Diamant"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Diamant"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Diamante"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Diamante"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Diamond"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "钻石"
+        }
+      ],
+      "version_group": "diamond-pearl"
+    },
+    "13": {
+      "id": 13,
+      "name": "pearl",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "パール"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "펄기아"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "珍珠"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Perle"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Perl"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Perla"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Perla"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Pearl"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "珍珠"
+        }
+      ],
+      "version_group": "diamond-pearl"
+    },
+    "14": {
+      "id": 14,
+      "name": "platinum",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "プラチナ"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "기라티나"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "白金"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Platine"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Platin"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Platino"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Platino"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Platinum"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "白金"
+        }
+      ],
+      "version_group": "platinum"
+    },
+    "15": {
+      "id": 15,
+      "name": "heartgold",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "ハートゴールド"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "하트골드"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "心金"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Or HeartGold"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "HeartGold"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Oro HeartGold"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Oro HeartGold"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "HeartGold"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "心金"
+        }
+      ],
+      "version_group": "heartgold-soulsilver"
+    },
+    "16": {
+      "id": 16,
+      "name": "soulsilver",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "ソウルシルバー"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "소울실버"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "魂銀"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Argent SoulSilver"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "SoulSilver"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Plata SoulSilver"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Argento SoulSilver"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "SoulSilver"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "魂銀"
+        }
+      ],
+      "version_group": "heartgold-soulsilver"
+    },
+    "17": {
+      "id": 17,
+      "name": "black",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "ブラック"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "블랙"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "黑"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Noir"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Schwarz"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Negro"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Nera"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Black"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "黑"
+        }
+      ],
+      "version_group": "black-white"
+    },
+    "18": {
+      "id": 18,
+      "name": "white",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "ホワイト"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "화이트"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "白"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Blanc"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Weiß"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Blanco"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Bianca"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "White"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "白"
+        }
+      ],
+      "version_group": "black-white"
+    },
+    "21": {
+      "id": 21,
+      "name": "black-2",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "ブラック2"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "블랙 2"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "黑2"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Noir 2"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Schwarz 2"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Negro 2"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Nera 2"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Black 2"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "黑2"
+        }
+      ],
+      "version_group": "black-2-white-2"
+    },
+    "22": {
+      "id": 22,
+      "name": "white-2",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "ホワイト2"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "화이트 2"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "白"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Blanc 2"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Weiß 2"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Blanco 2"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Bianca 2"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "White 2"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "白2"
+        }
+      ],
+      "version_group": "black-2-white-2"
+    },
+    "23": {
+      "id": 23,
+      "name": "x",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "X"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "X"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "X"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "X"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "X"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "X"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "X"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "X"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "X"
+        }
+      ],
+      "version_group": "x-y"
+    },
+    "24": {
+      "id": 24,
+      "name": "y",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "Y"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "Y"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "Y"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Y"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Y"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Y"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Y"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Y"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "Y"
+        }
+      ],
+      "version_group": "x-y"
+    },
+    "25": {
+      "id": 25,
+      "name": "omega-ruby",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "オメガルビー"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "오메가루비"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "歐米加紅寶石"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Rubis Oméga"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Omega Rubin"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Rubí Omega"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Rubino Omega"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Omega Ruby"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "欧米伽红宝石"
+        }
+      ],
+      "version_group": "omega-ruby-alpha-sapphire"
+    },
+    "26": {
+      "id": 26,
+      "name": "alpha-sapphire",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "アルファサファイア"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "알파사파이어"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "阿爾法藍寶石"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Saphir Alpha"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Alpha Saphir"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Zafiro Alfa"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Zaffiro Alpha"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Alpha Sapphire"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "阿尔法蓝宝石"
+        }
+      ],
+      "version_group": "omega-ruby-alpha-sapphire"
+    },
+    "27": {
+      "id": 27,
+      "name": "sun",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "サン"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "썬"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "太陽"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Soleil"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Sonne"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Sol"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Sole"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Sun"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "太阳"
+        }
+      ],
+      "version_group": "sun-moon"
+    },
+    "28": {
+      "id": 28,
+      "name": "moon",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "ムーン"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "문"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "月亮"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Lune"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Mond"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Luna"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Luna"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Moon"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "月亮"
+        }
+      ],
+      "version_group": "sun-moon"
+    },
+    "29": {
+      "id": 29,
+      "name": "ultra-sun",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "ウルトラサン"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "울트라썬"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "究極之日"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Ultra-Soleil"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Ultrasonne"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Ultrasol"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Ultrasole"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Ultra Sun"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "究极之日"
+        }
+      ],
+      "version_group": "ultra-sun-ultra-moon"
+    },
+    "30": {
+      "id": 30,
+      "name": "ultra-moon",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "ウルトラムーン"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "울트라문"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "究極之月"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Ultra-Lune"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Ultramond"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Ultraluna"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Ultraluna"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Ultra Moon"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "究极之月"
+        }
+      ],
+      "version_group": "ultra-sun-ultra-moon"
+    },
+    "31": {
+      "id": 31,
+      "name": "lets-go-pikachu",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "Let’s Go! ピカチュウ"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "레츠고! 피카츄"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "Let’s Go！皮卡丘"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Let’s Go, Pikachu"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Let’s Go, Pikachu!"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Let’s Go, Pikachu!"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Let’s Go, Pikachu!"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Let’s Go, Pikachu!"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "Let’s Go！皮卡丘"
+        }
+      ],
+      "version_group": "lets-go-pikachu-lets-go-eevee"
+    },
+    "32": {
+      "id": 32,
+      "name": "lets-go-eevee",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "Let’s Go! イーブイ"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "레츠고! 이브이"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "Let’s Go！伊布"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Let’s Go, Évoli"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Let’s Go, Evoli!"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Let’s Go, Eevee!"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Let’s Go, Eevee!"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Let’s Go, Eevee!"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "Let’s Go！伊布"
+        }
+      ],
+      "version_group": "lets-go-pikachu-lets-go-eevee"
+    },
+    "33": {
+      "id": 33,
+      "name": "sword",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "ソード"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "소드"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "劍"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Épée"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Schwert"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Espada"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Spada"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Sword"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "剑"
+        }
+      ],
+      "version_group": "sword-shield"
+    },
+    "34": {
+      "id": 34,
+      "name": "shield",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "シールド"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "실드"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "盾"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Bouclier"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Schild"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Escudo"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Scudo"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Shield"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "盾"
+        }
+      ],
+      "version_group": "sword-shield"
+    },
+    "35": {
+      "id": 35,
+      "name": "the-isle-of-armor",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "鎧の孤島"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "갑옷의 외딴섬"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "鎧之孤島"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "L’île solitaire de l’Armure"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Die Insel der Rüstung"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "La isla de la armadura"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "L’isola solitaria dell’armatura"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "The Isle of Armor"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "铠之孤岛"
+        }
+      ],
+      "version_group": "the-isle-of-armor"
+    },
+    "36": {
+      "id": 36,
+      "name": "the-crown-tundra",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "冠の雪原"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "왕관의 설원"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "冠之雪原"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Les terres enneigées de la Couronne"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Die Schneelande der Krone"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Las nieves de la corona"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Le terre innevate della corona"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "The Crown Tundra"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "冠之雪原"
+        }
+      ],
+      "version_group": "the-crown-tundra"
+    },
+    "37": {
+      "id": 37,
+      "name": "brilliant-diamond",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "ブリリアントダイヤモンド"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "브릴리언트 다이아몬드"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "晶燦鑽石"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Diamant Étincelant"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Strahlender Diamant"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Diamante Brillante"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Diamante Lucente"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Brilliant Diamond"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "晶灿钻石"
+        }
+      ],
+      "version_group": "brilliant-diamond-and-shining-pearl"
+    },
+    "38": {
+      "id": 38,
+      "name": "shining-pearl",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "シャイニングパール"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "샤이닝 펄"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "明亮珍珠"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Perle Scintillante"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Leuchtende Perle"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Perla Reluciente"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Perla Splendente"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Shining Pearl"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "明亮珍珠"
+        }
+      ],
+      "version_group": "brilliant-diamond-and-shining-pearl"
+    },
+    "39": {
+      "id": 39,
+      "name": "legends-arceus",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "LEGENDS アルセウス"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "LEGENDS 아르세우스"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "傳說 阿爾宙斯"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Légendes : Arceus"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Legenden: Arceus"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Leyendas: Arceus"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Leggende: Arceus"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Legends: Arceus"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "传说 阿尔宙斯"
+        }
+      ],
+      "version_group": "legends-arceus"
+    },
+    "40": {
+      "id": 40,
+      "name": "scarlet",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "スカーレット"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "스칼렛"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "朱"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Écarlate"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Karmesin"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Escarlata"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Scarlatto"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Scarlet"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "朱"
+        }
+      ],
+      "version_group": "scarlet-violet"
+    },
+    "41": {
+      "id": 41,
+      "name": "violet",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "バイオレット"
+        },
+        {
+          "language": {
+            "name": "ko",
+            "url": "https://pokeapi.co/api/v2/language/3/"
+          },
+          "name": "바이올렛"
+        },
+        {
+          "language": {
+            "name": "zh-Hant",
+            "url": "https://pokeapi.co/api/v2/language/4/"
+          },
+          "name": "紫"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Violet"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Purpur"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "Púrpura"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Violetto"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Violet"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "紫"
+        }
+      ],
+      "version_group": "scarlet-violet"
+    },
+    "42": {
+      "id": 42,
+      "name": "the-teal-mask",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "碧の仮面"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Le Masque Turquoise"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Die Türkisgrüne Maske"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "La máscara turquesa"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "La maschera turchese"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "The Teal Mask"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "碧之假面"
+        }
+      ],
+      "version_group": "the-teal-mask"
+    },
+    "43": {
+      "id": 43,
+      "name": "the-indigo-disk",
+      "names": [
+        {
+          "language": {
+            "name": "ja-Hrkt",
+            "url": "https://pokeapi.co/api/v2/language/1/"
+          },
+          "name": "藍の円盤"
+        },
+        {
+          "language": {
+            "name": "fr",
+            "url": "https://pokeapi.co/api/v2/language/5/"
+          },
+          "name": "Le Disque Indigo"
+        },
+        {
+          "language": {
+            "name": "de",
+            "url": "https://pokeapi.co/api/v2/language/6/"
+          },
+          "name": "Die Indigoblaue Scheibe"
+        },
+        {
+          "language": {
+            "name": "es",
+            "url": "https://pokeapi.co/api/v2/language/7/"
+          },
+          "name": "El disco índigo"
+        },
+        {
+          "language": {
+            "name": "it",
+            "url": "https://pokeapi.co/api/v2/language/8/"
+          },
+          "name": "Il disco indaco"
+        },
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "The Indigo Disk"
+        },
+        {
+          "language": {
+            "name": "zh-Hans",
+            "url": "https://pokeapi.co/api/v2/language/12/"
+          },
+          "name": "藍之圓盤"
+        }
+      ],
+      "version_group": "the-indigo-disk"
+    },
+    "47": {
+      "id": 47,
+      "name": "legends-za",
+      "names": [
+        {
+          "language": {
+            "name": "en",
+            "url": "https://pokeapi.co/api/v2/language/9/"
+          },
+          "name": "Legends: ZA"
+        }
+      ],
+      "version_group": "legends-za"
+    }
+  },
+  "versionGroups": {
+    "1": {
+      "generation": "i",
+      "id": 1,
+      "name": "red-blue",
+      "order": 3,
+      "pokedexes": [
+        "kanto"
+      ],
+      "versions": [
+        "red",
+        "blue"
+      ]
+    },
+    "2": {
+      "generation": "i",
+      "id": 2,
+      "name": "yellow",
+      "order": 4,
+      "pokedexes": [
+        "kanto"
+      ],
+      "versions": [
+        "yellow"
+      ]
+    },
+    "3": {
+      "generation": "ii",
+      "id": 3,
+      "name": "gold-silver",
+      "order": 5,
+      "pokedexes": [
+        "original-johto"
+      ],
+      "versions": [
+        "gold",
+        "silver"
+      ]
+    },
+    "4": {
+      "generation": "ii",
+      "id": 4,
+      "name": "crystal",
+      "order": 6,
+      "pokedexes": [
+        "original-johto"
+      ],
+      "versions": [
+        "crystal"
+      ]
+    },
+    "5": {
+      "generation": "iii",
+      "id": 5,
+      "name": "ruby-sapphire",
+      "order": 7,
+      "pokedexes": [
+        "hoenn"
+      ],
+      "versions": [
+        "ruby",
+        "sapphire"
+      ]
+    },
+    "6": {
+      "generation": "iii",
+      "id": 6,
+      "name": "emerald",
+      "order": 8,
+      "pokedexes": [
+        "hoenn"
+      ],
+      "versions": [
+        "emerald"
+      ]
+    },
+    "7": {
+      "generation": "iii",
+      "id": 7,
+      "name": "firered-leafgreen",
+      "order": 11,
+      "pokedexes": [
+        "kanto"
+      ],
+      "versions": [
+        "firered",
+        "leafgreen"
+      ]
+    },
+    "8": {
+      "generation": "iv",
+      "id": 8,
+      "name": "diamond-pearl",
+      "order": 12,
+      "pokedexes": [
+        "original-sinnoh"
+      ],
+      "versions": [
+        "diamond",
+        "pearl"
+      ]
+    },
+    "9": {
+      "generation": "iv",
+      "id": 9,
+      "name": "platinum",
+      "order": 13,
+      "pokedexes": [
+        "extended-sinnoh"
+      ],
+      "versions": [
+        "platinum"
+      ]
+    },
+    "10": {
+      "generation": "iv",
+      "id": 10,
+      "name": "heartgold-soulsilver",
+      "order": 14,
+      "pokedexes": [
+        "updated-johto"
+      ],
+      "versions": [
+        "heartgold",
+        "soulsilver"
+      ]
+    },
+    "11": {
+      "generation": "v",
+      "id": 11,
+      "name": "black-white",
+      "order": 15,
+      "pokedexes": [
+        "original-unova"
+      ],
+      "versions": [
+        "black",
+        "white"
+      ]
+    },
+    "14": {
+      "generation": "v",
+      "id": 14,
+      "name": "black-2-white-2",
+      "order": 16,
+      "pokedexes": [
+        "updated-unova"
+      ],
+      "versions": [
+        "black-2",
+        "white-2"
+      ]
+    },
+    "15": {
+      "generation": "vi",
+      "id": 15,
+      "name": "x-y",
+      "order": 17,
+      "pokedexes": [
+        "kalos-central",
+        "kalos-coastal",
+        "kalos-mountain"
+      ],
+      "versions": [
+        "x",
+        "y"
+      ]
+    },
+    "16": {
+      "generation": "vi",
+      "id": 16,
+      "name": "omega-ruby-alpha-sapphire",
+      "order": 18,
+      "pokedexes": [
+        "updated-hoenn"
+      ],
+      "versions": [
+        "omega-ruby",
+        "alpha-sapphire"
+      ]
+    },
+    "17": {
+      "generation": "vii",
+      "id": 17,
+      "name": "sun-moon",
+      "order": 19,
+      "pokedexes": [
+        "original-alola",
+        "original-melemele",
+        "original-akala",
+        "original-ulaula",
+        "original-poni"
+      ],
+      "versions": [
+        "sun",
+        "moon"
+      ]
+    },
+    "18": {
+      "generation": "vii",
+      "id": 18,
+      "name": "ultra-sun-ultra-moon",
+      "order": 20,
+      "pokedexes": [
+        "updated-alola",
+        "updated-melemele",
+        "updated-akala",
+        "updated-ulaula",
+        "updated-poni"
+      ],
+      "versions": [
+        "ultra-sun",
+        "ultra-moon"
+      ]
+    },
+    "19": {
+      "generation": "vii",
+      "id": 19,
+      "name": "lets-go-pikachu-lets-go-eevee",
+      "order": 21,
+      "pokedexes": [
+        "letsgo-kanto"
+      ],
+      "versions": [
+        "lets-go-pikachu",
+        "lets-go-eevee"
+      ]
+    },
+    "20": {
+      "generation": "viii",
+      "id": 20,
+      "name": "sword-shield",
+      "order": 22,
+      "pokedexes": [
+        "galar",
+        "isle-of-armor",
+        "crown-tundra"
+      ],
+      "versions": [
+        "sword",
+        "shield"
+      ]
+    },
+    "21": {
+      "generation": "viii",
+      "id": 21,
+      "name": "the-isle-of-armor",
+      "order": 23,
+      "pokedexes": [
+        "isle-of-armor"
+      ],
+      "versions": [
+        "the-isle-of-armor"
+      ]
+    },
+    "22": {
+      "generation": "viii",
+      "id": 22,
+      "name": "the-crown-tundra",
+      "order": 24,
+      "pokedexes": [
+        "crown-tundra"
+      ],
+      "versions": [
+        "the-crown-tundra"
+      ]
+    },
+    "23": {
+      "generation": "viii",
+      "id": 23,
+      "name": "brilliant-diamond-and-shining-pearl",
+      "order": 25,
+      "pokedexes": [
+        "original-sinnoh"
+      ],
+      "versions": [
+        "brilliant-diamond",
+        "shining-pearl"
+      ]
+    },
+    "24": {
+      "generation": "viii",
+      "id": 24,
+      "name": "legends-arceus",
+      "order": 26,
+      "pokedexes": [
+        "hisui"
+      ],
+      "versions": [
+        "legends-arceus"
+      ]
+    },
+    "25": {
+      "generation": "ix",
+      "id": 25,
+      "name": "scarlet-violet",
+      "order": 27,
+      "pokedexes": [
+        "paldea"
+      ],
+      "versions": [
+        "scarlet",
+        "violet"
+      ]
+    },
+    "26": {
+      "generation": "ix",
+      "id": 26,
+      "name": "the-teal-mask",
+      "order": 28,
+      "pokedexes": [
+        "kitakami"
+      ],
+      "versions": [
+        "the-teal-mask"
+      ]
+    },
+    "27": {
+      "generation": "ix",
+      "id": 27,
+      "name": "the-indigo-disk",
+      "order": 29,
+      "pokedexes": [
+        "blueberry"
+      ],
+      "versions": [
+        "the-indigo-disk"
+      ]
+    },
+    "30": {
+      "generation": "ix",
+      "id": 30,
+      "name": "legends-za",
+      "order": 30,
+      "pokedexes": [
+        "lumiose-city"
+      ],
+      "versions": [
+        "legends-za"
+      ]
+    }
+  }
+}
