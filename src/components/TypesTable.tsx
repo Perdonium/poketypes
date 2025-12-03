@@ -1,8 +1,6 @@
-﻿import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table.tsx";
-import type {Dictionary} from "@/pages/main-page/MainPage.tsx";
-import type {Type} from "pokenode-ts";
+﻿import {PokemonContext} from "@/pages/main-page/MainPage.tsx";
 import {cn} from "@/lib/utils.ts";
-import {useEffect, useRef, useState} from "react";
+import {useContext, useEffect, useRef, useState} from "react";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip.tsx";
 import {motion, useMotionValue} from "motion/react"
 import {Button} from "@/components/ui/button.tsx";
@@ -12,11 +10,11 @@ import {
     DialogDescription, DialogFooter,
     DialogHeader,
     DialogTitle,
-    DialogTrigger
 } from "@/components/ui/dialog.tsx";
 import {Input} from "@/components/ui/input.tsx";
 import {Checkbox} from "@/components/ui/checkbox.tsx";
 import TypeIcon from "@/components/TypeIcon.tsx";
+import type {Dictionary, Type} from "@/assets/types.ts";
 
 interface Tip {
     attacking: string,
@@ -25,7 +23,9 @@ interface Tip {
     mutual: boolean
 }
 
-function TypesTable({types}: { types: Dictionary<Type> }) {
+function TypesTable() {
+    const {types} = useContext(PokemonContext);
+    
     const topY = useMotionValue(0);
     const leftX = useMotionValue(0);
 

@@ -37,9 +37,12 @@ async function GetTypes() {
 
     for (let {name} of list.results) {
         let t: Type = await api.getTypeByName(name);
-        const {moves, pokemon, ...cleanedType} = t;
+        const {moves, pokemon, sprites, move_damage_class, game_indices, ...cleanedType} = t;
         if (t.id < 100)
-            typesDic[t.id] = cleanedType;
+            typesDic[t.id] = {
+                ...cleanedType,
+                generation : cleanedType.generation.name.replace("generation-",""),
+            };
     }
 
     fs.writeFile('types.json', JSON.stringify(typesDic), (error) => {
@@ -47,6 +50,8 @@ async function GetTypes() {
             throw error;
         }
     });
+    
+    console.log("Updated types !");
 }
 
 ////// POKEMON
@@ -106,7 +111,7 @@ async function GetPokemons() {
 ////// RELATIONS
 
 function GetRelations(type: Type): number[] {
-    let relations = new Array(Object.keys(types).length).fill(1);
+    let relations = new Array(Object.keys(types).length+1).fill(1);
     for (const r of type.damage_relations.double_damage_to) {
         relations[GetTypeFromName(r.name).id] = 2;
     }
@@ -116,19 +121,17 @@ function GetRelations(type: Type): number[] {
     for (const r of type.damage_relations.no_damage_to) {
         relations[GetTypeFromName(r.name).id] = 0;
     }
-    relations.shift(); //ids start at 1
-    relations.push(1);
     return relations;
 }
 
 function GetPokemonRelations(pokemon, types) {
     let relationsArray = new Array(Object.keys(types).length).fill(1);
     for (let t of Object.values(types))
-        relationsArray[t.id - 1] = relationsArray[t.id - 1] * t.relations[GetTypeFromName(pokemon.types[0]).id - 1]
+        relationsArray[t.id] = relationsArray[t.id] * t.relations[GetTypeFromName(pokemon.types[0]).id]
 
     if (pokemon.types.length == 2) {
         for (let t of Object.values(types))
-            relationsArray[t.id - 1] = relationsArray[t.id - 1] * t.relations[GetTypeFromName(pokemon.types[1]).id - 1]
+            relationsArray[t.id] = relationsArray[t.id] * t.relations[GetTypeFromName(pokemon.types[1]).id]
     }
 
     let relations = {
@@ -225,12 +228,12 @@ async function GetVersionGroups() {
     for (let {name} of list.results) {
         const group = await gameApi.getVersionGroupByName(name);
         console.log(group);
-        
+
         const {move_learn_methods, regions, ...cleanedGroup} = group;
         versionGroups[group.id] = {
             ...cleanedGroup,
-            generation: group.generation.name.replace("generation-",""),
-            pokedexes:group.pokedexes.map(x => x.name),
+            generation: group.generation.name.replace("generation-", ""),
+            pokedexes: group.pokedexes.map(x => x.name),
             versions: group.versions.map((x) => x.name),
         };
     }
@@ -271,11 +274,11 @@ async function GetVersionsAndVersionsGroups() {
 
 }
 
-//GetTypes();
+//await GetTypes();
 
 //GetPokemons();
 
-//UpdatePokemonsRelations();
+UpdatePokemonsRelations();
 
 //await GetPokedexes();
 
@@ -283,7 +286,7 @@ async function GetVersionsAndVersionsGroups() {
 
 //await GetVersions();
 
-await GetVersionsAndVersionsGroups();
+//await GetVersionsAndVersionsGroups();
 
 setInterval(() => {
 }, 1_000);

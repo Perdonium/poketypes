@@ -1,21 +1,17 @@
-﻿import type {Dictionary, Pokemon} from "@/pages/main-page/MainPage.tsx";
-import {Item, ItemActions, ItemContent, ItemDescription, ItemTitle} from "@/components/ui/item.tsx";
-import {Button} from "@/components/ui/button.tsx";
-import type {Type} from "pokenode-ts";
+﻿import {Item, ItemActions, ItemContent} from "@/components/ui/item.tsx";
 import TypeIcon from "@/components/TypeIcon.tsx";
 import {Separator} from "@/components/ui/separator.tsx";
 import PokemonRelation from "@/components/PokemonRelation.tsx";
-import {cn} from "@/lib/utils.ts";
-import {memo} from "react";
-
+import {memo, useContext} from "react";
+import type {Dictionary, Pokemon, Type} from "@/assets/types.ts";
+import {PokemonContext} from "@/pages/main-page/MainPage.tsx";
+import {Capitalize} from "@/lib/utils.ts";
 const pokemonSpritePrefix = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
 
-function PokemonCard({pokemon, types, entry}: { pokemon: Pokemon }) {
-
-    function Capitalize(val) {
-        return String(val).charAt(0).toUpperCase() + String(val).slice(1);
-    }
-
+function PokemonCard({pokemon, entry}: { pokemon: Pokemon, entry:number }) {
+    const {types}:{types:Dictionary<Type>} = useContext(PokemonContext);
+    
+    console.log(pokemon);
     return (
         <>
             <Item variant="outline"
@@ -50,15 +46,15 @@ function PokemonCard({pokemon, types, entry}: { pokemon: Pokemon }) {
 
                         <div className={"flex justify-evenly"}>
                             {pokemon.relations.none &&
-                                <PokemonRelation title="0" relations={pokemon.relations.none} types={types}/>}
+                                <PokemonRelation title="0" typeList={pokemon.relations.none.map(x => types[x.toString()].name)}/>}
                             {pokemon.relations.quarter &&
-                                <PokemonRelation title="0.25" relations={pokemon.relations.quarter} types={types}/>}
+                                <PokemonRelation title="0.25" typeList={pokemon.relations.quarter.map(x =>  types[x.toString()].name)}/>}
                             {pokemon.relations.half &&
-                                <PokemonRelation title="0.5" relations={pokemon.relations.half} types={types}/>}
+                                <PokemonRelation title="0.5" typeList={pokemon.relations.half.map(x =>  types[x.toString()].name)}/>}
                             {pokemon.relations.double &&
-                                <PokemonRelation title="2" relations={pokemon.relations.double} types={types}/>}
+                                <PokemonRelation title="2" typeList={pokemon.relations.double.map(x =>  types[x.toString()].name)}/>}
                             {pokemon.relations.quadruple &&
-                                <PokemonRelation title="4" relations={pokemon.relations.quadruple} types={types}/>}
+                                <PokemonRelation title="4" typeList={pokemon.relations.quadruple.map(x =>  types[x.toString()].name)}/>}
 
 
                         </div>

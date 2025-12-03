@@ -1,15 +1,12 @@
-﻿import type {Pokemon} from "@/pages/main-page/MainPage.tsx";
-import {Item, ItemActions, ItemContent, ItemDescription, ItemTitle} from "@/components/ui/item.tsx";
-import {Button} from "@/components/ui/button.tsx";
-import {cn} from "@/lib/utils.ts";
-import type {Type} from "pokenode-ts";
+﻿import {cn} from "@/lib/utils.ts";
+import type {Type} from "@/assets/types.ts";
 
-function TypeIcon({type, additionalClass}:{type:Type, additionalClass:string}) {
+function TypeIcon({type, additionalClass}:{type:Type|string, additionalClass:string}) {
 
     return (
         <>
             <img
-                src={`./types-icons/${type.name ?? type}.png`} alt="Logo"
+                src={`./types-icons/${typeof type !== "string" ? type.name : type}.png`} alt="Logo"
                  className={cn("aspect-square", additionalClass)}/>
         </>
     )
