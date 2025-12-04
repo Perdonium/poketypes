@@ -1,11 +1,19 @@
 ﻿import { create } from 'zustand'
-import type {Pokedex} from "@/assets/types.ts";
+import type {Pokedex, Type, VersionGroup} from "@/assets/types.ts";
 
 interface PokedexState {
-    pokedex: Pokedex | undefined,
-    setPokedex: (pkdx:Pokedex) => void
+    national: boolean,
+    setNational: (n:boolean) => void,
+    versionGroup: VersionGroup | undefined,
+    setVersionGroup: (group:VersionGroup) => void,
+    currentType: Type | undefined,
+    setCurrentType: (type:Type) => void,
 }
 export const usePokedex = create<PokedexState>((set) => ({
-    pokedex: undefined,
-    setPokedex: (pkdx:Pokedex) => set({ pokedex : pkdx}),
+    national: false,
+    setNational: (n:boolean)=> set({ national : n}),
+    versionGroup: undefined,
+    setVersionGroup: (group:VersionGroup) => set({ versionGroup : group}),
+    currentType: undefined,
+    setCurrentType: (type:Type) => set({ currentType : type}),
 }))

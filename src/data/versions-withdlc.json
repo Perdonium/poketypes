@@ -3100,6 +3100,30 @@
         "shield"
       ]
     },
+    "21": {
+      "generation": "viii",
+      "id": 21,
+      "name": "the-isle-of-armor",
+      "order": 23,
+      "pokedexes": [
+        "isle-of-armor"
+      ],
+      "versions": [
+        "the-isle-of-armor"
+      ]
+    },
+    "22": {
+      "generation": "viii",
+      "id": 22,
+      "name": "the-crown-tundra",
+      "order": 24,
+      "pokedexes": [
+        "crown-tundra"
+      ],
+      "versions": [
+        "the-crown-tundra"
+      ]
+    },
     "23": {
       "generation": "viii",
       "id": 23,
@@ -3136,6 +3160,30 @@
       "versions": [
         "scarlet",
         "violet"
+      ]
+    },
+    "26": {
+      "generation": "ix",
+      "id": 26,
+      "name": "the-teal-mask",
+      "order": 28,
+      "pokedexes": [
+        "kitakami"
+      ],
+      "versions": [
+        "the-teal-mask"
+      ]
+    },
+    "27": {
+      "generation": "ix",
+      "id": 27,
+      "name": "the-indigo-disk",
+      "order": 29,
+      "pokedexes": [
+        "blueberry"
+      ],
+      "versions": [
+        "the-indigo-disk"
       ]
     },
     "30": {

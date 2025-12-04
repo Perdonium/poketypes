@@ -1,4 +1,4 @@
-﻿import type {Name, NamedAPIResource, TypeRelations, TypeRelationsPast} from "pokenode-ts";
+﻿import type {Name, TypeRelations, TypeRelationsPast} from "pokenode-ts";
 
 export interface Dictionary<T> {
     [Key: string]: T;
@@ -25,8 +25,7 @@ export interface Pokedex {
     name: string,
     names: Name[],
     pokemon_entries: { entry: number, species: string }[],
-    region: NamedAPIResource,
-    version_groups: NamedAPIResource[],
+    version_groups: string[],
     is_main_series: boolean
 }
 

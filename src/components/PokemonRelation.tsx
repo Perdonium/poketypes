@@ -1,10 +1,15 @@
 ﻿import TypeIcon from "@/components/TypeIcon.tsx";
 import {cn} from "@/lib/utils.ts";
+import {Separator} from "@/components/ui/separator.tsx";
 
-function PokemonRelation({typeList, title}:{typeList:string[], title:string}) {
+function PokemonRelation({typeList, title, orientation = "vertical"}:{typeList:string[], title:string, orientation:"horizontal"|"vertical"}) {
 
     return (
+        <>
+
+            <Separator className={cn("separator", orientation=="vertical" && "!h-auto")} orientation={orientation}/>
         <div className={"flex flex-col"}>
+
             <div className={"text-lg font-bold"}>
                 x{title}
             </div>
@@ -19,6 +24,7 @@ function PokemonRelation({typeList, title}:{typeList:string[], title:string}) {
                 }
             </div>
         </div>
+            </>
     )
 }
 

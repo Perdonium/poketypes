@@ -133,7 +133,7 @@ function TypesTable() {
         if (type == undefined) {
             setTopOffset(0);
         } else {
-            setTopOffset(tbodyRef.current.firstChild.clientHeight * (type.id - 1));
+            setTopOffset(tbodyRef.current.children[1].clientHeight * (type.id - 1));
         }
     }
 
@@ -145,7 +145,7 @@ function TypesTable() {
         if (type == undefined) {
             setLeftOffset(0);
         } else {
-            setLeftOffset(topRowRef.current.firstChild.clientWidth * (type.id - 1));
+            setLeftOffset(topRowRef.current.children[1].clientWidth * (type.id - 1));
         }
     }
 
@@ -198,9 +198,10 @@ function TypesTable() {
     }
 
     return (
-        <div className="relative md:w-2/3 my-auto  font-bold
-                 [&_td]:min-w-6 [&_td]:min-h-6 text-xs
-                 [&_td]:md:min-w-7 [&_td]:md:min-h-7 md:text-sm
+        <>
+        <div className="relative md:w-2/3 my-auto mx-auto md:mx-8 lg:mx-auto
+                 [&_td]:min-w-3 [&_td]:min-h-3 text-[12px]
+                 [&_td]:md:min-w-7 [&_td]:md:min-h-7 md:text-sm md:font-bold
         ">
             <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
                 <DialogContent>
@@ -292,6 +293,10 @@ function TypesTable() {
                                     {
                                         relations && relations[rowType.id].map((relationValue, index) => {
                                             
+                                            //TODO : Just remove new type
+                                            if(index == relations[rowType.id].length - 1) {
+                                                return <></>
+                                            }
                                             if (relationValue != 1) {
 
                                                 return (
@@ -312,7 +317,8 @@ function TypesTable() {
                                                     >
                                                         <div className={"text-center h-fit align-middle"}>
                                                             
-                                                        {relationValue != 1 && `x${relationValue == 0.5 ? ".5":relationValue}`}
+                                                        {relationValue === 0.5 ? (<div className={"text-[10px]"}><sup>1</sup>&frasl;<sub>2</sub></div>):`${relationValue}`}
+                                                            
                                                         </div>
                                                     </td>
                                                 );
@@ -339,6 +345,8 @@ function TypesTable() {
                 </table>
             </TooltipProvider>
         </div>
+            {/* <img src={"chart.png"} className={"w-full"}/> */}
+        </>
     )
 }
 

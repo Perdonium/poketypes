@@ -1,8 +1,6 @@
-import {useState} from 'react'
 import './App.css'
 import {ThemeProvider} from "@/components/theme-provider"
 import MainPage from "@/pages/main-page/MainPage.tsx";
-import { Tooltip } from "./components/ui/tooltip";
 
 function App() {
 

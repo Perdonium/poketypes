@@ -11,7 +11,6 @@ const pokemonSpritePrefix = "https://raw.githubusercontent.com/PokeAPI/sprites/m
 function PokemonCard({pokemon, entry}: { pokemon: Pokemon, entry:number }) {
     const {types}:{types:Dictionary<Type>} = useContext(PokemonContext);
     
-    console.log(pokemon);
     return (
         <>
             <Item variant="outline"
@@ -35,7 +34,7 @@ function PokemonCard({pokemon, entry}: { pokemon: Pokemon, entry:number }) {
                                 <div className={"flex items-center mx-auto space-x-2"}>
                                     {
                                         Object.values(pokemon.types).map((type) => {
-                                            return <TypeIcon key={type} type={type} additionalClass={"w-6"}/>
+                                            return <TypeIcon key={type} type={type} additionalClass={"w-8"}/>
                                         })
                                     }
                                 </div>
@@ -44,17 +43,17 @@ function PokemonCard({pokemon, entry}: { pokemon: Pokemon, entry:number }) {
 
                         <Separator className={""}/>
 
-                        <div className={"flex justify-evenly"}>
+                        <div className={"flex justify-evenly [&>*:first-child]:hidden mt-4"}>
                             {pokemon.relations.none &&
-                                <PokemonRelation title="0" typeList={pokemon.relations.none.map(x => types[x.toString()].name)}/>}
+                                <PokemonRelation title="0" typeList={pokemon.relations.none.map(x => types[x.toString()].name)} orientation={"vertical"}/>}
                             {pokemon.relations.quarter &&
-                                <PokemonRelation title="0.25" typeList={pokemon.relations.quarter.map(x =>  types[x.toString()].name)}/>}
+                                <PokemonRelation title="0.25" typeList={pokemon.relations.quarter.map(x =>  types[x.toString()].name)} orientation={"vertical"}/>}
                             {pokemon.relations.half &&
-                                <PokemonRelation title="0.5" typeList={pokemon.relations.half.map(x =>  types[x.toString()].name)}/>}
+                                <PokemonRelation title="0.5" typeList={pokemon.relations.half.map(x =>  types[x.toString()].name)} orientation={"vertical"}/>}
                             {pokemon.relations.double &&
-                                <PokemonRelation title="2" typeList={pokemon.relations.double.map(x =>  types[x.toString()].name)}/>}
+                                <PokemonRelation title="2" typeList={pokemon.relations.double.map(x =>  types[x.toString()].name)} orientation={"vertical"}/>}
                             {pokemon.relations.quadruple &&
-                                <PokemonRelation title="4" typeList={pokemon.relations.quadruple.map(x =>  types[x.toString()].name)}/>}
+                                <PokemonRelation title="4" typeList={pokemon.relations.quadruple.map(x =>  types[x.toString()].name)} orientation={"vertical"}/>}
 
 
                         </div>
