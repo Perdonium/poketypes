@@ -21,12 +21,10 @@ function TypeIcon({type, additionalClass, useClick = true}:{type:Type|string, ad
     return (
         <div className={"relative"}>
             <img
+                data-type={typeof type !== "string" ? type.name : type}
                 src={`./types-icons/${typeof type !== "string" ? type.name : type}.png`} alt="Logo"
                  className={cn("aspect-square", additionalClass)}
             onClick={() => OnClick()}/>
-            {/* <p className={"absolute bottom-0 left-1/2 -translate-x-1/2 " +
-                "box-shadow-[0px_0px_1px_rgba(0,0,0,1)] text-[7px] md:text-[0.8rem] text-white font-bold"}>{(typeof type !== "string" ? type.name : type).toUpperCase().substring(0,3)}</p>
-            */}
         </div>
     )
 }

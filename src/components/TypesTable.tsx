@@ -1,5 +1,5 @@
 ﻿import {PokemonContext} from "@/pages/main-page/MainPage.tsx";
-import {cn} from "@/lib/utils.ts";
+import {Capitalize, cn} from "@/lib/utils.ts";
 import {useContext, useEffect, useRef, useState} from "react";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip.tsx";
 import {motion, useMotionValue} from "motion/react"
@@ -14,60 +14,16 @@ import {
 import {Input} from "@/components/ui/input.tsx";
 import {Checkbox} from "@/components/ui/checkbox.tsx";
 import TypeIcon from "@/components/TypeIcon.tsx";
-import type {Dictionary, Type} from "@/assets/types.ts";
+import type {Dictionary, Tip, Type} from "@/assets/types.ts";
+import RelationTip from "@/components/RelationTip.tsx";
 
-interface Tip {
-    attacking: string,
-    defending: string,
-    tip: string,
-    mutual: boolean
-}
+
 
 function TypesTable() {
-    const {types} = useContext(PokemonContext);
+    const {types, tips} = useContext(PokemonContext);
 
     const topY = useMotionValue(0);
     const leftX = useMotionValue(0);
-
-    const tips: Tip[] = [
-        {
-            attacking: "ghost",
-            defending: "normal",
-            tip: "Les vivants et les morts ne peuvent pas interagir entre eux",
-            mutual: true
-        },
-        {
-            attacking: "fighting",
-            defending: "normal",
-            tip: "Un combattant experimenté a l'avantage sur une personne normale",
-            mutual: true
-        },
-        {
-            attacking: "ground",
-            defending: "fire",
-            tip: "On peut éteindre un feu avec de la terre",
-            mutual: false
-        },
-        {
-            attacking: "fire",
-            defending: "water",
-            tip: "L'eau éteint le feu.",
-            mutual: true
-        },
-        {
-            attacking: "electric",
-            defending: "water",
-            tip: "L'eau conduit l'électricité",
-            mutual: true
-        },
-        {
-            attacking: "grass",
-            defending: "water",
-            tip: "Les plantes se nourrissent d'eau",
-            mutual: true
-        },
-
-    ]
 
     const firstCellRef = useRef<HTMLElement>(null);
 
@@ -88,7 +44,7 @@ function TypesTable() {
     const [relations, setRelations] = useState<Dictionary<number[]>>();
 
     const [tooltipOffset, setTooltipOffset] = useState([0, 0]);
-    const [currentTip, setCurrentTip] = useState("");
+    const [currentTip, setCurrentTip] = useState<Tip>();
 
     const [clickAttacking, setClickAttacking] = useState<Type>();
     const [clickDefending, setClickDefending] = useState<Type>();
@@ -111,7 +67,7 @@ function TypesTable() {
         const tip = tips.find(tip => (tip.attacking === attacking.name && tip.defending === defending.name)
             || (tip.attacking === defending.name && tip.defending === attacking.name && tip.mutual));
 
-        return tip ? tip.tip : undefined;
+        return tip ? tip : undefined;
     }
 
     function GetTypeFromName(name: string): Type {
@@ -127,12 +83,12 @@ function TypesTable() {
         return types[id];
     }
 
-    function GetCellOffset(id: string) {
+    function GetCellOffset(id: string, includeWidth?: boolean = false) {
         const cell = document.getElementById(id)?.getBoundingClientRect();
         if (!cell)
             return undefined;
         return {
-            x: cell.x - firstCellRef.current!.getBoundingClientRect().x,
+            x: cell.x - firstCellRef.current!.getBoundingClientRect().x + (includeWidth?cell.width/3:0),
             y: cell.y - firstCellRef.current!.getBoundingClientRect().y
         };
     }
@@ -175,7 +131,7 @@ function TypesTable() {
         if (!tip)
             return;
         setCurrentTip(tip);
-        const cellOffset = GetCellOffset(`cell-${attackingType.id}-${defendingTypeIndex}`)!;
+        const cellOffset = GetCellOffset(`cell-${attackingType.id}-${defendingTypeIndex}`, true)!;
         setTooltipOffset([cellOffset.x, cellOffset.y]);
         setTooltipOpen(true);
         setClickAttacking(attackingType);
@@ -249,22 +205,7 @@ function TypesTable() {
 
                     <div className={`relative border [&_>div]:border ${baseBg}
                   grid types-grid max-w-2xl mx-auto`}>
-                        <Tooltip open={tooltipOpen} onOpenChange={setTooltipOpen}>
-                            <TooltipTrigger asChild>
-                                <div
-                                    className={"absolute opacity-0"}
-                                    style={{
-                                        top: tooltipOffset[1],
-                                        left: tooltipOffset[0],
-                                    }}>
-                                    .
-                                </div>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                                <p>{currentTip}</p>
-                            </TooltipContent>
-                        </Tooltip>
-
+                      <RelationTip tooltipOpen={tooltipOpen} tip={currentTip} offset={tooltipOffset}/>
                         {/*Header*/}
                         <div className={"pointer-events-none"} ref={firstCellRef}></div>
                         {

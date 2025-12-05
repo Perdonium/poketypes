@@ -1,0 +1,38 @@
+﻿[
+  {
+    "attacking": "ghost",
+    "defending": "normal",
+    "tip": "Les vivants et les morts ne peuvent pas interagir entre eux",
+    "mutual": true
+  },
+  {
+    "attacking": "fighting",
+    "defending": "normal",
+    "tip": "Un combattant experimenté a l'avantage sur une personne normale",
+    "mutual": true
+  },
+  {
+    "attacking": "ground",
+    "defending": "fire",
+    "tip": "On peut éteindre un feu avec de la terre",
+    "mutual": false
+  },
+  {
+    "attacking": "fire",
+    "defending": "water",
+    "tip": "L'eau éteint le feu.",
+    "mutual": true
+  },
+  {
+    "attacking": "electric",
+    "defending": "water",
+    "tip": "L'eau conduit l'électricité",
+    "mutual": true
+  },
+  {
+    "attacking": "grass",
+    "defending": "water",
+    "tip": "Les plantes se nourrissent d'eau",
+    "mutual": true
+  }
+]

@@ -2,7 +2,7 @@
 import {cn} from "@/lib/utils.ts";
 import {Separator} from "@/components/ui/separator.tsx";
 
-function PokemonRelation({typeList, title, orientation = "vertical"}:{typeList:string[], title:string, orientation:"horizontal"|"vertical"}) {
+function PokemonRelation({typeList, title, orientation = "vertical", useClick = true}:{typeList:string[], title:string, orientation?:"horizontal"|"vertical", useClick?:boolean}) {
 
     return (
         <>
@@ -12,14 +12,17 @@ function PokemonRelation({typeList, title, orientation = "vertical"}:{typeList:s
 
             <div className={"text-lg font-bold"}>
                 x{title}
-            </div>
+               </div>
             <div className={cn("grid gap-1 mx-auto mt-2",
                 typeList.length > 2 && "grid-flow-col grid-rows-2",
                 typeList.length == 2 && "grid-cols-2",
                 typeList.length == 1 && "grid-cols-1")}>
                 {
                     typeList.map((s) => {
-                        return <TypeIcon key={s} type={s} additionalClass={"w-8"}/>
+                        return <TypeIcon key={s} 
+                                         type={s} 
+                                         additionalClass={"w-8"}
+                        useClick={useClick}/>
                     })
                 }
             </div>

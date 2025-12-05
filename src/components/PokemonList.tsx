@@ -4,7 +4,7 @@ import PokemonCard from "@/components/PokemonCard.tsx";
 import {Input} from "@/components/ui/input.tsx";
 import {useVirtualizer} from "@tanstack/react-virtual";
 import {usePokedex} from "@/stores/store.tsx";
-import type {Pokedex, Pokemon, VersionGroup} from "@/assets/types.ts";
+import type {Pokemon, VersionGroup} from "@/assets/types.ts";
 
 const nationalPerGen = [
     151,

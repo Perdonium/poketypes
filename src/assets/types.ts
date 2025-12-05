@@ -60,5 +60,12 @@ export interface PokemonContextType {
     versions:Dictionary<Version>,
     versionGroups:Dictionary<VersionGroup>,
     types:Dictionary<Type>
+    tips:Tip[]
+}
 
+export interface Tip {
+    attacking: string,
+    defending: string,
+    tip: string,
+    mutual: boolean
 }
