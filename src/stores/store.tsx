@@ -1,5 +1,5 @@
 ﻿import { create } from 'zustand'
-import type {Pokedex, Type, VersionGroup} from "@/assets/types.ts";
+import type {Type, VersionGroup} from "@/assets/types.ts";
 
 interface PokedexState {
     national: boolean,

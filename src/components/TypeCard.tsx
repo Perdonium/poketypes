@@ -2,7 +2,7 @@
 import TypeIcon from "@/components/TypeIcon.tsx";
 import {Separator} from "@/components/ui/separator.tsx";
 import PokemonRelation from "@/components/PokemonRelation.tsx";
-import {useContext, useEffect, useRef, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import {PokemonContext} from "@/pages/main-page/MainPage.tsx";
 import {usePokedex} from "@/stores/store.tsx";
 import type {Tip, Type} from "@/assets/types.ts";
@@ -22,37 +22,37 @@ function TypeCard() {
 
     const [tooltipOpen, setTooltipOpen] = useState<boolean>(false);
     const [currentTip, setCurrentTip] = useState<Tip>();
-    const [offset, setOffset] = useState([0,0]);
+    const [offset, setOffset] = useState([0, 0]);
+
     function FindTip(attacking: Type, defending: Type) {
         const tip = tips.find(tip => (tip.attacking === attacking.name && tip.defending === defending.name)
             || (tip.attacking === defending.name && tip.defending === attacking.name && tip.mutual));
 
         return tip ? tip : undefined;
     }
-    
+
     useEffect(() => {
         if (!currentType)
             setCurrentType(Object.values(types)[0]);
         //TODO : improve
     }, []);
 
-    const handleHover = (e) => {
-        if (e.target.tagName === "IMG") {
+    const handleHover = (e: MouseEvent<HTMLElement>) => {
+        if (e.target && e.target.tagName === "IMG") {
             const tip = FindTip(currentType!, Object.values(types).find(x => x.name == e.target.dataset.type)!);
-            if(!tip){
+            if (!tip) {
                 setTooltipOpen(false);
                 return;
             }
             setCurrentTip(tip);
             setTooltipOpen(true);
-            setOffset([e.target.getBoundingClientRect().x + window.scrollX + e.target.getBoundingClientRect().width/3,
+            setOffset([e.clientX + window.scrollX + e.target.getBoundingClientRect().width / 3,
                 e.target.getBoundingClientRect().y + window.scrollY])
         } else {
-            if(tooltipOpen)
+            if (tooltipOpen)
                 setTooltipOpen(false);
         }
     };
-    console.log(offset);
     return (
         <>
             {currentType &&
@@ -69,7 +69,7 @@ function TypeCard() {
                         <Separator className={"my-4"}/>
 
                         <div className={" flex justify-evenly [&>*:first-child]:hidden"}>
-                           
+
                             {
                                 Object.keys(titles).map((key: string) => {
                                     const relationKey = key as keyof typeof currentType.damage_relations;
@@ -78,7 +78,7 @@ function TypeCard() {
 
                                     return <PokemonRelation title={titles[key as keyof typeof titles]}
                                                             typeList={currentType.damage_relations[relationKey].map(x => x.name)}
-                                    useClick={false}/>;
+                                                            useClick={false}/>;
                                 })
                             }
 

@@ -1,7 +1,7 @@
 ﻿import {PokemonContext} from "@/pages/main-page/MainPage.tsx";
-import {Capitalize, cn} from "@/lib/utils.ts";
+import {cn} from "@/lib/utils.ts";
 import {useContext, useEffect, useRef, useState} from "react";
-import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip.tsx";
+import {TooltipProvider} from "@/components/ui/tooltip.tsx";
 import {motion, useMotionValue} from "motion/react"
 import {Button} from "@/components/ui/button.tsx";
 import {
@@ -25,7 +25,7 @@ function TypesTable() {
     const topY = useMotionValue(0);
     const leftX = useMotionValue(0);
 
-    const firstCellRef = useRef<HTMLElement>(null);
+    const firstCellRef = useRef<HTMLDivElement>(null);
 
     const hoverBg = "bg-accent";
     const noDamageBg = "bg-muted-foreground";
@@ -33,8 +33,8 @@ function TypesTable() {
     const doubleDamageBg = "bg-green-500";
     const baseBg = "bg-background";
 
-    const [hoverAttackingType, setHoverAttackingType] = useState<Type>();
-    const [hoverDefendingType, setHoverDefendingType] = useState<Type>();
+    const [hoverAttackingType, setHoverAttackingType] = useState<Type | undefined>();
+    const [hoverDefendingType, setHoverDefendingType] = useState<Type | undefined>();
     const [tooltipOpen, setTooltipOpen] = useState(false);
 
     const [topOffset, setTopOffset] = useState(0);
@@ -46,8 +46,7 @@ function TypesTable() {
     const [tooltipOffset, setTooltipOffset] = useState([0, 0]);
     const [currentTip, setCurrentTip] = useState<Tip>();
 
-    const [clickAttacking, setClickAttacking] = useState<Type>();
-    const [clickDefending, setClickDefending] = useState<Type>();
+    const [hoverCell, setHoverCell] = useState<[Type,Type]>();
     const [dialogOpen, setDialogOpen] = useState(false);
     const [newTip, setNewTip] = useState("");
     const [newTipMutual, setNewTipMutual] = useState(true);
@@ -83,7 +82,7 @@ function TypesTable() {
         return types[id];
     }
 
-    function GetCellOffset(id: string, includeWidth?: boolean = false) {
+    function GetCellOffset(id: string, includeWidth: boolean = false) {
         const cell = document.getElementById(id)?.getBoundingClientRect();
         if (!cell)
             return undefined;
@@ -93,16 +92,14 @@ function TypesTable() {
         };
     }
 
-    function OnHoverAttacking(type: Type) {
+    function OnHoverAttacking(type: Type | undefined) {
         if (hoverDefendingType || leftX.get() != 0)
             return;
         setHoverAttackingType(type);
 
         if (type == undefined) {
-            console.log("type undefined");
             setTopOffset(0);
         } else {
-            console.log("type NOT undefined");
             const prevRowOffset = GetCellOffset(`left-type-${type.id - 1}`);
             if (!prevRowOffset) //First row
                 return;
@@ -110,7 +107,7 @@ function TypesTable() {
         }
     }
 
-    function OnHoverDefending(type: Type) {
+    function OnHoverDefending(type: Type | undefined) {
         if (hoverAttackingType || topY.get() != 0)
             return;
         setHoverDefendingType(type);
@@ -134,27 +131,26 @@ function TypesTable() {
         const cellOffset = GetCellOffset(`cell-${attackingType.id}-${defendingTypeIndex}`, true)!;
         setTooltipOffset([cellOffset.x, cellOffset.y]);
         setTooltipOpen(true);
-        setClickAttacking(attackingType);
-        setClickDefending(defendingType);
+        setHoverCell([attackingType, defendingType]);
     }
 
     function OnClickCell(attackingType: Type, defendingTypeIndex: number) {
         const defendingType = GetTypeFromIndex(defendingTypeIndex);
-        setClickAttacking(attackingType);
-        setClickDefending(defendingType);
+        setHoverCell([attackingType, defendingType]);
         setDialogOpen(true);
     }
 
     function OnSubmitDialog() {
+        if(!hoverCell)
+            return;
         const nTips = newTips + `        {
-            attacking: "${clickAttacking.name}",
-            defending: "${clickDefending.name}",
+            attacking: "${hoverCell[0].name}",
+            defending: "${hoverCell[1].name}",
             tip: "${newTip}",
             mutual: ${newTipMutual}
         },
         `;
         setNewTips(nTips);
-        console.log(nTips);
         setDialogOpen(false);
     }
 
@@ -179,13 +175,13 @@ function TypesTable() {
             <div className="relative my-auto mx-auto md:mx-8 lg:mx-auto 
                  text-[12px]
                   lg:text-lg md:font-bold">
-                <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+                {hoverCell && <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
                     <DialogContent>
                         <DialogHeader>
                             <DialogTitle>Nouveau tip</DialogTitle>
                             <DialogDescription>
                                 Tip
-                                pour {clickAttacking && clickAttacking.name} sur {clickDefending && clickDefending.name} ?
+                                pour {hoverCell[0] && hoverCell[0].name} sur {hoverCell[1] && hoverCell[1].name} ?
                             </DialogDescription>
                         </DialogHeader>
                         <Input id="tip" name="tip" onChange={(e) => setNewTip(e.target.value)}/>
@@ -199,7 +195,7 @@ function TypesTable() {
                             <Button onClick={OnSubmitDialog}>Save changes</Button>
                         </DialogFooter>
                     </DialogContent>
-                </Dialog>
+                </Dialog>}
 
                 <TooltipProvider>
 
@@ -209,7 +205,7 @@ function TypesTable() {
                         {/*Header*/}
                         <div className={"pointer-events-none"} ref={firstCellRef}></div>
                         {
-                            types && Object.entries(types).map(([key, value]) => {
+                            types && relations && Object.entries(types).map(([key, value]) => {
                                 return (
                                     <motion.div key={key}
                                                 id={`top-type-${value.id}`}
@@ -230,7 +226,7 @@ function TypesTable() {
                         }
 
                         {
-                            types && Object.entries(types).map(([_, rowType]) => {
+                            types && relations && Object.entries(types).map(([_, rowType]) => {
                                 return (<>
 
                                         <motion.div

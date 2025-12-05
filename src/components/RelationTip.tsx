@@ -1,11 +1,8 @@
-﻿import {Separator} from "@/components/ui/separator.tsx";
-import {Capitalize, cn} from "@/lib/utils.ts";
-import TypeIcon from "@/components/TypeIcon.tsx";
+﻿import {Capitalize} from "@/lib/utils.ts";
 import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip.tsx";
-import {useState} from "react";
 import type {Tip} from "@/assets/types.ts";
 
-function RelationTip({tooltipOpen, tip, offset} : {tooltipOpen:boolean, tip:Tip|undefined, offset:number[2]}) {
+function RelationTip({tooltipOpen, tip, offset} : {tooltipOpen:boolean, tip:Tip|undefined, offset:number[]}) {
 
     return (
         <>
