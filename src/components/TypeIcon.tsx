@@ -4,7 +4,7 @@ import {usePokedex} from "@/stores/store.tsx";
 import {useContext} from "react";
 import {PokemonContext} from "@/pages/main-page/MainPage.tsx";
 
-function TypeIcon({type, additionalClass, useClick = true}:{type:Type|string, additionalClass:string, useClick:boolean}) {
+function TypeIcon({type, additionalClass, useClick = true}:{type:Type|string, additionalClass:string, useClick?:boolean}) {
 
     const setCurrentType = usePokedex((state) => state.setCurrentType);
     const {types} = useContext(PokemonContext);

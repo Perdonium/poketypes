@@ -64,7 +64,7 @@ function PokemonList() {
     })
 
     return (
-        <div className={"w-90 mx-auto mb-8"}>
+        <div className={"max-w-90 w-90 mb-8 mx-auto lg:mx-0"} id={"pokemon-list"}>
 
             <Input type={"text"}
                    placeholder={"Nom"}
@@ -73,6 +73,7 @@ function PokemonList() {
         <div className={"h-[90vh] md:h-[80vh] mt-4"}>
             <div
                 ref={scrollParentRef}
+                id={"scrollParent"}
                 className={"overflow-auto h-full border"}
             >
                 <div
@@ -80,7 +81,7 @@ function PokemonList() {
                         height: `${rowVirtualizer.getTotalSize()}px`,
                         width: '100%',
                     }}
-
+                    id={"listParent"}
                     className={"relative"}
                 >
                     {filtered.length > 0 && rowVirtualizer.getVirtualItems().map((virtualItem) => (

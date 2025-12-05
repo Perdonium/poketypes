@@ -25,7 +25,7 @@ interface Tip {
 
 function TypesTable() {
     const {types} = useContext(PokemonContext);
-    
+
     const topY = useMotionValue(0);
     const leftX = useMotionValue(0);
 
@@ -66,7 +66,7 @@ function TypesTable() {
             tip: "Les plantes se nourrissent d'eau",
             mutual: true
         },
-        
+
     ]
 
     const topRowRef = useRef(null);
@@ -77,7 +77,7 @@ function TypesTable() {
     const halfDamageBg = "bg-destructive";
     const doubleDamageBg = "bg-green-500";
     const baseBg = "bg-background";
-    
+
     const [hoverAttackingType, setHoverAttackingType] = useState<Type>();
     const [hoverDefendingType, setHoverDefendingType] = useState<Type>();
     const [tooltipOpen, setTooltipOpen] = useState(false);
@@ -97,7 +97,7 @@ function TypesTable() {
     const [newTip, setNewTip] = useState("");
     const [newTipMutual, setNewTipMutual] = useState(true);
     const [newTips, setNewTips] = useState("");
-    
+
     useEffect(() => {
         if (!types)
             return;
@@ -160,7 +160,7 @@ function TypesTable() {
         setClickAttacking(attackingType);
         setClickDefending(defendingType);
     }
-    
+
     function OnClickCell(attackingType: Type, defendingTypeIndex: number) {
         const defendingType = GetTypeFromIndex(defendingTypeIndex);
         setClickAttacking(attackingType);
@@ -168,8 +168,8 @@ function TypesTable() {
         setDialogOpen(true);
     }
 
-    function OnSubmitDialog(){
-        const nTips = newTips+`        {
+    function OnSubmitDialog() {
+        const nTips = newTips + `        {
             attacking: "${clickAttacking.name}",
             defending: "${clickDefending.name}",
             tip: "${newTip}",
@@ -180,7 +180,7 @@ function TypesTable() {
         console.log(nTips);
         setDialogOpen(false);
     }
-    
+
     function GetRelations(type: Type): number[] {
         let relations = new Array(Object.keys(types).length).fill(1);
         for (const r of type.damage_relations.double_damage_to) {
@@ -199,152 +199,146 @@ function TypesTable() {
 
     return (
         <>
-        <div className="relative md:w-2/3 my-auto mx-auto md:mx-8 lg:mx-auto
-                 [&_td]:min-w-3 [&_td]:min-h-3 text-[12px]
-                 [&_td]:md:min-w-7 [&_td]:md:min-h-7 md:text-sm md:font-bold
+            <div className="relative my-auto mx-auto md:mx-8 lg:mx-auto 
+                 text-[12px]
+                  lg:text-lg md:font-bold
         ">
-            <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-                <DialogContent>
-                    <DialogHeader>
-                        <DialogTitle>Nouveau tip</DialogTitle>
-                        <DialogDescription>
-                            Tip pour {clickAttacking && clickAttacking.name} sur {clickDefending && clickDefending.name} ?
-                        </DialogDescription>
-                    </DialogHeader>
-                    <Input id="tip" name="tip" onChange={(e) => setNewTip(e.target.value)}/>
-                    <div className={"space-x-4"}><Checkbox id="mutuel" checked={newTipMutual}  onCheckedChange={(value) => setNewTipMutual(value === true)}/><span>Mutuel</span></div>
-                    <DialogFooter>
-                        <DialogClose asChild>
-                            <Button variant="outline">Cancel</Button>
-                        </DialogClose>
-                        <Button onClick={OnSubmitDialog}>Save changes</Button>
-                    </DialogFooter>
-                </DialogContent>
-            </Dialog>
-            
-            <TooltipProvider>
+                <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+                    <DialogContent>
+                        <DialogHeader>
+                            <DialogTitle>Nouveau tip</DialogTitle>
+                            <DialogDescription>
+                                Tip
+                                pour {clickAttacking && clickAttacking.name} sur {clickDefending && clickDefending.name} ?
+                            </DialogDescription>
+                        </DialogHeader>
+                        <Input id="tip" name="tip" onChange={(e) => setNewTip(e.target.value)}/>
+                        <div className={"space-x-4"}><Checkbox id="mutuel" checked={newTipMutual}
+                                                               onCheckedChange={(value) => setNewTipMutual(value === true)}/><span>Mutuel</span>
+                        </div>
+                        <DialogFooter>
+                            <DialogClose asChild>
+                                <Button variant="outline">Cancel</Button>
+                            </DialogClose>
+                            <Button onClick={OnSubmitDialog}>Save changes</Button>
+                        </DialogFooter>
+                    </DialogContent>
+                </Dialog>
 
-                <table className={`relative border [&_td]:border ${baseBg}
-                 `}>
-                    <Tooltip open={tooltipOpen} onOpenChange={setTooltipOpen}>
-                        <TooltipTrigger asChild>
-                            <div
-                                className={"absolute opacity-0"}
-                                style={{
-                                    top: tooltipOffset[1],
-                                    left: tooltipOffset[0],
-                                }}>
-                                .
-                            </div>
-                        </TooltipTrigger>
-                        <TooltipContent>
-                            <p>{currentTip}</p>
-                        </TooltipContent>
-                    </Tooltip>
-                    <motion.thead className={"z-50 relative"}
-                                  animate={{y: topOffset}}
-                                  transition={{ease: "easeOut", duration: 0.2}}
-                                  style={{y:topY}}
-                    >
-                        <tr ref={topRowRef}>
-                            <th className={"pointer-events-none"}></th>
-                            {
-                                types && Object.entries(types).map(([key, value]) => {
-                                    return (
-                                        <th key={key}
-                                            onMouseEnter={() => OnHoverDefending(value)}
-                                            onMouseLeave={() => OnHoverDefending(hoverDefendingType == value ? undefined : value)}
-                                            className={cn(
-                                                "relative bg-accent ", //TODO:Here size
-                                            )}
-                                        >
-                                           <TypeIcon type={value} additionalClass={cn(
-                                               "",
-                                               hoverAttackingType && relations[hoverAttackingType.id][value.id - 1] == 1 ? "opacity-20" : "")}/>
-                                        </th>);
-                                })
-                            }
-                            
-                        </tr>
-                    </motion.thead>
+                <TooltipProvider>
 
-                    <tbody className={"relative "} ref={tbodyRef}>
-                    {
-                        types && Object.entries(types).map(([_, rowType]) => {
-                            return (<tr className={cn(
-                                    "relative",
-                                    baseBg
-                                )}>
+                    <div className={`relative border [&_>div]:border ${baseBg}
+                  grid types-grid max-w-2xl mx-auto`}>
+                        <Tooltip open={tooltipOpen} onOpenChange={setTooltipOpen}>
+                            <TooltipTrigger asChild>
+                                <div
+                                    className={"absolute opacity-0"}
+                                    style={{
+                                        top: tooltipOffset[1],
+                                        left: tooltipOffset[0],
+                                    }}>
+                                    .
+                                </div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                                <p>{currentTip}</p>
+                            </TooltipContent>
+                        </Tooltip>
 
-                                    <motion.td
-                                        animate={{x: leftOffset}}
-                                        transition={{ease: "easeOut", duration: 0.2}}
-                                        style={{x:leftX}}
-                                        onMouseEnter={() => OnHoverAttacking(rowType)}
-                                        onMouseLeave={() => OnHoverAttacking(hoverAttackingType == rowType ? undefined : rowType)
-                                        }
-                                        className={"relative z-10 bg-accent"}>
-                                            
-                                        <TypeIcon type={rowType} 
-                                                  additionalClass={cn(
-                                                      "w-full h-full",
-                                                      hoverDefendingType && relations[rowType.id][hoverDefendingType.id - 1] == 1 ? "opacity-20" : "")}/>
-                                    </motion.td>
-                                    {
-                                        relations && relations[rowType.id].map((relationValue, index) => {
-                                            
-                                            //TODO : Just remove new type
-                                            if(index == relations[rowType.id].length - 1) {
-                                                return <></>
+                        {/*Header*/}
+                        <div className={"pointer-events-none"}></div>
+                        {
+                            types && Object.entries(types).map(([key, value]) => {
+                                return (
+                                    <div key={key}
+                                         onMouseEnter={() => OnHoverDefending(value)}
+                                         onMouseLeave={() => OnHoverDefending(hoverDefendingType == value ? undefined : value)}
+                                         className={cn(
+                                             "relative bg-accent ", //TODO:Here size
+                                         )}
+                                    >
+                                        <TypeIcon type={value} additionalClass={cn(
+                                            "",
+                                            hoverAttackingType && relations[hoverAttackingType.id][value.id - 1] == 1 ? "opacity-20" : "")}/>
+                                    </div>);
+                            })
+                        }
+
+
+                        {
+                            types && Object.entries(types).map(([_, rowType]) => {
+                                return (<>
+
+                                        <motion.td
+                                            animate={{x: leftOffset}}
+                                            transition={{ease: "easeOut", duration: 0.2}}
+                                            style={{x: leftX}}
+                                            onMouseEnter={() => OnHoverAttacking(rowType)}
+                                            onMouseLeave={() => OnHoverAttacking(hoverAttackingType == rowType ? undefined : rowType)
                                             }
-                                            if (relationValue != 1) {
+                                            className={"relative z-10 bg-accent"}>
 
-                                                return (
-                                                    <td key={index} className={cn(
-                                                        "transition-all cursor-help",
-                                                        hoverAttackingType == rowType && hoverBg,
-                                                        hoverDefendingType && hoverDefendingType.id == index + 1 && hoverBg,
-                                                        relationValue == 0 && noDamageBg,
-                                                        relationValue == 0.5 && halfDamageBg,
-                                                        relationValue == 2 && doubleDamageBg,
-                                                        hoverAttackingType && hoverAttackingType != rowType && "opacity-40",
-                                                        hoverDefendingType && hoverDefendingType.id != index + 1 && "opacity-40",
-                                                    )}
-                                                        onMouseEnter={() => OnHoverCell(rowType, index)}
-                                                        onClick={() => OnClickCell(rowType, index)}
-                                                        onMouseLeave={() => setTooltipOpen(false)}
+                                            <TypeIcon type={rowType}
+                                                      additionalClass={cn(
+                                                          "w-full h-full",
+                                                          hoverDefendingType && relations[rowType.id][hoverDefendingType.id - 1] == 1 ? "opacity-20" : "")}/>
+                                        </motion.td>
+                                        {
+                                            relations && relations[rowType.id].map((relationValue, index) => {
 
-                                                    >
-                                                        <div className={"text-center h-fit align-middle"}>
-                                                            
-                                                        {relationValue === 0.5 ? (<div className={"text-[10px]"}><sup>1</sup>&frasl;<sub>2</sub></div>):`${relationValue}`}
-                                                            
+                                                //TODO : Just remove new type
+                                                if (index == 18) {
+                                                    return <></>
+                                                }
+                                                if (relationValue != 1) {
+
+                                                    return (
+                                                        <div key={index} className={cn(
+                                                            "flex transition-all cursor-help",
+                                                            hoverAttackingType == rowType && hoverBg,
+                                                            hoverDefendingType && hoverDefendingType.id == index + 1 && hoverBg,
+                                                            relationValue == 0 && noDamageBg,
+                                                            relationValue == 0.5 && halfDamageBg,
+                                                            relationValue == 2 && doubleDamageBg,
+                                                            hoverAttackingType && hoverAttackingType != rowType && "opacity-40",
+                                                            hoverDefendingType && hoverDefendingType.id != index + 1 && "opacity-40",
+                                                        )}
+                                                             onMouseEnter={() => OnHoverCell(rowType, index)}
+                                                             onClick={() => OnClickCell(rowType, index)}
+                                                             onMouseLeave={() => setTooltipOpen(false)}
+
+                                                        >
+                                                            <div className={cn("mx-auto my-auto h-fit")}>
+
+                                                                {relationValue === 0.5 ? (
+                                                                    <><sup>1</sup>&frasl;
+                                                                        <sub>2</sub></>) : `${relationValue}`}
+
+                                                            </div>
                                                         </div>
-                                                    </td>
-                                                );
-                                            } else {
-                                                return (
-                                                    <td key={index} className={cn(
-                                                        hoverAttackingType == rowType && hoverBg,
-                                                        hoverDefendingType && hoverDefendingType.id == index + 1 && hoverBg,
-                                                        hoverAttackingType && hoverAttackingType != rowType && "opacity-50",
-                                                        hoverDefendingType && hoverDefendingType.id != index + 1 && "opacity-50",
-                                                    )}
-                                                    >
-                                                    </td>
-                                                );
-                                                
-                                            }
-                                        })
-                                    }
-                                </tr>
-                            );
-                        })
-                    }
-                    </tbody>
-                </table>
-            </TooltipProvider>
-        </div>
+                                                    );
+                                                } else {
+                                                    return (
+                                                        <div key={index} className={cn(
+                                                            hoverAttackingType == rowType && hoverBg,
+                                                            hoverDefendingType && hoverDefendingType.id == index + 1 && hoverBg,
+                                                            hoverAttackingType && hoverAttackingType != rowType && "opacity-50",
+                                                            hoverDefendingType && hoverDefendingType.id != index + 1 && "opacity-50",
+                                                        )}
+                                                        >
+                                                        </div>
+                                                    );
+
+                                                }
+                                            })
+                                        }
+                                    </>
+                                );
+                            })
+                        }
+                    </div>
+                </TooltipProvider>
+            </div>
             {/* <img src={"chart.png"} className={"w-full"}/> */}
         </>
     )
