@@ -69,8 +69,7 @@ function TypesTable() {
 
     ]
 
-    const topRowRef = useRef(null);
-    const tbodyRef = useRef(null);
+    const firstCellRef = useRef<HTMLElement>(null);
 
     const hoverBg = "bg-accent";
     const noDamageBg = "bg-muted-foreground";
@@ -124,6 +123,19 @@ function TypesTable() {
         return Object.entries(types)[ind][1];
     }
 
+    function GetTypeFromId(id: number): Type {
+        return types[id];
+    }
+
+    function GetCellOffset(id: string) {
+        const cell = document.getElementById(id)?.getBoundingClientRect();
+        if (!cell)
+            return undefined;
+        return {
+            x: cell.x - firstCellRef.current!.getBoundingClientRect().x,
+            y: cell.y - firstCellRef.current!.getBoundingClientRect().y
+        };
+    }
 
     function OnHoverAttacking(type: Type) {
         if (hoverDefendingType || leftX.get() != 0)
@@ -131,9 +143,14 @@ function TypesTable() {
         setHoverAttackingType(type);
 
         if (type == undefined) {
+            console.log("type undefined");
             setTopOffset(0);
         } else {
-            setTopOffset(tbodyRef.current.children[1].clientHeight * (type.id - 1));
+            console.log("type NOT undefined");
+            const prevRowOffset = GetCellOffset(`left-type-${type.id - 1}`);
+            if (!prevRowOffset) //First row
+                return;
+            setTopOffset(prevRowOffset.y);
         }
     }
 
@@ -145,17 +162,21 @@ function TypesTable() {
         if (type == undefined) {
             setLeftOffset(0);
         } else {
-            setLeftOffset(topRowRef.current.children[1].clientWidth * (type.id - 1));
+            const prevColumnOffset = GetCellOffset(`top-type-${type.id - 1}`);
+            if (!prevColumnOffset) //First column
+                return;
+            setLeftOffset(prevColumnOffset.x);
         }
     }
 
     function OnHoverCell(attackingType: Type, defendingTypeIndex: number) {
-        const defendingType = GetTypeFromIndex(defendingTypeIndex);
+        const defendingType = GetTypeFromId(defendingTypeIndex);
         const tip = FindTip(attackingType, defendingType);
         if (!tip)
             return;
         setCurrentTip(tip);
-        setTooltipOffset([tbodyRef.current.firstChild.firstChild.clientWidth / 2 + tbodyRef.current.firstChild.firstChild.clientWidth * (defendingType.id), topRowRef.current.clientHeight * (attackingType.id)]);
+        const cellOffset = GetCellOffset(`cell-${attackingType.id}-${defendingTypeIndex}`)!;
+        setTooltipOffset([cellOffset.x, cellOffset.y]);
         setTooltipOpen(true);
         setClickAttacking(attackingType);
         setClickDefending(defendingType);
@@ -201,8 +222,7 @@ function TypesTable() {
         <>
             <div className="relative my-auto mx-auto md:mx-8 lg:mx-auto 
                  text-[12px]
-                  lg:text-lg md:font-bold
-        ">
+                  lg:text-lg md:font-bold">
                 <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
                     <DialogContent>
                         <DialogHeader>
@@ -246,30 +266,35 @@ function TypesTable() {
                         </Tooltip>
 
                         {/*Header*/}
-                        <div className={"pointer-events-none"}></div>
+                        <div className={"pointer-events-none"} ref={firstCellRef}></div>
                         {
                             types && Object.entries(types).map(([key, value]) => {
                                 return (
-                                    <div key={key}
-                                         onMouseEnter={() => OnHoverDefending(value)}
-                                         onMouseLeave={() => OnHoverDefending(hoverDefendingType == value ? undefined : value)}
-                                         className={cn(
-                                             "relative bg-accent ", //TODO:Here size
-                                         )}
+                                    <motion.div key={key}
+                                                id={`top-type-${value.id}`}
+                                                onMouseEnter={() => OnHoverDefending(value)}
+                                                onMouseLeave={() => OnHoverDefending(hoverDefendingType == value ? undefined : value)}
+                                                className={cn(
+                                                    "relative bg-accent z-10", //TODO:Here size
+                                                )}
+                                                animate={{y: topOffset}}
+                                                transition={{ease: "easeOut", duration: 0.2}}
+                                                style={{y: topY}}
                                     >
                                         <TypeIcon type={value} additionalClass={cn(
                                             "",
                                             hoverAttackingType && relations[hoverAttackingType.id][value.id - 1] == 1 ? "opacity-20" : "")}/>
-                                    </div>);
+                                    </motion.div>);
                             })
                         }
-
 
                         {
                             types && Object.entries(types).map(([_, rowType]) => {
                                 return (<>
 
-                                        <motion.td
+                                        <motion.div
+                                            key={rowType.id}
+                                            id={`left-type-${rowType.id}`}
                                             animate={{x: leftOffset}}
                                             transition={{ease: "easeOut", duration: 0.2}}
                                             style={{x: leftX}}
@@ -282,7 +307,7 @@ function TypesTable() {
                                                       additionalClass={cn(
                                                           "w-full h-full",
                                                           hoverDefendingType && relations[rowType.id][hoverDefendingType.id - 1] == 1 ? "opacity-20" : "")}/>
-                                        </motion.td>
+                                        </motion.div>
                                         {
                                             relations && relations[rowType.id].map((relationValue, index) => {
 
@@ -293,17 +318,19 @@ function TypesTable() {
                                                 if (relationValue != 1) {
 
                                                     return (
-                                                        <div key={index} className={cn(
-                                                            "flex transition-all cursor-help",
-                                                            hoverAttackingType == rowType && hoverBg,
-                                                            hoverDefendingType && hoverDefendingType.id == index + 1 && hoverBg,
-                                                            relationValue == 0 && noDamageBg,
-                                                            relationValue == 0.5 && halfDamageBg,
-                                                            relationValue == 2 && doubleDamageBg,
-                                                            hoverAttackingType && hoverAttackingType != rowType && "opacity-40",
-                                                            hoverDefendingType && hoverDefendingType.id != index + 1 && "opacity-40",
-                                                        )}
-                                                             onMouseEnter={() => OnHoverCell(rowType, index)}
+                                                        <div key={index}
+                                                             id={`cell-${rowType.id}-${index + 1}`}
+                                                             className={cn(
+                                                                 "flex transition-all cursor-help",
+                                                                 hoverAttackingType == rowType && hoverBg,
+                                                                 hoverDefendingType && hoverDefendingType.id == index + 1 && hoverBg,
+                                                                 relationValue == 0 && noDamageBg,
+                                                                 relationValue == 0.5 && halfDamageBg,
+                                                                 relationValue == 2 && doubleDamageBg,
+                                                                 hoverAttackingType && hoverAttackingType != rowType && "opacity-40",
+                                                                 hoverDefendingType && hoverDefendingType.id != index + 1 && "opacity-40",
+                                                             )}
+                                                             onMouseEnter={() => OnHoverCell(rowType, index + 1)}
                                                              onClick={() => OnClickCell(rowType, index)}
                                                              onMouseLeave={() => setTooltipOpen(false)}
 
