@@ -11,6 +11,7 @@ export function Capitalize(val:string) {
 
 export function GroupBy (xs:{}[], key:string) {
     return xs.reduce(function(rv, x) {
+        // @ts-ignore
         (rv[x[key]] ??= []).push(x);
         return rv;
     }, {});

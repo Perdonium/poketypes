@@ -37,6 +37,7 @@ function TypeCard() {
         //TODO : improve
     }, []);
 
+    // @ts-ignore
     const handleHover = (e: MouseEvent<HTMLElement>) => {
         if (e.target && e.target.tagName === "IMG") {
             const tip = FindTip(currentType!, Object.values(types).find(x => x.name == e.target.dataset.type)!);
