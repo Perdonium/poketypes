@@ -26,7 +26,7 @@ export const PokemonContext = createContext<PokemonContextType>({
 function MainPage() {
     const [tab, setTab] = useState("pokemons");
 
-    const onTabChange = (value) => {
+    const onTabChange = (value:string) => {
         setTab(value);
     }
     
