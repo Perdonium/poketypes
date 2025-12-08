@@ -2,7 +2,7 @@
 import type {Type} from "@/assets/types.ts";
 import {usePokedex} from "@/stores/store.tsx";
 import {useContext} from "react";
-import {PokemonContext} from "@/pages/main-page/MainPage.tsx";
+import {PokemonContext} from "@/pages/MainPage.tsx";
 
 function TypeIcon({type, additionalClass, useClick = true}:{type:Type|string, additionalClass:string, useClick?:boolean}) {
 

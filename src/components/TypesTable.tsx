@@ -1,4 +1,4 @@
-﻿import {PokemonContext} from "@/pages/main-page/MainPage.tsx";
+﻿import {PokemonContext} from "@/pages/MainPage.tsx";
 import {cn} from "@/lib/utils.ts";
 import {useContext, useEffect, useRef, useState} from "react";
 import {TooltipProvider} from "@/components/ui/tooltip.tsx";

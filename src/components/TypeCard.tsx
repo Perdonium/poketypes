@@ -3,7 +3,7 @@ import TypeIcon from "@/components/TypeIcon.tsx";
 import {Separator} from "@/components/ui/separator.tsx";
 import PokemonRelation from "@/components/PokemonRelation.tsx";
 import {useContext, useEffect, useState} from "react";
-import {PokemonContext} from "@/pages/main-page/MainPage.tsx";
+import {PokemonContext} from "@/pages/MainPage.tsx";
 import {usePokedex} from "@/stores/store.tsx";
 import type {Tip, Type} from "@/assets/types.ts";
 import RelationTip from "@/components/RelationTip.tsx";
@@ -58,7 +58,7 @@ function TypeCard() {
         <>
             {currentType &&
                 <Item variant="outline"
-                      className={"my-8 py-2 bg-card mx-auto h-[15rem] w-[300px] gap-0"}
+                      className={"my-4 lg:my-8 bg-card mx-auto h-[15rem] w-[300px] gap-0"}
                       onMouseOver={handleHover}>
                     <RelationTip tip={currentTip} tooltipOpen={tooltipOpen} offset={offset}/>
                     <ItemContent className={"w-fit h-fit mx-auto"}>

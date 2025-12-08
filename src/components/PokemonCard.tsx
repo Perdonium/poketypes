@@ -4,7 +4,7 @@ import {Separator} from "@/components/ui/separator.tsx";
 import PokemonRelation from "@/components/PokemonRelation.tsx";
 import {memo, useContext} from "react";
 import type {Dictionary, Pokemon, Type} from "@/assets/types.ts";
-import {PokemonContext} from "@/pages/main-page/MainPage.tsx";
+import {PokemonContext} from "@/pages/MainPage.tsx";
 import {Capitalize} from "@/lib/utils.ts";
 const pokemonSpritePrefix = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
 

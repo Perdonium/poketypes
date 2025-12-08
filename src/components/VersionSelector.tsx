@@ -5,7 +5,7 @@ import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
 import {Button} from "@/components/ui/button.tsx";
 import {ChevronsUpDown} from "lucide-react";
 import {Command, CommandGroup, CommandItem} from "@/components/ui/command.tsx";
-import {PokemonContext} from "@/pages/main-page/MainPage.tsx";
+import {PokemonContext} from "@/pages/MainPage.tsx";
 import type {Dictionary, VersionGroup} from "@/assets/types.ts";
 import {Switch} from "@/components/ui/switch.tsx";
 import {Label} from "@/components/ui/label.tsx";
@@ -47,7 +47,7 @@ function VersionSelector() {
     const groupsByVersions: Dictionary<VersionGroup[]> = versionGroups ? GroupBy(Object.values(versionGroups), "generation") : {};
 
     return (
-        <div className={"w-full my-4 flex justify-center md:grid md:grid-cols-2 space-x-4 h-[120px]"}>
+        <div className={"w-full lg:my-4 flex justify-center space-x-4 h-[120px]"}>
             {versionGroups && isDesktop &&
                 <Popover open={open} onOpenChange={setOpen}>
                     <PopoverTrigger asChild>
@@ -55,7 +55,7 @@ function VersionSelector() {
                             variant="ghost"
                             role="combobox"
                             aria-expanded={open}
-                            className="w-fit h-fit my-auto md:ml-auto"
+                            className="w-fit h-fit my-auto"
                         >
                             {Object.values(versionGroups).find((pokedex) => pokedex.id === selectedGroupId)?.versions
                                 .map(x => (
