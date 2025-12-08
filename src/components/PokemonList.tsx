@@ -28,7 +28,8 @@ function PokemonList() {
     const national: boolean = usePokedex((state) => state.national);
     const versionGroup: VersionGroup | undefined = usePokedex((state) => state.versionGroup);
 
-    const scrollParentRef = useRef(null)
+    const scrollParentRef = useRef<HTMLDivElement>(null)
+    const inputRef = useRef<HTMLInputElement>(null)
 
     useEffect(() => {
         if (!versionGroup) return;
@@ -42,7 +43,6 @@ function PokemonList() {
         for (let entry of pokedexEntries)
             entries[entry.species] = entry.entry;
         setEntryMap(entries);
-        // @ts-ignore
         scrollParentRef.current!.scrollTop = 0;
         
     }, [versionGroup, national]);
@@ -63,13 +63,29 @@ function PokemonList() {
         estimateSize: () => 250,
     })
 
+    function OnInputClick(){
+        const windowHeight = window.innerHeight;
+        const yPos = inputRef.current!.getBoundingClientRect().y;
+        const scrollPercentage = (yPos / (windowHeight)) * 100;
+        if(scrollPercentage > 50) {
+            //Need to add a delay because on mobile the keyboard opening stops any scrolling
+            setTimeout(() => {
+                inputRef.current!.scrollIntoView({behavior: "smooth", block: "start"});
+            }, 300);
+        }
+    }
+
+
     return (
-        <div className={"max-w-90 w-90 mb-8 mx-auto lg:mx-0"} id={"pokemon-list"}>
+        <div className={"max-w-90 w-90 mb-8 mx-auto lg:mx-0 scroll-smooth"} id={"pokemon-list"}>
 
             <Input type={"text"}
                    placeholder={"Nom"}
                    value={nameInput}
-                   onChange={e => setNameInput(e.target.value)}/>
+                   onChange={e => setNameInput(e.target.value)}
+                    onClick={(_) => OnInputClick()}
+                    ref={inputRef}
+                />
         <div className={"h-[90vh] md:h-[80vh] mt-4"}>
             <div
                 ref={scrollParentRef}
