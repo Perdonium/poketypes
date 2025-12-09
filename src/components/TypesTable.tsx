@@ -31,7 +31,7 @@ function TypesTable() {
     const noDamageBg = "bg-muted-foreground";
     const halfDamageBg = "bg-destructive";
     const doubleDamageBg = "bg-green-500";
-    const baseBg = "bg-background";
+    const baseBg = "bg-background/30";
 
     const [hoverAttackingType, setHoverAttackingType] = useState<Type | undefined>();
     const [hoverDefendingType, setHoverDefendingType] = useState<Type | undefined>();

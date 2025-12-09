@@ -13,6 +13,8 @@ import TypeCard from "@/components/TypeCard.tsx";
 import {Tabs, TabsList} from "@/components/ui/tabs";
 import {TabsTrigger} from "@/components/ui/tabs.tsx";
 import {cn} from "@/lib/utils.ts";
+import SVGBackground from "@/components/SVGBackground.tsx";
+
 
 export const PokemonContext = createContext<PokemonContextType>({
     pokemons,
@@ -31,10 +33,11 @@ function MainPage() {
     }
 
     return (
-        <div className={"w-full"}>
+        <div className={"relative w-full"}>
+            <SVGBackground/>
             {/*<h1 className={"mb-16 text-4xl font-bold"}>PokeTypes.fr</h1>*/}
             <VersionSelector/>
-            <Tabs id={"tabs"} value={tab} onValueChange={onTabChange} className={"lg:hidden"}>
+            <Tabs id={"tabs"} value={tab} onValueChange={onTabChange} className={"lg:invisible"}>
                 <TabsList className={"mx-auto mb-4"}>
                     <TabsTrigger value="pokemons">Pokémons</TabsTrigger>
                     <TabsTrigger value="grid">Grille des types</TabsTrigger>
