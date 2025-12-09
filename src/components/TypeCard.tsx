@@ -58,13 +58,18 @@ function TypeCard() {
         <>
             {currentType &&
                 <Item variant="outline"
-                      className={"my-4 lg:my-8 bg-card mx-auto h-[15rem] w-[300px] gap-0"}
+                      className={"my-4 lg:my-8 bg-card/[0.5] mx-auto h-[15rem] w-[300px] gap-0 border-l-0 border-r-0 border-b-0 border-t border-opacity-20 overflow-hidden"}
                       onMouseOver={handleHover}>
                     <RelationTip tip={currentTip} tooltipOpen={tooltipOpen} offset={offset}/>
                     <ItemContent className={"w-fit h-fit mx-auto"}>
-                        <div className={"flex justify-center gap-4"}>
+                        <div className={"relative flex justify-center gap-4"}>
                             <TypeIcon type={currentType} additionalClass={"w-12 mx-auto"} useClick={false}/>
                             <h1 className={"text-lg font-bold h-fit my-auto"}>{currentType.name.toUpperCase()}</h1>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                 className="pointer-events-none left-0 absolute blur-xl -translate-y-1/2 w-[150px] opacity-40 -z-10">
+                                <circle cx={"0%"} cy={"0%"} r="50"/>
+                            </svg>
                         </div>
 
                         <Separator className={"my-4"}/>
