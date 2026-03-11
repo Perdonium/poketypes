@@ -43,7 +43,7 @@ function MainPage() {
                     <TabsTrigger value="grid">Grille des types</TabsTrigger>
                 </TabsList>
             </Tabs>
-            <div className={"relative flex flex-col lg:flex-row lg:gap-16 md:h-full justify-around max-w-7xl mx-auto"}>
+            <div className={"relative flex flex-col lg:flex-row lg:gap-16 md:h-full max-w-full mx-auto w-fit"}>
                 {/*
                 <svg id="visual" viewBox="0 0 960 540" width="960" height="540" xmlns="http://www.w3.org/2000/svg"
                      className={"absolute -z-10 scale-200  blur-2xl opacity-50"}>

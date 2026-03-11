@@ -2,6 +2,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--secondary);
+}
+
 @custom-variant dark (&:is(.dark *));
 :root {
     --background: hsl(208 100% 97.0588%);

@@ -7,7 +7,7 @@ function PokemonRelation({typeList, title, orientation = "vertical", useClick = 
     return (
         <>
 
-            <Separator className={cn("separator", orientation=="vertical" && "!h-auto")} orientation={orientation}/>
+            <Separator className={cn("separator bg-white/40", orientation=="vertical" && "!h-auto")} orientation={orientation}/>
         <div className={"flex flex-col"}>
 
             <div className={"text-lg font-bold"}>

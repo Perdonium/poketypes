@@ -1,4 +1,4 @@
-﻿import {useContext, useEffect, useRef, useState} from "react";
+﻿import {useContext, useEffect, useMemo, useRef, useState} from "react";
 import {PokemonContext} from "@/pages/MainPage.tsx";
 import PokemonCard from "@/components/PokemonCard.tsx";
 import {Input} from "@/components/ui/input.tsx";
@@ -24,13 +24,15 @@ const generations = [
 function PokemonList() {
     const {pokemons, pokedexes} = useContext(PokemonContext);
     const [nameInput, setNameInput] = useState("");
+    const lanes = useResponsiveLanes();
     const [entryMap, setEntryMap] = useState<Record<string, number>>({});
     const national: boolean = usePokedex((state) => state.national);
     const versionGroup: VersionGroup | undefined = usePokedex((state) => state.versionGroup);
 
     const scrollParentRef = useRef<HTMLDivElement>(null)
     const inputRef = useRef<HTMLInputElement>(null)
-
+    
+    const width = lanes * 70;
     useEffect(() => {
         if (!versionGroup) return;
         let entries: Record<string, number> = {};
@@ -47,22 +49,31 @@ function PokemonList() {
         
     }, [versionGroup, national]);
 
-    const filtered:Pokemon[] = pokemons && versionGroup
-        ? Object.values(pokemons)
-            .filter(pkmn =>
-                entryMap[pkmn.species] !== undefined &&
-                pkmn.name.toLowerCase().includes(nameInput.toLowerCase())
-            )
-            .sort((a, b) => entryMap[a.species] - entryMap[b.species])
-        : [];
+    const filtered: Pokemon[] = useMemo(() => {
+        if (!pokemons || !versionGroup) return [];
+        return Object.values(pokemons)
+            .filter(pkmn => entryMap[pkmn.species] !== undefined &&
+                pkmn.name.toLowerCase().includes(nameInput.toLowerCase()))
+            .sort((a, b) => entryMap[a.species] - entryMap[b.species]);
+    }, [pokemons, versionGroup, entryMap, nameInput]);
 
+    
 
+    const paddedCount = Math.ceil(filtered.length / lanes) * lanes;
     const rowVirtualizer = useVirtualizer({
-        count: filtered.length,
+        get count() {
+            return paddedCount;
+        },
         getScrollElement: () => scrollParentRef.current,
         estimateSize: () => 250,
+        lanes:lanes,
+        
     })
-
+    
+    useEffect(() => {
+        rowVirtualizer.measure();
+    }, [lanes, paddedCount]);
+    
     function OnInputClick(){
         const windowHeight = window.innerHeight;
         const yPos = inputRef.current!.getBoundingClientRect().y;
@@ -77,20 +88,22 @@ function PokemonList() {
 
 
     return (
-        <div className={"max-w-90 w-90 mb-8 mx-auto lg:mx-0 scroll-smooth"} id={"pokemon-list"}>
+        <div className={"w-auto mb-8 mx-auto lg:mx-0 scroll-smooth"} id={"pokemon-list"}>
 
+            <span className={"font-bold mr-4"} onClick={() => setLanes(lanes-1)}>Rechercher </span>
             <Input type={"text"}
                    placeholder={"Nom"}
+                   className={"w-auto"}
                    value={nameInput}
                    onChange={e => setNameInput(e.target.value)}
                     onClick={(_) => OnInputClick()}
                     ref={inputRef}
                 />
-        <div className={"h-[90vh] md:h-[80vh] mt-4"}>
+        <div className={"h-[90vh] md:h-[80vh] mt-4 bg-black/10"} style={{width:`${width/3}rem`}}>
             <div
                 ref={scrollParentRef}
                 id={"scrollParent"}
-                className={"overflow-auto h-full border"}
+                className={"overflow-y-auto overflow-x-hidden h-full border"}
             >
                 <div
                     style={{
@@ -98,26 +111,32 @@ function PokemonList() {
                         width: '100%',
                     }}
                     id={"listParent"}
-                    className={"relative"}
+                    className={"relative flex"}
                 >
-                    {filtered.length > 0 && rowVirtualizer.getVirtualItems().map((virtualItem) => (
-                        <div
-                            key={virtualItem.key}
-                            style={{
-                                position: 'absolute',
-                                top: 0,
-                                left: 0,
-                                width: '100%',
-                                height: `${virtualItem.size}px`,
-                                transform: `translateY(${virtualItem.start}px)`,
-                            }}
-                        >
-                            <PokemonCard
-                                pokemon={filtered[virtualItem.index]}
-                                entry={entryMap[filtered[virtualItem.index].species]}
-                            />
-                        </div>
-                    ))}
+                    {rowVirtualizer.getVirtualItems().map(virtualItem => {
+                        const item = filtered[virtualItem.index];
+                        if (!item) return null; // fantôme pour compléter la dernière ligne
+
+                        const containerWidth = scrollParentRef.current?.clientWidth || 0;
+                        const laneWidth = containerWidth / lanes;
+
+                        return (
+                            <div
+                                key={virtualItem.key}
+                                style={{
+                                    position: "absolute",
+                                    width: `${100 / lanes}%`,
+                                    height: `${virtualItem.size}px`,
+                                    transform: `translateX(${virtualItem.lane * laneWidth}px) translateY(${virtualItem.start}px)`,
+                                }}
+                            >
+                                <PokemonCard
+                                    pokemon={item}
+                                    entry={entryMap[item.species]}
+                                />
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
 
@@ -127,4 +146,25 @@ function PokemonList() {
     )
 }
 
+function useResponsiveLanes() {
+    const [lanes, setLanes] = useState(3); // valeur par défaut
+
+    useEffect(() => {
+        function updateLanes() {
+            const width = window.innerWidth;
+
+            if (width < 1500) setLanes(1);      // mobile
+            else if (width < 2000) setLanes(2); // tablette
+            else setLanes(3);                  // desktop
+        }
+
+        updateLanes(); // set initial value
+        window.addEventListener("resize", updateLanes);
+
+        return () => window.removeEventListener("resize", updateLanes);
+    }, []);
+
+    return lanes;
+}
+    
 export default PokemonList

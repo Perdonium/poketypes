@@ -33,13 +33,12 @@ const colors = {
 };
 function PokemonCard({pokemon, entry}: { pokemon: Pokemon, entry: number }) {
     const {types}: { types: Dictionary<Type> } = useContext(PokemonContext);
-
-    console.log(pokemon.color);
     
     return (
         <>
             <Item variant="outline"
                   className={cn("gap-0 py-2 my-2 h-[15rem] border-l-0 border-r-0 border-b-0 border-t border-white/50 mx-1 overflow-hidden",
+                      "hover:scale-105 hover:cursor-pointer hover:z-10 transition-all",
                   pokemon.color in colors && colors[pokemon.color])}>
 
                 <ItemContent className={"w-fit h-fit"}>
@@ -84,9 +83,9 @@ function PokemonCard({pokemon, entry}: { pokemon: Pokemon, entry: number }) {
                             </div>
                         </div>
 
-                        <Separator className={""}/>
+                        <Separator className={"bg-white/40"}/>
 
-                        <div className={"flex justify-evenly [&>*:first-child]:hidden mt-4"}>
+                        <div className={"flex justify-evenly [&>*:first-child]:hidden mt-4 -mx-2"}>
                             {pokemon.relations.none &&
                                 <PokemonRelation title="0"
                                                  typeList={pokemon.relations.none.map(x => types[x.toString()].name)}
