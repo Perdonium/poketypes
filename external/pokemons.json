@@ -8,6 +8,7 @@
       "grass",
       "poison"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         12
@@ -35,6 +36,7 @@
       "grass",
       "poison"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         12
@@ -62,6 +64,7 @@
       "grass",
       "poison"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         12
@@ -88,6 +91,7 @@
     "types": [
       "fire"
     ],
+    "color": "red",
     "relations": {
       "half": [
         7,
@@ -112,6 +116,7 @@
     "types": [
       "fire"
     ],
+    "color": "red",
     "relations": {
       "half": [
         7,
@@ -137,6 +142,7 @@
       "fire",
       "flying"
     ],
+    "color": "red",
     "relations": {
       "none": [
         5
@@ -168,6 +174,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -189,6 +196,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -210,6 +218,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -231,6 +240,7 @@
     "types": [
       "bug"
     ],
+    "color": "green",
     "relations": {
       "half": [
         2,
@@ -252,6 +262,7 @@
     "types": [
       "bug"
     ],
+    "color": "green",
     "relations": {
       "half": [
         2,
@@ -274,6 +285,7 @@
       "bug",
       "flying"
     ],
+    "color": "white",
     "relations": {
       "none": [
         5
@@ -305,6 +317,7 @@
       "bug",
       "poison"
     ],
+    "color": "brown",
     "relations": {
       "quarter": [
         2,
@@ -332,6 +345,7 @@
       "bug",
       "poison"
     ],
+    "color": "yellow",
     "relations": {
       "quarter": [
         2,
@@ -359,6 +373,7 @@
       "bug",
       "poison"
     ],
+    "color": "yellow",
     "relations": {
       "quarter": [
         2,
@@ -386,6 +401,7 @@
       "normal",
       "flying"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         5,
@@ -411,6 +427,7 @@
       "normal",
       "flying"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         5,
@@ -436,6 +453,7 @@
       "normal",
       "flying"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         5,
@@ -460,6 +478,7 @@
     "types": [
       "normal"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         8
@@ -477,6 +496,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -495,6 +515,7 @@
       "normal",
       "flying"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         5,
@@ -520,6 +541,7 @@
       "normal",
       "flying"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         5,
@@ -544,6 +566,7 @@
     "types": [
       "poison"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         2,
@@ -566,6 +589,7 @@
     "types": [
       "poison"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         2,
@@ -588,6 +612,7 @@
     "types": [
       "electric"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         3,
@@ -607,6 +632,7 @@
     "types": [
       "electric"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         3,
@@ -626,6 +652,7 @@
     "types": [
       "ground"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         13
@@ -649,6 +676,7 @@
     "types": [
       "ground"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         13
@@ -672,6 +700,7 @@
     "types": [
       "poison"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,
@@ -694,6 +723,7 @@
     "types": [
       "poison"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,
@@ -717,6 +747,7 @@
       "poison",
       "ground"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         13
@@ -746,6 +777,7 @@
     "types": [
       "poison"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         2,
@@ -768,6 +800,7 @@
     "types": [
       "poison"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         2,
@@ -791,6 +824,7 @@
       "poison",
       "ground"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         13
@@ -820,6 +854,7 @@
     "types": [
       "fairy"
     ],
+    "color": "pink",
     "past_types": [
       {
         "gen": "v",
@@ -851,6 +886,7 @@
     "types": [
       "fairy"
     ],
+    "color": "pink",
     "past_types": [
       {
         "gen": "v",
@@ -882,6 +918,7 @@
     "types": [
       "fire"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         7,
@@ -906,6 +943,7 @@
     "types": [
       "fire"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         7,
@@ -931,6 +969,7 @@
       "normal",
       "fairy"
     ],
+    "color": "pink",
     "past_types": [
       {
         "gen": "v",
@@ -963,6 +1002,7 @@
       "normal",
       "fairy"
     ],
+    "color": "pink",
     "past_types": [
       {
         "gen": "v",
@@ -995,6 +1035,7 @@
       "poison",
       "flying"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         5
@@ -1025,6 +1066,7 @@
       "poison",
       "flying"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         5
@@ -1055,6 +1097,7 @@
       "grass",
       "poison"
     ],
+    "color": "blue",
     "relations": {
       "quarter": [
         12
@@ -1082,6 +1125,7 @@
       "grass",
       "poison"
     ],
+    "color": "blue",
     "relations": {
       "quarter": [
         12
@@ -1109,6 +1153,7 @@
       "grass",
       "poison"
     ],
+    "color": "red",
     "relations": {
       "quarter": [
         12
@@ -1136,6 +1181,7 @@
       "bug",
       "grass"
     ],
+    "color": "red",
     "relations": {
       "quarter": [
         5,
@@ -1167,6 +1213,7 @@
       "bug",
       "grass"
     ],
+    "color": "red",
     "relations": {
       "quarter": [
         5,
@@ -1198,6 +1245,7 @@
       "bug",
       "poison"
     ],
+    "color": "purple",
     "relations": {
       "quarter": [
         2,
@@ -1225,6 +1273,7 @@
       "bug",
       "poison"
     ],
+    "color": "purple",
     "relations": {
       "quarter": [
         2,
@@ -1251,6 +1300,7 @@
     "types": [
       "ground"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         13
@@ -1274,6 +1324,7 @@
     "types": [
       "ground"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         13
@@ -1297,6 +1348,7 @@
     "types": [
       "normal"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         8
@@ -1314,6 +1366,7 @@
     "types": [
       "normal"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         8
@@ -1331,6 +1384,7 @@
     "types": [
       "water"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         9,
@@ -1352,6 +1406,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -1373,6 +1428,7 @@
     "types": [
       "fighting"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         6,
@@ -1394,6 +1450,7 @@
     "types": [
       "fighting"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         6,
@@ -1415,6 +1472,7 @@
     "types": [
       "fire"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         7,
@@ -1439,6 +1497,7 @@
     "types": [
       "fire"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         7,
@@ -1463,6 +1522,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -1484,6 +1544,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -1506,6 +1567,7 @@
       "water",
       "fighting"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         6,
@@ -1533,6 +1595,7 @@
     "types": [
       "psychic"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         2,
@@ -1553,6 +1616,7 @@
     "types": [
       "psychic"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         2,
@@ -1573,6 +1637,7 @@
     "types": [
       "psychic"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         2,
@@ -1593,6 +1658,7 @@
     "types": [
       "fighting"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         6,
@@ -1614,6 +1680,7 @@
     "types": [
       "fighting"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         6,
@@ -1635,6 +1702,7 @@
     "types": [
       "fighting"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         6,
@@ -1657,6 +1725,7 @@
       "grass",
       "poison"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         12
@@ -1684,6 +1753,7 @@
       "grass",
       "poison"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         12
@@ -1711,6 +1781,7 @@
       "grass",
       "poison"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         12
@@ -1738,6 +1809,7 @@
       "water",
       "poison"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,
@@ -1765,6 +1837,7 @@
       "water",
       "poison"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,
@@ -1792,6 +1865,7 @@
       "rock",
       "ground"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         13
@@ -1826,6 +1900,7 @@
       "rock",
       "ground"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         13
@@ -1860,6 +1935,7 @@
       "rock",
       "ground"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         13
@@ -1893,6 +1969,7 @@
     "types": [
       "fire"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         7,
@@ -1917,6 +1994,7 @@
     "types": [
       "fire"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         7,
@@ -1942,6 +2020,7 @@
       "water",
       "psychic"
     ],
+    "color": "pink",
     "relations": {
       "half": [
         2,
@@ -1969,6 +2048,7 @@
       "water",
       "psychic"
     ],
+    "color": "pink",
     "relations": {
       "half": [
         2,
@@ -1996,6 +2076,7 @@
       "electric",
       "steel"
     ],
+    "color": "gray",
     "past_types": [
       {
         "gen": "i",
@@ -2041,6 +2122,7 @@
       "electric",
       "steel"
     ],
+    "color": "gray",
     "past_types": [
       {
         "gen": "i",
@@ -2086,6 +2168,7 @@
       "normal",
       "flying"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         5,
@@ -2111,6 +2194,7 @@
       "normal",
       "flying"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         5,
@@ -2136,6 +2220,7 @@
       "normal",
       "flying"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         5,
@@ -2160,6 +2245,7 @@
     "types": [
       "water"
     ],
+    "color": "white",
     "relations": {
       "half": [
         9,
@@ -2182,6 +2268,7 @@
       "water",
       "ice"
     ],
+    "color": "white",
     "relations": {
       "quarter": [
         15
@@ -2205,6 +2292,7 @@
     "types": [
       "poison"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         2,
@@ -2227,6 +2315,7 @@
     "types": [
       "poison"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         2,
@@ -2249,6 +2338,7 @@
     "types": [
       "water"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         9,
@@ -2271,6 +2361,7 @@
       "water",
       "ice"
     ],
+    "color": "purple",
     "relations": {
       "quarter": [
         15
@@ -2295,6 +2386,7 @@
       "ghost",
       "poison"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         1,
@@ -2325,6 +2417,7 @@
       "ghost",
       "poison"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         1,
@@ -2355,6 +2448,7 @@
       "ghost",
       "poison"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         1,
@@ -2385,6 +2479,7 @@
       "rock",
       "ground"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         13
@@ -2418,6 +2513,7 @@
     "types": [
       "psychic"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         2,
@@ -2438,6 +2534,7 @@
     "types": [
       "psychic"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         2,
@@ -2458,6 +2555,7 @@
     "types": [
       "water"
     ],
+    "color": "red",
     "relations": {
       "half": [
         9,
@@ -2479,6 +2577,7 @@
     "types": [
       "water"
     ],
+    "color": "red",
     "relations": {
       "half": [
         9,
@@ -2500,6 +2599,7 @@
     "types": [
       "electric"
     ],
+    "color": "red",
     "relations": {
       "half": [
         3,
@@ -2519,6 +2619,7 @@
     "types": [
       "electric"
     ],
+    "color": "red",
     "relations": {
       "half": [
         3,
@@ -2539,6 +2640,7 @@
       "grass",
       "psychic"
     ],
+    "color": "pink",
     "relations": {
       "half": [
         2,
@@ -2570,6 +2672,7 @@
       "grass",
       "psychic"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         2,
@@ -2600,6 +2703,7 @@
     "types": [
       "ground"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         13
@@ -2623,6 +2727,7 @@
     "types": [
       "ground"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         13
@@ -2646,6 +2751,7 @@
     "types": [
       "fighting"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         6,
@@ -2667,6 +2773,7 @@
     "types": [
       "fighting"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         6,
@@ -2688,6 +2795,7 @@
     "types": [
       "normal"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         8
@@ -2705,6 +2813,7 @@
     "types": [
       "poison"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         2,
@@ -2727,6 +2836,7 @@
     "types": [
       "poison"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         2,
@@ -2750,6 +2860,7 @@
       "ground",
       "rock"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         13
@@ -2784,6 +2895,7 @@
       "ground",
       "rock"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         13
@@ -2817,6 +2929,7 @@
     "types": [
       "normal"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         8
@@ -2834,6 +2947,7 @@
     "types": [
       "grass"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         5,
@@ -2858,6 +2972,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -2875,6 +2990,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -2896,6 +3012,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -2917,6 +3034,7 @@
     "types": [
       "water"
     ],
+    "color": "red",
     "relations": {
       "half": [
         9,
@@ -2938,6 +3056,7 @@
     "types": [
       "water"
     ],
+    "color": "red",
     "relations": {
       "half": [
         9,
@@ -2959,6 +3078,7 @@
     "types": [
       "water"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         9,
@@ -2981,6 +3101,7 @@
       "water",
       "psychic"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         2,
@@ -3008,6 +3129,7 @@
       "psychic",
       "fairy"
     ],
+    "color": "pink",
     "past_types": [
       {
         "gen": "v",
@@ -3042,6 +3164,7 @@
       "bug",
       "flying"
     ],
+    "color": "green",
     "relations": {
       "none": [
         5
@@ -3073,6 +3196,7 @@
       "ice",
       "psychic"
     ],
+    "color": "red",
     "relations": {
       "half": [
         14,
@@ -3096,6 +3220,7 @@
     "types": [
       "electric"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         3,
@@ -3115,6 +3240,7 @@
     "types": [
       "fire"
     ],
+    "color": "red",
     "relations": {
       "half": [
         7,
@@ -3139,6 +3265,7 @@
     "types": [
       "bug"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         2,
@@ -3160,6 +3287,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -3177,6 +3305,7 @@
     "types": [
       "water"
     ],
+    "color": "red",
     "relations": {
       "half": [
         9,
@@ -3199,6 +3328,7 @@
       "water",
       "flying"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         5
@@ -3227,6 +3357,7 @@
       "water",
       "ice"
     ],
+    "color": "blue",
     "relations": {
       "quarter": [
         15
@@ -3250,6 +3381,7 @@
     "types": [
       "normal"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         8
@@ -3267,6 +3399,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -3284,6 +3417,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -3305,6 +3439,7 @@
     "types": [
       "electric"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         3,
@@ -3324,6 +3459,7 @@
     "types": [
       "fire"
     ],
+    "color": "red",
     "relations": {
       "half": [
         7,
@@ -3348,6 +3484,7 @@
     "types": [
       "normal"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         8
@@ -3366,6 +3503,7 @@
       "rock",
       "water"
     ],
+    "color": "blue",
     "relations": {
       "quarter": [
         10
@@ -3395,6 +3533,7 @@
       "rock",
       "water"
     ],
+    "color": "blue",
     "relations": {
       "quarter": [
         10
@@ -3424,6 +3563,7 @@
       "rock",
       "water"
     ],
+    "color": "brown",
     "relations": {
       "quarter": [
         10
@@ -3453,6 +3593,7 @@
       "rock",
       "water"
     ],
+    "color": "brown",
     "relations": {
       "quarter": [
         10
@@ -3482,6 +3623,7 @@
       "rock",
       "flying"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         5
@@ -3510,6 +3652,7 @@
     "types": [
       "normal"
     ],
+    "color": "black",
     "relations": {
       "none": [
         8
@@ -3528,6 +3671,7 @@
       "ice",
       "flying"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         5
@@ -3555,6 +3699,7 @@
       "electric",
       "flying"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         5
@@ -3581,6 +3726,7 @@
       "fire",
       "flying"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         5
@@ -3612,6 +3758,7 @@
     "types": [
       "dragon"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         10,
@@ -3634,6 +3781,7 @@
     "types": [
       "dragon"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         10,
@@ -3657,6 +3805,7 @@
       "dragon",
       "flying"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         5
@@ -3688,6 +3837,7 @@
     "types": [
       "psychic"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         2,
@@ -3708,6 +3858,7 @@
     "types": [
       "psychic"
     ],
+    "color": "pink",
     "relations": {
       "half": [
         2,
@@ -3728,6 +3879,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -3752,6 +3904,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -3776,6 +3929,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -3800,6 +3954,7 @@
     "types": [
       "fire"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         7,
@@ -3824,6 +3979,7 @@
     "types": [
       "fire"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         7,
@@ -3848,6 +4004,7 @@
     "types": [
       "fire"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         7,
@@ -3872,6 +4029,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -3893,6 +4051,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -3914,6 +4073,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -3935,6 +4095,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -3952,6 +4113,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -3970,6 +4132,7 @@
       "normal",
       "flying"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         5,
@@ -3995,6 +4158,7 @@
       "normal",
       "flying"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         5,
@@ -4020,6 +4184,7 @@
       "bug",
       "flying"
     ],
+    "color": "red",
     "relations": {
       "none": [
         5
@@ -4051,6 +4216,7 @@
       "bug",
       "flying"
     ],
+    "color": "red",
     "relations": {
       "none": [
         5
@@ -4082,6 +4248,7 @@
       "bug",
       "poison"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         2,
@@ -4109,6 +4276,7 @@
       "bug",
       "poison"
     ],
+    "color": "red",
     "relations": {
       "quarter": [
         2,
@@ -4136,6 +4304,7 @@
       "poison",
       "flying"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         5
@@ -4166,6 +4335,7 @@
       "water",
       "electric"
     ],
+    "color": "blue",
     "relations": {
       "quarter": [
         9
@@ -4191,6 +4361,7 @@
       "water",
       "electric"
     ],
+    "color": "blue",
     "relations": {
       "quarter": [
         9
@@ -4215,6 +4386,7 @@
     "types": [
       "electric"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         3,
@@ -4234,6 +4406,7 @@
     "types": [
       "fairy"
     ],
+    "color": "pink",
     "past_types": [
       {
         "gen": "v",
@@ -4266,6 +4439,7 @@
       "normal",
       "fairy"
     ],
+    "color": "pink",
     "past_types": [
       {
         "gen": "v",
@@ -4297,6 +4471,7 @@
     "types": [
       "fairy"
     ],
+    "color": "white",
     "past_types": [
       {
         "gen": "v",
@@ -4329,6 +4504,7 @@
       "fairy",
       "flying"
     ],
+    "color": "white",
     "past_types": [
       {
         "gen": "v",
@@ -4369,6 +4545,7 @@
       "psychic",
       "flying"
     ],
+    "color": "green",
     "relations": {
       "none": [
         5
@@ -4398,6 +4575,7 @@
       "psychic",
       "flying"
     ],
+    "color": "green",
     "relations": {
       "none": [
         5
@@ -4426,6 +4604,7 @@
     "types": [
       "electric"
     ],
+    "color": "white",
     "relations": {
       "half": [
         3,
@@ -4445,6 +4624,7 @@
     "types": [
       "electric"
     ],
+    "color": "pink",
     "relations": {
       "half": [
         3,
@@ -4464,6 +4644,7 @@
     "types": [
       "electric"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         3,
@@ -4483,6 +4664,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -4508,6 +4690,7 @@
       "water",
       "fairy"
     ],
+    "color": "blue",
     "past_types": [
       {
         "gen": "v",
@@ -4544,6 +4727,7 @@
       "water",
       "fairy"
     ],
+    "color": "blue",
     "past_types": [
       {
         "gen": "v",
@@ -4579,6 +4763,7 @@
     "types": [
       "rock"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         1,
@@ -4603,6 +4788,7 @@
     "types": [
       "water"
     ],
+    "color": "green",
     "relations": {
       "half": [
         9,
@@ -4625,6 +4811,7 @@
       "grass",
       "flying"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         5
@@ -4656,6 +4843,7 @@
       "grass",
       "flying"
     ],
+    "color": "green",
     "relations": {
       "none": [
         5
@@ -4687,6 +4875,7 @@
       "grass",
       "flying"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         5
@@ -4717,6 +4906,7 @@
     "types": [
       "normal"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         8
@@ -4734,6 +4924,7 @@
     "types": [
       "grass"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         5,
@@ -4758,6 +4949,7 @@
     "types": [
       "grass"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         5,
@@ -4783,6 +4975,7 @@
       "bug",
       "flying"
     ],
+    "color": "red",
     "relations": {
       "none": [
         5
@@ -4814,6 +5007,7 @@
       "water",
       "ground"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         13
@@ -4838,6 +5032,7 @@
       "water",
       "ground"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         13
@@ -4861,6 +5056,7 @@
     "types": [
       "psychic"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         2,
@@ -4881,6 +5077,7 @@
     "types": [
       "dark"
     ],
+    "color": "black",
     "relations": {
       "none": [
         14
@@ -4905,6 +5102,7 @@
       "dark",
       "flying"
     ],
+    "color": "black",
     "relations": {
       "none": [
         5,
@@ -4932,6 +5130,7 @@
       "water",
       "psychic"
     ],
+    "color": "pink",
     "relations": {
       "half": [
         2,
@@ -4958,6 +5157,7 @@
     "types": [
       "ghost"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         1,
@@ -4981,6 +5181,7 @@
     "types": [
       "psychic"
     ],
+    "color": "black",
     "relations": {
       "half": [
         2,
@@ -5001,6 +5202,7 @@
     "types": [
       "psychic"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,
@@ -5022,6 +5224,7 @@
       "normal",
       "psychic"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         8
@@ -5043,6 +5246,7 @@
     "types": [
       "bug"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         2,
@@ -5065,6 +5269,7 @@
       "bug",
       "steel"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         4
@@ -5094,6 +5299,7 @@
     "types": [
       "normal"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         8
@@ -5112,6 +5318,7 @@
       "ground",
       "flying"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         5,
@@ -5139,6 +5346,7 @@
       "steel",
       "ground"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4,
@@ -5172,6 +5380,7 @@
     "types": [
       "fairy"
     ],
+    "color": "pink",
     "past_types": [
       {
         "gen": "v",
@@ -5203,6 +5412,7 @@
     "types": [
       "fairy"
     ],
+    "color": "purple",
     "past_types": [
       {
         "gen": "v",
@@ -5235,6 +5445,7 @@
       "water",
       "poison"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         2,
@@ -5262,6 +5473,7 @@
       "bug",
       "steel"
     ],
+    "color": "red",
     "relations": {
       "none": [
         4
@@ -5292,6 +5504,7 @@
       "bug",
       "rock"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         1,
@@ -5313,6 +5526,7 @@
       "bug",
       "fighting"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,
@@ -5340,6 +5554,7 @@
       "dark",
       "ice"
     ],
+    "color": "black",
     "relations": {
       "none": [
         14
@@ -5369,6 +5584,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -5386,6 +5602,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -5403,6 +5620,7 @@
     "types": [
       "fire"
     ],
+    "color": "red",
     "relations": {
       "half": [
         7,
@@ -5428,6 +5646,7 @@
       "fire",
       "rock"
     ],
+    "color": "red",
     "relations": {
       "quarter": [
         10
@@ -5459,6 +5678,7 @@
       "ice",
       "ground"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         13
@@ -5484,6 +5704,7 @@
       "ice",
       "ground"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         13
@@ -5509,6 +5730,7 @@
       "water",
       "rock"
     ],
+    "color": "pink",
     "relations": {
       "quarter": [
         10
@@ -5537,6 +5759,7 @@
     "types": [
       "water"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         9,
@@ -5558,6 +5781,7 @@
     "types": [
       "water"
     ],
+    "color": "red",
     "relations": {
       "half": [
         9,
@@ -5580,6 +5804,7 @@
       "ice",
       "flying"
     ],
+    "color": "red",
     "relations": {
       "none": [
         5
@@ -5607,6 +5832,7 @@
       "water",
       "flying"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         5
@@ -5635,6 +5861,7 @@
       "steel",
       "flying"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4,
@@ -5667,6 +5894,7 @@
       "dark",
       "fire"
     ],
+    "color": "black",
     "relations": {
       "none": [
         14
@@ -5696,6 +5924,7 @@
       "dark",
       "fire"
     ],
+    "color": "black",
     "relations": {
       "none": [
         14
@@ -5725,6 +5954,7 @@
       "water",
       "dragon"
     ],
+    "color": "blue",
     "relations": {
       "quarter": [
         10,
@@ -5747,6 +5977,7 @@
     "types": [
       "ground"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         13
@@ -5770,6 +6001,7 @@
     "types": [
       "ground"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         13
@@ -5793,6 +6025,7 @@
     "types": [
       "normal"
     ],
+    "color": "red",
     "relations": {
       "none": [
         8
@@ -5810,6 +6043,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -5827,6 +6061,7 @@
     "types": [
       "normal"
     ],
+    "color": "white",
     "relations": {
       "none": [
         8
@@ -5844,6 +6079,7 @@
     "types": [
       "fighting"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         6,
@@ -5865,6 +6101,7 @@
     "types": [
       "fighting"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         6,
@@ -5887,6 +6124,7 @@
       "ice",
       "psychic"
     ],
+    "color": "pink",
     "relations": {
       "half": [
         14,
@@ -5910,6 +6148,7 @@
     "types": [
       "electric"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         3,
@@ -5929,6 +6168,7 @@
     "types": [
       "fire"
     ],
+    "color": "red",
     "relations": {
       "half": [
         7,
@@ -5953,6 +6193,7 @@
     "types": [
       "normal"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         8
@@ -5970,6 +6211,7 @@
     "types": [
       "normal"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         8
@@ -5987,6 +6229,7 @@
     "types": [
       "electric"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         3,
@@ -6006,6 +6249,7 @@
     "types": [
       "fire"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         7,
@@ -6030,6 +6274,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -6052,6 +6297,7 @@
       "rock",
       "ground"
     ],
+    "color": "green",
     "relations": {
       "none": [
         13
@@ -6086,6 +6332,7 @@
       "rock",
       "ground"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         13
@@ -6120,6 +6367,7 @@
       "rock",
       "dark"
     ],
+    "color": "green",
     "relations": {
       "none": [
         14
@@ -6154,6 +6402,7 @@
       "psychic",
       "flying"
     ],
+    "color": "white",
     "relations": {
       "none": [
         5
@@ -6183,6 +6432,7 @@
       "fire",
       "flying"
     ],
+    "color": "red",
     "relations": {
       "none": [
         5
@@ -6215,6 +6465,7 @@
       "psychic",
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         2,
@@ -6245,6 +6496,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -6269,6 +6521,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -6293,6 +6546,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -6317,6 +6571,7 @@
     "types": [
       "fire"
     ],
+    "color": "red",
     "relations": {
       "half": [
         7,
@@ -6342,6 +6597,7 @@
       "fire",
       "fighting"
     ],
+    "color": "red",
     "relations": {
       "quarter": [
         7
@@ -6370,6 +6626,7 @@
       "fire",
       "fighting"
     ],
+    "color": "red",
     "relations": {
       "quarter": [
         7
@@ -6397,6 +6654,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -6419,6 +6677,7 @@
       "water",
       "ground"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         13
@@ -6443,6 +6702,7 @@
       "water",
       "ground"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         13
@@ -6466,6 +6726,7 @@
     "types": [
       "dark"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         14
@@ -6489,6 +6750,7 @@
     "types": [
       "dark"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         14
@@ -6512,6 +6774,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -6529,6 +6792,7 @@
     "types": [
       "normal"
     ],
+    "color": "white",
     "relations": {
       "none": [
         8
@@ -6546,6 +6810,7 @@
     "types": [
       "bug"
     ],
+    "color": "red",
     "relations": {
       "half": [
         2,
@@ -6567,6 +6832,7 @@
     "types": [
       "bug"
     ],
+    "color": "white",
     "relations": {
       "half": [
         2,
@@ -6589,6 +6855,7 @@
       "bug",
       "flying"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         5
@@ -6619,6 +6886,7 @@
     "types": [
       "bug"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         2,
@@ -6641,6 +6909,7 @@
       "bug",
       "poison"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         2,
@@ -6668,6 +6937,7 @@
       "water",
       "grass"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         11
@@ -6692,6 +6962,7 @@
       "water",
       "grass"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         11
@@ -6716,6 +6987,7 @@
       "water",
       "grass"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         11
@@ -6739,6 +7011,7 @@
     "types": [
       "grass"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         5,
@@ -6764,6 +7037,7 @@
       "grass",
       "dark"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         14
@@ -6798,6 +7072,7 @@
       "grass",
       "dark"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         14
@@ -6832,6 +7107,7 @@
       "normal",
       "flying"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         5,
@@ -6857,6 +7133,7 @@
       "normal",
       "flying"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         5,
@@ -6882,6 +7159,7 @@
       "water",
       "flying"
     ],
+    "color": "white",
     "relations": {
       "none": [
         5
@@ -6910,6 +7188,7 @@
       "water",
       "flying"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         5
@@ -6938,6 +7217,7 @@
       "psychic",
       "fairy"
     ],
+    "color": "white",
     "past_types": [
       {
         "gen": "v",
@@ -6972,6 +7252,7 @@
       "psychic",
       "fairy"
     ],
+    "color": "white",
     "past_types": [
       {
         "gen": "v",
@@ -7006,6 +7287,7 @@
       "psychic",
       "fairy"
     ],
+    "color": "white",
     "past_types": [
       {
         "gen": "v",
@@ -7040,6 +7322,7 @@
       "bug",
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,
@@ -7064,6 +7347,7 @@
       "bug",
       "flying"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         5
@@ -7094,6 +7378,7 @@
     "types": [
       "grass"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         5,
@@ -7119,6 +7404,7 @@
       "grass",
       "fighting"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -7148,6 +7434,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -7165,6 +7452,7 @@
     "types": [
       "normal"
     ],
+    "color": "white",
     "relations": {
       "none": [
         8
@@ -7182,6 +7470,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -7200,6 +7489,7 @@
       "bug",
       "ground"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         13
@@ -7226,6 +7516,7 @@
       "bug",
       "flying"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         5
@@ -7257,6 +7548,7 @@
       "bug",
       "ghost"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         1,
@@ -7285,6 +7577,7 @@
     "types": [
       "normal"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         8
@@ -7302,6 +7595,7 @@
     "types": [
       "normal"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         8
@@ -7319,6 +7613,7 @@
     "types": [
       "normal"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         8
@@ -7336,6 +7631,7 @@
     "types": [
       "fighting"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         6,
@@ -7357,6 +7653,7 @@
     "types": [
       "fighting"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         6,
@@ -7379,6 +7676,7 @@
       "normal",
       "fairy"
     ],
+    "color": "blue",
     "past_types": [
       {
         "gen": "v",
@@ -7410,6 +7708,7 @@
     "types": [
       "rock"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         1,
@@ -7434,6 +7733,7 @@
     "types": [
       "normal"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         8
@@ -7451,6 +7751,7 @@
     "types": [
       "normal"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         8
@@ -7469,6 +7770,7 @@
       "dark",
       "ghost"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         1,
@@ -7492,6 +7794,7 @@
       "steel",
       "fairy"
     ],
+    "color": "black",
     "past_types": [
       {
         "gen": "v",
@@ -7533,6 +7836,7 @@
       "steel",
       "rock"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4
@@ -7567,6 +7871,7 @@
       "steel",
       "rock"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4
@@ -7601,6 +7906,7 @@
       "steel",
       "rock"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4
@@ -7635,6 +7941,7 @@
       "fighting",
       "psychic"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,
@@ -7656,6 +7963,7 @@
       "fighting",
       "psychic"
     ],
+    "color": "red",
     "relations": {
       "half": [
         2,
@@ -7676,6 +7984,7 @@
     "types": [
       "electric"
     ],
+    "color": "green",
     "relations": {
       "half": [
         3,
@@ -7695,6 +8004,7 @@
     "types": [
       "electric"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         3,
@@ -7714,6 +8024,7 @@
     "types": [
       "electric"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         3,
@@ -7733,6 +8044,7 @@
     "types": [
       "electric"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         3,
@@ -7752,6 +8064,7 @@
     "types": [
       "bug"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         2,
@@ -7773,6 +8086,7 @@
     "types": [
       "bug"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         2,
@@ -7795,6 +8109,7 @@
       "grass",
       "poison"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         12
@@ -7821,6 +8136,7 @@
     "types": [
       "poison"
     ],
+    "color": "green",
     "relations": {
       "half": [
         2,
@@ -7843,6 +8159,7 @@
     "types": [
       "poison"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         2,
@@ -7866,6 +8183,7 @@
       "water",
       "dark"
     ],
+    "color": "red",
     "relations": {
       "none": [
         14
@@ -7896,6 +8214,7 @@
       "water",
       "dark"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         14
@@ -7925,6 +8244,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -7946,6 +8266,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -7968,6 +8289,7 @@
       "fire",
       "ground"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         13
@@ -7996,6 +8318,7 @@
       "fire",
       "ground"
     ],
+    "color": "red",
     "relations": {
       "none": [
         13
@@ -8023,6 +8346,7 @@
     "types": [
       "fire"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         7,
@@ -8047,6 +8371,7 @@
     "types": [
       "psychic"
     ],
+    "color": "black",
     "relations": {
       "half": [
         2,
@@ -8067,6 +8392,7 @@
     "types": [
       "psychic"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         2,
@@ -8087,6 +8413,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -8104,6 +8431,7 @@
     "types": [
       "ground"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         13
@@ -8128,6 +8456,7 @@
       "ground",
       "dragon"
     ],
+    "color": "green",
     "relations": {
       "none": [
         13
@@ -8155,6 +8484,7 @@
       "ground",
       "dragon"
     ],
+    "color": "green",
     "relations": {
       "none": [
         13
@@ -8181,6 +8511,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -8206,6 +8537,7 @@
       "grass",
       "dark"
     ],
+    "color": "green",
     "relations": {
       "none": [
         14
@@ -8240,6 +8572,7 @@
       "normal",
       "flying"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         5,
@@ -8265,6 +8598,7 @@
       "dragon",
       "flying"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         5
@@ -8296,6 +8630,7 @@
     "types": [
       "normal"
     ],
+    "color": "white",
     "relations": {
       "none": [
         8
@@ -8313,6 +8648,7 @@
     "types": [
       "poison"
     ],
+    "color": "black",
     "relations": {
       "half": [
         2,
@@ -8336,6 +8672,7 @@
       "rock",
       "psychic"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         1,
@@ -8364,6 +8701,7 @@
       "rock",
       "psychic"
     ],
+    "color": "red",
     "relations": {
       "half": [
         1,
@@ -8392,6 +8730,7 @@
       "water",
       "ground"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         13
@@ -8416,6 +8755,7 @@
       "water",
       "ground"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         13
@@ -8439,6 +8779,7 @@
     "types": [
       "water"
     ],
+    "color": "red",
     "relations": {
       "half": [
         9,
@@ -8461,6 +8802,7 @@
       "water",
       "dark"
     ],
+    "color": "red",
     "relations": {
       "none": [
         14
@@ -8491,6 +8833,7 @@
       "ground",
       "psychic"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         13
@@ -8520,6 +8863,7 @@
       "ground",
       "psychic"
     ],
+    "color": "black",
     "relations": {
       "none": [
         13
@@ -8549,6 +8893,7 @@
       "rock",
       "grass"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         1,
@@ -8571,6 +8916,7 @@
       "rock",
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         1,
@@ -8593,6 +8939,7 @@
       "rock",
       "bug"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         1,
@@ -8614,6 +8961,7 @@
       "rock",
       "bug"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         1,
@@ -8634,6 +8982,7 @@
     "types": [
       "water"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         9,
@@ -8655,6 +9004,7 @@
     "types": [
       "water"
     ],
+    "color": "pink",
     "relations": {
       "half": [
         9,
@@ -8676,6 +9026,7 @@
     "types": [
       "normal"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         8
@@ -8693,6 +9044,7 @@
     "types": [
       "normal"
     ],
+    "color": "green",
     "relations": {
       "none": [
         8
@@ -8710,6 +9062,7 @@
     "types": [
       "ghost"
     ],
+    "color": "black",
     "relations": {
       "none": [
         1,
@@ -8733,6 +9086,7 @@
     "types": [
       "ghost"
     ],
+    "color": "black",
     "relations": {
       "none": [
         1,
@@ -8756,6 +9110,7 @@
     "types": [
       "ghost"
     ],
+    "color": "black",
     "relations": {
       "none": [
         1,
@@ -8779,6 +9134,7 @@
     "types": [
       "ghost"
     ],
+    "color": "black",
     "relations": {
       "none": [
         1,
@@ -8803,6 +9159,7 @@
       "grass",
       "flying"
     ],
+    "color": "green",
     "relations": {
       "none": [
         5
@@ -8833,6 +9190,7 @@
     "types": [
       "psychic"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,
@@ -8853,6 +9211,7 @@
     "types": [
       "dark"
     ],
+    "color": "white",
     "relations": {
       "none": [
         14
@@ -8876,6 +9235,7 @@
     "types": [
       "psychic"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,
@@ -8896,6 +9256,7 @@
     "types": [
       "ice"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         15
@@ -8916,6 +9277,7 @@
     "types": [
       "ice"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         15
@@ -8937,6 +9299,7 @@
       "ice",
       "water"
     ],
+    "color": "blue",
     "relations": {
       "quarter": [
         15
@@ -8961,6 +9324,7 @@
       "ice",
       "water"
     ],
+    "color": "blue",
     "relations": {
       "quarter": [
         15
@@ -8985,6 +9349,7 @@
       "ice",
       "water"
     ],
+    "color": "blue",
     "relations": {
       "quarter": [
         15
@@ -9008,6 +9373,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -9029,6 +9395,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -9050,6 +9417,7 @@
     "types": [
       "water"
     ],
+    "color": "pink",
     "relations": {
       "half": [
         9,
@@ -9072,6 +9440,7 @@
       "water",
       "rock"
     ],
+    "color": "gray",
     "relations": {
       "quarter": [
         10
@@ -9100,6 +9469,7 @@
     "types": [
       "water"
     ],
+    "color": "pink",
     "relations": {
       "half": [
         9,
@@ -9121,6 +9491,7 @@
     "types": [
       "dragon"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         10,
@@ -9143,6 +9514,7 @@
     "types": [
       "dragon"
     ],
+    "color": "white",
     "relations": {
       "half": [
         10,
@@ -9166,6 +9538,7 @@
       "dragon",
       "flying"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         5
@@ -9198,6 +9571,7 @@
       "steel",
       "psychic"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         4
@@ -9232,6 +9606,7 @@
       "steel",
       "psychic"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         4
@@ -9266,6 +9641,7 @@
       "steel",
       "psychic"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         4
@@ -9299,6 +9675,7 @@
     "types": [
       "rock"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         1,
@@ -9323,6 +9700,7 @@
     "types": [
       "ice"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         15
@@ -9343,6 +9721,7 @@
     "types": [
       "steel"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4
@@ -9375,6 +9754,7 @@
       "dragon",
       "psychic"
     ],
+    "color": "red",
     "relations": {
       "half": [
         2,
@@ -9403,6 +9783,7 @@
       "dragon",
       "psychic"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,
@@ -9430,6 +9811,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -9451,6 +9833,7 @@
     "types": [
       "ground"
     ],
+    "color": "red",
     "relations": {
       "none": [
         13
@@ -9475,6 +9858,7 @@
       "dragon",
       "flying"
     ],
+    "color": "green",
     "relations": {
       "none": [
         5
@@ -9507,6 +9891,7 @@
       "steel",
       "psychic"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         4
@@ -9540,6 +9925,7 @@
     "types": [
       "psychic"
     ],
+    "color": "red",
     "relations": {
       "half": [
         2,
@@ -9560,6 +9946,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -9584,6 +9971,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -9609,6 +9997,7 @@
       "grass",
       "ground"
     ],
+    "color": "green",
     "relations": {
       "none": [
         13
@@ -9635,6 +10024,7 @@
     "types": [
       "fire"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         7,
@@ -9660,6 +10050,7 @@
       "fire",
       "fighting"
     ],
+    "color": "brown",
     "relations": {
       "quarter": [
         7
@@ -9688,6 +10079,7 @@
       "fire",
       "fighting"
     ],
+    "color": "brown",
     "relations": {
       "quarter": [
         7
@@ -9715,6 +10107,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -9736,6 +10129,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -9758,6 +10152,7 @@
       "water",
       "steel"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         4
@@ -9792,6 +10187,7 @@
       "normal",
       "flying"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         5,
@@ -9817,6 +10213,7 @@
       "normal",
       "flying"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         5,
@@ -9842,6 +10239,7 @@
       "normal",
       "flying"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         5,
@@ -9866,6 +10264,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -9884,6 +10283,7 @@
       "normal",
       "water"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -9909,6 +10309,7 @@
     "types": [
       "bug"
     ],
+    "color": "red",
     "relations": {
       "half": [
         2,
@@ -9930,6 +10331,7 @@
     "types": [
       "bug"
     ],
+    "color": "red",
     "relations": {
       "half": [
         2,
@@ -9951,6 +10353,7 @@
     "types": [
       "electric"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         3,
@@ -9970,6 +10373,7 @@
     "types": [
       "electric"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         3,
@@ -9989,6 +10393,7 @@
     "types": [
       "electric"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         3,
@@ -10009,6 +10414,7 @@
       "grass",
       "poison"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         12
@@ -10036,6 +10442,7 @@
       "grass",
       "poison"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         12
@@ -10062,6 +10469,7 @@
     "types": [
       "rock"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         1,
@@ -10086,6 +10494,7 @@
     "types": [
       "rock"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         1,
@@ -10111,6 +10520,7 @@
       "rock",
       "steel"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4
@@ -10145,6 +10555,7 @@
       "rock",
       "steel"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4
@@ -10178,6 +10589,7 @@
     "types": [
       "bug"
     ],
+    "color": "green",
     "relations": {
       "half": [
         2,
@@ -10200,6 +10612,7 @@
       "bug",
       "grass"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         5,
@@ -10231,6 +10644,7 @@
       "bug",
       "flying"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         5
@@ -10262,6 +10676,7 @@
       "bug",
       "flying"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         5
@@ -10293,6 +10708,7 @@
       "bug",
       "flying"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         5
@@ -10323,6 +10739,7 @@
     "types": [
       "electric"
     ],
+    "color": "white",
     "relations": {
       "half": [
         3,
@@ -10342,6 +10759,7 @@
     "types": [
       "water"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         9,
@@ -10363,6 +10781,7 @@
     "types": [
       "water"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         9,
@@ -10384,6 +10803,7 @@
     "types": [
       "grass"
     ],
+    "color": "pink",
     "relations": {
       "half": [
         5,
@@ -10408,6 +10828,7 @@
     "types": [
       "grass"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         5,
@@ -10432,6 +10853,7 @@
     "types": [
       "water"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         9,
@@ -10454,6 +10876,7 @@
       "water",
       "ground"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         13
@@ -10477,6 +10900,7 @@
     "types": [
       "normal"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         8
@@ -10495,6 +10919,7 @@
       "ghost",
       "flying"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         1,
@@ -10526,6 +10951,7 @@
       "ghost",
       "flying"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         1,
@@ -10556,6 +10982,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -10573,6 +11000,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -10590,6 +11018,7 @@
     "types": [
       "ghost"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         1,
@@ -10614,6 +11043,7 @@
       "dark",
       "flying"
     ],
+    "color": "black",
     "relations": {
       "none": [
         5,
@@ -10640,6 +11070,7 @@
     "types": [
       "normal"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         8
@@ -10657,6 +11088,7 @@
     "types": [
       "normal"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         8
@@ -10674,6 +11106,7 @@
     "types": [
       "psychic"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         2,
@@ -10695,6 +11128,7 @@
       "poison",
       "dark"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         14
@@ -10719,6 +11153,7 @@
       "poison",
       "dark"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         14
@@ -10743,6 +11178,7 @@
       "steel",
       "psychic"
     ],
+    "color": "green",
     "relations": {
       "none": [
         4
@@ -10777,6 +11213,7 @@
       "steel",
       "psychic"
     ],
+    "color": "green",
     "relations": {
       "none": [
         4
@@ -10810,6 +11247,7 @@
     "types": [
       "rock"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         1,
@@ -10835,6 +11273,7 @@
       "psychic",
       "fairy"
     ],
+    "color": "pink",
     "past_types": [
       {
         "gen": "v",
@@ -10868,6 +11307,7 @@
     "types": [
       "normal"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         8
@@ -10886,6 +11326,7 @@
       "normal",
       "flying"
     ],
+    "color": "black",
     "relations": {
       "none": [
         5,
@@ -10911,6 +11352,7 @@
       "ghost",
       "dark"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         1,
@@ -10934,6 +11376,7 @@
       "dragon",
       "ground"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         13
@@ -10961,6 +11404,7 @@
       "dragon",
       "ground"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         13
@@ -10988,6 +11432,7 @@
       "dragon",
       "ground"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         13
@@ -11014,6 +11459,7 @@
     "types": [
       "normal"
     ],
+    "color": "black",
     "relations": {
       "none": [
         8
@@ -11031,6 +11477,7 @@
     "types": [
       "fighting"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         6,
@@ -11053,6 +11500,7 @@
       "fighting",
       "steel"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         4
@@ -11084,6 +11532,7 @@
     "types": [
       "ground"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         13
@@ -11107,6 +11556,7 @@
     "types": [
       "ground"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         13
@@ -11131,6 +11581,7 @@
       "poison",
       "bug"
     ],
+    "color": "purple",
     "relations": {
       "quarter": [
         2,
@@ -11158,6 +11609,7 @@
       "poison",
       "dark"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         14
@@ -11182,6 +11634,7 @@
       "poison",
       "fighting"
     ],
+    "color": "blue",
     "relations": {
       "quarter": [
         7
@@ -11211,6 +11664,7 @@
       "poison",
       "fighting"
     ],
+    "color": "blue",
     "relations": {
       "quarter": [
         7
@@ -11239,6 +11693,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -11263,6 +11718,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -11284,6 +11740,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -11306,6 +11763,7 @@
       "water",
       "flying"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         5
@@ -11334,6 +11792,7 @@
       "grass",
       "ice"
     ],
+    "color": "white",
     "relations": {
       "half": [
         5,
@@ -11363,6 +11822,7 @@
       "grass",
       "ice"
     ],
+    "color": "white",
     "relations": {
       "half": [
         5,
@@ -11392,6 +11852,7 @@
       "dark",
       "ice"
     ],
+    "color": "black",
     "relations": {
       "none": [
         14
@@ -11422,6 +11883,7 @@
       "electric",
       "steel"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4
@@ -11458,6 +11920,7 @@
     "types": [
       "normal"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         8
@@ -11476,6 +11939,7 @@
       "ground",
       "rock"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         13
@@ -11509,6 +11973,7 @@
     "types": [
       "grass"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         5,
@@ -11533,6 +11998,7 @@
     "types": [
       "electric"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         3,
@@ -11552,6 +12018,7 @@
     "types": [
       "fire"
     ],
+    "color": "red",
     "relations": {
       "half": [
         7,
@@ -11577,6 +12044,7 @@
       "fairy",
       "flying"
     ],
+    "color": "white",
     "past_types": [
       {
         "gen": "v",
@@ -11617,6 +12085,7 @@
       "bug",
       "flying"
     ],
+    "color": "green",
     "relations": {
       "none": [
         5
@@ -11647,6 +12116,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -11671,6 +12141,7 @@
     "types": [
       "ice"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         15
@@ -11692,6 +12163,7 @@
       "ground",
       "flying"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         5,
@@ -11719,6 +12191,7 @@
       "ice",
       "ground"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         13
@@ -11743,6 +12216,7 @@
     "types": [
       "normal"
     ],
+    "color": "red",
     "relations": {
       "none": [
         8
@@ -11761,6 +12235,7 @@
       "psychic",
       "fighting"
     ],
+    "color": "white",
     "relations": {
       "half": [
         2,
@@ -11782,6 +12257,7 @@
       "rock",
       "steel"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4
@@ -11815,6 +12291,7 @@
     "types": [
       "ghost"
     ],
+    "color": "black",
     "relations": {
       "none": [
         1,
@@ -11839,6 +12316,7 @@
       "ice",
       "ghost"
     ],
+    "color": "white",
     "relations": {
       "none": [
         1,
@@ -11867,6 +12345,7 @@
       "electric",
       "ghost"
     ],
+    "color": "red",
     "relations": {
       "none": [
         1,
@@ -11894,6 +12373,7 @@
     "types": [
       "psychic"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         2,
@@ -11914,6 +12394,7 @@
     "types": [
       "psychic"
     ],
+    "color": "pink",
     "relations": {
       "half": [
         2,
@@ -11934,6 +12415,7 @@
     "types": [
       "psychic"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,
@@ -11955,6 +12437,7 @@
       "steel",
       "dragon"
     ],
+    "color": "white",
     "relations": {
       "none": [
         4
@@ -11987,6 +12470,7 @@
       "water",
       "dragon"
     ],
+    "color": "purple",
     "relations": {
       "quarter": [
         10,
@@ -12010,6 +12494,7 @@
       "fire",
       "steel"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         4
@@ -12044,6 +12529,7 @@
     "types": [
       "normal"
     ],
+    "color": "white",
     "relations": {
       "none": [
         8
@@ -12062,6 +12548,7 @@
       "ghost",
       "dragon"
     ],
+    "color": "black",
     "relations": {
       "none": [
         1,
@@ -12092,6 +12579,7 @@
     "types": [
       "psychic"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         2,
@@ -12112,6 +12600,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -12133,6 +12622,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -12154,6 +12644,7 @@
     "types": [
       "dark"
     ],
+    "color": "black",
     "relations": {
       "none": [
         14
@@ -12177,6 +12668,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -12201,6 +12693,7 @@
     "types": [
       "normal"
     ],
+    "color": "white",
     "relations": {
       "none": [
         8
@@ -12219,6 +12712,7 @@
       "psychic",
       "fire"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         2,
@@ -12246,6 +12740,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -12270,6 +12765,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -12294,6 +12790,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -12318,6 +12815,7 @@
     "types": [
       "fire"
     ],
+    "color": "red",
     "relations": {
       "half": [
         7,
@@ -12343,6 +12841,7 @@
       "fire",
       "fighting"
     ],
+    "color": "red",
     "relations": {
       "quarter": [
         7
@@ -12371,6 +12870,7 @@
       "fire",
       "fighting"
     ],
+    "color": "red",
     "relations": {
       "quarter": [
         7
@@ -12398,6 +12898,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -12419,6 +12920,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -12440,6 +12942,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -12461,6 +12964,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -12478,6 +12982,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -12495,6 +13000,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -12512,6 +13018,7 @@
     "types": [
       "normal"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         8
@@ -12529,6 +13036,7 @@
     "types": [
       "normal"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         8
@@ -12546,6 +13054,7 @@
     "types": [
       "dark"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         14
@@ -12569,6 +13078,7 @@
     "types": [
       "dark"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         14
@@ -12592,6 +13102,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -12616,6 +13127,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -12640,6 +13152,7 @@
     "types": [
       "fire"
     ],
+    "color": "red",
     "relations": {
       "half": [
         7,
@@ -12664,6 +13177,7 @@
     "types": [
       "fire"
     ],
+    "color": "red",
     "relations": {
       "half": [
         7,
@@ -12688,6 +13202,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -12709,6 +13224,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -12730,6 +13246,7 @@
     "types": [
       "psychic"
     ],
+    "color": "pink",
     "relations": {
       "half": [
         2,
@@ -12750,6 +13267,7 @@
     "types": [
       "psychic"
     ],
+    "color": "pink",
     "relations": {
       "half": [
         2,
@@ -12771,6 +13289,7 @@
       "normal",
       "flying"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         5,
@@ -12796,6 +13315,7 @@
       "normal",
       "flying"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         5,
@@ -12821,6 +13341,7 @@
       "normal",
       "flying"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         5,
@@ -12845,6 +13366,7 @@
     "types": [
       "electric"
     ],
+    "color": "black",
     "relations": {
       "half": [
         3,
@@ -12864,6 +13386,7 @@
     "types": [
       "electric"
     ],
+    "color": "black",
     "relations": {
       "half": [
         3,
@@ -12883,6 +13406,7 @@
     "types": [
       "rock"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         1,
@@ -12907,6 +13431,7 @@
     "types": [
       "rock"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         1,
@@ -12931,6 +13456,7 @@
     "types": [
       "rock"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         1,
@@ -12956,6 +13482,7 @@
       "psychic",
       "flying"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         5
@@ -12985,6 +13512,7 @@
       "psychic",
       "flying"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         5
@@ -13013,6 +13541,7 @@
     "types": [
       "ground"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         13
@@ -13037,6 +13566,7 @@
       "ground",
       "steel"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4,
@@ -13070,6 +13600,7 @@
     "types": [
       "normal"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         8
@@ -13087,6 +13618,7 @@
     "types": [
       "fighting"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         6,
@@ -13108,6 +13640,7 @@
     "types": [
       "fighting"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         6,
@@ -13129,6 +13662,7 @@
     "types": [
       "fighting"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         6,
@@ -13150,6 +13684,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -13172,6 +13707,7 @@
       "water",
       "ground"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         13
@@ -13196,6 +13732,7 @@
       "water",
       "ground"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         13
@@ -13219,6 +13756,7 @@
     "types": [
       "fighting"
     ],
+    "color": "red",
     "relations": {
       "half": [
         6,
@@ -13240,6 +13778,7 @@
     "types": [
       "fighting"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         6,
@@ -13262,6 +13801,7 @@
       "bug",
       "grass"
     ],
+    "color": "yellow",
     "relations": {
       "quarter": [
         5,
@@ -13293,6 +13833,7 @@
       "bug",
       "grass"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         5,
@@ -13324,6 +13865,7 @@
       "bug",
       "grass"
     ],
+    "color": "yellow",
     "relations": {
       "quarter": [
         5,
@@ -13355,6 +13897,7 @@
       "bug",
       "poison"
     ],
+    "color": "red",
     "relations": {
       "quarter": [
         2,
@@ -13382,6 +13925,7 @@
       "bug",
       "poison"
     ],
+    "color": "gray",
     "relations": {
       "quarter": [
         2,
@@ -13409,6 +13953,7 @@
       "bug",
       "poison"
     ],
+    "color": "red",
     "relations": {
       "quarter": [
         2,
@@ -13436,6 +13981,7 @@
       "grass",
       "fairy"
     ],
+    "color": "green",
     "past_types": [
       {
         "gen": "v",
@@ -13476,6 +14022,7 @@
       "grass",
       "fairy"
     ],
+    "color": "green",
     "past_types": [
       {
         "gen": "v",
@@ -13515,6 +14062,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -13539,6 +14087,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -13563,6 +14112,7 @@
     "types": [
       "water"
     ],
+    "color": "green",
     "relations": {
       "half": [
         9,
@@ -13585,6 +14135,7 @@
       "ground",
       "dark"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         13,
@@ -13615,6 +14166,7 @@
       "ground",
       "dark"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         13,
@@ -13645,6 +14197,7 @@
       "ground",
       "dark"
     ],
+    "color": "red",
     "relations": {
       "none": [
         13,
@@ -13674,6 +14227,7 @@
     "types": [
       "fire"
     ],
+    "color": "red",
     "relations": {
       "half": [
         7,
@@ -13698,6 +14252,7 @@
     "types": [
       "fire"
     ],
+    "color": "red",
     "relations": {
       "half": [
         7,
@@ -13722,6 +14277,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -13747,6 +14303,7 @@
       "bug",
       "rock"
     ],
+    "color": "red",
     "relations": {
       "half": [
         1,
@@ -13768,6 +14325,7 @@
       "bug",
       "rock"
     ],
+    "color": "red",
     "relations": {
       "half": [
         1,
@@ -13789,6 +14347,7 @@
       "dark",
       "fighting"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         14
@@ -13818,6 +14377,7 @@
       "dark",
       "fighting"
     ],
+    "color": "red",
     "relations": {
       "none": [
         14
@@ -13847,6 +14407,7 @@
       "psychic",
       "flying"
     ],
+    "color": "black",
     "relations": {
       "none": [
         5
@@ -13875,6 +14436,7 @@
     "types": [
       "ghost"
     ],
+    "color": "black",
     "relations": {
       "none": [
         1,
@@ -13898,6 +14460,7 @@
     "types": [
       "ghost"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         1,
@@ -13922,6 +14485,7 @@
       "water",
       "rock"
     ],
+    "color": "blue",
     "relations": {
       "quarter": [
         10
@@ -13951,6 +14515,7 @@
       "water",
       "rock"
     ],
+    "color": "blue",
     "relations": {
       "quarter": [
         10
@@ -13980,6 +14545,7 @@
       "rock",
       "flying"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         5
@@ -14009,6 +14575,7 @@
       "rock",
       "flying"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         5
@@ -14037,6 +14604,7 @@
     "types": [
       "poison"
     ],
+    "color": "green",
     "relations": {
       "half": [
         2,
@@ -14059,6 +14627,7 @@
     "types": [
       "poison"
     ],
+    "color": "green",
     "relations": {
       "half": [
         2,
@@ -14081,6 +14650,7 @@
     "types": [
       "dark"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         14
@@ -14104,6 +14674,7 @@
     "types": [
       "dark"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         14
@@ -14127,6 +14698,7 @@
     "types": [
       "normal"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         8
@@ -14144,6 +14716,7 @@
     "types": [
       "normal"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         8
@@ -14161,6 +14734,7 @@
     "types": [
       "psychic"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         2,
@@ -14181,6 +14755,7 @@
     "types": [
       "psychic"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         2,
@@ -14201,6 +14776,7 @@
     "types": [
       "psychic"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         2,
@@ -14221,6 +14797,7 @@
     "types": [
       "psychic"
     ],
+    "color": "green",
     "relations": {
       "half": [
         2,
@@ -14241,6 +14818,7 @@
     "types": [
       "psychic"
     ],
+    "color": "green",
     "relations": {
       "half": [
         2,
@@ -14261,6 +14839,7 @@
     "types": [
       "psychic"
     ],
+    "color": "green",
     "relations": {
       "half": [
         2,
@@ -14282,6 +14861,7 @@
       "water",
       "flying"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         5
@@ -14310,6 +14890,7 @@
       "water",
       "flying"
     ],
+    "color": "white",
     "relations": {
       "none": [
         5
@@ -14337,6 +14918,7 @@
     "types": [
       "ice"
     ],
+    "color": "white",
     "relations": {
       "half": [
         15
@@ -14357,6 +14939,7 @@
     "types": [
       "ice"
     ],
+    "color": "white",
     "relations": {
       "half": [
         15
@@ -14377,6 +14960,7 @@
     "types": [
       "ice"
     ],
+    "color": "white",
     "relations": {
       "half": [
         15
@@ -14398,6 +14982,7 @@
       "normal",
       "grass"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         8
@@ -14427,6 +15012,7 @@
       "normal",
       "grass"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -14456,6 +15042,7 @@
       "electric",
       "flying"
     ],
+    "color": "white",
     "relations": {
       "none": [
         5
@@ -14481,6 +15068,7 @@
     "types": [
       "bug"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,
@@ -14503,6 +15091,7 @@
       "bug",
       "steel"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4
@@ -14533,6 +15122,7 @@
       "grass",
       "poison"
     ],
+    "color": "white",
     "relations": {
       "quarter": [
         12
@@ -14560,6 +15150,7 @@
       "grass",
       "poison"
     ],
+    "color": "white",
     "relations": {
       "quarter": [
         12
@@ -14587,6 +15178,7 @@
       "water",
       "ghost"
     ],
+    "color": "white",
     "relations": {
       "none": [
         1,
@@ -14617,6 +15209,7 @@
       "water",
       "ghost"
     ],
+    "color": "white",
     "relations": {
       "none": [
         1,
@@ -14646,6 +15239,7 @@
     "types": [
       "water"
     ],
+    "color": "pink",
     "relations": {
       "half": [
         9,
@@ -14668,6 +15262,7 @@
       "bug",
       "electric"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         2,
@@ -14690,6 +15285,7 @@
       "bug",
       "electric"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         2,
@@ -14712,6 +15308,7 @@
       "grass",
       "steel"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4
@@ -14746,6 +15343,7 @@
       "grass",
       "steel"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4
@@ -14779,6 +15377,7 @@
     "types": [
       "steel"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4
@@ -14810,6 +15409,7 @@
     "types": [
       "steel"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4
@@ -14841,6 +15441,7 @@
     "types": [
       "steel"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4
@@ -14872,6 +15473,7 @@
     "types": [
       "electric"
     ],
+    "color": "white",
     "relations": {
       "half": [
         3,
@@ -14891,6 +15493,7 @@
     "types": [
       "electric"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         3,
@@ -14910,6 +15513,7 @@
     "types": [
       "electric"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         3,
@@ -14929,6 +15533,7 @@
     "types": [
       "psychic"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,
@@ -14949,6 +15554,7 @@
     "types": [
       "psychic"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         2,
@@ -14970,6 +15576,7 @@
       "ghost",
       "fire"
     ],
+    "color": "white",
     "relations": {
       "none": [
         1,
@@ -15004,6 +15611,7 @@
       "ghost",
       "fire"
     ],
+    "color": "black",
     "relations": {
       "none": [
         1,
@@ -15038,6 +15646,7 @@
       "ghost",
       "fire"
     ],
+    "color": "black",
     "relations": {
       "none": [
         1,
@@ -15071,6 +15680,7 @@
     "types": [
       "dragon"
     ],
+    "color": "green",
     "relations": {
       "half": [
         10,
@@ -15093,6 +15703,7 @@
     "types": [
       "dragon"
     ],
+    "color": "green",
     "relations": {
       "half": [
         10,
@@ -15115,6 +15726,7 @@
     "types": [
       "dragon"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         10,
@@ -15137,6 +15749,7 @@
     "types": [
       "ice"
     ],
+    "color": "white",
     "relations": {
       "half": [
         15
@@ -15157,6 +15770,7 @@
     "types": [
       "ice"
     ],
+    "color": "white",
     "relations": {
       "half": [
         15
@@ -15177,6 +15791,7 @@
     "types": [
       "ice"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         15
@@ -15197,6 +15812,7 @@
     "types": [
       "bug"
     ],
+    "color": "red",
     "relations": {
       "half": [
         2,
@@ -15218,6 +15834,7 @@
     "types": [
       "bug"
     ],
+    "color": "red",
     "relations": {
       "half": [
         2,
@@ -15240,6 +15857,7 @@
       "ground",
       "electric"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         13
@@ -15266,6 +15884,7 @@
     "types": [
       "fighting"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         6,
@@ -15287,6 +15906,7 @@
     "types": [
       "fighting"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         6,
@@ -15308,6 +15928,7 @@
     "types": [
       "dragon"
     ],
+    "color": "red",
     "relations": {
       "half": [
         10,
@@ -15331,6 +15952,7 @@
       "ground",
       "ghost"
     ],
+    "color": "green",
     "relations": {
       "none": [
         1,
@@ -15362,6 +15984,7 @@
       "ground",
       "ghost"
     ],
+    "color": "green",
     "relations": {
       "none": [
         1,
@@ -15393,6 +16016,7 @@
       "dark",
       "steel"
     ],
+    "color": "red",
     "relations": {
       "none": [
         4,
@@ -15427,6 +16051,7 @@
       "dark",
       "steel"
     ],
+    "color": "red",
     "relations": {
       "none": [
         4,
@@ -15460,6 +16085,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -15478,6 +16104,7 @@
       "normal",
       "flying"
     ],
+    "color": "white",
     "relations": {
       "none": [
         5,
@@ -15503,6 +16130,7 @@
       "normal",
       "flying"
     ],
+    "color": "red",
     "relations": {
       "none": [
         5,
@@ -15528,6 +16156,7 @@
       "dark",
       "flying"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         5,
@@ -15555,6 +16184,7 @@
       "dark",
       "flying"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         5,
@@ -15581,6 +16211,7 @@
     "types": [
       "fire"
     ],
+    "color": "red",
     "relations": {
       "half": [
         7,
@@ -15606,6 +16237,7 @@
       "bug",
       "steel"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4
@@ -15636,6 +16268,7 @@
       "dark",
       "dragon"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         14
@@ -15668,6 +16301,7 @@
       "dark",
       "dragon"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         14
@@ -15700,6 +16334,7 @@
       "dark",
       "dragon"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         14
@@ -15732,6 +16367,7 @@
       "bug",
       "fire"
     ],
+    "color": "white",
     "relations": {
       "quarter": [
         12
@@ -15761,6 +16397,7 @@
       "bug",
       "fire"
     ],
+    "color": "white",
     "relations": {
       "quarter": [
         12
@@ -15790,6 +16427,7 @@
       "steel",
       "fighting"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         4
@@ -15822,6 +16460,7 @@
       "rock",
       "fighting"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         1,
@@ -15851,6 +16490,7 @@
       "grass",
       "fighting"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -15880,6 +16520,7 @@
     "types": [
       "flying"
     ],
+    "color": "green",
     "relations": {
       "none": [
         5
@@ -15905,6 +16546,7 @@
       "electric",
       "flying"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         5
@@ -15931,6 +16573,7 @@
       "dragon",
       "fire"
     ],
+    "color": "white",
     "relations": {
       "quarter": [
         10,
@@ -15957,6 +16600,7 @@
       "dragon",
       "electric"
     ],
+    "color": "black",
     "relations": {
       "quarter": [
         13
@@ -15985,6 +16629,7 @@
       "ground",
       "flying"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         5,
@@ -16012,6 +16657,7 @@
       "dragon",
       "ice"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         11,
@@ -16036,6 +16682,7 @@
       "water",
       "fighting"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         6,
@@ -16064,6 +16711,7 @@
       "normal",
       "psychic"
     ],
+    "color": "white",
     "relations": {
       "none": [
         8
@@ -16086,6 +16734,7 @@
       "bug",
       "steel"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         4
@@ -16115,6 +16764,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -16139,6 +16789,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -16164,6 +16815,7 @@
       "grass",
       "fighting"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -16193,6 +16845,7 @@
     "types": [
       "fire"
     ],
+    "color": "red",
     "relations": {
       "half": [
         7,
@@ -16217,6 +16870,7 @@
     "types": [
       "fire"
     ],
+    "color": "red",
     "relations": {
       "half": [
         7,
@@ -16242,6 +16896,7 @@
       "fire",
       "psychic"
     ],
+    "color": "red",
     "relations": {
       "half": [
         2,
@@ -16269,6 +16924,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -16290,6 +16946,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -16312,6 +16969,7 @@
       "water",
       "dark"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         14
@@ -16341,6 +16999,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -16359,6 +17018,7 @@
       "normal",
       "ground"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8,
@@ -16385,6 +17045,7 @@
       "normal",
       "flying"
     ],
+    "color": "red",
     "relations": {
       "none": [
         5,
@@ -16410,6 +17071,7 @@
       "fire",
       "flying"
     ],
+    "color": "red",
     "relations": {
       "none": [
         5
@@ -16442,6 +17104,7 @@
       "fire",
       "flying"
     ],
+    "color": "red",
     "relations": {
       "none": [
         5
@@ -16473,6 +17136,7 @@
     "types": [
       "bug"
     ],
+    "color": "black",
     "relations": {
       "half": [
         2,
@@ -16494,6 +17158,7 @@
     "types": [
       "bug"
     ],
+    "color": "black",
     "relations": {
       "half": [
         2,
@@ -16516,6 +17181,7 @@
       "bug",
       "flying"
     ],
+    "color": "white",
     "relations": {
       "none": [
         5
@@ -16547,6 +17213,7 @@
       "fire",
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -16576,6 +17243,7 @@
       "fire",
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -16604,6 +17272,7 @@
     "types": [
       "fairy"
     ],
+    "color": "white",
     "relations": {
       "none": [
         16
@@ -16627,6 +17296,7 @@
     "types": [
       "fairy"
     ],
+    "color": "white",
     "relations": {
       "none": [
         16
@@ -16650,6 +17320,7 @@
     "types": [
       "fairy"
     ],
+    "color": "white",
     "relations": {
       "none": [
         16
@@ -16673,6 +17344,7 @@
     "types": [
       "grass"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         5,
@@ -16697,6 +17369,7 @@
     "types": [
       "grass"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         5,
@@ -16721,6 +17394,7 @@
     "types": [
       "fighting"
     ],
+    "color": "white",
     "relations": {
       "half": [
         6,
@@ -16743,6 +17417,7 @@
       "fighting",
       "dark"
     ],
+    "color": "white",
     "relations": {
       "none": [
         14
@@ -16771,6 +17446,7 @@
     "types": [
       "normal"
     ],
+    "color": "white",
     "relations": {
       "none": [
         8
@@ -16788,6 +17464,7 @@
     "types": [
       "psychic"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         2,
@@ -16808,6 +17485,7 @@
     "types": [
       "psychic"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,
@@ -16829,6 +17507,7 @@
       "steel",
       "ghost"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         1,
@@ -16865,6 +17544,7 @@
       "steel",
       "ghost"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         1,
@@ -16901,6 +17581,7 @@
       "steel",
       "ghost"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         1,
@@ -16936,6 +17617,7 @@
     "types": [
       "fairy"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         16
@@ -16959,6 +17641,7 @@
     "types": [
       "fairy"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         16
@@ -16982,6 +17665,7 @@
     "types": [
       "fairy"
     ],
+    "color": "white",
     "relations": {
       "none": [
         16
@@ -17005,6 +17689,7 @@
     "types": [
       "fairy"
     ],
+    "color": "white",
     "relations": {
       "none": [
         16
@@ -17029,6 +17714,7 @@
       "dark",
       "psychic"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         14
@@ -17050,6 +17736,7 @@
       "dark",
       "psychic"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         14
@@ -17071,6 +17758,7 @@
       "rock",
       "water"
     ],
+    "color": "brown",
     "relations": {
       "quarter": [
         10
@@ -17100,6 +17788,7 @@
       "rock",
       "water"
     ],
+    "color": "brown",
     "relations": {
       "quarter": [
         10
@@ -17129,6 +17818,7 @@
       "poison",
       "water"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         2,
@@ -17156,6 +17846,7 @@
       "poison",
       "dragon"
     ],
+    "color": "brown",
     "relations": {
       "quarter": [
         12
@@ -17184,6 +17875,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -17205,6 +17897,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -17227,6 +17920,7 @@
       "electric",
       "normal"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         8
@@ -17251,6 +17945,7 @@
       "electric",
       "normal"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         8
@@ -17275,6 +17970,7 @@
       "rock",
       "dragon"
     ],
+    "color": "brown",
     "relations": {
       "quarter": [
         10
@@ -17304,6 +18000,7 @@
       "rock",
       "dragon"
     ],
+    "color": "red",
     "relations": {
       "quarter": [
         10
@@ -17333,6 +18030,7 @@
       "rock",
       "ice"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         1,
@@ -17361,6 +18059,7 @@
       "rock",
       "ice"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         1,
@@ -17388,6 +18087,7 @@
     "types": [
       "fairy"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         16
@@ -17412,6 +18112,7 @@
       "fighting",
       "flying"
     ],
+    "color": "green",
     "relations": {
       "none": [
         5
@@ -17442,6 +18143,7 @@
       "electric",
       "fairy"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         16
@@ -17468,6 +18170,7 @@
       "rock",
       "fairy"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         16
@@ -17497,6 +18200,7 @@
     "types": [
       "dragon"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         10,
@@ -17519,6 +18223,7 @@
     "types": [
       "dragon"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         10,
@@ -17541,6 +18246,7 @@
     "types": [
       "dragon"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         10,
@@ -17564,6 +18270,7 @@
       "steel",
       "fairy"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4,
@@ -17597,6 +18304,7 @@
       "ghost",
       "grass"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         1,
@@ -17626,6 +18334,7 @@
       "ghost",
       "grass"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         1,
@@ -17655,6 +18364,7 @@
       "ghost",
       "grass"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         1,
@@ -17684,6 +18394,7 @@
       "ghost",
       "grass"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         1,
@@ -17712,6 +18423,7 @@
     "types": [
       "ice"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         15
@@ -17732,6 +18444,7 @@
     "types": [
       "ice"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         15
@@ -17753,6 +18466,7 @@
       "flying",
       "dragon"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         5
@@ -17785,6 +18499,7 @@
       "flying",
       "dragon"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         5
@@ -17816,6 +18531,7 @@
     "types": [
       "fairy"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         16
@@ -17840,6 +18556,7 @@
       "dark",
       "flying"
     ],
+    "color": "red",
     "relations": {
       "none": [
         5,
@@ -17867,6 +18584,7 @@
       "dragon",
       "ground"
     ],
+    "color": "green",
     "relations": {
       "none": [
         13
@@ -17894,6 +18612,7 @@
       "rock",
       "fairy"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         16
@@ -17924,6 +18643,7 @@
       "psychic",
       "ghost"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         1,
@@ -17948,6 +18668,7 @@
       "fire",
       "water"
     ],
+    "color": "brown",
     "relations": {
       "quarter": [
         9,
@@ -17974,6 +18695,7 @@
       "grass",
       "flying"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         5
@@ -18005,6 +18727,7 @@
       "grass",
       "flying"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         5
@@ -18036,6 +18759,7 @@
       "grass",
       "ghost"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         1,
@@ -18064,6 +18788,7 @@
     "types": [
       "fire"
     ],
+    "color": "red",
     "relations": {
       "half": [
         7,
@@ -18088,6 +18813,7 @@
     "types": [
       "fire"
     ],
+    "color": "red",
     "relations": {
       "half": [
         7,
@@ -18113,6 +18839,7 @@
       "fire",
       "dark"
     ],
+    "color": "red",
     "relations": {
       "none": [
         14
@@ -18141,6 +18868,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -18162,6 +18890,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -18184,6 +18913,7 @@
       "water",
       "fairy"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         16
@@ -18212,6 +18942,7 @@
       "normal",
       "flying"
     ],
+    "color": "black",
     "relations": {
       "none": [
         5,
@@ -18237,6 +18968,7 @@
       "normal",
       "flying"
     ],
+    "color": "black",
     "relations": {
       "none": [
         5,
@@ -18262,6 +18994,7 @@
       "normal",
       "flying"
     ],
+    "color": "black",
     "relations": {
       "none": [
         5,
@@ -18286,6 +19019,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -18303,6 +19037,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -18320,6 +19055,7 @@
     "types": [
       "bug"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         2,
@@ -18342,6 +19078,7 @@
       "bug",
       "electric"
     ],
+    "color": "green",
     "relations": {
       "half": [
         2,
@@ -18364,6 +19101,7 @@
       "bug",
       "electric"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,
@@ -18385,6 +19123,7 @@
     "types": [
       "fighting"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         6,
@@ -18407,6 +19146,7 @@
       "fighting",
       "ice"
     ],
+    "color": "white",
     "relations": {
       "half": [
         7,
@@ -18432,6 +19172,7 @@
       "fire",
       "flying"
     ],
+    "color": "red",
     "relations": {
       "none": [
         5
@@ -18464,6 +19205,7 @@
       "bug",
       "fairy"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         16
@@ -18495,6 +19237,7 @@
       "bug",
       "fairy"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         16
@@ -18525,6 +19268,7 @@
     "types": [
       "rock"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         1,
@@ -18549,6 +19293,7 @@
     "types": [
       "rock"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         1,
@@ -18573,6 +19318,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -18595,6 +19341,7 @@
       "poison",
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,
@@ -18622,6 +19369,7 @@
       "poison",
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,
@@ -18648,6 +19396,7 @@
     "types": [
       "ground"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         13
@@ -18671,6 +19420,7 @@
     "types": [
       "ground"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         13
@@ -18695,6 +19445,7 @@
       "water",
       "bug"
     ],
+    "color": "green",
     "relations": {
       "half": [
         2,
@@ -18719,6 +19470,7 @@
       "water",
       "bug"
     ],
+    "color": "green",
     "relations": {
       "half": [
         2,
@@ -18742,6 +19494,7 @@
     "types": [
       "grass"
     ],
+    "color": "pink",
     "relations": {
       "half": [
         5,
@@ -18766,6 +19519,7 @@
     "types": [
       "grass"
     ],
+    "color": "pink",
     "relations": {
       "half": [
         5,
@@ -18791,6 +19545,7 @@
       "grass",
       "fairy"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         16
@@ -18823,6 +19578,7 @@
       "grass",
       "fairy"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         16
@@ -18855,6 +19611,7 @@
       "poison",
       "fire"
     ],
+    "color": "black",
     "relations": {
       "quarter": [
         7,
@@ -18887,6 +19644,7 @@
       "poison",
       "fire"
     ],
+    "color": "black",
     "relations": {
       "quarter": [
         7,
@@ -18919,6 +19677,7 @@
       "normal",
       "fighting"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         8
@@ -18945,6 +19704,7 @@
       "normal",
       "fighting"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         8
@@ -18970,6 +19730,7 @@
     "types": [
       "grass"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         5,
@@ -18994,6 +19755,7 @@
     "types": [
       "grass"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         5,
@@ -19018,6 +19780,7 @@
     "types": [
       "grass"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         5,
@@ -19042,6 +19805,7 @@
     "types": [
       "fairy"
     ],
+    "color": "green",
     "relations": {
       "none": [
         16
@@ -19066,6 +19830,7 @@
       "normal",
       "psychic"
     ],
+    "color": "white",
     "relations": {
       "none": [
         8
@@ -19087,6 +19852,7 @@
     "types": [
       "fighting"
     ],
+    "color": "white",
     "relations": {
       "half": [
         6,
@@ -19109,6 +19875,7 @@
       "bug",
       "water"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         2,
@@ -19133,6 +19900,7 @@
       "bug",
       "water"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         2,
@@ -19157,6 +19925,7 @@
       "ghost",
       "ground"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         1,
@@ -19188,6 +19957,7 @@
       "ghost",
       "ground"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         1,
@@ -19218,6 +19988,7 @@
     "types": [
       "water"
     ],
+    "color": "black",
     "relations": {
       "half": [
         9,
@@ -19239,6 +20010,7 @@
     "types": [
       "normal"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         8
@@ -19256,6 +20028,7 @@
     "types": [
       "normal"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         8
@@ -19274,6 +20047,7 @@
       "rock",
       "flying"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         5
@@ -19302,6 +20076,7 @@
     "types": [
       "normal"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         8
@@ -19320,6 +20095,7 @@
       "fire",
       "dragon"
     ],
+    "color": "red",
     "relations": {
       "quarter": [
         10,
@@ -19346,6 +20122,7 @@
       "electric",
       "steel"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4
@@ -19383,6 +20160,7 @@
       "ghost",
       "fairy"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         1,
@@ -19407,6 +20185,7 @@
       "water",
       "psychic"
     ],
+    "color": "pink",
     "relations": {
       "half": [
         2,
@@ -19434,6 +20213,7 @@
       "normal",
       "dragon"
     ],
+    "color": "white",
     "relations": {
       "none": [
         8
@@ -19461,6 +20241,7 @@
       "ghost",
       "grass"
     ],
+    "color": "green",
     "relations": {
       "none": [
         1,
@@ -19489,6 +20270,7 @@
     "types": [
       "dragon"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         10,
@@ -19512,6 +20294,7 @@
       "dragon",
       "fighting"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         6,
@@ -19542,6 +20325,7 @@
       "dragon",
       "fighting"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         6,
@@ -19572,6 +20356,7 @@
       "electric",
       "fairy"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         16
@@ -19598,6 +20383,7 @@
       "psychic",
       "fairy"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         16
@@ -19624,6 +20410,7 @@
       "grass",
       "fairy"
     ],
+    "color": "red",
     "relations": {
       "none": [
         16
@@ -19656,6 +20443,7 @@
       "water",
       "fairy"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         16
@@ -19683,6 +20471,7 @@
     "types": [
       "psychic"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,
@@ -19703,6 +20492,7 @@
     "types": [
       "psychic"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,
@@ -19724,6 +20514,7 @@
       "psychic",
       "steel"
     ],
+    "color": "white",
     "relations": {
       "none": [
         4
@@ -19758,6 +20549,7 @@
       "psychic",
       "ghost"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         1,
@@ -19782,6 +20574,7 @@
       "rock",
       "poison"
     ],
+    "color": "white",
     "relations": {
       "quarter": [
         4
@@ -19812,6 +20605,7 @@
       "bug",
       "fighting"
     ],
+    "color": "red",
     "relations": {
       "half": [
         2,
@@ -19839,6 +20633,7 @@
       "bug",
       "fighting"
     ],
+    "color": "white",
     "relations": {
       "half": [
         2,
@@ -19865,6 +20660,7 @@
     "types": [
       "electric"
     ],
+    "color": "black",
     "relations": {
       "half": [
         3,
@@ -19885,6 +20681,7 @@
       "steel",
       "flying"
     ],
+    "color": "green",
     "relations": {
       "none": [
         4,
@@ -19917,6 +20714,7 @@
       "grass",
       "steel"
     ],
+    "color": "white",
     "relations": {
       "none": [
         4
@@ -19951,6 +20749,7 @@
       "dark",
       "dragon"
     ],
+    "color": "black",
     "relations": {
       "none": [
         14
@@ -19982,6 +20781,7 @@
     "types": [
       "psychic"
     ],
+    "color": "black",
     "relations": {
       "half": [
         2,
@@ -20003,6 +20803,7 @@
       "steel",
       "fairy"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4,
@@ -20036,6 +20837,7 @@
       "fighting",
       "ghost"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         1,
@@ -20064,6 +20866,7 @@
     "types": [
       "poison"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         2,
@@ -20087,6 +20890,7 @@
       "poison",
       "dragon"
     ],
+    "color": "purple",
     "relations": {
       "quarter": [
         12
@@ -20116,6 +20920,7 @@
       "rock",
       "steel"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4
@@ -20150,6 +20955,7 @@
       "fire",
       "ghost"
     ],
+    "color": "white",
     "relations": {
       "none": [
         1,
@@ -20183,6 +20989,7 @@
     "types": [
       "electric"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         3,
@@ -20202,6 +21009,7 @@
     "types": [
       "steel"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4
@@ -20233,6 +21041,7 @@
     "types": [
       "steel"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4
@@ -20264,6 +21073,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -20288,6 +21098,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -20312,6 +21123,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -20336,6 +21148,7 @@
     "types": [
       "fire"
     ],
+    "color": "white",
     "relations": {
       "half": [
         7,
@@ -20360,6 +21173,7 @@
     "types": [
       "fire"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         7,
@@ -20384,6 +21198,7 @@
     "types": [
       "fire"
     ],
+    "color": "white",
     "relations": {
       "half": [
         7,
@@ -20408,6 +21223,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -20429,6 +21245,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -20450,6 +21267,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -20471,6 +21289,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -20488,6 +21307,7 @@
     "types": [
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -20505,6 +21325,7 @@
     "types": [
       "flying"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         5
@@ -20529,6 +21350,7 @@
     "types": [
       "flying"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         5
@@ -20554,6 +21376,7 @@
       "flying",
       "steel"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         4,
@@ -20585,6 +21408,7 @@
     "types": [
       "bug"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,
@@ -20607,6 +21431,7 @@
       "bug",
       "psychic"
     ],
+    "color": "yellow",
     "relations": {
       "quarter": [
         2
@@ -20635,6 +21460,7 @@
       "bug",
       "psychic"
     ],
+    "color": "red",
     "relations": {
       "quarter": [
         2
@@ -20662,6 +21488,7 @@
     "types": [
       "dark"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         14
@@ -20685,6 +21512,7 @@
     "types": [
       "dark"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         14
@@ -20708,6 +21536,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -20732,6 +21561,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -20756,6 +21586,7 @@
     "types": [
       "normal"
     ],
+    "color": "white",
     "relations": {
       "none": [
         8
@@ -20773,6 +21604,7 @@
     "types": [
       "normal"
     ],
+    "color": "white",
     "relations": {
       "none": [
         8
@@ -20790,6 +21622,7 @@
     "types": [
       "water"
     ],
+    "color": "green",
     "relations": {
       "half": [
         9,
@@ -20812,6 +21645,7 @@
       "water",
       "rock"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         10
@@ -20840,6 +21674,7 @@
     "types": [
       "electric"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         3,
@@ -20859,6 +21694,7 @@
     "types": [
       "electric"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         3,
@@ -20878,6 +21714,7 @@
     "types": [
       "rock"
     ],
+    "color": "black",
     "relations": {
       "half": [
         1,
@@ -20903,6 +21740,7 @@
       "rock",
       "fire"
     ],
+    "color": "black",
     "relations": {
       "quarter": [
         10
@@ -20934,6 +21772,7 @@
       "rock",
       "fire"
     ],
+    "color": "black",
     "relations": {
       "quarter": [
         10
@@ -20965,6 +21804,7 @@
       "grass",
       "dragon"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         11,
@@ -20995,6 +21835,7 @@
       "grass",
       "dragon"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         11,
@@ -21025,6 +21866,7 @@
       "grass",
       "dragon"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         11,
@@ -21054,6 +21896,7 @@
     "types": [
       "ground"
     ],
+    "color": "green",
     "relations": {
       "none": [
         13
@@ -21077,6 +21920,7 @@
     "types": [
       "ground"
     ],
+    "color": "green",
     "relations": {
       "none": [
         13
@@ -21101,6 +21945,7 @@
       "flying",
       "water"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         5
@@ -21128,6 +21973,7 @@
     "types": [
       "water"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         9,
@@ -21149,6 +21995,7 @@
     "types": [
       "water"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         9,
@@ -21171,6 +22018,7 @@
       "electric",
       "poison"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         2,
@@ -21199,6 +22047,7 @@
       "electric",
       "poison"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         2,
@@ -21227,6 +22076,7 @@
       "fire",
       "bug"
     ],
+    "color": "red",
     "relations": {
       "quarter": [
         12
@@ -21256,6 +22106,7 @@
       "fire",
       "bug"
     ],
+    "color": "red",
     "relations": {
       "quarter": [
         12
@@ -21284,6 +22135,7 @@
     "types": [
       "fighting"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         6,
@@ -21305,6 +22157,7 @@
     "types": [
       "fighting"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         6,
@@ -21326,6 +22179,7 @@
     "types": [
       "ghost"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         1,
@@ -21349,6 +22203,7 @@
     "types": [
       "ghost"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         1,
@@ -21372,6 +22227,7 @@
     "types": [
       "psychic"
     ],
+    "color": "pink",
     "relations": {
       "half": [
         2,
@@ -21392,6 +22248,7 @@
     "types": [
       "psychic"
     ],
+    "color": "pink",
     "relations": {
       "half": [
         2,
@@ -21413,6 +22270,7 @@
       "psychic",
       "fairy"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         16
@@ -21439,6 +22297,7 @@
       "dark",
       "fairy"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         14,
@@ -21466,6 +22325,7 @@
       "dark",
       "fairy"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         14,
@@ -21493,6 +22353,7 @@
       "dark",
       "fairy"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         14,
@@ -21520,6 +22381,7 @@
       "dark",
       "normal"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         8,
@@ -21545,6 +22407,7 @@
     "types": [
       "steel"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         4
@@ -21576,6 +22439,7 @@
     "types": [
       "ghost"
     ],
+    "color": "white",
     "relations": {
       "none": [
         1,
@@ -21599,6 +22463,7 @@
     "types": [
       "fighting"
     ],
+    "color": "white",
     "relations": {
       "half": [
         6,
@@ -21621,6 +22486,7 @@
       "ice",
       "psychic"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         14,
@@ -21645,6 +22511,7 @@
       "ground",
       "ghost"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         1,
@@ -21675,6 +22542,7 @@
     "types": [
       "fairy"
     ],
+    "color": "white",
     "relations": {
       "none": [
         16
@@ -21698,6 +22566,7 @@
     "types": [
       "fairy"
     ],
+    "color": "white",
     "relations": {
       "none": [
         16
@@ -21721,6 +22590,7 @@
     "types": [
       "fighting"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         6,
@@ -21742,6 +22612,7 @@
     "types": [
       "electric"
     ],
+    "color": "purple",
     "relations": {
       "half": [
         3,
@@ -21762,6 +22633,7 @@
       "ice",
       "bug"
     ],
+    "color": "white",
     "relations": {
       "half": [
         5,
@@ -21787,6 +22659,7 @@
       "ice",
       "bug"
     ],
+    "color": "white",
     "relations": {
       "half": [
         5,
@@ -21811,6 +22684,7 @@
     "types": [
       "rock"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         1,
@@ -21835,6 +22709,7 @@
     "types": [
       "ice"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         15
@@ -21856,6 +22731,7 @@
       "psychic",
       "normal"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         8
@@ -21878,6 +22754,7 @@
       "electric",
       "dark"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         14
@@ -21905,6 +22782,7 @@
     "types": [
       "steel"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         4
@@ -21936,6 +22814,7 @@
     "types": [
       "steel"
     ],
+    "color": "green",
     "relations": {
       "none": [
         4
@@ -21968,6 +22847,7 @@
       "electric",
       "dragon"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         13
@@ -21996,6 +22876,7 @@
       "electric",
       "ice"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         3,
@@ -22019,6 +22900,7 @@
       "water",
       "dragon"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         10,
@@ -22042,6 +22924,7 @@
       "water",
       "ice"
     ],
+    "color": "blue",
     "relations": {
       "quarter": [
         15
@@ -22066,6 +22949,7 @@
       "steel",
       "dragon"
     ],
+    "color": "white",
     "relations": {
       "none": [
         4
@@ -22098,6 +22982,7 @@
       "dragon",
       "ghost"
     ],
+    "color": "green",
     "relations": {
       "none": [
         1,
@@ -22129,6 +23014,7 @@
       "dragon",
       "ghost"
     ],
+    "color": "green",
     "relations": {
       "none": [
         1,
@@ -22160,6 +23046,7 @@
       "dragon",
       "ghost"
     ],
+    "color": "green",
     "relations": {
       "none": [
         1,
@@ -22190,6 +23077,7 @@
     "types": [
       "fairy"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         16
@@ -22213,6 +23101,7 @@
     "types": [
       "fighting"
     ],
+    "color": "red",
     "relations": {
       "half": [
         6,
@@ -22235,6 +23124,7 @@
       "poison",
       "dragon"
     ],
+    "color": "purple",
     "relations": {
       "quarter": [
         12
@@ -22263,6 +23153,7 @@
     "types": [
       "fighting"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         6,
@@ -22285,6 +23176,7 @@
       "fighting",
       "dark"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         14
@@ -22314,6 +23206,7 @@
       "dark",
       "grass"
     ],
+    "color": "green",
     "relations": {
       "none": [
         14
@@ -22347,6 +23240,7 @@
     "types": [
       "electric"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         3,
@@ -22366,6 +23260,7 @@
     "types": [
       "dragon"
     ],
+    "color": "green",
     "relations": {
       "half": [
         10,
@@ -22388,6 +23283,7 @@
     "types": [
       "ice"
     ],
+    "color": "white",
     "relations": {
       "half": [
         15
@@ -22408,6 +23304,7 @@
     "types": [
       "ghost"
     ],
+    "color": "black",
     "relations": {
       "none": [
         1,
@@ -22432,6 +23329,7 @@
       "psychic",
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         2,
@@ -22463,6 +23361,7 @@
       "normal",
       "psychic"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         8
@@ -22485,6 +23384,7 @@
       "bug",
       "rock"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         1,
@@ -22506,6 +23406,7 @@
       "ground",
       "normal"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8,
@@ -22532,6 +23433,7 @@
       "water",
       "ghost"
     ],
+    "color": "green",
     "relations": {
       "none": [
         1,
@@ -22562,6 +23464,7 @@
       "fighting",
       "poison"
     ],
+    "color": "gray",
     "relations": {
       "quarter": [
         7
@@ -22591,6 +23494,7 @@
       "dark",
       "poison"
     ],
+    "color": "black",
     "relations": {
       "none": [
         14
@@ -22615,6 +23519,7 @@
       "fairy",
       "flying"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         5,
@@ -22645,6 +23550,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -22669,6 +23575,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -22694,6 +23601,7 @@
       "grass",
       "dark"
     ],
+    "color": "green",
     "relations": {
       "none": [
         14
@@ -22727,6 +23635,7 @@
     "types": [
       "fire"
     ],
+    "color": "red",
     "relations": {
       "half": [
         7,
@@ -22751,6 +23660,7 @@
     "types": [
       "fire"
     ],
+    "color": "red",
     "relations": {
       "half": [
         7,
@@ -22776,6 +23686,7 @@
       "fire",
       "ghost"
     ],
+    "color": "red",
     "relations": {
       "none": [
         1,
@@ -22809,6 +23720,7 @@
     "types": [
       "water"
     ],
+    "color": "white",
     "relations": {
       "half": [
         9,
@@ -22830,6 +23742,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -22852,6 +23765,7 @@
       "water",
       "fighting"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         6,
@@ -22879,6 +23793,7 @@
     "types": [
       "normal"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         8
@@ -22896,6 +23811,7 @@
     "types": [
       "normal"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         8
@@ -22913,6 +23829,7 @@
     "types": [
       "bug"
     ],
+    "color": "white",
     "relations": {
       "half": [
         2,
@@ -22934,6 +23851,7 @@
     "types": [
       "bug"
     ],
+    "color": "green",
     "relations": {
       "half": [
         2,
@@ -22955,6 +23873,7 @@
     "types": [
       "bug"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         2,
@@ -22977,6 +23896,7 @@
       "bug",
       "dark"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         14
@@ -23004,6 +23924,7 @@
     "types": [
       "electric"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         3,
@@ -23024,6 +23945,7 @@
       "electric",
       "fighting"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         6,
@@ -23048,6 +23970,7 @@
       "electric",
       "fighting"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         6,
@@ -23071,6 +23994,7 @@
     "types": [
       "normal"
     ],
+    "color": "white",
     "relations": {
       "none": [
         8
@@ -23088,6 +24012,7 @@
     "types": [
       "normal"
     ],
+    "color": "white",
     "relations": {
       "none": [
         8
@@ -23105,6 +24030,7 @@
     "types": [
       "fairy"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         16
@@ -23128,6 +24054,7 @@
     "types": [
       "fairy"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         16
@@ -23152,6 +24079,7 @@
       "grass",
       "normal"
     ],
+    "color": "green",
     "relations": {
       "none": [
         8
@@ -23181,6 +24109,7 @@
       "grass",
       "normal"
     ],
+    "color": "green",
     "relations": {
       "none": [
         8
@@ -23210,6 +24139,7 @@
       "grass",
       "normal"
     ],
+    "color": "green",
     "relations": {
       "none": [
         8
@@ -23239,6 +24169,7 @@
       "normal",
       "flying"
     ],
+    "color": "green",
     "relations": {
       "none": [
         5,
@@ -23263,6 +24194,7 @@
     "types": [
       "rock"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         1,
@@ -23287,6 +24219,7 @@
     "types": [
       "rock"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         1,
@@ -23311,6 +24244,7 @@
     "types": [
       "rock"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         1,
@@ -23335,6 +24269,7 @@
     "types": [
       "fire"
     ],
+    "color": "red",
     "relations": {
       "half": [
         7,
@@ -23360,6 +24295,7 @@
       "fire",
       "psychic"
     ],
+    "color": "red",
     "relations": {
       "half": [
         2,
@@ -23388,6 +24324,7 @@
       "fire",
       "ghost"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         1,
@@ -23421,6 +24358,7 @@
     "types": [
       "electric"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         3,
@@ -23440,6 +24378,7 @@
     "types": [
       "electric"
     ],
+    "color": "green",
     "relations": {
       "half": [
         3,
@@ -23460,6 +24399,7 @@
       "electric",
       "flying"
     ],
+    "color": "black",
     "relations": {
       "none": [
         5
@@ -23486,6 +24426,7 @@
       "electric",
       "flying"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         5
@@ -23511,6 +24452,7 @@
     "types": [
       "dark"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         14
@@ -23534,6 +24476,7 @@
     "types": [
       "dark"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         14
@@ -23558,6 +24501,7 @@
       "poison",
       "normal"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         8
@@ -23583,6 +24527,7 @@
       "poison",
       "normal"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         8
@@ -23608,6 +24553,7 @@
       "grass",
       "ghost"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         1,
@@ -23637,6 +24583,7 @@
       "grass",
       "ghost"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         1,
@@ -23666,6 +24613,7 @@
       "ground",
       "grass"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         13
@@ -23693,6 +24641,7 @@
       "ground",
       "grass"
     ],
+    "color": "black",
     "relations": {
       "none": [
         13
@@ -23719,6 +24668,7 @@
     "types": [
       "rock"
     ],
+    "color": "red",
     "relations": {
       "half": [
         1,
@@ -23743,6 +24693,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -23768,6 +24719,7 @@
       "grass",
       "fire"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         12
@@ -23792,6 +24744,7 @@
     "types": [
       "bug"
     ],
+    "color": "brown",
     "relations": {
       "half": [
         2,
@@ -23814,6 +24767,7 @@
       "bug",
       "psychic"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         2
@@ -23841,6 +24795,7 @@
     "types": [
       "psychic"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         2,
@@ -23861,6 +24816,7 @@
     "types": [
       "psychic"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         2,
@@ -23882,6 +24838,7 @@
       "fairy",
       "steel"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         4,
@@ -23915,6 +24872,7 @@
       "fairy",
       "steel"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         4,
@@ -23948,6 +24906,7 @@
       "fairy",
       "steel"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         4,
@@ -23980,6 +24939,7 @@
     "types": [
       "water"
     ],
+    "color": "white",
     "relations": {
       "half": [
         9,
@@ -24001,6 +24961,7 @@
     "types": [
       "water"
     ],
+    "color": "red",
     "relations": {
       "half": [
         9,
@@ -24023,6 +24984,7 @@
       "flying",
       "dark"
     ],
+    "color": "white",
     "relations": {
       "none": [
         5,
@@ -24049,6 +25011,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -24070,6 +25033,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -24092,6 +25056,7 @@
       "steel",
       "poison"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4
@@ -24126,6 +25091,7 @@
       "steel",
       "poison"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4
@@ -24160,6 +25126,7 @@
       "dragon",
       "normal"
     ],
+    "color": "green",
     "relations": {
       "none": [
         8
@@ -24186,6 +25153,7 @@
     "types": [
       "steel"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         4
@@ -24218,6 +25186,7 @@
       "rock",
       "poison"
     ],
+    "color": "blue",
     "relations": {
       "quarter": [
         4
@@ -24248,6 +25217,7 @@
       "rock",
       "poison"
     ],
+    "color": "blue",
     "relations": {
       "quarter": [
         4
@@ -24277,6 +25247,7 @@
     "types": [
       "ghost"
     ],
+    "color": "white",
     "relations": {
       "none": [
         1,
@@ -24300,6 +25271,7 @@
     "types": [
       "ghost"
     ],
+    "color": "white",
     "relations": {
       "none": [
         1,
@@ -24324,6 +25296,7 @@
       "flying",
       "fighting"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         5
@@ -24353,6 +25326,7 @@
     "types": [
       "ice"
     ],
+    "color": "white",
     "relations": {
       "half": [
         15
@@ -24373,6 +25347,7 @@
     "types": [
       "ice"
     ],
+    "color": "white",
     "relations": {
       "half": [
         15
@@ -24394,6 +25369,7 @@
       "water",
       "psychic"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         2,
@@ -24420,6 +25396,7 @@
     "types": [
       "water"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         9,
@@ -24442,6 +25419,7 @@
       "dragon",
       "water"
     ],
+    "color": "pink",
     "relations": {
       "quarter": [
         10,
@@ -24465,6 +25443,7 @@
       "fighting",
       "ghost"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         1,
@@ -24494,6 +25473,7 @@
       "poison",
       "ground"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         13
@@ -24524,6 +25504,7 @@
       "normal",
       "psychic"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         8
@@ -24545,6 +25526,7 @@
     "types": [
       "normal"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         8
@@ -24563,6 +25545,7 @@
       "dark",
       "steel"
     ],
+    "color": "black",
     "relations": {
       "none": [
         4,
@@ -24597,6 +25580,7 @@
       "ground",
       "fighting"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         13
@@ -24628,6 +25612,7 @@
       "fairy",
       "psychic"
     ],
+    "color": "pink",
     "relations": {
       "none": [
         16
@@ -24654,6 +25639,7 @@
       "grass",
       "dark"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         14
@@ -24688,6 +25674,7 @@
       "ghost",
       "fairy"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         1,
@@ -24712,6 +25699,7 @@
       "bug",
       "fighting"
     ],
+    "color": "red",
     "relations": {
       "half": [
         2,
@@ -24739,6 +25727,7 @@
       "electric",
       "ground"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         13
@@ -24766,6 +25755,7 @@
       "ground",
       "steel"
     ],
+    "color": "gray",
     "relations": {
       "none": [
         4,
@@ -24800,6 +25790,7 @@
       "ice",
       "water"
     ],
+    "color": "red",
     "relations": {
       "quarter": [
         15
@@ -24824,6 +25815,7 @@
       "fighting",
       "electric"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         6,
@@ -24848,6 +25840,7 @@
       "dark",
       "flying"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         5,
@@ -24875,6 +25868,7 @@
       "fire",
       "poison"
     ],
+    "color": "yellow",
     "relations": {
       "quarter": [
         7,
@@ -24907,6 +25901,7 @@
       "rock",
       "electric"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         3
@@ -24936,6 +25931,7 @@
       "dragon",
       "ice"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         11,
@@ -24960,6 +25956,7 @@
       "dragon",
       "ice"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         11,
@@ -24984,6 +25981,7 @@
       "dragon",
       "ice"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         11,
@@ -25007,6 +26005,7 @@
     "types": [
       "ghost"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         1,
@@ -25031,6 +26030,7 @@
       "steel",
       "ghost"
     ],
+    "color": "yellow",
     "relations": {
       "none": [
         1,
@@ -25067,6 +26067,7 @@
       "dark",
       "grass"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         14
@@ -25101,6 +26102,7 @@
       "dark",
       "ice"
     ],
+    "color": "white",
     "relations": {
       "none": [
         14
@@ -25131,6 +26133,7 @@
       "dark",
       "ground"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         13,
@@ -25161,6 +26164,7 @@
       "dark",
       "fire"
     ],
+    "color": "red",
     "relations": {
       "none": [
         14
@@ -25190,6 +26194,7 @@
       "dragon",
       "dark"
     ],
+    "color": "green",
     "relations": {
       "none": [
         14
@@ -25222,6 +26227,7 @@
       "fairy",
       "fighting"
     ],
+    "color": "white",
     "relations": {
       "none": [
         16
@@ -25252,6 +26258,7 @@
       "fighting",
       "dragon"
     ],
+    "color": "red",
     "relations": {
       "half": [
         6,
@@ -25282,6 +26289,7 @@
       "electric",
       "dragon"
     ],
+    "color": "blue",
     "relations": {
       "quarter": [
         13
@@ -25310,6 +26318,7 @@
       "water",
       "dragon"
     ],
+    "color": "blue",
     "relations": {
       "quarter": [
         10,
@@ -25333,6 +26342,7 @@
       "grass",
       "psychic"
     ],
+    "color": "green",
     "relations": {
       "half": [
         2,
@@ -25364,6 +26374,7 @@
       "grass",
       "dragon"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         11,
@@ -25394,6 +26405,7 @@
       "grass",
       "ghost"
     ],
+    "color": "green",
     "relations": {
       "none": [
         1,
@@ -25423,6 +26435,7 @@
       "grass",
       "ghost"
     ],
+    "color": "green",
     "relations": {
       "none": [
         1,
@@ -25452,6 +26465,7 @@
       "poison",
       "fighting"
     ],
+    "color": "black",
     "relations": {
       "quarter": [
         7
@@ -25481,6 +26495,7 @@
       "poison",
       "psychic"
     ],
+    "color": "black",
     "relations": {
       "quarter": [
         2
@@ -25506,6 +26521,7 @@
       "poison",
       "fairy"
     ],
+    "color": "black",
     "relations": {
       "none": [
         16
@@ -25534,6 +26550,7 @@
     "types": [
       "grass"
     ],
+    "color": "green",
     "relations": {
       "half": [
         5,
@@ -25559,6 +26576,7 @@
       "steel",
       "dragon"
     ],
+    "color": "white",
     "relations": {
       "none": [
         4
@@ -25591,6 +26609,7 @@
       "grass",
       "dragon"
     ],
+    "color": "green",
     "relations": {
       "quarter": [
         11,
@@ -25621,6 +26640,7 @@
       "fire",
       "dragon"
     ],
+    "color": "brown",
     "relations": {
       "quarter": [
         10,
@@ -25647,6 +26667,7 @@
       "electric",
       "dragon"
     ],
+    "color": "yellow",
     "relations": {
       "quarter": [
         13
@@ -25675,6 +26696,7 @@
       "rock",
       "psychic"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         1,
@@ -25703,6 +26725,7 @@
       "steel",
       "psychic"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         4
@@ -25736,6 +26759,7 @@
     "types": [
       "normal"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         8
@@ -25754,6 +26778,7 @@
       "poison",
       "ghost"
     ],
+    "color": "purple",
     "relations": {
       "none": [
         1,
@@ -25783,6 +26808,7 @@
     "types": [
       "psychic"
     ],
+    "color": "red",
     "relations": {
       "half": [
         2,
@@ -25803,6 +26829,7 @@
     "types": [
       "psychic"
     ],
+    "color": "red",
     "relations": {
       "half": [
         2,
@@ -25823,6 +26850,7 @@
     "types": [
       "psychic"
     ],
+    "color": "red",
     "relations": {
       "half": [
         2,
@@ -25844,6 +26872,7 @@
       "bug",
       "ground"
     ],
+    "color": "green",
     "relations": {
       "none": [
         13
@@ -25870,6 +26899,7 @@
       "bug",
       "steel"
     ],
+    "color": "green",
     "relations": {
       "none": [
         4
@@ -25900,6 +26930,7 @@
       "grass",
       "flying"
     ],
+    "color": "green",
     "relations": {
       "none": [
         5
@@ -25931,6 +26962,7 @@
       "ghost",
       "dragon"
     ],
+    "color": "black",
     "relations": {
       "none": [
         1,
@@ -25962,6 +26994,7 @@
       "electric",
       "fire"
     ],
+    "color": "red",
     "past_types": [
       {
         "gen": "iv",
@@ -26002,6 +27035,7 @@
       "electric",
       "water"
     ],
+    "color": "red",
     "past_types": [
       {
         "gen": "iv",
@@ -26036,6 +27070,7 @@
       "electric",
       "ice"
     ],
+    "color": "red",
     "past_types": [
       {
         "gen": "iv",
@@ -26068,6 +27103,7 @@
       "electric",
       "flying"
     ],
+    "color": "red",
     "past_types": [
       {
         "gen": "iv",
@@ -26103,6 +27139,7 @@
       "electric",
       "grass"
     ],
+    "color": "red",
     "past_types": [
       {
         "gen": "iv",
@@ -26137,6 +27174,7 @@
     "types": [
       "fire"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         7,
@@ -26161,6 +27199,7 @@
     "types": [
       "water"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         9,
@@ -26182,6 +27221,7 @@
     "types": [
       "ice"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         15
@@ -26202,6 +27242,7 @@
     "types": [
       "water"
     ],
+    "color": "green",
     "relations": {
       "half": [
         9,
@@ -26224,6 +27265,7 @@
       "fire",
       "psychic"
     ],
+    "color": "red",
     "relations": {
       "half": [
         2,
@@ -26252,6 +27294,7 @@
       "normal",
       "fighting"
     ],
+    "color": "white",
     "relations": {
       "none": [
         8
@@ -26277,6 +27320,7 @@
     "types": [
       "flying"
     ],
+    "color": "green",
     "relations": {
       "none": [
         5
@@ -26302,6 +27346,7 @@
       "electric",
       "flying"
     ],
+    "color": "blue",
     "relations": {
       "none": [
         5
@@ -26328,6 +27373,7 @@
       "ground",
       "flying"
     ],
+    "color": "brown",
     "relations": {
       "none": [
         5,
@@ -26355,6 +27401,7 @@
       "dragon",
       "ice"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         11,
@@ -26379,6 +27426,7 @@
       "dragon",
       "ice"
     ],
+    "color": "gray",
     "relations": {
       "half": [
         11,
@@ -26403,6 +27451,7 @@
       "water",
       "fighting"
     ],
+    "color": "yellow",
     "relations": {
       "half": [
         6,
@@ -26430,6 +27479,7 @@
     "types": [
       "psychic"
     ],
+    "color": "blue",
     "relations": {
       "half": [
         2,

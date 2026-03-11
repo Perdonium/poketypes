@@ -10,6 +10,7 @@ export type Pokemon = {
     species: string,
     sprite: string,
     types: string[],
+    color: string,
     past_types?: { gen: string, types: string[] }[], //Absent if no change in types
     relations: {
         none?:number[],

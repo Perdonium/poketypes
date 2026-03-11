@@ -7,6 +7,30 @@ import {PokemonContext} from "@/pages/MainPage.tsx";
 import {usePokedex} from "@/stores/store.tsx";
 import type {Tip, Type} from "@/assets/types.ts";
 import RelationTip from "@/components/RelationTip.tsx";
+import {cn} from "@/lib/utils.ts";
+
+const typeColors = {
+    "normal": "bg-gradient-to-t from-gray-300/30 to-gray-500/50",
+    "fighting": "bg-gradient-to-t from-red-400/30 to-red-600/50",
+    "flying": "bg-gradient-to-t from-blue-200/30 to-blue-400/50",
+    "poison": "bg-gradient-to-t from-purple-400/30 to-purple-600/50",
+    "ground": "bg-gradient-to-t from-yellow-400/30 to-yellow-600/50",
+    "rock": "bg-gradient-to-t from-gray-300/30 to-gray-300/50",
+    "bug": "bg-gradient-to-t from-green-400/30 to-green-600/50",
+    "ghost": "bg-gradient-to-t from-indigo-400/30 to-indigo-600/50",
+    "steel": "bg-gradient-to-t from-gray-400/30 to-gray-600/50",
+    "fire": "bg-gradient-to-t from-red-300/30 to-red-500/50",
+    "water": "bg-gradient-to-t from-blue-300/30 to-blue-500/50",
+    "grass": "bg-gradient-to-t from-green-300/30 to-green-500/50",
+    "electric": "bg-gradient-to-t from-yellow-300/30 to-yellow-500/50",
+    "psychic": "bg-gradient-to-t from-pink-300/30 to-pink-500/50",
+    "ice": "bg-gradient-to-t from-cyan-200/30 to-cyan-400/50",
+    "dragon": "bg-gradient-to-t from-indigo-500/30 to-indigo-700/50",
+    "dark": "bg-gradient-to-t from-gray-800/30 to-gray-900/50",
+    "fairy": "bg-gradient-to-t from-pink-200/30 to-pink-400/50",
+    "unknown": "bg-gradient-to-t from-gray-200/30 to-gray-400/50",
+    "shadow": "bg-gradient-to-t from-gray-900/30 to-black/50"
+};
 
 function TypeCard() {
 
@@ -58,7 +82,8 @@ function TypeCard() {
         <>
             {currentType &&
                 <Item variant="outline"
-                      className={"my-4 lg:my-8 bg-card/[0.5] mx-auto h-[15rem] w-[300px] gap-0 border-l-0 border-r-0 border-b-0 border-t border-opacity-20 overflow-hidden"}
+                      className={cn("my-4 lg:my-8 mx-auto h-[15rem] w-[300px] gap-0 border-l-0 border-r-0 border-b-0 border-t border-white/50 overflow-hidden",
+                      typeColors[currentType.name])}
                       onMouseOver={handleHover}>
                     <RelationTip tip={currentTip} tooltipOpen={tooltipOpen} offset={offset}/>
                     <ItemContent className={"w-fit h-fit mx-auto"}>

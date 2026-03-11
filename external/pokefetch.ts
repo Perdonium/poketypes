@@ -76,6 +76,7 @@ async function GetPokemon(name: string) {
         name: species.names.find(x => x.language.name == "fr").name,
         sprite: sprite,
         types: pkmn.types.map(x => x.type.name),
+        color : species.color.name,
         ...(pkmn.past_types.length > 0 ? {
                 past_types: pkmn.past_types.map(x => ({
                     gen: x.generation.name.replace("generation-", ""),

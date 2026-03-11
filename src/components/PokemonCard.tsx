@@ -5,26 +5,65 @@ import PokemonRelation from "@/components/PokemonRelation.tsx";
 import {memo, useContext} from "react";
 import type {Dictionary, Pokemon, Type} from "@/assets/types.ts";
 import {PokemonContext} from "@/pages/MainPage.tsx";
-import {Capitalize} from "@/lib/utils.ts";
+import {Capitalize, cn} from "@/lib/utils.ts";
 
 const pokemonSpritePrefix = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
 
+const colors = {
+    "blue": "bg-gradient-to-t from-blue-300/20 to-blue-500/50",
+    "red": "bg-gradient-to-t from-red-300/20 to-red-500/50",
+    "green": "bg-gradient-to-t from-green-300/20 to-green-500/50",
+    "yellow": "bg-gradient-to-t from-yellow-300/20 to-yellow-500/50",
+    "purple": "bg-gradient-to-t from-purple-300/20 to-purple-500/50",
+    "brown": "bg-gradient-to-t from-orange-300/20 to-orange-500/50", // Orange used as substitute for brown
+    "black": "bg-gradient-to-t from-gray-800/20 to-gray-900/50",
+    "white": "bg-gradient-to-t from-white/20 to-gray-100/50",
+    "gray": "bg-gradient-to-t from-gray-400/20 to-gray-600/50",
+    "pink": "bg-gradient-to-t from-pink-300/20 to-pink-500/50",
+    "cyan": "bg-gradient-to-t from-cyan-300/20 to-cyan-500/50",
+    "orange": "bg-gradient-to-t from-orange-300/20 to-orange-500/50",
+    "beige": "bg-gradient-to-t from-yellow-100/20 to-yellow-200/50",
+    "gold": "bg-gradient-to-t from-yellow-500/20 to-yellow-600/50",
+    "silver": "bg-gradient-to-t from-gray-500/20 to-gray-600/50",
+    "violet": "bg-gradient-to-t from-purple-500/20 to-purple-600/50",
+    "indigo": "bg-gradient-to-t from-indigo-500/20 to-indigo-600/50",
+    "fuchsia": "bg-gradient-to-t from-pink-500/20 to-pink-600/50",
+    "lavender": "bg-gradient-to-t from-purple-200/20 to-purple-300/50",
+    "lightblue": "bg-gradient-to-t from-blue-200/20 to-blue-400/50"
+};
 function PokemonCard({pokemon, entry}: { pokemon: Pokemon, entry: number }) {
     const {types}: { types: Dictionary<Type> } = useContext(PokemonContext);
 
+    console.log(pokemon.color);
+    
     return (
         <>
             <Item variant="outline"
-                  className={"gap-0 py-2 my-2 bg-card/[0.5] h-[15rem] border-l-0 border-r-0 border-b-0 border-t mx-1 overflow-hidden"}>
+                  className={cn("gap-0 py-2 my-2 h-[15rem] border-l-0 border-r-0 border-b-0 border-t border-white/50 mx-1 overflow-hidden",
+                  pokemon.color in colors && colors[pokemon.color])}>
+
                 <ItemContent className={"w-fit h-fit"}>
 
                     <div className={""}>
                         <div className={"relative flex justify-around"}>
 
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                 className="pointer-events-none absolute blur-xl  left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] opacity-40 -z-10">
-                                <circle cx={"50%"} cy={"10%"} r="60"/>
+                                 className="pointer-events-none absolute blur-xl left-1/2 -translate-x-1/2 top-full -translate-y-1/2 w-[300px] opacity-80 -z-10">
+                                <circle cx={"50%"} cy={"10%"} r="50"/>
                             </svg>
+
+                            {
+/*           
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                 className="pointer-events-none absolute blur-xl left-0 -translate-x-1/2 -translate-y-1/2 w-[300px] opacity-60">
+                                <circle cx={"50%"} cy={"10%"} r="100" fill={pokemon.color}/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                 className="pointer-events-none absolute blur-xl left-full -translate-x-1/2 translate-y-full w-[300px] opacity-60">
+                                <circle cx={"50%"} cy={"10%"} r="100" fill={pokemon.color}/>
+                            </svg>
+                            */
+                    }
                             <div className={"w-1/3 my-auto"}>
 
                                 <h1 className={"text-lg font-bold"}>{Capitalize(pokemon.name)}</h1>

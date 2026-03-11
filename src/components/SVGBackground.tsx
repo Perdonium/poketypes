@@ -8,7 +8,7 @@ function SVGBackground() {
 
     return (
         <>
-            <svg className={"absolute opacity-20 w-full h-full"} xmlns="http://www.w3.org/2000/svg"
+            <svg className={"absolute opacity-20 w-full h-full pointer-events-none"} xmlns="http://www.w3.org/2000/svg"
                  fill={""}>
                 <defs>
                     <pattern id="pokeballPattern" patternUnits="userSpaceOnUse" width="50" height="50">
@@ -43,7 +43,7 @@ function SVGBackground() {
             </svg>
 
 
-            <svg className={"absolute -z-10 opacity-50 w-full h-full"} xmlns="http://www.w3.org/2000/svg" version="1.1"
+            <svg className={"absolute -z-10 opacity-50 w-full h-full pointer-events-none"} xmlns="http://www.w3.org/2000/svg" version="1.1"
                  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" preserveAspectRatio="none" viewBox="0 0 1920 1080">
                 <g mask="url(&quot;#SvgjsMask1018&quot;)" fill="none">
                     <rect width="1920" height="1080" x="0" y="0"
