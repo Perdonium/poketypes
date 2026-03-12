@@ -1,4 +1,4 @@
-﻿import {createContext, useState} from "react";
+﻿import {createContext, useContext, useState} from "react";
 import TypesTable from "@/components/TypesTable.tsx";
 import PokemonList from "@/components/PokemonList.tsx";
 import VersionSelector from "@/components/VersionSelector.tsx";
@@ -14,6 +14,7 @@ import {Tabs, TabsList} from "@/components/ui/tabs";
 import {TabsTrigger} from "@/components/ui/tabs.tsx";
 import {cn} from "@/lib/utils.ts";
 import SVGBackground from "@/components/SVGBackground.tsx";
+import DetailledPokemonCard from "@/components/DetailledPokemonCard.tsx";
 
 
 export const PokemonContext = createContext<PokemonContextType>({

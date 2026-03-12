@@ -6,6 +6,7 @@ import {memo, useContext} from "react";
 import type {Dictionary, Pokemon, Type} from "@/assets/types.ts";
 import {PokemonContext} from "@/pages/MainPage.tsx";
 import {Capitalize, cn} from "@/lib/utils.ts";
+import DetailledPokemonRelation from "@/components/DetailledPokemonRelation.tsx";
 
 const pokemonSpritePrefix = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
 
@@ -31,17 +32,15 @@ const colors = {
     "lavender": "bg-gradient-to-t from-purple-200/20 to-purple-300/50",
     "lightblue": "bg-gradient-to-t from-blue-200/20 to-blue-400/50"
 };
-
-function PokemonCard({pokemon, entry, onClick}: { pokemon: Pokemon, entry: number, onClick: (p: Pokemon) => void }) {
+function DetailledPokemonCard({pokemon, entry}: { pokemon: Pokemon, entry: number }) {
     const {types}: { types: Dictionary<Type> } = useContext(PokemonContext);
-
+    
     return (
         <>
             <Item variant="outline"
-                  className={cn("gap-0 py-2 my-2 h-[15rem] border-l-0 border-r-0 border-b-0 border-t border-white/50 mx-1 overflow-hidden",
-                      "hover:scale-105 hover:cursor-pointer hover:z-10 transition-all",
-                      pokemon.color in colors && colors[pokemon.color])}
-                  onClick={() => onClick(pokemon)}>
+                  className={cn("gap-0 py-2 my-2 h-auto border-l-0 border-r-0 border-b-0 border-t border-white/50 mx-1 overflow-hidden",
+                      "",
+                  pokemon.color in colors && colors[pokemon.color])}>
 
                 <ItemContent className={"w-fit h-fit"}>
 
@@ -54,21 +53,21 @@ function PokemonCard({pokemon, entry, onClick}: { pokemon: Pokemon, entry: numbe
                             </svg>
 
                             {
-                                /*           
-                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                                 className="pointer-events-none absolute blur-xl left-0 -translate-x-1/2 -translate-y-1/2 w-[300px] opacity-60">
-                                                                <circle cx={"50%"} cy={"10%"} r="100" fill={pokemon.color}/>
-                                                            </svg>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                                                 className="pointer-events-none absolute blur-xl left-full -translate-x-1/2 translate-y-full w-[300px] opacity-60">
-                                                                <circle cx={"50%"} cy={"10%"} r="100" fill={pokemon.color}/>
-                                                            </svg>
-                                                            */
-                            }
+/*           
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                 className="pointer-events-none absolute blur-xl left-0 -translate-x-1/2 -translate-y-1/2 w-[300px] opacity-60">
+                                <circle cx={"50%"} cy={"10%"} r="100" fill={pokemon.color}/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                 className="pointer-events-none absolute blur-xl left-full -translate-x-1/2 translate-y-full w-[300px] opacity-60">
+                                <circle cx={"50%"} cy={"10%"} r="100" fill={pokemon.color}/>
+                            </svg>
+                            */
+                    }
                             <div className={"w-1/3 my-auto"}>
 
-                                <h1 className={"text-lg font-bold"}>{Capitalize(pokemon.name)}</h1>
-                                <h1 className={"text-lg font-bold"}>#{entry}</h1>
+                                <h1 className={"text-lg font-bold w-fit mx-auto"}>{Capitalize(pokemon.name)}</h1>
+                                <h1 className={"text-lg font-bold w-fit mx-auto"}>#{entry}</h1>
                             </div>
                             <img loading="lazy"
                                  src={pokemonSpritePrefix + pokemon.sprite}
@@ -85,29 +84,27 @@ function PokemonCard({pokemon, entry, onClick}: { pokemon: Pokemon, entry: numbe
                             </div>
                         </div>
 
-                        <Separator className={"bg-white/40"}/>
-
-                        <div className={"flex justify-evenly [&>*:first-child]:hidden mt-4 -mx-2"}>
+                        <div className={"flex flex-col justify-evenly mt-4 -mx-2"}>
                             {pokemon.relations.none &&
-                                <PokemonRelation title="0"
+                                <DetailledPokemonRelation title="0"
                                                  typeList={pokemon.relations.none.map(x => types[x.toString()].name)}
-                                                 orientation={"vertical"}/>}
+                                                 orientation={"horizontal"}/>}
                             {pokemon.relations.quarter &&
-                                <PokemonRelation title="0.25"
+                                <DetailledPokemonRelation title="0.25"
                                                  typeList={pokemon.relations.quarter.map(x => types[x.toString()].name)}
-                                                 orientation={"vertical"}/>}
+                                                 orientation={"horizontal"}/>}
                             {pokemon.relations.half &&
-                                <PokemonRelation title="0.5"
+                                <DetailledPokemonRelation title="0.5"
                                                  typeList={pokemon.relations.half.map(x => types[x.toString()].name)}
-                                                 orientation={"vertical"}/>}
+                                                 orientation={"horizontal"}/>}
                             {pokemon.relations.double &&
-                                <PokemonRelation title="2"
+                                <DetailledPokemonRelation title="2"
                                                  typeList={pokemon.relations.double.map(x => types[x.toString()].name)}
-                                                 orientation={"vertical"}/>}
+                                                 orientation={"horizontal"}/>}
                             {pokemon.relations.quadruple &&
-                                <PokemonRelation title="4"
+                                <DetailledPokemonRelation title="4"
                                                  typeList={pokemon.relations.quadruple.map(x => types[x.toString()].name)}
-                                                 orientation={"vertical"}/>}
+                                                 orientation={"horizontal"}/>}
 
 
                         </div>
@@ -121,7 +118,7 @@ function PokemonCard({pokemon, entry, onClick}: { pokemon: Pokemon, entry: numbe
     )
 }
 
-export default memo(PokemonCard, (prev, next) =>
+export default memo(DetailledPokemonCard, (prev, next) =>
     prev.pokemon.id === next.pokemon.id &&
     prev.entry === next.entry
 );

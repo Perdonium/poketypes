@@ -151,6 +151,7 @@ function TypesTable() {
         },
         `;
         setNewTips(nTips);
+        console.log(JSON.stringify(nTips));
         setDialogOpen(false);
     }
 
@@ -266,6 +267,7 @@ function TypesTable() {
                                                                  relationValue == 2 && doubleDamageBg,
                                                                  hoverAttackingType && hoverAttackingType != rowType && "opacity-40",
                                                                  hoverDefendingType && hoverDefendingType.id != index + 1 && "opacity-40",
+                                                                 FindTip(rowType, types[(index+1).toString()]) != undefined && "bg-black"
                                                              )}
                                                              onMouseEnter={() => OnHoverCell(rowType, index + 1)}
                                                              onClick={() => OnClickCell(rowType, index)}

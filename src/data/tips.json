@@ -34,5 +34,82 @@
     "defending": "water",
     "tip": "Les plantes se nourrissent d'eau",
     "mutual": true
+  },        {
+  "attacking": "steel",
+  "defending": "water",
+  "tip": "Le métal rouille avec l'eau.",
+  "mutual": true
+},
+  {
+    "attacking": "bug",
+    "defending": "psychic",
+    "tip": "Il est commun d'avoir peur des insectes.",
+    "mutual": true
+  },
+  {
+    "attacking": "dark",
+    "defending": "psychic",
+    "tip": "Il est commun d'avoir peur des ténèbres.",
+    "mutual": true
+  },
+  {
+    "attacking": "fire",
+    "defending": "steel",
+    "tip": "Le feu plie le métal.",
+    "mutual": true
+  },
+  {
+    "attacking": "rock",
+    "defending": "fire",
+    "tip": "Des pierres peuvent étouffer un feu.",
+    "mutual": true
+  },
+  {
+    "attacking": "grass",
+    "defending": "fire",
+    "tip": "Le feu brûle les plantes.",
+    "mutual": true
+  },
+  {
+    "attacking": "ice",
+    "defending": "fire",
+    "tip": "Le feu fait fondre la glace.",
+    "mutual": true
+  },
+  {
+    "attacking": "steel",
+    "defending": "fire",
+    "tip": "Le feu peut faire fondre le métal.",
+    "mutual": true
+  },
+  {
+    "attacking": "ice",
+    "defending": "water",
+    "tip": "L'eau et la glace sont la même matière.",
+    "mutual": true
+  },
+  {
+    "attacking": "steel",
+    "defending": "water",
+    "tip": "L'acier rouille avec l'eau.",
+    "mutual": true
+  },
+  {
+    "attacking": "electric",
+    "defending": "ground",
+    "tip": "La terre absorbe l'électricité.",
+    "mutual": true
+  },
+  {
+    "attacking": "electric",
+    "defending": "flying",
+    "tip": "Les éclairs frappent souvent les oiseaux.",
+    "mutual": true
+  },
+  {
+    "attacking": "steel",
+    "defending": "electric",
+    "tip": "Le métal est conducteur.",
+    "mutual": true
   }
 ]
