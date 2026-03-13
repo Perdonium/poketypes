@@ -7,6 +7,7 @@ export interface Dictionary<T> {
 export type Pokemon = {
     id: number,
     name: string,
+    names: Dictionary<string>, //Absent if no change in types
     species: string,
     sprite: string,
     types: string[],
@@ -52,7 +53,7 @@ export interface Type {
     damage_relations: TypeRelations,
     past_damage_relations: TypeRelationsPast[],
     generation: string,
-    names: Name[]
+    names: Dictionary<string>,
 }
 
 export interface PokemonContextType {

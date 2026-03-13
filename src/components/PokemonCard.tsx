@@ -32,7 +32,31 @@ const colors: { [color: string] : string } = {
     "lightblue": "bg-gradient-to-t from-blue-200/20 to-blue-400/50"
 };
 
-function PokemonCard({pokemon, entry, onClick}: { pokemon: Pokemon, entry: number, onClick: (p: Pokemon) => void }) {
+/*
+const colorsB: { [color: string] : string } = {
+    "blue": "bg-gradient-to-t from-blue-300/40 to-blue-500/70",
+    "red": "bg-gradient-to-t from-red-300/40 to-red-500/70",
+    "green": "bg-gradient-to-t from-green-300/40 to-green-500/70",
+    "yellow": "bg-gradient-to-t from-yellow-300/40 to-yellow-500/70",
+    "purple": "bg-gradient-to-t from-purple-300/40 to-purple-500/70",
+    "brown": "bg-gradient-to-t from-orange-300/40 to-orange-500/70", // Orange used as substitute for brown
+    "black": "bg-gradient-to-t from-gray-800/40 to-gray-900/70",
+    "white": "bg-gradient-to-t from-white/40 to-gray-100/70",
+    "gray": "bg-gradient-to-t from-gray-400/40 to-gray-600/70",
+    "pink": "bg-gradient-to-t from-pink-300/40 to-pink-500/70",
+    "cyan": "bg-gradient-to-t from-cyan-300/40 to-cyan-500/70",
+    "orange": "bg-gradient-to-t from-orange-300/40 to-orange-500/70",
+    "beige": "bg-gradient-to-t from-yellow-100/40 to-yellow-200/70",
+    "gold": "bg-gradient-to-t from-yellow-500/40 to-yellow-600/70",
+    "silver": "bg-gradient-to-t from-gray-500/40 to-gray-600/70",
+    "violet": "bg-gradient-to-t from-purple-500/40 to-purple-600/70",
+    "indigo": "bg-gradient-to-t from-indigo-500/40 to-indigo-600/70",
+    "fuchsia": "bg-gradient-to-t from-pink-500/40 to-pink-600/70",
+    "lavender": "bg-gradient-to-t from-purple-200/40 to-purple-300/70",
+    "lightblue": "bg-gradient-to-t from-blue-200/40 to-blue-400/70"
+};*/
+
+function PokemonCard({pokemon, entry, onClick, lang}: { pokemon: Pokemon, entry: number, onClick: (p: Pokemon) => void, lang:string }) {
     const {types}: { types: Dictionary<Type> } = useContext(PokemonContext);
 
     return (
@@ -67,7 +91,7 @@ function PokemonCard({pokemon, entry, onClick}: { pokemon: Pokemon, entry: numbe
                             }
                             <div className={"w-1/3 my-auto"}>
 
-                                <h1 className={"text-lg font-bold"}>{Capitalize(pokemon.name)}</h1>
+                                <h1 className={"text-lg font-bold"}>{Capitalize(pokemon.names[lang])}</h1>
                                 <h1 className={"text-lg font-bold"}>#{entry}</h1>
                             </div>
                             <img loading="lazy"
@@ -123,5 +147,6 @@ function PokemonCard({pokemon, entry, onClick}: { pokemon: Pokemon, entry: numbe
 
 export default memo(PokemonCard, (prev, next) =>
     prev.pokemon.id === next.pokemon.id &&
-    prev.entry === next.entry
+    prev.entry === next.entry &&
+    prev.lang === next.lang
 );

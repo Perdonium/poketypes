@@ -6,6 +6,8 @@ import {useVirtualizer} from "@tanstack/react-virtual";
 import {usePokedex} from "@/stores/store.tsx";
 import type {Pokemon, VersionGroup} from "@/assets/types.ts";
 import DetailledPokemonCard from "@/components/DetailledPokemonCard.tsx";
+import { useTransition, animated, config } from "react-spring";
+
 import {
     Dialog,
     DialogContent,
@@ -33,6 +35,8 @@ function PokemonList() {
     const lanes = useResponsiveLanes();
     const [entryMap, setEntryMap] = useState<Record<string, number>>({});
     const national: boolean = usePokedex((state) => state.national);
+    const lang: string = usePokedex((state) => state.lang);
+    console.log("lang is "+lang);
     const versionGroup: VersionGroup | undefined = usePokedex((state) => state.versionGroup);
 
     const scrollParentRef = useRef<HTMLDivElement>(null)
@@ -79,7 +83,8 @@ function PokemonList() {
     useEffect(() => {
         rowVirtualizer.measure();
     }, [lanes, paddedCount]);
-    
+
+
     function OnInputClick(){
         const windowHeight = window.innerHeight;
         const yPos = inputRef.current!.getBoundingClientRect().y;
@@ -102,7 +107,8 @@ function PokemonList() {
 
             {dialogPokemon && <Dialog open={dialogPokemon != undefined} onOpenChange={onDialogOpenChange} >
                 <DialogContent className={"p-0 border-0"}>
-                    { filtered.length > 0 && <DetailledPokemonCard pokemon={dialogPokemon} entry={1}/>}
+
+                    { filtered.length > 0 && <DetailledPokemonCard pokemon={dialogPokemon} entry={1} lang={lang}/>}
                 </DialogContent>
             </Dialog>}
             
@@ -119,7 +125,7 @@ function PokemonList() {
             <div
                 ref={scrollParentRef}
                 id={"scrollParent"}
-                className={"overflow-y-auto overflow-x-hidden h-full" +
+                className={"scrollbar overflow-y-auto overflow-x-hidden h-full" +
                     " border border-t-2 border-white/10 border-t-white/30 px-2 rounded-lg"}
             >
                 <div
@@ -151,6 +157,7 @@ function PokemonList() {
                                     pokemon={item}
                                     entry={entryMap[item.species]}
                                     onClick={setDialogPokemon}
+                                    lang={lang}
                                 />
                             </div>
                         );

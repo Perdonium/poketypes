@@ -15,7 +15,7 @@ import {TabsTrigger} from "@/components/ui/tabs.tsx";
 import {cn} from "@/lib/utils.ts";
 import SVGBackground from "@/components/SVGBackground.tsx";
 
-
+import LanguageSwitch from "@/components/LanguageSwitch.tsx";
 export const PokemonContext = createContext<PokemonContextType>({
     pokemons,
     pokedexes,
@@ -36,7 +36,10 @@ function MainPage() {
         <div className={"relative w-full"}>
             <SVGBackground/>
             {/*<h1 className={"mb-16 text-4xl font-bold"}>PokeTypes.fr</h1>*/}
-            <VersionSelector/>
+            <div className={"flex items-center justify-center"}>
+                <VersionSelector/>
+                <LanguageSwitch/>
+            </div>
             <Tabs id={"tabs"} value={tab} onValueChange={onTabChange} className={"lg:invisible"}>
                 <TabsList className={"mx-auto mb-4"}>
                     <TabsTrigger value="pokemons">Pokémons</TabsTrigger>

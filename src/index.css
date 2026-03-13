@@ -2,9 +2,24 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-* {
-    scrollbar-width: thin;
-    scrollbar-color: var(--primary) var(--secondary);
+.scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 20px;
+    color: var(--primary);
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: var(--secondary);
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 100vh;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+    background:var(--primary);
 }
 
 @custom-variant dark (&:is(.dark *));

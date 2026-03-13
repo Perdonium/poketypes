@@ -42,6 +42,10 @@ async function GetTypes() {
             typesDic[t.id] = {
                 ...cleanedType,
                 generation : cleanedType.generation.name.replace("generation-",""),
+                names:cleanedType.names.reduce((dic, x) => {
+                    dic[x.language.name.toString()] = x.name;
+                    return dic;
+                }, {}),
             };
     }
 
@@ -74,6 +78,10 @@ async function GetPokemon(name: string) {
         id: pkmn.id,
         species: species.name,
         name: species.names.find(x => x.language.name == "fr").name,
+        names: species.names.reduce((dic, x) => {
+            dic[x.language.name.toString()] = x.name;
+            return dic;
+        }, {}),
         sprite: sprite,
         types: pkmn.types.map(x => x.type.name),
         color : species.color.name,
@@ -275,11 +283,11 @@ async function GetVersionsAndVersionsGroups() {
 
 }
 
-//await GetTypes();
+await GetTypes();
 
 //GetPokemons();
 
-UpdatePokemonsRelations();
+//UpdatePokemonsRelations();
 
 //await GetPokedexes();
 

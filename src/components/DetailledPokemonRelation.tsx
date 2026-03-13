@@ -1,5 +1,5 @@
 ﻿import TypeIcon from "@/components/TypeIcon.tsx";
-import {cn} from "@/lib/utils.ts";
+import {cn, GetTypesFromNames} from "@/lib/utils.ts";
 import {Separator} from "@/components/ui/separator.tsx";
 
 function DetailledPokemonRelation({typeList, title, orientation = "vertical", useClick = true}: {
@@ -20,7 +20,7 @@ function DetailledPokemonRelation({typeList, title, orientation = "vertical", us
                 </div>
                 <div className={cn("grid gap-4 my-2")}>
                     {
-                        typeList.map((s) => {
+                        GetTypesFromNames(typeList).map((s) => {
                             return <div className={"grid grid-cols-4"}>
                                 <div className={"grid-shri"}>
                                 <TypeIcon key={s}

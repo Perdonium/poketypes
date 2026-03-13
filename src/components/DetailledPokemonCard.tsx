@@ -3,7 +3,7 @@ import TypeIcon from "@/components/TypeIcon.tsx";
 import {memo, useContext} from "react";
 import type {Dictionary, Pokemon, Type} from "@/assets/types.ts";
 import {PokemonContext} from "@/pages/MainPage.tsx";
-import {Capitalize, cn} from "@/lib/utils.ts";
+import {Capitalize, cn, GetTypesFromNames} from "@/lib/utils.ts";
 import DetailledPokemonRelation from "@/components/DetailledPokemonRelation.tsx";
 
 const pokemonSpritePrefix = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
@@ -30,7 +30,7 @@ const colors: { [color: string] : string } = {
     "lavender": "bg-gradient-to-t from-purple-200/20 to-purple-300/50",
     "lightblue": "bg-gradient-to-t from-blue-200/20 to-blue-400/50"
 };
-function DetailledPokemonCard({pokemon, entry}: { pokemon: Pokemon, entry: number }) {
+function DetailledPokemonCard({pokemon, entry, lang}: { pokemon: Pokemon, entry: number, lang:string }) {
     const {types}: { types: Dictionary<Type> } = useContext(PokemonContext);
     
     return (
@@ -64,7 +64,7 @@ function DetailledPokemonCard({pokemon, entry}: { pokemon: Pokemon, entry: numbe
                     }
                             <div className={"w-1/3 my-auto"}>
 
-                                <h1 className={"text-lg font-bold w-fit mx-auto"}>{Capitalize(pokemon.name)}</h1>
+                                <h1 className={"text-lg font-bold w-fit mx-auto"}>{Capitalize(pokemon.names[lang])}</h1>
                                 <h1 className={"text-lg font-bold w-fit mx-auto"}>#{entry}</h1>
                             </div>
                             <img loading="lazy"
@@ -74,7 +74,7 @@ function DetailledPokemonCard({pokemon, entry}: { pokemon: Pokemon, entry: numbe
                             <div className={"w-1/3 flex space-y-2"}>
                                 <div className={"flex items-center mx-auto space-x-2"}>
                                     {
-                                        Object.values(pokemon.types).map((type) => {
+                                        GetTypesFromNames(pokemon.types).map((type) => {
                                             return <TypeIcon key={type} type={type} additionalClass={"w-8"} showName={true}/>
                                         })
                                     }

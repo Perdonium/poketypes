@@ -54,7 +54,7 @@ function TypeCard() {
 
         return tip ? tip : undefined;
     }
-
+    
     useEffect(() => {
         if (!currentType)
             setCurrentType(Object.values(types)[0]);

@@ -8,6 +8,8 @@ interface PokedexState {
     setVersionGroup: (group:VersionGroup) => void,
     currentType: Type | undefined,
     setCurrentType: (type:Type) => void,
+    lang:string,
+    setLang:(lang:string) => void,
 }
 export const usePokedex = create<PokedexState>((set) => ({
     national: false,
@@ -16,4 +18,6 @@ export const usePokedex = create<PokedexState>((set) => ({
     setVersionGroup: (group:VersionGroup) => set({ versionGroup : group}),
     currentType: undefined,
     setCurrentType: (type:Type) => set({ currentType : type}),
+    lang: "fr",
+    setLang: (lang:string) => set({ lang : lang}),
 }))

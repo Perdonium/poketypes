@@ -47,7 +47,7 @@ function VersionSelector() {
     const groupsByVersions: Dictionary<VersionGroup[]> = versionGroups ? GroupBy(Object.values(versionGroups), "generation") : {};
 
     return (
-        <div className={"w-full lg:mb-4 flex justify-center space-x-4 h-[120px]"}>
+        <div className={"w-fit mx-8 lg:mb-4 flex justify-center space-x-4 h-[120px]"}>
             {versionGroups && isDesktop &&
                 <Popover open={open} onOpenChange={setOpen}>
                     <PopoverTrigger asChild>
