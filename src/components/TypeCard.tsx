@@ -9,7 +9,7 @@ import type {Tip, Type} from "@/assets/types.ts";
 import RelationTip from "@/components/RelationTip.tsx";
 import {cn} from "@/lib/utils.ts";
 
-const typeColors = {
+const typeColors: { [color: string] : string } = {
     "normal": "bg-gradient-to-t from-gray-300/30 to-gray-500/50",
     "fighting": "bg-gradient-to-t from-red-400/30 to-red-600/50",
     "flying": "bg-gradient-to-t from-blue-200/30 to-blue-400/50",
