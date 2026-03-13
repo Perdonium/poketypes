@@ -20,7 +20,7 @@ function DetailledPokemonRelation({typeList, title, orientation = "vertical", us
                 </div>
                 <div className={cn("grid gap-4 my-2")}>
                     {
-                        typeList.map((s, ind) => {
+                        typeList.map((s) => {
                             return <div className={"grid grid-cols-4"}>
                                 <div className={"grid-shri"}>
                                 <TypeIcon key={s}

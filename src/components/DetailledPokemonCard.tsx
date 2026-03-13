@@ -1,7 +1,5 @@
 ﻿import {Item, ItemActions, ItemContent} from "@/components/ui/item.tsx";
 import TypeIcon from "@/components/TypeIcon.tsx";
-import {Separator} from "@/components/ui/separator.tsx";
-import PokemonRelation from "@/components/PokemonRelation.tsx";
 import {memo, useContext} from "react";
 import type {Dictionary, Pokemon, Type} from "@/assets/types.ts";
 import {PokemonContext} from "@/pages/MainPage.tsx";
@@ -10,7 +8,7 @@ import DetailledPokemonRelation from "@/components/DetailledPokemonRelation.tsx"
 
 const pokemonSpritePrefix = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
 
-const colors = {
+const colors: { [color: string] : string } = {
     "blue": "bg-gradient-to-t from-blue-300/20 to-blue-500/50",
     "red": "bg-gradient-to-t from-red-300/20 to-red-500/50",
     "green": "bg-gradient-to-t from-green-300/20 to-green-500/50",

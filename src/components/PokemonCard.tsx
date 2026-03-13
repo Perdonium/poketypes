@@ -9,7 +9,7 @@ import {Capitalize, cn} from "@/lib/utils.ts";
 
 const pokemonSpritePrefix = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
 
-const colors = {
+const colors: { [color: string] : string } = {
     "blue": "bg-gradient-to-t from-blue-300/20 to-blue-500/50",
     "red": "bg-gradient-to-t from-red-300/20 to-red-500/50",
     "green": "bg-gradient-to-t from-green-300/20 to-green-500/50",

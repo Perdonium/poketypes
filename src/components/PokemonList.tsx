@@ -7,15 +7,9 @@ import {usePokedex} from "@/stores/store.tsx";
 import type {Pokemon, VersionGroup} from "@/assets/types.ts";
 import DetailledPokemonCard from "@/components/DetailledPokemonCard.tsx";
 import {
-    Dialog, DialogClose,
+    Dialog,
     DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle
 } from "@/components/ui/dialog.tsx";
-import {Checkbox} from "@/components/ui/checkbox.tsx";
-import {Button} from "@/components/ui/button.tsx";
 
 const nationalPerGen = [
     151,
@@ -35,8 +29,7 @@ const generations = [
 function PokemonList() {
     const {pokemons, pokedexes} = useContext(PokemonContext);
     const [nameInput, setNameInput] = useState("");
-    const [dialogOpen, setDialogOpen] = useState(true);
-    const [dialogPokemon, setDialogPokemon] = useState<Pokemon>(undefined);
+    const [dialogPokemon, setDialogPokemon] = useState<Pokemon | undefined>(undefined);
     const lanes = useResponsiveLanes();
     const [entryMap, setEntryMap] = useState<Record<string, number>>({});
     const national: boolean = usePokedex((state) => state.national);
@@ -107,13 +100,13 @@ function PokemonList() {
     return (
         <div className={"w-auto mb-8 mx-auto lg:-mt-14 lg:mx-0 scroll-smooth"} id={"pokemon-list"}>
 
-            {dialogPokemon && <Dialog open={dialogPokemon} onOpenChange={onDialogOpenChange} >
+            {dialogPokemon && <Dialog open={dialogPokemon != undefined} onOpenChange={onDialogOpenChange} >
                 <DialogContent className={"p-0 border-0"}>
                     { filtered.length > 0 && <DetailledPokemonCard pokemon={dialogPokemon} entry={1}/>}
                 </DialogContent>
             </Dialog>}
             
-            <span className={"font-bold mr-4"} onClick={() => setLanes(lanes-1)}>Rechercher </span>
+            <span className={"font-bold mr-4"}>Rechercher </span>
             <Input type={"text"}
                    placeholder={"Nom"}
                    className={"w-auto"}

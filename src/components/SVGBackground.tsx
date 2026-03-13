@@ -1,11 +1,6 @@
-﻿import type {Type} from "@/assets/types.ts";
-import {usePokedex} from "@/stores/store.tsx";
-import {useContext} from "react";
-import {PokemonContext} from "@/pages/MainPage.tsx";
-import {cn} from "@/lib/utils.ts";
+﻿function SVGBackground() {
 
-function SVGBackground() {
-
+    // @ts-ignore
     return (
         <>
             <svg className={"absolute -z-10 opacity-20 w-full h-full pointer-events-none"} xmlns="http://www.w3.org/2000/svg"
