@@ -274,7 +274,7 @@ function TypesTable() {
                                                              onMouseLeave={() => setTooltipOpen(false)}
 
                                                         >
-                                                            <div className={cn("mx-auto my-auto h-fit")}>
+                                                            <div className={cn("mx-auto my-auto h-fit select-none")}>
 
                                                                 {relationValue === 0.5 ? (
                                                                     <><sup>1</sup>&frasl;

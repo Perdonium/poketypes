@@ -105,7 +105,7 @@ function PokemonList() {
     }
 
     return (
-        <div className={"w-auto mb-8 mx-auto lg:mx-0 scroll-smooth"} id={"pokemon-list"}>
+        <div className={"w-auto mb-8 mx-auto lg:-mt-14 lg:mx-0 scroll-smooth"} id={"pokemon-list"}>
 
             {dialogPokemon && <Dialog open={dialogPokemon} onOpenChange={onDialogOpenChange} >
                 <DialogContent className={"p-0 border-0"}>
@@ -126,7 +126,8 @@ function PokemonList() {
             <div
                 ref={scrollParentRef}
                 id={"scrollParent"}
-                className={"overflow-y-auto overflow-x-hidden h-full border"}
+                className={"overflow-y-auto overflow-x-hidden h-full" +
+                    " border border-t-2 border-white/10 border-t-white/30 px-2 rounded-lg"}
             >
                 <div
                     style={{

@@ -15,18 +15,21 @@ function DetailledPokemonRelation({typeList, title, orientation = "vertical", us
                        orientation={orientation}/>
             <div className={"flex my-4 items-center"}>
 
-                <div className={"text-lg font-bold w-1/4 text-center"}>
+                <div className={"text-lg font-bold w-1/8 text-center"}>
                     x{title}
                 </div>
-                <div className={cn("grid gap-4 mx-auto my-2")}>
+                <div className={cn("grid gap-4 my-2")}>
                     {
                         typeList.map((s, ind) => {
-                            return <div className={"flex"}>
+                            return <div className={"grid grid-cols-4"}>
+                                <div className={"grid-shri"}>
                                 <TypeIcon key={s}
                                           type={s}
-                                          additionalClass={"w-8 mr-8"}
-                                          useClick={useClick}/>
-                                <span className={"my-auto"}> Ceci est un exemple de tips pour mémoriser la résistance. </span>
+                                          additionalClass={"w-10"}
+                                          useClick={useClick}
+                                          showName={true}/>
+                                </div>
+                                <span className={"my-auto col-span-3"}> Ceci est un exemple de tips pour mémoriser la résistance. </span>
                             </div>
                         })
                     }

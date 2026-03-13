@@ -38,7 +38,7 @@ function DetailledPokemonCard({pokemon, entry}: { pokemon: Pokemon, entry: numbe
     return (
         <>
             <Item variant="outline"
-                  className={cn("gap-0 py-2 my-2 h-auto border-l-0 border-r-0 border-b-0 border-t border-white/50 mx-1 overflow-hidden",
+                  className={cn("gap-0 py-2 h-auto border-l-0 border-r-0 border-b-0 border-t border-white/50 overflow-hidden",
                       "",
                   pokemon.color in colors && colors[pokemon.color])}>
 
@@ -77,14 +77,14 @@ function DetailledPokemonCard({pokemon, entry}: { pokemon: Pokemon, entry: numbe
                                 <div className={"flex items-center mx-auto space-x-2"}>
                                     {
                                         Object.values(pokemon.types).map((type) => {
-                                            return <TypeIcon key={type} type={type} additionalClass={"w-8"}/>
+                                            return <TypeIcon key={type} type={type} additionalClass={"w-8"} showName={true}/>
                                         })
                                     }
                                 </div>
                             </div>
                         </div>
 
-                        <div className={"flex flex-col justify-evenly mt-4 -mx-2"}>
+                        <div className={"justify-evenly mt-4 -mx-2"}>
                             {pokemon.relations.none &&
                                 <DetailledPokemonRelation title="0"
                                                  typeList={pokemon.relations.none.map(x => types[x.toString()].name)}

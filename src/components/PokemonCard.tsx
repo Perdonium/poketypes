@@ -39,7 +39,7 @@ function PokemonCard({pokemon, entry, onClick}: { pokemon: Pokemon, entry: numbe
         <>
             <Item variant="outline"
                   className={cn("gap-0 py-2 my-2 h-[15rem] border-l-0 border-r-0 border-b-0 border-t border-white/50 mx-1 overflow-hidden",
-                      "hover:scale-105 hover:cursor-pointer hover:z-10 transition-all",
+                      "hover:scale-105 hover:cursor-pointer hover:z-50 transition-all",
                       pokemon.color in colors && colors[pokemon.color])}
                   onClick={() => onClick(pokemon)}>
 
