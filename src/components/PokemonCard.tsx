@@ -56,7 +56,7 @@ const colorsB: { [color: string] : string } = {
     "lightblue": "bg-gradient-to-t from-blue-200/40 to-blue-400/70"
 };*/
 
-function PokemonCard({pokemon, entry, onClick, lang}: { pokemon: Pokemon, entry: number, onClick: (p: Pokemon) => void, lang:string }) {
+function PokemonCard({pokemon, entry, onClick, onHoverStart, onHoverEnd, lang}: { pokemon: Pokemon, entry: number, onClick: (p: Pokemon) => void, onHoverStart: (p: Pokemon) => void, onHoverEnd: (p: Pokemon) => void, lang:string }) {
     const {types}: { types: Dictionary<Type> } = useContext(PokemonContext);
 
     return (
@@ -65,7 +65,10 @@ function PokemonCard({pokemon, entry, onClick, lang}: { pokemon: Pokemon, entry:
                   className={cn("gap-0 py-2 my-2 h-[15rem] border-l-0 border-r-0 border-b-0 border-t border-white/50 mx-1 overflow-hidden",
                       "hover:scale-105 hover:cursor-pointer hover:z-50 transition-all",
                       pokemon.color in colors && colors[pokemon.color])}
-                  onClick={() => onClick(pokemon)}>
+                  onClick={() => onClick(pokemon)}
+                  onMouseEnter={() => onHoverStart(pokemon)}
+                  onMouseLeave={() => onHoverEnd(pokemon)}
+            >
 
                 <ItemContent className={"w-fit h-fit"}>
 

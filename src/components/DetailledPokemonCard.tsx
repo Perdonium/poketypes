@@ -74,8 +74,8 @@ function DetailledPokemonCard({pokemon, entry, lang}: { pokemon: Pokemon, entry:
                             <div className={"w-1/3 flex space-y-2"}>
                                 <div className={"flex items-center mx-auto space-x-2"}>
                                     {
-                                        GetTypesFromNames(pokemon.types).map((type) => {
-                                            return <TypeIcon key={type} type={type} additionalClass={"w-8"} showName={true}/>
+                                        GetTypesFromNames(pokemon.types).map((type,ind) => {
+                                            return <TypeIcon key={ind} type={type} additionalClass={"w-8"} showName={true}/>
                                         })
                                     }
                                 </div>

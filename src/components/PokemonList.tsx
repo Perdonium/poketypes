@@ -6,12 +6,12 @@ import {useVirtualizer} from "@tanstack/react-virtual";
 import {usePokedex} from "@/stores/store.tsx";
 import type {Pokemon, VersionGroup} from "@/assets/types.ts";
 import DetailledPokemonCard from "@/components/DetailledPokemonCard.tsx";
-import { useTransition, animated, config } from "react-spring";
 
 import {
     Dialog,
     DialogContent,
 } from "@/components/ui/dialog.tsx";
+import {cn} from "@/lib/utils.ts";
 
 const nationalPerGen = [
     151,
@@ -32,6 +32,7 @@ function PokemonList() {
     const {pokemons, pokedexes} = useContext(PokemonContext);
     const [nameInput, setNameInput] = useState("");
     const [dialogPokemon, setDialogPokemon] = useState<Pokemon | undefined>(undefined);
+    const [hoverPokemon, setHoverPokemon] = useState<Pokemon | undefined>(undefined);
     const lanes = useResponsiveLanes();
     const [entryMap, setEntryMap] = useState<Record<string, number>>({});
     const national: boolean = usePokedex((state) => state.national);
@@ -97,18 +98,37 @@ function PokemonList() {
         }
     }
 
+    const [dialogOpen, setDialogOpen] = useState(false)
     function onDialogOpenChange(open:boolean){
-        if(!open)
-            setDialogPokemon(undefined);
+        setDialogOpen(open)
+    }
+    
+    function onPokemonClick(pokemon:Pokemon){
+            setDialogPokemon(pokemon);
+            setDialogOpen(true)
+    }
+    
+    function onHoverStart(pokemon:Pokemon){
+        setHoverPokemon(pokemon);
     }
 
+    function onHoverEnd(pokemon:Pokemon){
+        setHoverPokemon(undefined);
+    }
+    
     return (
         <div className={"w-auto mb-8 mx-auto lg:-mt-14 lg:mx-0 scroll-smooth"} id={"pokemon-list"}>
 
-            {dialogPokemon && <Dialog open={dialogPokemon != undefined} onOpenChange={onDialogOpenChange} >
-                <DialogContent className={"p-0 border-0"}>
+            {<Dialog open={dialogOpen} onOpenChange={onDialogOpenChange} >
+                <DialogContent className={cn("p-0 border-0",
+                "data-[state=open]:animate-in \n" +
+                    "data-[state=closed]:animate-out " +
+                    "data-[state=closed]:-spin-out-15 \n" +
+                    "data-[state=closed]:slide-out-to-left-1/2 \n" +
+                    "data-[state=open]:spin-in-15 \n" +
+                    "data-[state=open]:slide-in-from-right-1/2 \n")}>
 
-                    { filtered.length > 0 && <DetailledPokemonCard pokemon={dialogPokemon} entry={1} lang={lang}/>}
+                    { <DetailledPokemonCard pokemon={dialogPokemon!} entry={1} lang={lang}/>}
                 </DialogContent>
             </Dialog>}
             
@@ -156,8 +176,10 @@ function PokemonList() {
                                 <PokemonCard
                                     pokemon={item}
                                     entry={entryMap[item.species]}
-                                    onClick={setDialogPokemon}
+                                    onClick={onPokemonClick}
                                     lang={lang}
+                                    onHoverStart={onHoverStart}
+                                    onHoverEnd={onHoverEnd}
                                 />
                             </div>
                         );
