@@ -1,5 +1,5 @@
 ﻿import { create } from 'zustand'
-import type {Type, VersionGroup} from "@/assets/types.ts";
+import type {Pokemon, Type, VersionGroup} from "@/assets/types.ts";
 
 interface PokedexState {
     national: boolean,
@@ -10,6 +10,8 @@ interface PokedexState {
     setCurrentType: (type:Type) => void,
     lang:string,
     setLang:(lang:string) => void,
+    highlightedPokemon:Pokemon | undefined,
+    setHighlightedPokemon: (pokemon:Pokemon | undefined) => void,
 }
 export const usePokedex = create<PokedexState>((set) => ({
     national: false,
@@ -20,4 +22,6 @@ export const usePokedex = create<PokedexState>((set) => ({
     setCurrentType: (type:Type) => set({ currentType : type}),
     lang: "fr",
     setLang: (lang:string) => set({ lang : lang}),
+    highlightedPokemon:undefined,
+    setHighlightedPokemon: (pokemon:Pokemon | undefined) => set({ highlightedPokemon : pokemon}),
 }))

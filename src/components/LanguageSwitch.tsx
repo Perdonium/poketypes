@@ -25,12 +25,10 @@ const languages = [
 
 
 const LanguageSwitch = () => {
-  const [language, setLanguage] = useState("en");
-  const setLang = usePokedex((state) => state.setLang);
+    const setLang = usePokedex((state) => state.setLang);
+    const language = usePokedex((state) => state.lang);
   function OnSwitch(lang:string){
-      console.log(lang);
       setLang(lang);
-      setLanguage(lang);
   }
   
   return (
@@ -38,7 +36,7 @@ const LanguageSwitch = () => {
       <DropdownMenuTrigger asChild>
         <Button variant="outline" className={"-mt-4"}>
           <Languages className="h-4 w-4" />
-            {languages.find(x => x.code == language).label}
+            {languages.find(x => x.code == language)!.label}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-48">

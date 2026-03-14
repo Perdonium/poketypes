@@ -32,13 +32,13 @@ function PokemonList() {
     const {pokemons, pokedexes} = useContext(PokemonContext);
     const [nameInput, setNameInput] = useState("");
     const [dialogPokemon, setDialogPokemon] = useState<Pokemon | undefined>(undefined);
-    const [hoverPokemon, setHoverPokemon] = useState<Pokemon | undefined>(undefined);
     const lanes = useResponsiveLanes();
     const [entryMap, setEntryMap] = useState<Record<string, number>>({});
     const national: boolean = usePokedex((state) => state.national);
     const lang: string = usePokedex((state) => state.lang);
     console.log("lang is "+lang);
     const versionGroup: VersionGroup | undefined = usePokedex((state) => state.versionGroup);
+    const setHighlightedPokemon  = usePokedex((state) => state.setHighlightedPokemon);
 
     const scrollParentRef = useRef<HTMLDivElement>(null)
     const inputRef = useRef<HTMLInputElement>(null)
@@ -109,11 +109,11 @@ function PokemonList() {
     }
     
     function onHoverStart(pokemon:Pokemon){
-        setHoverPokemon(pokemon);
+        setHighlightedPokemon(pokemon);
     }
 
     function onHoverEnd(pokemon:Pokemon){
-        setHoverPokemon(undefined);
+        setHighlightedPokemon(undefined);
     }
     
     return (
