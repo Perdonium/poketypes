@@ -13,13 +13,16 @@ export type Pokemon = {
     types: string[],
     color: string,
     past_types?: { gen: string, types: string[] }[], //Absent if no change in types
-    relations: {
-        none?:number[],
-        quarter?:number[],
-        half?:number[],
-        double?:number[],
-        quadruple?:number[],
-    }
+    relations:Relations,
+    past_relations?:Relations
+}
+
+export type Relations = {
+    none?:number[],
+    quarter?:number[],
+    half?:number[],
+    double?:number[],
+    quadruple?:number[],
 }
 
 export interface Pokedex {

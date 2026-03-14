@@ -133,14 +133,14 @@ function GetRelations(type: Type): number[] {
     return relations;
 }
 
-function GetPokemonRelations(pokemon, types) {
-    let relationsArray = new Array(Object.keys(types).length).fill(1);
-    for (let t of Object.values(types))
-        relationsArray[t.id] = relationsArray[t.id] * t.relations[GetTypeFromName(pokemon.types[0]).id]
+function GetPokemonRelations(pokemonTypes, allTypes) {
+    let relationsArray = new Array(Object.keys(allTypes).length).fill(1);
+    for (let t of Object.values(allTypes))
+        relationsArray[t.id] = relationsArray[t.id] * t.relations[GetTypeFromName(pokemonTypes[0]).id]
 
-    if (pokemon.types.length == 2) {
-        for (let t of Object.values(types))
-            relationsArray[t.id] = relationsArray[t.id] * t.relations[GetTypeFromName(pokemon.types[1]).id]
+    if (pokemonTypes.length == 2) {
+        for (let t of Object.values(allTypes))
+            relationsArray[t.id] = relationsArray[t.id] * t.relations[GetTypeFromName(pokemonTypes[1]).id]
     }
 
     let relations = {
@@ -174,18 +174,19 @@ function GetPokemonRelations(pokemon, types) {
 
 async function UpdatePokemonsRelations() {
     let relations = [];
-    console.log(types);
     for (let type of Object.values(types)) {
         const r = GetRelations(type);
         relations.push(r);
         type.relations = r;
     }
-    console.log(relations);
-
     for (const pokemon of Object.values(pokemons)) {
-        pokemon.relations = GetPokemonRelations(pokemon, types);
-        console.log(pokemon);
+        pokemon.relations = GetPokemonRelations(pokemon.types, types);
+        if(pokemon.past_types){
+            pokemon.past_relations = GetPokemonRelations(pokemon.past_types[0].types, types);
+            console.log(pokemon);
+        }
     }
+    
     fs.writeFile('pokemons.json', JSON.stringify(pokemons), (error) => {
         if (error) {
             throw error;
@@ -283,11 +284,11 @@ async function GetVersionsAndVersionsGroups() {
 
 }
 
-await GetTypes();
+//await GetTypes();
 
 //GetPokemons();
 
-//UpdatePokemonsRelations();
+UpdatePokemonsRelations();
 
 //await GetPokedexes();
 

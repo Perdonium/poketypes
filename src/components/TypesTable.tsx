@@ -1,5 +1,5 @@
 ﻿import {PokemonContext} from "@/pages/MainPage.tsx";
-import {cn} from "@/lib/utils.ts";
+import {cn, GetPokemonTypes} from "@/lib/utils.ts";
 import {useContext, useEffect, useRef, useState} from "react";
 import {TooltipProvider} from "@/components/ui/tooltip.tsx";
 import {motion, useMotionValue} from "motion/react"
@@ -54,11 +54,12 @@ function TypesTable() {
 
 
     const highlightedPokemon = usePokedex((state) => state.highlightedPokemon);
-
+    const versionGroup = usePokedex((state) => state.versionGroup);
+    
     let highlightedTypes: Type[] = [];
 
     if (highlightedPokemon != undefined)
-        highlightedTypes = highlightedPokemon.types.map(x => GetTypeFromName(x));
+        highlightedTypes = GetPokemonTypes(highlightedPokemon, versionGroup!.generation).map(x => GetTypeFromName(x));
 
     useEffect(() => {
         if (!types)

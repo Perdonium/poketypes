@@ -5,7 +5,7 @@ import PokemonRelation from "@/components/PokemonRelation.tsx";
 import {memo, useContext} from "react";
 import type {Dictionary, Pokemon, Type} from "@/assets/types.ts";
 import {PokemonContext} from "@/pages/MainPage.tsx";
-import {Capitalize, cn, GetPokemonTypes} from "@/lib/utils.ts";
+import {Capitalize, cn, GetPokemonRelations, GetPokemonTypes} from "@/lib/utils.ts";
 
 const pokemonSpritePrefix = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
 
@@ -59,6 +59,8 @@ const colorsB: { [color: string] : string } = {
 function PokemonCard({pokemon, entry, onClick, onHoverStart, onHoverEnd, lang, generation}: { pokemon: Pokemon, entry: number, onClick: (p: Pokemon) => void, onHoverStart: (p: Pokemon) => void, onHoverEnd: (p: Pokemon) => void, lang:string, generation:string }) {
     const {types}: { types: Dictionary<Type> } = useContext(PokemonContext);
 
+    const relations = GetPokemonRelations(pokemon, generation);
+    
     return (
         <>
             <Item variant="outline"
@@ -115,23 +117,23 @@ function PokemonCard({pokemon, entry, onClick, onHoverStart, onHoverEnd, lang, g
                         <Separator className={"bg-white/40"}/>
 
                         <div className={"flex justify-evenly [&>*:first-child]:hidden mt-4 -mx-2"}>
-                            {pokemon.relations.none &&
+                            {relations.none &&
                                 <PokemonRelation title="0"
                                                  typeList={pokemon.relations.none.map(x => types[x.toString()].name)}
                                                  orientation={"vertical"}/>}
-                            {pokemon.relations.quarter &&
+                            {relations.quarter &&
                                 <PokemonRelation title="0.25"
                                                  typeList={pokemon.relations.quarter.map(x => types[x.toString()].name)}
                                                  orientation={"vertical"}/>}
-                            {pokemon.relations.half &&
+                            {relations.half &&
                                 <PokemonRelation title="0.5"
                                                  typeList={pokemon.relations.half.map(x => types[x.toString()].name)}
                                                  orientation={"vertical"}/>}
-                            {pokemon.relations.double &&
+                            {relations.double &&
                                 <PokemonRelation title="2"
                                                  typeList={pokemon.relations.double.map(x => types[x.toString()].name)}
                                                  orientation={"vertical"}/>}
-                            {pokemon.relations.quadruple &&
+                            {relations.quadruple &&
                                 <PokemonRelation title="4"
                                                  typeList={pokemon.relations.quadruple.map(x => types[x.toString()].name)}
                                                  orientation={"vertical"}/>}

@@ -1,6 +1,6 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
-import type {Pokemon, Type} from "@/assets/types.ts";
+import type {Pokemon, Relations, Type} from "@/assets/types.ts";
 import types from "@/data/types.json";
 
 export function cn(...inputs: ClassValue[]) {
@@ -60,5 +60,14 @@ export function GetPokemonTypes(pokemon:Pokemon, currentGen:string):string[]{
         }
     }
     return pokemon.types;
-    
+}
+
+export function GetPokemonRelations(pokemon:Pokemon, currentGen:string):Relations{
+    if(pokemon.past_types){
+        for(let pastType of pokemon.past_types){
+            if(GetGeneration(pastType.gen) >= GetGeneration(currentGen))
+                return pokemon.past_relations;
+        }
+    }
+    return pokemon.relations;
 }
