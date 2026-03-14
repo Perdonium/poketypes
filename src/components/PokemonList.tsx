@@ -11,7 +11,7 @@ import {
     Dialog,
     DialogContent,
 } from "@/components/ui/dialog.tsx";
-import {cn} from "@/lib/utils.ts";
+import {cn, GetGeneration} from "@/lib/utils.ts";
 
 const nationalPerGen = [
     151,
@@ -25,9 +25,6 @@ const nationalPerGen = [
     1025
 ]
 
-const generations = [
-    "i","ii","iii","iv","v","vi","vii","viii","ix","x"
-]
 function PokemonList() {
     const {pokemons, pokedexes} = useContext(PokemonContext);
     const [nameInput, setNameInput] = useState("");
@@ -36,7 +33,6 @@ function PokemonList() {
     const [entryMap, setEntryMap] = useState<Record<string, number>>({});
     const national: boolean = usePokedex((state) => state.national);
     const lang: string = usePokedex((state) => state.lang);
-    console.log("lang is "+lang);
     const versionGroup: VersionGroup | undefined = usePokedex((state) => state.versionGroup);
     const setHighlightedPokemon  = usePokedex((state) => state.setHighlightedPokemon);
 
@@ -50,7 +46,7 @@ function PokemonList() {
         const pokedex = Object.values(pokedexes).find(p => p.name === versionGroup.pokedexes[0])!
         let pokedexEntries = pokedex.pokemon_entries;
         if(national){
-            const gen = generations.indexOf(versionGroup.generation);
+            const gen = GetGeneration(versionGroup.generation);
             pokedexEntries = Object.values(pokedexes).find(p => p.name === "national")!.pokemon_entries.slice(0,nationalPerGen[gen]);
         }
         for (let entry of pokedexEntries)
@@ -180,6 +176,7 @@ function PokemonList() {
                                     lang={lang}
                                     onHoverStart={onHoverStart}
                                     onHoverEnd={onHoverEnd}
+                                    generation={versionGroup!.generation}
                                 />
                             </div>
                         );

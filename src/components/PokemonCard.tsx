@@ -5,7 +5,7 @@ import PokemonRelation from "@/components/PokemonRelation.tsx";
 import {memo, useContext} from "react";
 import type {Dictionary, Pokemon, Type} from "@/assets/types.ts";
 import {PokemonContext} from "@/pages/MainPage.tsx";
-import {Capitalize, cn} from "@/lib/utils.ts";
+import {Capitalize, cn, GetPokemonTypes} from "@/lib/utils.ts";
 
 const pokemonSpritePrefix = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
 
@@ -56,7 +56,7 @@ const colorsB: { [color: string] : string } = {
     "lightblue": "bg-gradient-to-t from-blue-200/40 to-blue-400/70"
 };*/
 
-function PokemonCard({pokemon, entry, onClick, onHoverStart, onHoverEnd, lang}: { pokemon: Pokemon, entry: number, onClick: (p: Pokemon) => void, onHoverStart: (p: Pokemon) => void, onHoverEnd: (p: Pokemon) => void, lang:string }) {
+function PokemonCard({pokemon, entry, onClick, onHoverStart, onHoverEnd, lang, generation}: { pokemon: Pokemon, entry: number, onClick: (p: Pokemon) => void, onHoverStart: (p: Pokemon) => void, onHoverEnd: (p: Pokemon) => void, lang:string, generation:string }) {
     const {types}: { types: Dictionary<Type> } = useContext(PokemonContext);
 
     return (
@@ -104,7 +104,7 @@ function PokemonCard({pokemon, entry, onClick, onHoverStart, onHoverEnd, lang}: 
                             <div className={"w-1/3 flex space-y-2"}>
                                 <div className={"flex items-center mx-auto space-x-2"}>
                                     {
-                                        Object.values(pokemon.types).map((type) => {
+                                        Object.values(GetPokemonTypes(pokemon, generation)).map((type) => {
                                             return <TypeIcon key={type} type={type} additionalClass={"w-8"}/>
                                         })
                                     }
@@ -151,5 +151,6 @@ function PokemonCard({pokemon, entry, onClick, onHoverStart, onHoverEnd, lang}: 
 export default memo(PokemonCard, (prev, next) =>
     prev.pokemon.id === next.pokemon.id &&
     prev.entry === next.entry &&
-    prev.lang === next.lang
+    prev.lang === next.lang &&
+    prev.generation === next.generation
 );

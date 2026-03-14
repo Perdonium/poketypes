@@ -1,6 +1,6 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
-import type {Type} from "@/assets/types.ts";
+import type {Pokemon, Type} from "@/assets/types.ts";
 import types from "@/data/types.json";
 
 export function cn(...inputs: ClassValue[]) {
@@ -24,4 +24,41 @@ export function GroupBy (xs:{}[], key:string) {
 export function GetTypesFromNames(typeNames: string[]): Type[] {
     return typeNames.map(x => Object.entries(types)
         .find(pair => pair[1].name === x)![1]);
+}
+
+export function TypeIsRelatedTo(baseType:Type, relatedType:Type): boolean {
+
+    for (const r of baseType.damage_relations.double_damage_to) {
+        if(r.name == relatedType.name) 
+            return true;
+    }
+    for (const r of baseType.damage_relations.half_damage_to) {
+        if(r.name == relatedType.name)
+            return true;
+    }
+    for (const r of baseType.damage_relations.no_damage_to) {
+        if(r.name == relatedType.name)
+            return true;
+    }
+    
+    return false;
+}
+
+const generations = [
+    "i","ii","iii","iv","v","vi","vii","viii","ix","x"
+]
+
+export function GetGeneration(gen:string){
+    return generations.indexOf(gen)+1;
+}
+
+export function GetPokemonTypes(pokemon:Pokemon, currentGen:string):string[]{
+    if(pokemon.past_types){
+        for(let pastType of pokemon.past_types){
+            if(GetGeneration(pastType.gen) >= GetGeneration(currentGen))
+                return pastType.types;
+        }
+    }
+    return pokemon.types;
+    
 }

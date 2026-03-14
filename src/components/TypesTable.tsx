@@ -16,7 +16,7 @@ import {Checkbox} from "@/components/ui/checkbox.tsx";
 import TypeIcon from "@/components/TypeIcon.tsx";
 import type {Dictionary, Tip, Type} from "@/assets/types.ts";
 import RelationTip from "@/components/RelationTip.tsx";
-
+import {usePokedex} from "@/stores/store.tsx";
 
 
 function TypesTable() {
@@ -46,11 +46,19 @@ function TypesTable() {
     const [tooltipOffset, setTooltipOffset] = useState([0, 0]);
     const [currentTip, setCurrentTip] = useState<Tip>();
 
-    const [hoverCell, setHoverCell] = useState<[Type,Type]>();
+    const [hoverCell, setHoverCell] = useState<[Type, Type]>();
     const [dialogOpen, setDialogOpen] = useState(false);
     const [newTip, setNewTip] = useState("");
     const [newTipMutual, setNewTipMutual] = useState(true);
     const [newTips, setNewTips] = useState("");
+
+
+    const highlightedPokemon = usePokedex((state) => state.highlightedPokemon);
+
+    let highlightedTypes: Type[] = [];
+
+    if (highlightedPokemon != undefined)
+        highlightedTypes = highlightedPokemon.types.map(x => GetTypeFromName(x));
 
     useEffect(() => {
         if (!types)
@@ -87,7 +95,7 @@ function TypesTable() {
         if (!cell)
             return undefined;
         return {
-            x: cell.x - firstCellRef.current!.getBoundingClientRect().x + (includeWidth?cell.width/3:0),
+            x: cell.x - firstCellRef.current!.getBoundingClientRect().x + (includeWidth ? cell.width / 3 : 0),
             y: cell.y - firstCellRef.current!.getBoundingClientRect().y
         };
     }
@@ -141,7 +149,7 @@ function TypesTable() {
     }
 
     function OnSubmitDialog() {
-        if(!hoverCell)
+        if (!hoverCell)
             return;
         const nTips = newTips + `        {
             attacking: "${hoverCell[0].name}",
@@ -170,6 +178,23 @@ function TypesTable() {
         relations.push(1);
         return relations;
     }
+
+    function RowShouldGetHighlighted(type: Type): boolean {
+        if (!highlightedPokemon || !relations) {
+            return false;
+        }
+
+        let shouldHighlight = false;
+        highlightedPokemon.types.forEach((typeName: string) => {
+            let t: Type = GetTypeFromName(typeName);
+            if (relations[type.id][t.id - 1] != 1) {
+                shouldHighlight = true;
+            }
+        });
+
+        return shouldHighlight;
+    }
+
 
     return (
         <>
@@ -202,7 +227,7 @@ function TypesTable() {
 
                     <div className={`relative border [&_>div]:border ${baseBg}
                   grid types-grid max-w-2xl mx-auto`}>
-                      <RelationTip tooltipOpen={tooltipOpen} tip={currentTip} offset={tooltipOffset}/>
+                        <RelationTip tooltipOpen={tooltipOpen} tip={currentTip} offset={tooltipOffset}/>
                         {/*Header*/}
                         <div className={"pointer-events-none"} ref={firstCellRef}></div>
                         {
@@ -214,6 +239,7 @@ function TypesTable() {
                                                 onMouseLeave={() => OnHoverDefending(hoverDefendingType == value ? undefined : value)}
                                                 className={cn(
                                                     "relative bg-accent z-10", //TODO:Here size
+                                                    highlightedPokemon && !highlightedTypes.includes(value) && "opacity-40"
                                                 )}
                                                 animate={{y: topOffset}}
                                                 transition={{ease: "easeOut", duration: 0.2}}
@@ -244,7 +270,9 @@ function TypesTable() {
                                             <TypeIcon type={rowType}
                                                       additionalClass={cn(
                                                           "w-full h-full",
-                                                          hoverDefendingType && relations[rowType.id][hoverDefendingType.id - 1] == 1 ? "opacity-20" : "")}/>
+                                                          hoverDefendingType && relations[rowType.id][hoverDefendingType.id - 1] == 1 ? "opacity-20" : "",
+                                                          highlightedPokemon && !RowShouldGetHighlighted(rowType) && "opacity-20"
+                                                      )}/>
                                         </motion.div>
                                         {
                                             relations && relations[rowType.id].map((relationValue, index) => {
@@ -267,14 +295,17 @@ function TypesTable() {
                                                                  relationValue == 2 && doubleDamageBg,
                                                                  hoverAttackingType && hoverAttackingType != rowType && "opacity-40",
                                                                  hoverDefendingType && hoverDefendingType.id != index + 1 && "opacity-40",
-                                                                 FindTip(rowType, types[(index+1).toString()]) != undefined && "bg-black"
+                                                                 FindTip(rowType, types[(index + 1).toString()]) != undefined && "bg-black",
+                                                                 highlightedPokemon && !highlightedTypes.find(x => x.id == index + 1) && "opacity-40",
                                                              )}
                                                              onMouseEnter={() => OnHoverCell(rowType, index + 1)}
                                                              onClick={() => OnClickCell(rowType, index)}
                                                              onMouseLeave={() => setTooltipOpen(false)}
 
                                                         >
-                                                            <div className={cn("mx-auto my-auto h-fit select-none")}>
+                                                            <div className={cn("mx-auto my-auto h-fit select-none pointer-events-none")}
+                                                                onMouseEnter={() => OnHoverCell(rowType, index + 1)}
+                                                                onClick={() => OnClickCell(rowType, index)}>
 
                                                                 {relationValue === 0.5 ? (
                                                                     <><sup>1</sup>&frasl;
@@ -290,6 +321,7 @@ function TypesTable() {
                                                             hoverDefendingType && hoverDefendingType.id == index + 1 && hoverBg,
                                                             hoverAttackingType && hoverAttackingType != rowType && "opacity-50",
                                                             hoverDefendingType && hoverDefendingType.id != index + 1 && "opacity-50",
+                                                            highlightedPokemon && highlightedTypes.find(x => x.id == index + 1) && hoverBg,
                                                         )}
                                                         >
                                                         </div>
