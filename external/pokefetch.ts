@@ -5,7 +5,7 @@
     GameClient,
     PokemonSpecies,
     Type,
-    NamedAPIResourceList
+    NamedAPIResourceList, TypeRelations
 } from 'pokenode-ts';
 import * as fs from 'fs';
 import pokemons from './pokemons.json';
@@ -30,6 +30,17 @@ function GetTypeFromName(name: string): Type {
         .find(pair => pair[1].name === name)![1];
 }
 
+function CleanRelations(typeRelations: TypeRelations) {
+
+    const test = Object.entries(typeRelations).map(([key, value]) =>
+        [key, value.map(x => x.name)])
+    const bis = Object.fromEntries(test)
+    return Object.fromEntries(
+        Object.entries(typeRelations).map(([key, value]) => 
+            [key, value.map(x => x.name)])
+    )
+}
+
 async function GetTypes() {
     const list: NamedAPIResourceList = await api
         .listTypes(0, 100);
@@ -38,11 +49,20 @@ async function GetTypes() {
     for (let {name} of list.results) {
         let t: Type = await api.getTypeByName(name);
         const {moves, pokemon, sprites, move_damage_class, game_indices, ...cleanedType} = t;
+
+        let test =CleanRelations(cleanedType.damage_relations)
         if (t.id < 100)
             typesDic[t.id] = {
                 ...cleanedType,
-                generation : cleanedType.generation.name.replace("generation-",""),
-                names:cleanedType.names.reduce((dic, x) => {
+                damage_relations: CleanRelations(cleanedType.damage_relations),
+                generation: cleanedType.generation.name.replace("generation-", ""),
+                past_damage_relations: cleanedType.past_damage_relations.map(x => {
+                    return ({
+                        damage_relations: CleanRelations(x.damage_relations),
+                        generation: x.generation.name.replace("generation-", "")
+                    });
+                }),
+                names: cleanedType.names.reduce((dic, x) => {
                     dic[x.language.name.toString()] = x.name;
                     return dic;
                 }, {}),
@@ -54,7 +74,7 @@ async function GetTypes() {
             throw error;
         }
     });
-    
+
     console.log("Updated types !");
 }
 
@@ -84,7 +104,7 @@ async function GetPokemon(name: string) {
         }, {}),
         sprite: sprite,
         types: pkmn.types.map(x => x.type.name),
-        color : species.color.name,
+        color: species.color.name,
         ...(pkmn.past_types.length > 0 ? {
                 past_types: pkmn.past_types.map(x => ({
                     gen: x.generation.name.replace("generation-", ""),
@@ -120,7 +140,7 @@ async function GetPokemons() {
 ////// RELATIONS
 
 function GetRelations(type: Type): number[] {
-    let relations = new Array(Object.keys(types).length+1).fill(1);
+    let relations = new Array(Object.keys(types).length + 1).fill(1);
     for (const r of type.damage_relations.double_damage_to) {
         relations[GetTypeFromName(r.name).id] = 2;
     }
@@ -181,12 +201,12 @@ async function UpdatePokemonsRelations() {
     }
     for (const pokemon of Object.values(pokemons)) {
         pokemon.relations = GetPokemonRelations(pokemon.types, types);
-        if(pokemon.past_types){
+        if (pokemon.past_types) {
             pokemon.past_relations = GetPokemonRelations(pokemon.past_types[0].types, types);
             console.log(pokemon);
         }
     }
-    
+
     fs.writeFile('pokemons.json', JSON.stringify(pokemons), (error) => {
         if (error) {
             throw error;
@@ -284,11 +304,11 @@ async function GetVersionsAndVersionsGroups() {
 
 }
 
-//await GetTypes();
+await GetTypes();
 
 //GetPokemons();
 
-UpdatePokemonsRelations();
+//UpdatePokemonsRelations();
 
 //await GetPokedexes();
 
