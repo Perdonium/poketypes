@@ -108,7 +108,7 @@ function TypeCard() {
                                         return <></>;
 
                                     return <PokemonRelation title={titles[key as keyof typeof titles]}
-                                                            typeList={currentType.damage_relations[relationKey].map(x => x.name)}
+                                                            typeList={currentType.damage_relations[relationKey]}
                                                             useClick={false}/>;
                                 })
                             }

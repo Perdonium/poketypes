@@ -90,23 +90,23 @@ function DetailledPokemonCard({pokemon, entry, lang}: { pokemon: Pokemon, entry:
                         <div className={"justify-evenly mt-4 -mx-2"}>
                             {relations.none &&
                                 <DetailledPokemonRelation title="0"
-                                                 typeList={pokemon.relations.none.map(x => types[x.toString()].name)}
+                                                 typeList={relations.none.map(x => types[x.toString()].name)}
                                                  orientation={"horizontal"}/>}
                             {relations.quarter &&
                                 <DetailledPokemonRelation title="0.25"
-                                                 typeList={pokemon.relations.quarter.map(x => types[x.toString()].name)}
+                                                 typeList={relations.quarter.map(x => types[x.toString()].name)}
                                                  orientation={"horizontal"}/>}
                             {relations.half &&
                                 <DetailledPokemonRelation title="0.5"
-                                                 typeList={pokemon.relations.half.map(x => types[x.toString()].name)}
+                                                 typeList={relations.half.map(x => types[x.toString()].name)}
                                                  orientation={"horizontal"}/>}
                             {relations.double &&
                                 <DetailledPokemonRelation title="2"
-                                                 typeList={pokemon.relations.double.map(x => types[x.toString()].name)}
+                                                 typeList={relations.double.map(x => types[x.toString()].name)}
                                                  orientation={"horizontal"}/>}
                             {relations.quadruple &&
                                 <DetailledPokemonRelation title="4"
-                                                 typeList={pokemon.relations.quadruple.map(x => types[x.toString()].name)}
+                                                 typeList={relations.quadruple.map(x => types[x.toString()].name)}
                                                  orientation={"horizontal"}/>}
 
 

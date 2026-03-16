@@ -1,4 +1,4 @@
-﻿import type {Name, TypeRelations, TypeRelationsPast} from "pokenode-ts";
+﻿import type {Name} from "pokenode-ts";
 
 export interface Dictionary<T> {
     [Key: string]: T;
@@ -73,4 +73,18 @@ export interface Tip {
     defending: string,
     tip: string,
     mutual: boolean
+}
+
+export interface TypeRelations {
+    no_damage_from: string[];
+    half_damage_from: string[];
+    double_damage_from: string[];
+    no_damage_to: string[];
+    half_damage_to: string[];
+    double_damage_to: string[];
+}
+
+export interface TypeRelationsPast {
+    damage_relations: TypeRelations;
+    generation: string;
 }

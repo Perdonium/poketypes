@@ -1,5 +1,5 @@
 ﻿import {PokemonContext} from "@/pages/MainPage.tsx";
-import {cn, GetPokemonTypes} from "@/lib/utils.ts";
+import {cn, GetGeneration, GetPokemonTypes, GetTypeRelations} from "@/lib/utils.ts";
 import {useContext, useEffect, useRef, useState} from "react";
 import {TooltipProvider} from "@/components/ui/tooltip.tsx";
 import {motion, useMotionValue} from "motion/react"
@@ -62,14 +62,15 @@ function TypesTable() {
         highlightedTypes = GetPokemonTypes(highlightedPokemon, versionGroup!.generation).map(x => GetTypeFromName(x));
 
     useEffect(() => {
-        if (!types)
+        console.log("version change");
+        if (!types || !versionGroup)
             return;
         let relations: Dictionary<number[]> = {};
         Object.entries(types).map(([key, value]) => {
             relations[key] = GetRelations(value);
         });
         setRelations(relations);
-    }, [types]);
+    }, [versionGroup, types]);
 
     function FindTip(attacking: Type, defending: Type) {
         const tip = tips.find(tip => (tip.attacking === attacking.name && tip.defending === defending.name)
@@ -79,8 +80,8 @@ function TypesTable() {
     }
 
     function GetTypeFromName(name: string): Type {
-        return Object.entries(types)
-            .find(pair => pair[1].name === name)![1];
+        return Object.values(types)
+            .find(type => type.name === name)!;
     }
 
     function GetTypeFromIndex(ind: number): Type {
@@ -166,14 +167,15 @@ function TypesTable() {
 
     function GetRelations(type: Type): number[] {
         let relations = new Array(Object.keys(types).length).fill(1);
-        for (const r of type.damage_relations.double_damage_to) {
-            relations[GetTypeFromName(r.name).id] = 2;
+        const typeRelations = GetTypeRelations(type, versionGroup!.generation);
+        for (const r of typeRelations.double_damage_to) {
+            relations[GetTypeFromName(r).id] = 2;
         }
-        for (const r of type.damage_relations.half_damage_to) {
-            relations[GetTypeFromName(r.name).id] = 0.5;
+        for (const r of typeRelations.half_damage_to) {
+            relations[GetTypeFromName(r).id] = 0.5;
         }
-        for (const r of type.damage_relations.no_damage_to) {
-            relations[GetTypeFromName(r.name).id] = 0;
+        for (const r of typeRelations.no_damage_to) {
+            relations[GetTypeFromName(r).id] = 0;
         }
         relations.shift(); //ids start at 1
         relations.push(1);
