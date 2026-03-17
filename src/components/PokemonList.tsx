@@ -116,7 +116,9 @@ function PokemonList() {
         <div className={"w-auto mb-8 mx-auto lg:-mt-14 lg:mx-0 scroll-smooth"} id={"pokemon-list"}>
 
             {<Dialog open={dialogOpen} onOpenChange={onDialogOpenChange} >
-                <DialogContent className={cn("p-0 border-0",
+                <DialogContent 
+                    showCloseButton={false}
+                    className={cn("p-0 border-0 max-h-[90vh]  overflow-hidden",
                 "data-[state=open]:animate-in \n" +
                     "data-[state=closed]:animate-out " +
                     "data-[state=closed]:-spin-out-15 \n" +

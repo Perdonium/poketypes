@@ -462,6 +462,82 @@
       }
     ]
   },
+  "10": {
+    "damage_relations": {
+      "double_damage_from": [
+        "ground",
+        "rock",
+        "water"
+      ],
+      "double_damage_to": [
+        "bug",
+        "steel",
+        "grass",
+        "ice"
+      ],
+      "half_damage_from": [
+        "bug",
+        "steel",
+        "fire",
+        "grass",
+        "ice",
+        "fairy"
+      ],
+      "half_damage_to": [
+        "rock",
+        "fire",
+        "water",
+        "dragon"
+      ],
+      "no_damage_from": [],
+      "no_damage_to": []
+    },
+    "generation": "i",
+    "id": 10,
+    "name": "fire",
+    "names": {
+      "ja-hrkt": "ほのお",
+      "ko": "불꽃",
+      "zh-hant": "火",
+      "fr": "Feu",
+      "de": "Feuer",
+      "es": "Fuego",
+      "it": "Fuoco",
+      "en": "Fire",
+      "ja": "ほのお",
+      "zh-hans": "火"
+    },
+    "past_damage_relations": [
+      {
+        "damage_relations": {
+          "double_damage_from": [
+            "ground",
+            "rock",
+            "water"
+          ],
+          "double_damage_to": [
+            "bug",
+            "grass",
+            "ice"
+          ],
+          "half_damage_from": [
+            "bug",
+            "fire",
+            "grass"
+          ],
+          "half_damage_to": [
+            "rock",
+            "fire",
+            "water",
+            "dragon"
+          ],
+          "no_damage_from": [],
+          "no_damage_to": []
+        },
+        "generation": "i"
+      }
+    ]
+  },
   "9": {
     "damage_relations": {
       "double_damage_from": [
@@ -549,82 +625,6 @@
           "no_damage_to": []
         },
         "generation": "v"
-      }
-    ]
-  },
-  "10": {
-    "damage_relations": {
-      "double_damage_from": [
-        "ground",
-        "rock",
-        "water"
-      ],
-      "double_damage_to": [
-        "bug",
-        "steel",
-        "grass",
-        "ice"
-      ],
-      "half_damage_from": [
-        "bug",
-        "steel",
-        "fire",
-        "grass",
-        "ice",
-        "fairy"
-      ],
-      "half_damage_to": [
-        "rock",
-        "fire",
-        "water",
-        "dragon"
-      ],
-      "no_damage_from": [],
-      "no_damage_to": []
-    },
-    "generation": "i",
-    "id": 10,
-    "name": "fire",
-    "names": {
-      "ja-hrkt": "ほのお",
-      "ko": "불꽃",
-      "zh-hant": "火",
-      "fr": "Feu",
-      "de": "Feuer",
-      "es": "Fuego",
-      "it": "Fuoco",
-      "en": "Fire",
-      "ja": "ほのお",
-      "zh-hans": "火"
-    },
-    "past_damage_relations": [
-      {
-        "damage_relations": {
-          "double_damage_from": [
-            "ground",
-            "rock",
-            "water"
-          ],
-          "double_damage_to": [
-            "bug",
-            "grass",
-            "ice"
-          ],
-          "half_damage_from": [
-            "bug",
-            "fire",
-            "grass"
-          ],
-          "half_damage_to": [
-            "rock",
-            "fire",
-            "water",
-            "dragon"
-          ],
-          "no_damage_from": [],
-          "no_damage_to": []
-        },
-        "generation": "i"
       }
     ]
   },

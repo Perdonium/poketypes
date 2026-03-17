@@ -28,6 +28,7 @@ function TypesTable() {
     const firstCellRef = useRef<HTMLDivElement>(null);
 
     const hoverBg = "bg-accent";
+    const disabledBg = "bg-accent/50";
     const noDamageBg = "bg-muted-foreground";
     const halfDamageBg = "bg-destructive";
     const doubleDamageBg = "bg-green-500";
@@ -110,7 +111,10 @@ function TypesTable() {
         if (type == undefined) {
             setTopOffset(0);
         } else {
-            const prevRowOffset = GetCellOffset(`left-type-${type.id - 1}`);
+            const orderedIndex = orderedTypes.findIndex(x => x === type);
+            if(orderedIndex == 0)
+                return;
+            const prevRowOffset = GetCellOffset(`left-type-${orderedTypes[orderedIndex - 1].id}`);
             if (!prevRowOffset) //First row
                 return;
             setTopOffset(prevRowOffset.y);
@@ -125,7 +129,10 @@ function TypesTable() {
         if (type == undefined) {
             setLeftOffset(0);
         } else {
-            const prevColumnOffset = GetCellOffset(`top-type-${type.id - 1}`);
+            const orderedIndex = orderedTypes.findIndex(x => x === type);
+            if(orderedIndex == 0)
+                return;
+            const prevColumnOffset = GetCellOffset(`top-type-${orderedTypes[orderedIndex - 1].id}`);
             if (!prevColumnOffset) //First column
                 return;
             setLeftOffset(prevColumnOffset.x);
@@ -197,8 +204,16 @@ function TypesTable() {
 
         return shouldHighlight;
     }
-
-
+    
+    const orderedTypes = Object.values(types);
+    orderedTypes.sort((a,b) => {
+        
+        if(GetGeneration(a.generation) != GetGeneration(b.generation))
+            return GetGeneration(a.generation) > GetGeneration(b.generation) ? 1 : -1;
+        
+        return a.id > b.id ? 1 : -1;
+    });
+    
     return (
         <>
             <div className="relative my-auto mx-auto md:mx-8 lg:mx-auto 
@@ -234,29 +249,30 @@ function TypesTable() {
                         {/*Header*/}
                         <div className={"pointer-events-none"} ref={firstCellRef}></div>
                         {
-                            types && relations && Object.entries(types).map(([key, value]) => {
+                            types && relations && orderedTypes.map((type) => {
                                 return (
-                                    <motion.div key={key}
-                                                id={`top-type-${value.id}`}
-                                                onMouseEnter={() => OnHoverDefending(value)}
-                                                onMouseLeave={() => OnHoverDefending(hoverDefendingType == value ? undefined : value)}
+                                    <motion.div key={type.id}
+                                                id={`top-type-${type.id}`}
+                                                onMouseEnter={() => OnHoverDefending(type)}
+                                                onMouseLeave={() => OnHoverDefending(hoverDefendingType == type ? undefined : type)}
                                                 className={cn(
                                                     "relative bg-accent z-10", //TODO:Here size
-                                                    highlightedPokemon && !highlightedTypes.includes(value) && "opacity-40"
+                                                    highlightedPokemon && !highlightedTypes.includes(type) && "opacity-40",
+                                                    versionGroup && GetGeneration(type.generation) > GetGeneration(versionGroup.generation) && "opacity-40",
                                                 )}
                                                 animate={{y: topOffset}}
                                                 transition={{ease: "easeOut", duration: 0.2}}
                                                 style={{y: topY}}
                                     >
-                                        <TypeIcon type={value} additionalClass={cn(
+                                        <TypeIcon type={type} additionalClass={cn(
                                             "",
-                                            hoverAttackingType && relations[hoverAttackingType.id][value.id - 1] == 1 ? "opacity-20" : "")}/>
+                                            hoverAttackingType && relations[hoverAttackingType.id][type.id - 1] == 1 ? "opacity-20" : "")}/>
                                     </motion.div>);
                             })
                         }
 
                         {
-                            types && relations && Object.entries(types).map(([_, rowType]) => {
+                            types && relations && orderedTypes.map((rowType) => {
                                 return (<>
 
                                         <motion.div
@@ -274,41 +290,46 @@ function TypesTable() {
                                                       additionalClass={cn(
                                                           "w-full h-full",
                                                           hoverDefendingType && relations[rowType.id][hoverDefendingType.id - 1] == 1 ? "opacity-20" : "",
-                                                          highlightedPokemon && !RowShouldGetHighlighted(rowType) && "opacity-20"
+                                                          highlightedPokemon && !RowShouldGetHighlighted(rowType) && "opacity-20",
+                                                          versionGroup && GetGeneration(rowType.generation) > GetGeneration(versionGroup.generation) && "opacity-40",
                                                       )}/>
                                         </motion.div>
                                         {
-                                            relations && relations[rowType.id].map((relationValue, index) => {
+                                            relations && relations[rowType.id].map((_, ind) => {
 
                                                 //TODO : Just remove new type
-                                                if (index == 18) {
+                                                if (ind == 18) {
                                                     return <></>
                                                 }
-                                                if (relationValue != 1) {
+                                                const columnTypeId = orderedTypes[ind].id;
+                                                const relationValue = relations[rowType.id][columnTypeId-1];
+                                                if (relationValue != 1 && GetGeneration(rowType.generation) <= GetGeneration(versionGroup!.generation) && GetGeneration(types[columnTypeId].generation) <= GetGeneration(versionGroup!.generation)) {
 
                                                     return (
-                                                        <div key={index}
-                                                             id={`cell-${rowType.id}-${index + 1}`}
+                                                        <div key={columnTypeId}
+                                                             id={`cell-${rowType.id}-${columnTypeId}`}
                                                              className={cn(
                                                                  "flex transition-all cursor-help",
                                                                  hoverAttackingType == rowType && hoverBg,
-                                                                 hoverDefendingType && hoverDefendingType.id == index + 1 && hoverBg,
+                                                                 hoverDefendingType && hoverDefendingType.id == columnTypeId && hoverBg,
                                                                  relationValue == 0 && noDamageBg,
                                                                  relationValue == 0.5 && halfDamageBg,
                                                                  relationValue == 2 && doubleDamageBg,
                                                                  hoverAttackingType && hoverAttackingType != rowType && "opacity-40",
-                                                                 hoverDefendingType && hoverDefendingType.id != index + 1 && "opacity-40",
-                                                                 FindTip(rowType, types[(index + 1).toString()]) != undefined && "bg-black",
-                                                                 highlightedPokemon && !highlightedTypes.find(x => x.id == index + 1) && "opacity-40",
+                                                                 hoverDefendingType && hoverDefendingType.id != columnTypeId && "opacity-40",
+                                                                 //FindTip(rowType, types[(index + 1).toString()]) != undefined && "bg-black",
+                                                                 highlightedPokemon && !highlightedTypes.find(x => x.id == columnTypeId) && "opacity-40",
+                                                                 versionGroup && GetGeneration(rowType.generation) > GetGeneration(versionGroup.generation) && disabledBg,
+                                                                 versionGroup && GetGeneration(types[columnTypeId].generation) > GetGeneration(versionGroup.generation) && disabledBg,
                                                              )}
-                                                             onMouseEnter={() => OnHoverCell(rowType, index + 1)}
-                                                             onClick={() => OnClickCell(rowType, index)}
+                                                             onMouseEnter={() => OnHoverCell(rowType, columnTypeId)}
+                                                             onClick={() => OnClickCell(rowType, columnTypeId+1)}
                                                              onMouseLeave={() => setTooltipOpen(false)}
 
                                                         >
                                                             <div className={cn("mx-auto my-auto h-fit select-none pointer-events-none")}
-                                                                onMouseEnter={() => OnHoverCell(rowType, index + 1)}
-                                                                onClick={() => OnClickCell(rowType, index)}>
+                                                                onMouseEnter={() => OnHoverCell(rowType, columnTypeId)}
+                                                                onClick={() => OnClickCell(rowType, columnTypeId)}>
 
                                                                 {relationValue === 0.5 ? (
                                                                     <><sup>1</sup>&frasl;
@@ -319,12 +340,14 @@ function TypesTable() {
                                                     );
                                                 } else {
                                                     return (
-                                                        <div key={index} className={cn(
+                                                        <div key={columnTypeId} className={cn(
                                                             hoverAttackingType == rowType && hoverBg,
-                                                            hoverDefendingType && hoverDefendingType.id == index + 1 && hoverBg,
+                                                            hoverDefendingType && hoverDefendingType.id == columnTypeId && hoverBg,
                                                             hoverAttackingType && hoverAttackingType != rowType && "opacity-50",
-                                                            hoverDefendingType && hoverDefendingType.id != index + 1 && "opacity-50",
-                                                            highlightedPokemon && highlightedTypes.find(x => x.id == index + 1) && hoverBg,
+                                                            hoverDefendingType && hoverDefendingType.id != columnTypeId && "opacity-50",
+                                                            highlightedPokemon && highlightedTypes.find(x => x.id == columnTypeId) && hoverBg,
+                                                            versionGroup && GetGeneration(rowType.generation) > GetGeneration(versionGroup.generation) && disabledBg,
+                                                            versionGroup && GetGeneration(types[columnTypeId].generation) > GetGeneration(versionGroup.generation) && disabledBg,
                                                         )}
                                                         >
                                                         </div>

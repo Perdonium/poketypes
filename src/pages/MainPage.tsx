@@ -9,13 +9,13 @@ import {versions, versionGroups} from "@/data/versions.json";
 import types from "@/data/types.json";
 import tips from "@/data/tips.json";
 import type {PokemonContextType} from "@/assets/types.ts";
-import TypeCard from "@/components/TypeCard.tsx";
 import {Tabs, TabsList} from "@/components/ui/tabs";
 import {TabsTrigger} from "@/components/ui/tabs.tsx";
 import {cn} from "@/lib/utils.ts";
 import SVGBackground from "@/components/SVGBackground.tsx";
 
 import LanguageSwitch from "@/components/LanguageSwitch.tsx";
+
 export const PokemonContext = createContext<PokemonContextType>({
     pokemons,
     pokedexes,
@@ -60,12 +60,12 @@ function MainPage() {
                 <div className={cn("flex flex-col justify-between gap-4",
                     tab != "grid" && "hidden lg:inline")} id={"left-part"}>
                     <TypesTable/>
-                    <TypeCard/>
+{/*                    <TypeCard/>*/}
                 </div>
                 <div className={cn(tab != "pokemons" && "hidden lg:inline")}>
-                    <div className={"lg:hidden"}>
+{/*                    <div className={"lg:hidden"}>
                         <TypeCard/>
-                    </div>
+                    </div>*/}
                     <PokemonList/>
                 </div>
             </div>

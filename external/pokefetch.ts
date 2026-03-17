@@ -304,9 +304,9 @@ async function GetVersionsAndVersionsGroups() {
 
 }
 
-await GetTypes();
+//await GetTypes();
 
-//GetPokemons();
+GetPokemons();
 
 //UpdatePokemonsRelations();
 

@@ -13,8 +13,6 @@ export type Pokemon = {
     types: string[],
     color: string,
     past_types?: { gen: string, types: string[] }[], //Absent if no change in types
-    relations:Relations,
-    past_relations?:Relations
 }
 
 export type Relations = {

@@ -6,6 +6,7 @@ import {PokemonContext} from "@/pages/MainPage.tsx";
 import {Capitalize, cn, GetPokemonRelations, GetPokemonTypes, GetTypesFromNames} from "@/lib/utils.ts";
 import DetailledPokemonRelation from "@/components/DetailledPokemonRelation.tsx";
 import {usePokedex} from "@/stores/store.tsx";
+import {Separator} from "@/components/ui/separator.tsx";
 
 const pokemonSpritePrefix = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
 
@@ -41,11 +42,11 @@ function DetailledPokemonCard({pokemon, entry, lang}: { pokemon: Pokemon, entry:
     return (
         <>
             <Item variant="outline"
-                  className={cn("gap-0 py-2 h-auto border-l-0 border-r-0 border-b-0 border-t border-white/50 overflow-hidden",
+                  className={cn("gap-0 py-2 h-auto border-l-0 border-r-0 border-b-0 border-t border-white/50",
                       "",
                   pokemon.color in colors && colors[pokemon.color])}>
 
-                <ItemContent className={"w-fit h-fit"}>
+                <ItemContent className={"w-fit h-full"}>
 
                     <div className={""}>
                         <div className={"relative flex justify-around"}>
@@ -87,7 +88,8 @@ function DetailledPokemonCard({pokemon, entry, lang}: { pokemon: Pokemon, entry:
                             </div>
                         </div>
 
-                        <div className={"justify-evenly mt-4 -mx-2"}>
+                        <Separator className={"bg-white/40"}/>
+                        <div className={"scrollbar justify-evenly mt-2 -mx-2 [&>*:first-child]:hidden max-h-[75vh] overflow-y-auto"}>
                             {relations.none &&
                                 <DetailledPokemonRelation title="0"
                                                  typeList={relations.none.map(x => types[x.toString()].name)}
