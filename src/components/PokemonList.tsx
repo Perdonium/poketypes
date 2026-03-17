@@ -32,6 +32,7 @@ function PokemonList() {
     const lanes = useResponsiveLanes();
     const [entryMap, setEntryMap] = useState<Record<string, number>>({});
     const national: boolean = usePokedex((state) => state.national);
+    console.log("national "+national);
     const lang: string = usePokedex((state) => state.lang);
     const versionGroup: VersionGroup | undefined = usePokedex((state) => state.versionGroup);
     const setHighlightedPokemon  = usePokedex((state) => state.setHighlightedPokemon);
@@ -58,9 +59,10 @@ function PokemonList() {
 
     const filtered: Pokemon[] = useMemo(() => {
         if (!pokemons || !versionGroup) return [];
+        //The normalize is to ignore accents
         return Object.values(pokemons)
             .filter(pkmn => entryMap[pkmn.species] !== undefined &&
-                pkmn.name.toLowerCase().includes(nameInput.toLowerCase()))
+                pkmn.name.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '').includes(nameInput.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '')))
             .sort((a, b) => entryMap[a.species] - entryMap[b.species]);
     }, [pokemons, versionGroup, entryMap, nameInput]);
     
@@ -118,7 +120,7 @@ function PokemonList() {
             {<Dialog open={dialogOpen} onOpenChange={onDialogOpenChange} >
                 <DialogContent 
                     showCloseButton={false}
-                    className={cn("p-0 border-0 max-h-[90vh]  overflow-hidden",
+                    className={cn("p-0 border-0 max-h-[90vh] overflow-hidden focus:outline-none",
                 "data-[state=open]:animate-in \n" +
                     "data-[state=closed]:animate-out " +
                     "data-[state=closed]:-spin-out-15 \n" +

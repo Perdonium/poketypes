@@ -19,12 +19,12 @@ function VersionSelector() {
 
     const setVersionGroup = usePokedex((state) => state.setVersionGroup);
     const setNational = usePokedex((state) => state.setNational);
-
+    const national = usePokedex((state) => state.national);
+    const versionGroup = usePokedex((state) => state.versionGroup);
 
     const [open, setOpen] = useState(false)
     const [selectedGroupId, setSelectedGroupId] = useState(-1)
     const isDesktop = useMediaQuery("(min-width: 768px)")
-
 
     function SetNational(national: boolean) {
         setNational(national)
@@ -40,9 +40,14 @@ function VersionSelector() {
     }
 
     useEffect(() => {
-        if (pokedexes && selectedGroupId === -1)
+        if (pokedexes && selectedGroupId === -1 && versionGroup == undefined)
             OnSelect(1);
     }, [pokedexes]);
+
+
+    useEffect(() => {
+        setSelectedGroupId(versionGroup!.id);
+    }, []);
 
     const groupsByVersions: Dictionary<VersionGroup[]> = versionGroups ? GroupBy(Object.values(versionGroups), "generation") : {};
 
@@ -141,6 +146,7 @@ function VersionSelector() {
             <div className="flex items-center space-x-2">
                 <Switch id="national-mode"
                         onCheckedChange={SetNational}
+                        checked={national}
                 />
                 <Label htmlFor="national-mode">National</Label>
             </div>

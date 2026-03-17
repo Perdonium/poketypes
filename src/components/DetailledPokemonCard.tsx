@@ -43,7 +43,6 @@ function DetailledPokemonCard({pokemon, entry, lang}: { pokemon: Pokemon, entry:
         <>
             <Item variant="outline"
                   className={cn("gap-0 py-2 h-auto border-l-0 border-r-0 border-b-0 border-t border-white/50",
-                      "",
                   pokemon.color in colors && colors[pokemon.color])}>
 
                 <ItemContent className={"w-fit h-full"}>
@@ -80,7 +79,7 @@ function DetailledPokemonCard({pokemon, entry, lang}: { pokemon: Pokemon, entry:
                             <div className={"w-1/3 flex space-y-2"}>
                                 <div className={"flex items-center mx-auto space-x-2"}>
                                     {
-                                        GetTypesFromNames(GetPokemonTypes(pokemon, versionGroup?.generation)).map((type, ind) => {
+                                        GetTypesFromNames(GetPokemonTypes(pokemon, versionGroup!.generation)).map((type, ind) => {
                                             return <TypeIcon key={ind} type={type} additionalClass={"w-8"} showName={true}/>
                                         })
                                     }
