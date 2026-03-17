@@ -17,7 +17,7 @@ interface PokedexState {
 
 export const usePokedex = create<PokedexState>()(
     persist(
-        (set, get) => ({
+        (set) => ({
             national: false,
             setNational: (n: boolean) => set({national: n}),
             versionGroup: undefined,

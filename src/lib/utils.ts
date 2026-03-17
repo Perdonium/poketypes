@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge"
 import type {Dictionary, Pokemon, Relations, Type, TypeRelations} from "@/assets/types.ts";
 import types from "@/data/types.json";
 
-const typesDic:Dictionary<Type> = Object.values(types).reduce((res, type) => {
+const typesDic:Dictionary<Type> = Object.values(types).reduce((res:Dictionary<Type>, type) => {
     res[type.name] = type;
     return res;
 },{});

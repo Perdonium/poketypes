@@ -110,7 +110,7 @@ function PokemonList() {
         setHighlightedPokemon(pokemon);
     }
 
-    function onHoverEnd(pokemon:Pokemon){
+    function onHoverEnd(_:Pokemon){
         setHighlightedPokemon(undefined);
     }
     
