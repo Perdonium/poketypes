@@ -38,7 +38,6 @@ function DetailledPokemonCard({pokemon, entry, lang}: { pokemon: Pokemon, entry:
     const versionGroup = usePokedex((state) => state.versionGroup);
     const relations = GetPokemonRelations(pokemon, versionGroup!.generation);
     
-    console.log(pokemon);
     return (
         <>
             <Item variant="outline"

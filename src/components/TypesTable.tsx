@@ -63,7 +63,6 @@ function TypesTable() {
         highlightedTypes = GetPokemonTypes(highlightedPokemon, versionGroup!.generation).map(x => GetTypeFromName(x));
 
     useEffect(() => {
-        console.log("version change");
         if (!types || !versionGroup)
             return;
         let relations: Dictionary<number[]> = {};

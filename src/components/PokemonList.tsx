@@ -32,7 +32,6 @@ function PokemonList() {
     const lanes = useResponsiveLanes();
     const [entryMap, setEntryMap] = useState<Record<string, number>>({});
     const national: boolean = usePokedex((state) => state.national);
-    console.log("national "+national);
     const lang: string = usePokedex((state) => state.lang);
     const versionGroup: VersionGroup | undefined = usePokedex((state) => state.versionGroup);
     const setHighlightedPokemon  = usePokedex((state) => state.setHighlightedPokemon);

@@ -46,7 +46,10 @@ function VersionSelector() {
 
 
     useEffect(() => {
-        setSelectedGroupId(versionGroup!.id);
+        if (pokedexes && selectedGroupId === -1 && versionGroup == undefined)
+            OnSelect(1);
+        else if(versionGroup != undefined)
+            setSelectedGroupId(versionGroup!.id);
     }, []);
 
     const groupsByVersions: Dictionary<VersionGroup[]> = versionGroups ? GroupBy(Object.values(versionGroups), "generation") : {};
