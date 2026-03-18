@@ -12,6 +12,9 @@ import {
     DialogContent,
 } from "@/components/ui/dialog.tsx";
 import {cn, GetGeneration} from "@/lib/utils.ts";
+import {useMediaQuery} from "usehooks-ts";
+import {Button} from "@/components/ui/button.tsx";
+import {ArrowLeft, ArrowLeftIcon} from "lucide-react";
 
 const nationalPerGen = [
     151,
@@ -38,6 +41,8 @@ function PokemonList() {
 
     const scrollParentRef = useRef<HTMLDivElement>(null)
     const inputRef = useRef<HTMLInputElement>(null)
+    const isDesktop = useMediaQuery("(min-width: 768px)")
+    
     
     const width = lanes * 70;
     useEffect(() => {
@@ -87,7 +92,8 @@ function PokemonList() {
         const windowHeight = window.innerHeight;
         const yPos = inputRef.current!.getBoundingClientRect().y;
         const scrollPercentage = (yPos / (windowHeight)) * 100;
-        if(scrollPercentage > 50) {
+        console.log(scrollPercentage);
+        if(!isDesktop && scrollPercentage > 20) {
             //Need to add a delay because on mobile the keyboard opening stops any scrolling
             setTimeout(() => {
                 inputRef.current!.scrollIntoView({behavior: "smooth", block: "start"});
@@ -115,11 +121,11 @@ function PokemonList() {
     
     return (
         <div className={"w-auto mb-8 mx-auto lg:-mt-14 lg:mx-0 scroll-smooth"} id={"pokemon-list"}>
-
+            
             {<Dialog open={dialogOpen} onOpenChange={onDialogOpenChange} >
                 <DialogContent 
                     showCloseButton={false}
-                    className={cn("p-0 border-0 max-h-[90vh] overflow-hidden focus:outline-none",
+                    className={cn("p-0 border-0 mt-8 max-h-[70vh] xl:max-h-[90vh] focus:outline-none",
                 "data-[state=open]:animate-in \n" +
                     "data-[state=closed]:animate-out " +
                     "data-[state=closed]:-spin-out-15 \n" +
@@ -127,7 +133,7 @@ function PokemonList() {
                     "data-[state=open]:spin-in-15 \n" +
                     "data-[state=open]:slide-in-from-right-1/2 \n")}>
 
-                    { <DetailledPokemonCard pokemon={dialogPokemon!} entry={1} lang={lang}/>}
+                    { <DetailledPokemonCard pokemon={dialogPokemon!} entry={1} lang={lang} closeFunction={() => setDialogOpen(false)}/>}
                 </DialogContent>
             </Dialog>}
             
@@ -200,7 +206,7 @@ function useResponsiveLanes() {
         function updateLanes() {
             const width = window.innerWidth;
 
-            if (width < 1500) setLanes(1);      // mobile
+            if (width < 1200) setLanes(1);      // mobile
             else if (width < 2000) setLanes(2); // tablette
             else setLanes(3);                  // desktop
         }

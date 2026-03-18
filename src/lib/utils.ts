@@ -67,7 +67,29 @@ export function GetPokemonTypes(pokemon:Pokemon, currentGen:string):string[]{
     return pokemon.types;
 }
 
-export function GetTypeRelations(type:Type, currentGen:string):TypeRelations{
+const typeTableBackgorundColor:Dictionary<string> = {
+    "0":"bg-muted-foreground",
+    "0.5":"bg-destructive",
+    "2":"bg-green-500"
+}
+
+export function GetTypeTableBackgroundColor(multiplicator:number){
+    return typeTableBackgorundColor[multiplicator.toString()];
+}
+
+const relationBackgroundColor:Dictionary<string> = {
+    "0":"bg-muted-foreground/80",
+    "0.25":"bg-destructive/50",
+    "0.5":"bg-destructive/80",
+    "2":"bg-green-600",
+    "4":"bg-green-500"
+}
+
+export function GetRelationBackgroundColor(multiplicator:number) {
+    return relationBackgroundColor[multiplicator.toString()];
+}
+
+    export function GetTypeRelations(type:Type, currentGen:string):TypeRelations{
     if(type.past_damage_relations){
         for(let pastRelations of type.past_damage_relations){
             if(GetGeneration(pastRelations.generation) >= GetGeneration(currentGen))

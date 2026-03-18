@@ -1,5 +1,5 @@
 ﻿import TypeIcon from "@/components/TypeIcon.tsx";
-import {cn} from "@/lib/utils.ts";
+import {cn, GetRelationBackgroundColor} from "@/lib/utils.ts";
 import {Separator} from "@/components/ui/separator.tsx";
 
 function PokemonRelation({typeList, title, orientation = "vertical", useClick = true}:{typeList:string[], title:string, orientation?:"horizontal"|"vertical", useClick?:boolean}) {
@@ -10,7 +10,8 @@ function PokemonRelation({typeList, title, orientation = "vertical", useClick = 
             <Separator className={cn("separator bg-white/40", orientation=="vertical" && "!h-auto")} orientation={orientation}/>
         <div className={"flex flex-col"}>
 
-            <div className={"text-lg font-bold"}>
+            <div className={cn("text-lg font-bold w-fit rounded-2xl px-3 mx-auto",
+                GetRelationBackgroundColor(title))}>
                 x{title}
                </div>
             <div className={cn("grid gap-1 mx-auto mt-2",

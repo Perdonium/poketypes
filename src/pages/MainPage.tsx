@@ -16,6 +16,7 @@ import SVGBackground from "@/components/SVGBackground.tsx";
 
 import LanguageSwitch from "@/components/LanguageSwitch.tsx";
 import HelpButton from "@/components/HelpButton.tsx";
+import {ScrollToTop} from "@/components/ScrollToTop.tsx";
 
 export const PokemonContext = createContext<PokemonContextType>({
     pokemons,
@@ -37,10 +38,16 @@ function MainPage() {
         <div className={"relative w-full min-h-screen"}>
             <SVGBackground/>
             {/*<h1 className={"mb-16 text-4xl font-bold"}>PokeTypes.fr</h1>*/}
-            <div className={"pt-8 flex flex-col lg:flex-row items-center justify-evenly w-3/4 mx-auto"}>
-                <div className={"font-light text-2xl w-fit"}>PokeTypes.net</div>
+            <div className={"absolute top-2 left-2 lg:hidden"}>
+                <HelpButton/>
+            </div>
+            <div className={"absolute top-4 right-2 lg:hidden"}>
+                <LanguageSwitch/>
+            </div>
+            <div className={"pt-12 lg:pt-4 flex flex-col lg:flex-row items-center justify-evenly w-3/4 mx-auto"}>
+                <div className={"font-light text-2xl w-fit mb-8 lg:mb-0"}>PokeTypes.net</div>
                 <VersionSelector/>
-                <div className={"flex items-center justify-around items-end"}>
+                <div className={"relative flex justify-around items-end invisible lg:visible"}>
                     <HelpButton/>
                     <LanguageSwitch/>
                 </div>
@@ -74,6 +81,7 @@ function MainPage() {
                     <PokemonList/>
                 </div>
             </div>
+            <ScrollToTop minHeight={10}/>
         </div>
     )
 }

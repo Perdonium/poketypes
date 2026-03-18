@@ -30,9 +30,10 @@ const chooseVersionTranslated = [
     {lang:"en",
         text:"Choose your version"},
     {lang:"de",
-        text:"Elige tu versión"},
-    {lang:"es",
         text:"Wählen Sie Ihre Version"},
+    {lang:"es",
+        text:"Elige tu versión"},
+
 
 ]
 function VersionSelector() {
@@ -86,9 +87,9 @@ function VersionSelector() {
     const groupsByVersions: Dictionary<VersionGroup[]> = versionGroups ? GroupBy(Object.values(versionGroups), "generation") : {};
 
     return (
-        <div className={"w-120 h-40 lg:mb-4 flex flex-col justify-center space-x-4"}>
+        <div className={"lg:w-120 h-40 lg:mb-4 flex flex-col justify-center space-x-4"}>
             <h1 className={"text-xl font-mono mb-4"}>{chooseVersionTranslated.find(x => x.lang == lang)?.text}</h1>
-            <div className={"flex flex-col lg:flex-row justify-center items-center space-x-4"}>
+            <div className={"flex lg:flex-col lg:flex-row justify-center items-center space-x-4"}>
             {versionGroups && isDesktop &&
                 <Popover open={open} onOpenChange={setOpen}>
                     <PopoverTrigger asChild>
@@ -145,11 +146,11 @@ function VersionSelector() {
                             variant="ghost"
                             role="combobox"
                             aria-expanded={open}
-                            className="w-fit h-fit my-auto md:ml-auto"
+                            className="w-fit h-fit my-auto border border-input rounded-2xl md:ml-auto bg-input/30 hover:bg-input/50"
                         >
                             {Object.values(versionGroups).find((pokedex) => pokedex.id === selectedGroupId)?.versions
                                 .map(x => (
-                                    <GameLogo name={x} additionalClass={""}/>
+                                    <GameLogo name={x} additionalClass={"w-22"}/>
                                 ))}
                             <ChevronsUpDown className="opacity-50"/>
                         </Button>

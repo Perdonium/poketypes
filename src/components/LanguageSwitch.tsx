@@ -35,7 +35,7 @@ const LanguageSwitch = () => {
       <DropdownMenuTrigger asChild>
         <Button variant="outline" className={"-mt-4"}>
           <Languages className="h-4 w-4" />
-            {languages.find(x => x.code == language)!.label}
+            {languages.find(x => x.code == language)!.label.split("-")}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-48">

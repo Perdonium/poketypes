@@ -8,11 +8,11 @@ function HelpButton() {
         <>
             <Dialog>
                     <DialogTrigger asChild>
-                        <Button className={"-translate-x-16 text-accent-foreground"} variant="ghost" size="icon" aria-label="Submit">
+                        <Button className={"text-accent-foreground"} variant="ghost" size="icon" aria-label="Submit">
                             <CircleQuestionMark className={"size-8 text-shadow-input"}/>
                         </Button>
                     </DialogTrigger>
-                    <DialogContent className="border-0 border-t-2 bg-card" showCloseButton={false}>
+                    <DialogContent className="mt-4 border-0 border-t-2 bg-card max-h-[80vh] overflow-y-auto scrollbar text-xs" showCloseButton={false}>
                         <div className={"font-bold mx-auto text-2xl mb-10"}>PokeTypes.net</div>
                         <div>Le site PokeTypes.net a été créé pour pouvoir plus facilement connaître les résistances des Pokémons.</div>
                         <div>Malgré plus de 20 ans à jouer aux jeux Pokémon, j'ai encore du mal à me rappeler des types et faiblesses avec plus de 1000

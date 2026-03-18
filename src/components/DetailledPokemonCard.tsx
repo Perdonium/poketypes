@@ -7,6 +7,8 @@ import {Capitalize, cn, GetPokemonRelations, GetPokemonTypes, GetTypesFromNames}
 import DetailledPokemonRelation from "@/components/DetailledPokemonRelation.tsx";
 import {usePokedex} from "@/stores/store.tsx";
 import {Separator} from "@/components/ui/separator.tsx";
+import {Button} from "@/components/ui/button.tsx";
+import {ArrowLeftIcon} from "lucide-react";
 
 const pokemonSpritePrefix = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/";
 
@@ -32,7 +34,7 @@ const colors: { [color: string] : string } = {
     "lavender": "bg-gradient-to-t from-purple-200/20 to-purple-300/50",
     "lightblue": "bg-gradient-to-t from-blue-200/20 to-blue-400/50"
 };
-function DetailledPokemonCard({pokemon, entry, lang}: { pokemon: Pokemon, entry: number, lang:string }) {
+function DetailledPokemonCard({pokemon, entry, lang, closeFunction}: { pokemon: Pokemon, entry: number, lang:string, closeFunction:() => void }) {
     const {types}: { types: Dictionary<Type> } = useContext(PokemonContext);
 
     const versionGroup = usePokedex((state) => state.versionGroup);
@@ -40,6 +42,17 @@ function DetailledPokemonCard({pokemon, entry, lang}: { pokemon: Pokemon, entry:
     
     return (
         <>
+            {
+                <Button
+                    variant={"outline"}
+                    size={"icon"}
+                    className={"fixed !ring ring-border -top-12 left-0 bg-primary-foreground!"}
+                    onClick={closeFunction}
+                >
+                    <ArrowLeftIcon/>
+                </Button>
+
+            }
             <Item variant="outline"
                   className={cn("gap-0 py-2 h-auto border-l-0 border-r-0 border-b-0 border-t border-white/50",
                   pokemon.color in colors && colors[pokemon.color])}>
@@ -87,7 +100,7 @@ function DetailledPokemonCard({pokemon, entry, lang}: { pokemon: Pokemon, entry:
                         </div>
 
                         <Separator className={"bg-white/40"}/>
-                        <div className={"scrollbar justify-evenly mt-2 -mx-2 [&>*:first-child]:hidden max-h-[75vh] overflow-y-auto"}>
+                        <div className={"scrollbar justify-evenly mt-2 -mx-2 [&>*:first-child]:hidden max-h-[50vh] xl:max-h-[75vh] overflow-y-auto"}>
                             {relations.none &&
                                 <DetailledPokemonRelation title="0"
                                                  typeList={relations.none.map(x => types[x.toString()].name)}

@@ -1,5 +1,12 @@
 ﻿import {PokemonContext} from "@/pages/MainPage.tsx";
-import {cn, GetGeneration, GetPokemonTypes, GetTypeRelations} from "@/lib/utils.ts";
+import {
+    cn,
+    GetGeneration,
+    GetPokemonTypes,
+    GetRelationBackgroundColor,
+    GetTypeRelations,
+    GetTypeTableBackgroundColor
+} from "@/lib/utils.ts";
 import {useContext, useEffect, useRef, useState} from "react";
 import {TooltipProvider} from "@/components/ui/tooltip.tsx";
 import {motion, useMotionValue} from "motion/react"
@@ -217,7 +224,7 @@ function TypesTable() {
         <>
             <div className="relative my-auto mx-auto md:mx-8 lg:mx-auto 
                  text-[12px]
-                  lg:text-lg md:font-bold">
+                  md:text-lg md:font-bold lg:text-lg xl:text-md">
                 {hoverCell && <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
                     <DialogContent>
                         <DialogHeader>
@@ -311,9 +318,7 @@ function TypesTable() {
                                                                  "flex transition-all cursor-help",
                                                                  hoverAttackingType == rowType && hoverBg,
                                                                  hoverDefendingType && hoverDefendingType.id == columnTypeId && hoverBg,
-                                                                 relationValue == 0 && noDamageBg,
-                                                                 relationValue == 0.5 && halfDamageBg,
-                                                                 relationValue == 2 && doubleDamageBg,
+                                                                 GetTypeTableBackgroundColor(relationValue),
                                                                  hoverAttackingType && hoverAttackingType != rowType && "opacity-40",
                                                                  hoverDefendingType && hoverDefendingType.id != columnTypeId && "opacity-40",
                                                                  //FindTip(rowType, types[(index + 1).toString()]) != undefined && "bg-black",

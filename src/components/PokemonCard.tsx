@@ -64,7 +64,7 @@ function PokemonCard({pokemon, entry, onClick, onHoverStart, onHoverEnd, lang, g
     return (
         <>
             <Item variant="outline"
-                  className={cn("gap-0 py-2 my-2 h-[15rem] border-l-0 border-r-0 border-b-0 border-t border-white/50 mx-1 overflow-hidden",
+                  className={cn("gap-0 py-2 my-2 h-60 border-l-0 border-r-0 border-b-0 border-t border-white/50 mx-1 overflow-hidden",
                       "hover:scale-105 hover:cursor-pointer hover:z-50 transition-all",
                       pokemon.color in colors && colors[pokemon.color])}
                   onClick={() => onClick(pokemon)}
@@ -72,11 +72,10 @@ function PokemonCard({pokemon, entry, onClick, onHoverStart, onHoverEnd, lang, g
                   onMouseLeave={() => onHoverEnd(pokemon)}
             >
 
-                <ItemContent className={"w-fit h-fit"}>
+                <ItemContent className={"w-fit h-full"}>
 
-                    <div className={""}>
+                    <div className={"flex flex-col"}>
                         <div className={"relative flex justify-around"}>
-
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                  className="pointer-events-none absolute blur-xl left-1/2 -translate-x-1/2 top-full -translate-y-1/2 w-[300px] opacity-80 -z-10">
                                 <circle cx={"50%"} cy={"10%"} r="50"/>
@@ -116,7 +115,7 @@ function PokemonCard({pokemon, entry, onClick, onHoverStart, onHoverEnd, lang, g
 
                         <Separator className={"bg-white/40"}/>
 
-                        <div className={"flex justify-evenly [&>*:first-child]:hidden mt-4 -mx-2"}>
+                        <div className={"flex justify-evenly [&>*:first-child]:hidden mt-4 -mx-2 h-[40%]"}>
                             {relations.none &&
                                 <PokemonRelation title="0"
                                                  typeList={relations.none.map(x => types[x.toString()].name)}
