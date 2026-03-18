@@ -3,7 +3,6 @@ import {
     cn,
     GetGeneration,
     GetPokemonTypes,
-    GetRelationBackgroundColor,
     GetTypeRelations,
     GetTypeTableBackgroundColor
 } from "@/lib/utils.ts";
@@ -36,9 +35,6 @@ function TypesTable() {
 
     const hoverBg = "bg-accent";
     const disabledBg = "bg-accent/50";
-    const noDamageBg = "bg-muted-foreground";
-    const halfDamageBg = "bg-destructive";
-    const doubleDamageBg = "bg-green-500";
     const baseBg = "bg-background/30";
 
     const [hoverAttackingType, setHoverAttackingType] = useState<Type | undefined>();

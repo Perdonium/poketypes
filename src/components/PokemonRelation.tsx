@@ -11,7 +11,7 @@ function PokemonRelation({typeList, title, orientation = "vertical", useClick = 
         <div className={"flex flex-col"}>
 
             <div className={cn("text-lg font-bold w-fit rounded-2xl px-3 mx-auto",
-                GetRelationBackgroundColor(title))}>
+                GetRelationBackgroundColor(Number.parseFloat(title)))}>
                 x{title}
                </div>
             <div className={cn("grid gap-1 mx-auto mt-2",

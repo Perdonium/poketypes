@@ -17,7 +17,7 @@ function DetailledPokemonRelation({typeList, title, orientation = "vertical", us
 
                 <div className={cn("md:text-lg font-bold w-1/5 xl:w-1/8 text-center")}>
                     <h1 className={cn("w-fit mx-auto rounded-2xl px-3",
-                        GetRelationBackgroundColor(title))}>
+                        GetRelationBackgroundColor(Number.parseFloat(title)))}>
                     x{title}
                     </h1>
                 </div>

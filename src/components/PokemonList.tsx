@@ -13,8 +13,6 @@ import {
 } from "@/components/ui/dialog.tsx";
 import {cn, GetGeneration} from "@/lib/utils.ts";
 import {useMediaQuery} from "usehooks-ts";
-import {Button} from "@/components/ui/button.tsx";
-import {ArrowLeft, ArrowLeftIcon} from "lucide-react";
 
 const nationalPerGen = [
     151,
