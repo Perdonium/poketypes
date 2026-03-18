@@ -61,9 +61,9 @@ function PokemonList() {
         //The normalize is to ignore accents
         return Object.values(pokemons)
             .filter(pkmn => entryMap[pkmn.species] !== undefined &&
-                pkmn.name.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '').includes(nameInput.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '')))
+                pkmn.names[lang].toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '').includes(nameInput.toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu, '')))
             .sort((a, b) => entryMap[a.species] - entryMap[b.species]);
-    }, [pokemons, versionGroup, entryMap, nameInput]);
+    }, [pokemons, versionGroup, entryMap, nameInput, lang]);
     
     
 

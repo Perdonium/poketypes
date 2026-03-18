@@ -13,14 +13,37 @@ import GameLogo from "@/components/GameLogo.tsx";
 import {Drawer, DrawerContent, DrawerTrigger} from "@/components/ui/drawer.tsx";
 import {useMediaQuery} from "usehooks-ts";
 
+const generationTranslated = [
+    {lang:"fr",
+    text:"Génération"},
+    {lang:"en",
+        text:"Generation"},
+    {lang:"de",
+        text:"Generation"},
+    {lang:"es",
+        text:"Generación"},
+]
+
+const chooseVersionTranslated = [
+    {lang:"fr",
+        text:"Choisis ta version"},
+    {lang:"en",
+        text:"Choose your version"},
+    {lang:"de",
+        text:"Elige tu versión"},
+    {lang:"es",
+        text:"Wählen Sie Ihre Version"},
+
+]
 function VersionSelector() {
 
-    const {pokedexes, versionGroups} = useContext(PokemonContext);
+    const {pokedexes, versions, versionGroups} = useContext(PokemonContext);
 
     const setVersionGroup = usePokedex((state) => state.setVersionGroup);
     const setNational = usePokedex((state) => state.setNational);
     const national = usePokedex((state) => state.national);
     const versionGroup = usePokedex((state) => state.versionGroup);
+    const lang = usePokedex((state) => state.lang);
 
     const [open, setOpen] = useState(false)
     const [selectedGroupId, setSelectedGroupId] = useState(-1)
@@ -30,7 +53,7 @@ function VersionSelector() {
         setNational(national)
     }
 
-
+    console.log(lang);
     function OnSelect(newValue: number) {
         setOpen(false)
         if (newValue === selectedGroupId)
@@ -39,6 +62,14 @@ function VersionSelector() {
         setVersionGroup(versionGroups[newValue]);
     }
 
+    function GetVersionTranslatedName(versionName: string)
+    {
+        let versionLang =  Object.values(versions).find(v => v.name === versionName)!.names.find(n => n.language.name == lang);
+        if(!versionLang)
+            return Object.values(versions).find(v => v.name === versionName)!.names.find(n => n.language.name == "en")!.name;
+        return versionLang.name;
+    }
+    
     useEffect(() => {
         if (pokedexes && selectedGroupId === -1 && versionGroup == undefined)
             OnSelect(1);
@@ -55,7 +86,9 @@ function VersionSelector() {
     const groupsByVersions: Dictionary<VersionGroup[]> = versionGroups ? GroupBy(Object.values(versionGroups), "generation") : {};
 
     return (
-        <div className={"w-fit mx-8 lg:mb-4 flex justify-center space-x-4 h-[120px]"}>
+        <div className={"w-120 h-40 lg:mb-4 flex flex-col justify-center space-x-4"}>
+            <h1 className={"text-xl font-mono mb-4"}>{chooseVersionTranslated.find(x => x.lang == lang)?.text}</h1>
+            <div className={"flex flex-col lg:flex-row justify-center items-center space-x-4"}>
             {versionGroups && isDesktop &&
                 <Popover open={open} onOpenChange={setOpen}>
                     <PopoverTrigger asChild>
@@ -63,7 +96,7 @@ function VersionSelector() {
                             variant="ghost"
                             role="combobox"
                             aria-expanded={open}
-                            className="w-fit h-fit my-auto"
+                            className="w-fit h-fit my-auto border border-input rounded-2xl bg-input/30 hover:bg-input/50"
                         >
                             {Object.values(versionGroups).find((pokedex) => pokedex.id === selectedGroupId)?.versions
                                 .map(x => (
@@ -72,13 +105,13 @@ function VersionSelector() {
                             <ChevronsUpDown className="opacity-50"/>
                         </Button>
                     </PopoverTrigger>
-                    <PopoverContent className="p-0">
+                    <PopoverContent className="p-0 scale-60 xl:scale-80 2xl:scale-90">
                         <Command className={"w-max md:-translate-x-1/3 overflow-auto"}>
-                            <div className={"grid grid-cols-2 md:grid-cols-3"}>
+                            <div className={"grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5"}>
                                 {
                                     Object.keys(groupsByVersions).reverse().map((version: string) => (
-                                        <CommandGroup className={"col-span-1"}
-                                                      heading={"Generation " + version.toUpperCase()}>
+                                        <CommandGroup className={"col-span-1 border-r border-b"}
+                                                      heading={generationTranslated.find(x => x.lang == lang)?.text + " "+version.toUpperCase()}>
                                             {groupsByVersions[version].map((versionGroup) => (
                                                 <CommandItem
                                                     className={""}
@@ -89,7 +122,11 @@ function VersionSelector() {
                                                     }}
                                                 >
                                                     {versionGroup.versions.map(x => (
-                                                        <GameLogo name={x} additionalClass={"mx-auto"}/>
+                                                        <div className={"flex flex-col"}>
+                                                        <GameLogo name={x} additionalClass={"mx-auto "}/>
+                                                            <h1 className={"text-center"}>{GetVersionTranslatedName(x)}</h1>
+                                                        </div>
+                                                        
                                                     ))}
                                                 </CommandItem>
                                             ))}
@@ -134,7 +171,10 @@ function VersionSelector() {
                                                     }}
                                                 >
                                                     {versionGroup.versions.map(x => (
-                                                        <GameLogo name={x} additionalClass={"mx-auto"}/>
+                                                        <div className={"flex flex-col"}>
+                                                            <GameLogo name={x} additionalClass={"mx-auto"}/>
+                                                            <h1 className={"text-center"}>{GetVersionTranslatedName(x)}</h1>
+                                                        </div>
                                                     ))}
                                                 </CommandItem>
                                             ))}
@@ -146,12 +186,13 @@ function VersionSelector() {
                     </DrawerContent>
                 </Drawer>
             }
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 border border-input h-fit rounded-2xl bg-input/30 hover:bg-input/50 px-4 py-2">
                 <Switch id="national-mode"
                         onCheckedChange={SetNational}
                         checked={national}
                 />
                 <Label htmlFor="national-mode">National</Label>
+            </div>
             </div>
         </div>
     )

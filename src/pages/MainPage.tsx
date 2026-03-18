@@ -15,6 +15,7 @@ import {cn} from "@/lib/utils.ts";
 import SVGBackground from "@/components/SVGBackground.tsx";
 
 import LanguageSwitch from "@/components/LanguageSwitch.tsx";
+import HelpButton from "@/components/HelpButton.tsx";
 
 export const PokemonContext = createContext<PokemonContextType>({
     pokemons,
@@ -33,12 +34,16 @@ function MainPage() {
     }
 
     return (
-        <div className={"relative w-full"}>
+        <div className={"relative w-full min-h-screen"}>
             <SVGBackground/>
             {/*<h1 className={"mb-16 text-4xl font-bold"}>PokeTypes.fr</h1>*/}
-            <div className={"flex items-center justify-center"}>
+            <div className={"pt-8 flex flex-col lg:flex-row items-center justify-evenly w-3/4 mx-auto"}>
+                <div className={"font-light text-2xl w-fit"}>PokeTypes.net</div>
                 <VersionSelector/>
-                <LanguageSwitch/>
+                <div className={"flex items-center justify-around items-end"}>
+                    <HelpButton/>
+                    <LanguageSwitch/>
+                </div>
             </div>
             <Tabs id={"tabs"} value={tab} onValueChange={onTabChange} className={"lg:invisible"}>
                 <TabsList className={"mx-auto mb-4"}>
