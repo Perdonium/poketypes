@@ -23,7 +23,7 @@ import TypeIcon from "@/components/TypeIcon.tsx";
 import type {Dictionary, Tip, Type} from "@/assets/types.ts";
 import RelationTip from "@/components/RelationTip.tsx";
 import {usePokedex} from "@/stores/store.tsx";
-import {ArrowUpLeft, ArrowUpRight} from "lucide-react";
+import {ArrowUpRight} from "lucide-react";
 
 
 function TypesTable() {
