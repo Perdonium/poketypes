@@ -44,10 +44,17 @@ function MainPage() {
             <div className={"absolute top-4 right-2 lg:hidden"}>
                 <LanguageSwitch/>
             </div>
-            <div className={"pt-12 lg:pt-4 flex flex-col lg:flex-row items-center justify-evenly w-3/4 mx-auto"}>
-                <div className={"font-light text-2xl w-fit mb-8 lg:mb-0"}>PokeTypes.net</div>
-                <VersionSelector/>
-                <div className={"relative flex justify-around items-end invisible lg:visible"}>
+            <div className={"pt-12 lg:pt-4 flex flex-col lg:flex-row items-center justify-center w-3/4 mx-auto"}>
+                <div className={"text-2xl mb-8 lg:mb-0 flex-1 "}>
+                    <img
+                         src={"site-logo.png"}
+                         alt={"Poketypes"}
+                         className={"h-20"}/>
+                </div>
+                <div className={"flex-1"}>
+                    <VersionSelector/>
+                </div>
+                <div className={"relative flex justify-end gap-12 items-end invisible lg:visible flex-1"}>
                     <HelpButton/>
                     <LanguageSwitch/>
                 </div>
@@ -58,7 +65,7 @@ function MainPage() {
                     <TabsTrigger value="grid">Grille des types</TabsTrigger>
                 </TabsList>
             </Tabs>
-            <div className={"relative flex flex-col lg:flex-row lg:gap-16 md:h-full max-w-full mx-auto w-fit"}>
+            <div className={"relative flex flex-col lg:flex-row lg:gap-4 xl:gap-8 2xl:gap-16 md:h-full max-w-full mx-auto w-fit"}>
                 {/*
                 <svg id="visual" viewBox="0 0 960 540" width="960" height="540" xmlns="http://www.w3.org/2000/svg"
                      className={"absolute -z-10 scale-200  blur-2xl opacity-50"}>
@@ -69,7 +76,7 @@ function MainPage() {
                     </g>
                 </svg>
                 */}
-                <div className={cn("flex flex-col justify-between gap-4",
+                <div className={cn("flex flex-col justify-between gap-4 mb-4",
                     tab != "grid" && "hidden lg:inline")} id={"left-part"}>
                     <TypesTable/>
 {/*                    <TypeCard/>*/}

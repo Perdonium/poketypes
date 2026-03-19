@@ -36,6 +36,17 @@ const chooseVersionTranslated = [
 
 
 ]
+
+const nationalTranslated = [
+    {lang:"fr",
+        text:"National"},
+    {lang:"en",
+        text:"National"},
+    {lang:"de",
+        text:"National"},
+    {lang:"es",
+        text:"Nacional"},
+]
 function VersionSelector() {
 
     const {pokedexes, versions, versionGroups} = useContext(PokemonContext);
@@ -111,17 +122,20 @@ function VersionSelector() {
                             <div className={"grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5"}>
                                 {
                                     Object.keys(groupsByVersions).reverse().map((version: string) => (
-                                        <CommandGroup className={"col-span-1 border-r border-b"}
-                                                      heading={generationTranslated.find(x => x.lang == lang)?.text + " "+version.toUpperCase()}>
+                                        <CommandGroup className={"col-span-1 border-r border-b underline-offset-1 text-center"}>
+                                            <div className={"font-bold text-accent-foreground bg-accent"}>
+                                                {generationTranslated.find(x => x.lang == lang)?.text + " "+version.toUpperCase()}
+                                            </div>
                                             {groupsByVersions[version].map((versionGroup) => (
                                                 <CommandItem
-                                                    className={""}
+                                                    className={"border-t last:border-b"}
                                                     key={versionGroup.id}
                                                     value={versionGroup.name}
                                                     onSelect={(_) => {
                                                         OnSelect(versionGroup.id);
                                                     }}
                                                 >
+                                                    <div className={"flex justify-around w-full"}>
                                                     {versionGroup.versions.map(x => (
                                                         <div className={"flex flex-col"}>
                                                         <GameLogo name={x} additionalClass={"mx-auto "}/>
@@ -129,6 +143,7 @@ function VersionSelector() {
                                                         </div>
                                                         
                                                     ))}
+                                                    </div>
                                                 </CommandItem>
                                             ))}
                                         </CommandGroup>
@@ -160,23 +175,28 @@ function VersionSelector() {
                             <div className={"grid grid-cols-2 md:grid-cols-3"}>
                                 {
                                     Object.keys(groupsByVersions).reverse().map((version: string) => (
-                                        <CommandGroup className={"col-span-1"}
-                                                      heading={"Generation " + version.toUpperCase()}>
+                                        <CommandGroup className={"col-span-1 border text-center"}>
+
+                                            <div className={"font-bold text-accent-foreground bg-accent"}>
+                                                {generationTranslated.find(x => x.lang == lang)?.text + " "+version.toUpperCase()}
+                                            </div>
                                             {groupsByVersions[version].map((versionGroup) => (
                                                 <CommandItem
-                                                    className={" bg-transparent"}
+                                                    className={"border-t last:border-b bg-transparent"}
                                                     key={versionGroup.id}
                                                     value={versionGroup.name}
                                                     onSelect={(_) => {
                                                         OnSelect(versionGroup.id);
                                                     }}
                                                 >
+                                                    <div className={"flex mx-auto w-full justify-around"}>
                                                     {versionGroup.versions.map(x => (
                                                         <div className={"flex flex-col"}>
                                                             <GameLogo name={x} additionalClass={"mx-auto"}/>
                                                             <h1 className={"text-center"}>{GetVersionTranslatedName(x)}</h1>
                                                         </div>
                                                     ))}
+                                                    </div>
                                                 </CommandItem>
                                             ))}
                                         </CommandGroup>
@@ -192,7 +212,7 @@ function VersionSelector() {
                         onCheckedChange={SetNational}
                         checked={national}
                 />
-                <Label htmlFor="national-mode">National</Label>
+                <Label htmlFor="national-mode"> {nationalTranslated.find(x => x.lang == lang)?.text}</Label>
             </div>
             </div>
         </div>

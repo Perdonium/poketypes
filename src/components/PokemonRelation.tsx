@@ -10,12 +10,13 @@ function PokemonRelation({typeList, title, orientation = "vertical", useClick = 
             <Separator className={cn("separator bg-white/40", orientation=="vertical" && "!h-auto")} orientation={orientation}/>
         <div className={"flex flex-col"}>
 
-            <div className={cn("text-lg font-bold w-fit rounded-2xl px-3 mx-auto",
+            <div className={cn("text-lg font-bold w-fit rounded-2xl px-3 mx-auto text-foreground",
                 GetRelationBackgroundColor(Number.parseFloat(title)))}>
                 x{title}
                </div>
             <div className={cn("grid gap-1 mx-auto mt-2",
                 typeList.length > 2 && "grid-flow-col grid-rows-2",
+                typeList.length <= 2 && "mt-6",
                 typeList.length == 2 && "grid-cols-2",
                 typeList.length == 1 && "grid-cols-1")}>
                 {

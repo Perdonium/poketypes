@@ -26,10 +26,36 @@ const nationalPerGen = [
     1025
 ]
 
+
+const searchTranslated = [
+    {lang:"fr",
+        text:"Rechercher"},
+    {lang:"en",
+        text:"Search"},
+    {lang:"de",
+        text:"Suchen"},
+    {lang:"es",
+        text:"Buscar"},
+]
+
+
+const nameTranslated = [
+    {lang:"fr",
+        text:"Nom"},
+    {lang:"en",
+        text:"Name"},
+    {lang:"de",
+        text:"Name"},
+    {lang:"es",
+        text:"Nombre"},
+]
+
+
 function PokemonList() {
     const {pokemons, pokedexes} = useContext(PokemonContext);
     const [nameInput, setNameInput] = useState("");
     const [dialogPokemon, setDialogPokemon] = useState<Pokemon | undefined>(undefined);
+    const [dialogEntry, setDialogEntry] = useState(1)
     const lanes = useResponsiveLanes();
     const [entryMap, setEntryMap] = useState<Record<string, number>>({});
     const national: boolean = usePokedex((state) => state.national);
@@ -104,8 +130,9 @@ function PokemonList() {
         setDialogOpen(open)
     }
     
-    function onPokemonClick(pokemon:Pokemon){
+    function onPokemonClick(pokemon:Pokemon, entry:number){
             setDialogPokemon(pokemon);
+            setDialogEntry(entry);
             setDialogOpen(true)
     }
     
@@ -131,13 +158,13 @@ function PokemonList() {
                     "data-[state=open]:spin-in-15 \n" +
                     "data-[state=open]:slide-in-from-right-1/2 \n")}>
 
-                    { <DetailledPokemonCard pokemon={dialogPokemon!} entry={1} lang={lang} closeFunction={() => setDialogOpen(false)}/>}
+                    { <DetailledPokemonCard pokemon={dialogPokemon!} entry={dialogEntry} lang={lang} closeFunction={() => setDialogOpen(false)}/>}
                 </DialogContent>
             </Dialog>}
             
-            <span className={"font-bold mr-4"}>Rechercher </span>
+            <span className={"font-bold mr-4"}>{searchTranslated.find(x => x.lang == lang)?.text} </span>
             <Input type={"text"}
-                   placeholder={"Nom"}
+                   placeholder={nameTranslated.find(x => x.lang == lang)?.text}
                    className={"w-auto"}
                    value={nameInput}
                    onChange={e => setNameInput(e.target.value)}

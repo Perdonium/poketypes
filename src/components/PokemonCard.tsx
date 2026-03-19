@@ -56,7 +56,7 @@ const colorsB: { [color: string] : string } = {
     "lightblue": "bg-gradient-to-t from-blue-200/40 to-blue-400/70"
 };*/
 
-function PokemonCard({pokemon, entry, onClick, onHoverStart, onHoverEnd, lang, generation}: { pokemon: Pokemon, entry: number, onClick: (p: Pokemon) => void, onHoverStart: (p: Pokemon) => void, onHoverEnd: (p: Pokemon) => void, lang:string, generation:string }) {
+function PokemonCard({pokemon, entry, onClick, onHoverStart, onHoverEnd, lang, generation}: { pokemon: Pokemon, entry: number, onClick: (p: Pokemon, entry: number) => void, onHoverStart: (p: Pokemon) => void, onHoverEnd: (p: Pokemon) => void, lang:string, generation:string }) {
     const {types}: { types: Dictionary<Type> } = useContext(PokemonContext);
 
     const relations = GetPokemonRelations(pokemon, generation);
@@ -67,7 +67,7 @@ function PokemonCard({pokemon, entry, onClick, onHoverStart, onHoverEnd, lang, g
                   className={cn("gap-0 py-2 my-2 h-60 border-l-0 border-r-0 border-b-0 border-t border-white/50 mx-1 overflow-hidden",
                       "hover:scale-105 hover:cursor-pointer hover:z-50 transition-all",
                       pokemon.color in colors && colors[pokemon.color])}
-                  onClick={() => onClick(pokemon)}
+                  onClick={() => onClick(pokemon, entry)}
                   onMouseEnter={() => onHoverStart(pokemon)}
                   onMouseLeave={() => onHoverEnd(pokemon)}
             >
@@ -101,7 +101,7 @@ function PokemonCard({pokemon, entry, onClick, onHoverStart, onHoverEnd, lang, g
                             <img loading="lazy"
                                  src={pokemonSpritePrefix + pokemon.sprite}
                                  alt={pokemon.name}
-                                 className={"w-24 h-24"}/>
+                                 className={"size-24"}/>
                             <div className={"w-1/3 flex space-y-2"}>
                                 <div className={"flex items-center mx-auto space-x-2"}>
                                     {

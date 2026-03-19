@@ -23,6 +23,7 @@ import TypeIcon from "@/components/TypeIcon.tsx";
 import type {Dictionary, Tip, Type} from "@/assets/types.ts";
 import RelationTip from "@/components/RelationTip.tsx";
 import {usePokedex} from "@/stores/store.tsx";
+import {ArrowUpLeft, ArrowUpRight} from "lucide-react";
 
 
 function TypesTable() {
@@ -220,7 +221,7 @@ function TypesTable() {
         <>
             <div className="relative my-auto mx-auto md:mx-8 lg:mx-auto 
                  text-[12px]
-                  md:text-lg md:font-bold lg:text-lg xl:text-md">
+                  md:text-lg md:font-bold lg:text-sm xl:text-lg">
                 {hoverCell && <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
                     <DialogContent>
                         <DialogHeader>
@@ -249,7 +250,9 @@ function TypesTable() {
                   grid types-grid max-w-2xl mx-auto`}>
                         <RelationTip tooltipOpen={tooltipOpen} tip={currentTip} offset={tooltipOffset}/>
                         {/*Header*/}
-                        <div className={"pointer-events-none"} ref={firstCellRef}></div>
+                        <div className={"pointer-events-none relative"} ref={firstCellRef}>
+                            <ArrowUpRight className={"absolute bottom-0 right-0 size-4 lg:size-6"}/>
+                        </div>
                         {
                             types && relations && orderedTypes.map((type) => {
                                 return (
