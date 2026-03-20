@@ -85,7 +85,7 @@ function DetailledPokemonRelation({pokemon, typeList, title, orientation = "vert
                                                                   additionalClass={"w-5 xl:w-7"}
                                                                   useClick={useClick}/>
                                                     </div>
-                                                    <h1 className={"w-4/5 text-xs xs:text-md my-auto"}>{tip.tip}</h1>
+                                                    <h1 className={"w-4/5 text-xs xs:text-md my-auto italic"}>{tip.tip}</h1>
                                                 </div>
                                             );
                                         }
