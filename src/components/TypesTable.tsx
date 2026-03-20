@@ -320,7 +320,7 @@ function TypesTable() {
                                                                  GetTypeTableBackgroundColor(relationValue),
                                                                  hoverAttackingType && hoverAttackingType != rowType && "opacity-40",
                                                                  hoverDefendingType && hoverDefendingType.id != columnTypeId && "opacity-40",
-                                                                 FindTip(rowType, types[(columnTypeId).toString()]) != undefined && "bg-black",
+                                                                 //FindTip(rowType, types[(columnTypeId).toString()]) != undefined && "bg-black",
                                                                  highlightedPokemon && !highlightedTypes.find(x => x.id == columnTypeId) && "opacity-40",
                                                                  versionGroup && GetGeneration(rowType.generation) > GetGeneration(versionGroup.generation) && disabledBg,
                                                                  versionGroup && GetGeneration(types[columnTypeId].generation) > GetGeneration(versionGroup.generation) && disabledBg,

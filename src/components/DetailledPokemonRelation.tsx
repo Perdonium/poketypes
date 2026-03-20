@@ -1,7 +1,6 @@
 ﻿import TypeIcon from "@/components/TypeIcon.tsx";
 import {
     cn,
-    GetPokemonRelations,
     GetRelationBackgroundColor,
     GetTypeFromName,
     GetTypeRelations,

@@ -24,13 +24,6 @@ export function GroupBy(xs: {}[], key: string) {
     }, {});
 }
 
-function FindTip(attacking: Type, defending: Type) {
-    const tip = tips.find(tip => (tip.attacking === attacking.name && tip.defending === defending.name)
-        || (tip.attacking === defending.name && tip.defending === attacking.name && tip.mutual));
-
-    return tip ? tip : undefined;
-}
-
 export function GetTypesFromNames(typeNames: string[]): Type[] {
     return typeNames.map(x => Object.entries(types)
         .find(pair => pair[1].name === x)![1]);
