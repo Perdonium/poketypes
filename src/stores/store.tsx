@@ -34,7 +34,7 @@ function GetDefaultLang(){
 export const usePokedex = create<PokedexState>()(
     persist(
         (set) => ({
-            national: false,
+            national: true,
             setNational: (n: boolean) => set({national: n}),
             versionGroup: undefined,
             setVersionGroup: (group: VersionGroup) => set({versionGroup: group}),

@@ -49,6 +49,8 @@ const nationalTranslated = [
 ]
 function VersionSelector() {
 
+    const DEFAULT_POKEDEX = 30;
+    
     const {pokedexes, versions, versionGroups} = useContext(PokemonContext);
 
     const setVersionGroup = usePokedex((state) => state.setVersionGroup);
@@ -89,7 +91,7 @@ function VersionSelector() {
 
     useEffect(() => {
         if (pokedexes && selectedGroupId === -1 && versionGroup == undefined)
-            OnSelect(1);
+            OnSelect(DEFAULT_POKEDEX);
         else if(versionGroup != undefined)
             setSelectedGroupId(versionGroup!.id);
     }, []);
