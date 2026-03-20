@@ -65,7 +65,6 @@ function VersionSelector() {
         setNational(national)
     }
 
-    console.log(lang);
     function OnSelect(newValue: number) {
         setOpen(false)
         if (newValue === selectedGroupId)

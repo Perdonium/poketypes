@@ -9,7 +9,7 @@
     "attacking": "fighting",
     "defending": "normal",
     "tip": "Un combattant experimenté a l'avantage sur une personne normale",
-    "mutual": true
+    "mutual": false
   },
   {
     "attacking": "ground",
@@ -20,96 +20,559 @@
   {
     "attacking": "fire",
     "defending": "water",
-    "tip": "L'eau éteint le feu.",
+    "tip": "L'eau éteint le feu",
     "mutual": true
   },
   {
     "attacking": "electric",
     "defending": "water",
     "tip": "L'eau conduit l'électricité",
-    "mutual": true
+    "mutual": false
   },
   {
     "attacking": "grass",
     "defending": "water",
     "tip": "Les plantes se nourrissent d'eau",
     "mutual": true
-  },        {
-  "attacking": "steel",
-  "defending": "water",
-  "tip": "Le métal rouille avec l'eau.",
-  "mutual": true
-},
+  },
+  {
+    "attacking": "steel",
+    "defending": "water",
+    "tip": "Le métal rouille avec l'eau",
+    "mutual": false
+  },
   {
     "attacking": "bug",
     "defending": "psychic",
-    "tip": "Il est commun d'avoir peur des insectes.",
-    "mutual": true
+    "tip": "Il est commun d'avoir peur des insectes",
+    "mutual": false
   },
   {
     "attacking": "dark",
     "defending": "psychic",
-    "tip": "Il est commun d'avoir peur des ténèbres.",
+    "tip": "Il est commun d'avoir peur des ténèbres",
     "mutual": true
+  },
+  {
+    "attacking": "ghost",
+    "defending": "psychic",
+    "tip": "Il est commun d'avoir peur des fantômes",
+    "mutual": false
   },
   {
     "attacking": "fire",
     "defending": "steel",
-    "tip": "Le feu plie le métal.",
+    "tip": "Le feu plie le métal",
     "mutual": true
   },
   {
     "attacking": "rock",
     "defending": "fire",
-    "tip": "Des pierres peuvent étouffer un feu.",
+    "tip": "Des pierres peuvent étouffer un feu",
     "mutual": true
   },
   {
     "attacking": "grass",
     "defending": "fire",
-    "tip": "Le feu brûle les plantes.",
+    "tip": "Le feu brûle les plantes",
     "mutual": true
   },
   {
     "attacking": "ice",
     "defending": "fire",
-    "tip": "Le feu fait fondre la glace.",
-    "mutual": true
-  },
-  {
-    "attacking": "steel",
-    "defending": "fire",
-    "tip": "Le feu peut faire fondre le métal.",
+    "tip": "Le feu fait fondre la glace",
     "mutual": true
   },
   {
     "attacking": "ice",
     "defending": "water",
-    "tip": "L'eau et la glace sont la même matière.",
-    "mutual": true
+    "tip": "L'eau et la glace sont la même matière",
+    "mutual": false
   },
   {
     "attacking": "steel",
     "defending": "water",
-    "tip": "L'acier rouille avec l'eau.",
-    "mutual": true
+    "tip": "L'acier rouille dans l'eau",
+    "mutual": false
   },
   {
     "attacking": "electric",
     "defending": "ground",
-    "tip": "La terre absorbe l'électricité.",
+    "tip": "Le sol absorbe l'électricité",
     "mutual": true
   },
   {
     "attacking": "electric",
     "defending": "flying",
-    "tip": "Les éclairs frappent souvent les oiseaux.",
+    "tip": "Il est dangereux de voler pendant un orage",
     "mutual": true
+  },
+  {
+    "attacking": "ice",
+    "defending": "flying",
+    "tip": "Il est dangereux de voler pendant un blizzard",
+    "mutual": false
   },
   {
     "attacking": "steel",
     "defending": "electric",
-    "tip": "Le métal est conducteur.",
+    "tip": "Le métal est conducteur",
+    "mutual": false
+  },
+  {
+    "attacking": "rock",
+    "defending": "bug",
+    "tip": "On peut facilement écraser un insecte",
+    "mutual": false
+  },
+  {
+    "attacking": "fire",
+    "defending": "bug",
+    "tip": "On peut facilement brûler un insecte",
     "mutual": true
+  },
+  {
+    "attacking": "psychic",
+    "defending": "fighting",
+    "tip": "Cerveau > Muscles",
+    "mutual": true
+  },
+  {
+    "attacking": "flying",
+    "defending": "fighting",
+    "tip": "Vous avez déjà essayé de frapper un oiseau ?",
+    "mutual": true
+  },
+  {
+    "attacking": "ice",
+    "defending": "grass",
+    "tip": "Les plantes ne survivent pas au froid",
+    "mutual": false
+  },
+  {
+    "attacking": "water",
+    "defending": "rock",
+    "tip": "L'eau érode la roche",
+    "mutual": false
+  },
+  {
+    "attacking": "grass",
+    "defending": "rock",
+    "tip": "Les plantes poussent entre les rochers",
+    "mutual": false
+  },
+  {
+    "attacking": "steel",
+    "defending": "rock",
+    "tip": "Le métal est plus résistant que la roche",
+    "mutual": true
+  },
+  {
+    "attacking": "ghost",
+    "defending": "ghost",
+    "tip": "Seul un fantôme peut affronter un fantôme",
+    "mutual": false
+  },
+  {
+    "attacking": "dark",
+    "defending": "ghost",
+    "tip": "Les fantômes sont plus faciles à confronter la nuit",
+    "mutual": true
+  },
+  {
+    "attacking": "water",
+    "defending": "ground",
+    "tip": "L'eau érode le sol",
+    "mutual": false
+  },
+  {
+    "attacking": "grass",
+    "defending": "ground",
+    "tip": "Les plantes se nourissent des nutriments dans le sol",
+    "mutual": true
+  },
+  {
+    "attacking": "fighting",
+    "defending": "bug",
+    "tip": "Il est difficile d'attraper un moustique",
+    "mutual": false
+  },
+  {
+    "attacking": "grass",
+    "defending": "bug",
+    "tip": "Les insectes mangent les plantes",
+    "mutual": true
+  },
+  {
+    "attacking": "ground",
+    "defending": "bug",
+    "tip": "Les insectes creusent dans le sol pour se cacher",
+    "mutual": false
+  },
+  {
+    "attacking": "fairy",
+    "defending": "dark",
+    "tip": "Les fées sont les protecteurs contre les ténèbres",
+    "mutual": true
+  },
+  {
+    "attacking": "fighting",
+    "defending": "dark",
+    "tip": "C'est bien de combattre le mal",
+    "mutual": true
+  },
+  {
+    "attacking": "dragon",
+    "defending": "dragon",
+    "tip": "Seul un dragon peut battre un autre dragon",
+    "mutual": false
+  },
+  {
+    "attacking": "fire",
+    "defending": "dragon",
+    "tip": "Le type dragon resiste aux 3 types de base",
+    "mutual": false
+  },
+  {
+    "attacking": "water",
+    "defending": "dragon",
+    "tip": "Le type dragon resiste aux 3 types de base",
+    "mutual": false
+  },
+  {
+    "attacking": "grass",
+    "defending": "dragon",
+    "tip": "Le type dragon resiste aux 3 types de base",
+    "mutual": false
+  },
+  {
+    "attacking": "electric",
+    "defending": "dragon",
+    "tip": "Il est commun pour les dragons d'avoir des pouvoirs electriques",
+    "mutual": false
+  },
+  {
+    "attacking": "electric",
+    "defending": "electric",
+    "tip": "Ajouter de l'éléctricité à elle-même donne juste plus d'électricité",
+    "mutual": false
+  },
+  {
+    "attacking": "fire",
+    "defending": "fire",
+    "tip": "Ajouter du feu à du feu donne juste plus de feu",
+    "mutual": false
+  },
+  {
+    "attacking": "fighting",
+    "defending": "fairy",
+    "tip": "Magie > Muscles",
+    "mutual": true
+  },
+  {
+    "attacking": "dragon",
+    "defending": "fairy",
+    "tip": "Les dragons n'existent que dans les contes de fées",
+    "mutual": true
+  },
+  {
+    "attacking": "steel",
+    "defending": "fairy",
+    "tip": "Dans le folklore, le fer repousse les créatures maléfiques, les esprits et les fées",
+    "mutual": true
+  },
+  {
+    "attacking": "rock",
+    "defending": "fighting",
+    "tip": "Un pratiquant d'arts martiaux est entrainé en frappant des rochers",
+    "mutual": true
+  },
+  {
+    "attacking": "rock",
+    "defending": "flying",
+    "tip": "Tu peux jeter un caillou sur un oiseau pour le toucher",
+    "mutual": false
+  },
+  {
+    "attacking": "flying",
+    "defending": "rock",
+    "tip": "Un oiseau ne peut rien faire à un caillou",
+    "mutual": false
+  },
+  {
+    "attacking": "bug",
+    "defending": "flying",
+    "tip": "Les oiseaux mangent les insectes",
+    "mutual": true
+  },
+  {
+    "attacking": "grass",
+    "defending": "flying",
+    "tip": "Les oiseaux mangent les plantes",
+    "mutual": true
+  },
+  {
+    "attacking": "ground",
+    "defending": "flying",
+    "tip": "Les oiseaux ne sont pas affectés par ce qui touche le sol",
+    "mutual": false
+  },
+  {
+    "attacking": "poison",
+    "defending": "ghost",
+    "tip": "Un mort ne peut pas être empoisonné",
+    "mutual": false
+  },
+  {
+    "attacking": "bug",
+    "defending": "ghost",
+    "tip": "Les insectes mangent les corps morts mais pas les âmes",
+    "mutual": false
+  },
+  {
+    "attacking": "fighting",
+    "defending": "ghost",
+    "tip": "Un coup de poing passera à travers un fantôme",
+    "mutual": false
+  },
+  {
+    "attacking": "poison",
+    "defending": "grass",
+    "tip": "Le désherbant est très efficace contre les mauvaises herbes",
+    "mutual": true
+  },
+  {
+    "attacking": "electric",
+    "defending": "grass",
+    "tip": "Le bois sec est un isolant",
+    "mutual": false
+  },
+  {
+    "attacking": "poison",
+    "defending": "ground",
+    "tip": "On ne peut pas empoisonner le sol",
+    "mutual": false
+  },
+  {
+    "attacking": "ground",
+    "defending": "poison",
+    "tip": "On ne peut pas empoisonner le sol",
+    "mutual": false
+  },
+  {
+    "attacking": "ground",
+    "defending": "steel",
+    "tip": "Les tremblements de terre peuvent détruire les meilleures structures en métal",
+    "mutual": false
+  },
+  {
+    "attacking": "ghost",
+    "defending": "steel",
+    "tip": "Dans le folklore, le fer repousse les créatures maléfiques, les esprits et les fées",
+    "mutual": false
+  },
+  {
+    "attacking": "fighting",
+    "defending": "ice",
+    "tip": "On peut facilement casser de la glace",
+    "mutual": false
+  },
+  {
+    "attacking": "rock",
+    "defending": "ice",
+    "tip": "La roche est plus résistant que la glace",
+    "mutual": false
+  },
+  {
+    "attacking": "steel",
+    "defending": "ice",
+    "tip": "Le métal est plus résistant que la glace",
+    "mutual": true
+  },
+  {
+    "attacking": "ice",
+    "defending": "ice",
+    "tip": "Ajouter de la glace à elle-même donne juste plus de glace",
+    "mutual": false
+  },
+  {
+    "attacking": "water",
+    "defending": "water",
+    "tip": "Ajouter de l'eau à elle-même donne juste plus d'eau",
+    "mutual": false
+  },
+  {
+    "attacking": "ice",
+    "defending": "ground",
+    "tip": "La glace peut fragiliser le sol",
+    "mutual": false
+  },
+  {
+    "attacking": "bug",
+    "defending": "poison",
+    "tip": "Les insectes sont insignifiants face aux pesticides",
+    "mutual": false
+  },
+  {
+    "attacking": "fighting",
+    "defending": "poison",
+    "tip": "On ne peut pas combattre une maladie avec les poings",
+    "mutual": false
+  },
+  {
+    "attacking": "poison",
+    "defending": "bug",
+    "tip": "Les pesticides sont très efficaces sur les insectes",
+    "mutual": false
+  },
+  {
+    "attacking": "poison",
+    "defending": "poison",
+    "tip": "Quelqu'un d'empoisonné ne peut pas être plus empoisonné",
+    "mutual": false
+  },
+  {
+    "attacking": "ground",
+    "defending": "rock",
+    "tip": "Au fil du temps, les rochers deviennent de la terre",
+    "mutual": true
+  },
+  {
+    "attacking": "normal",
+    "defending": "rock",
+    "tip": "Les personnes normales ne peuvent rien faire face à un rocher",
+    "mutual": false
+  },
+  {
+    "attacking": "poison",
+    "defending": "rock",
+    "tip": "On en peut pas empoisonner un rocher",
+    "mutual": false
+  },
+  {
+    "attacking": "fighting",
+    "defending": "steel",
+    "tip": "Une personne musclée peut torder l'acier",
+    "mutual": false
+  },
+  {
+    "attacking": "poison",
+    "defending": "steel",
+    "tip": "Les déchets toxiques sont stockées dans des barils en métal",
+    "mutual": false
+  },
+  {
+    "attacking": "normal",
+    "defending": "steel",
+    "tip": "Les personnes normales ne peuvent rien faire face à du métal",
+    "mutual": false
+  },
+  {
+    "attacking": "grass",
+    "defending": "steel",
+    "tip": "Les plantes ne poussent pas sur le métal",
+    "mutual": false
+  },
+  {
+    "attacking": "grass",
+    "defending": "steel",
+    "tip": "Les plantes ne poussent pas sur le métal",
+    "mutual": false
+  },
+  {
+    "attacking": "flying",
+    "defending": "steel",
+    "tip": "Le vent affecte peu les avions",
+    "mutual": false
+  },
+  {
+    "attacking": "dragon",
+    "defending": "steel",
+    "tip": "Le feu du dragon affecte peu l'armure du chevalier",
+    "mutual": false
+  },
+  {
+    "attacking": "bug",
+    "defending": "dark",
+    "tip": "Les lucioles transpercent les ténèbres",
+    "mutual": false
+  },
+  {
+    "attacking": "poison",
+    "defending": "fairy",
+    "tip": "Les fées sont proches de la nature et sont affectées par la pollution",
+    "mutual": true
+  },
+  {
+    "attacking": "bug",
+    "defending": "fairy",
+    "tip": "Les fées sont proches de la nature tout comme les insectes",
+    "mutual": false
+  },
+  {
+    "attacking": "fairy",
+    "defending": "fire",
+    "tip": "Les fées ne peuvent pas faire grand chose face à un incendie",
+    "mutual": false
+  },
+  {
+    "attacking": "ice",
+    "defending": "dragon",
+    "tip": "Les dragons ont le sang froid et sont sensibles au froid",
+    "mutual": false
+  },
+  {
+    "attacking": "bug",
+    "defending": "fighting",
+    "tip": "Un insecte est insignifiant face à un combattant",
+    "mutual": false
+  },
+  {
+    "attacking": "bug",
+    "defending": "steel",
+    "tip": "Un insecte est insignifiant face à une épée",
+    "mutual": false
+  },
+  {
+    "attacking": "psychic",
+    "defending": "poison",
+    "tip": "Une personne intelligente peut créer des médicaments face aux maladies",
+    "mutual": false
+  },
+  {
+    "attacking": "grass",
+    "defending": "grass",
+    "tip": "Les différentes plantes et végétaux vivent ensemble dans les forêts",
+    "mutual": false
+  },
+  {
+    "attacking": "psychic",
+    "defending": "psychic",
+    "tip": "Un esprit aiguisé est plus difficile à duper",
+    "mutual": false
+  },
+  {
+    "attacking": "dark",
+    "defending": "dark",
+    "tip": "Un lieu dans le noir ne peut pas être plus noir",
+    "mutual": false
+  },
+  {
+    "attacking": "psychic",
+    "defending": "steel",
+    "tip": "En duel il est difficile de rivaliser avec son cerveau face à une épée",
+    "mutual": false
+  },
+  {
+    "attacking": "dark",
+    "defending": "steel",
+    "tip": "Dans le folklore, le fer repousse les créatures maléfiques, les esprits et les fées",
+    "mutual": false
+  },
+  {
+    "attacking": "steel",
+    "defending": "steel",
+    "tip": "Dans un duel, les épées se contrent l'une l'autre",
+    "mutual": false
   }
 ]

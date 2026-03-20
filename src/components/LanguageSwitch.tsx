@@ -29,7 +29,7 @@ const LanguageSwitch = () => {
   function OnSwitch(lang:string){
       setLang(lang);
   }
-  
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

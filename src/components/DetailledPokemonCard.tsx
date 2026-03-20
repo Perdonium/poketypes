@@ -102,23 +102,23 @@ function DetailledPokemonCard({pokemon, entry, lang, closeFunction}: { pokemon: 
                         <Separator className={"bg-white/40"}/>
                         <div className={"scrollbar justify-evenly mt-2 -mx-2 [&>*:first-child]:hidden max-h-[50vh] xl:max-h-[75vh] overflow-y-auto"}>
                             {relations.none &&
-                                <DetailledPokemonRelation title="0"
+                                <DetailledPokemonRelation pokemon={pokemon} title="0"
                                                  typeList={relations.none.map(x => types[x.toString()].name)}
                                                  orientation={"horizontal"}/>}
                             {relations.quarter &&
-                                <DetailledPokemonRelation title="0.25"
+                                <DetailledPokemonRelation pokemon={pokemon} title="0.25"
                                                  typeList={relations.quarter.map(x => types[x.toString()].name)}
                                                  orientation={"horizontal"}/>}
                             {relations.half &&
-                                <DetailledPokemonRelation title="0.5"
+                                <DetailledPokemonRelation pokemon={pokemon} title="0.5"
                                                  typeList={relations.half.map(x => types[x.toString()].name)}
                                                  orientation={"horizontal"}/>}
                             {relations.double &&
-                                <DetailledPokemonRelation title="2"
+                                <DetailledPokemonRelation pokemon={pokemon} title="2"
                                                  typeList={relations.double.map(x => types[x.toString()].name)}
                                                  orientation={"horizontal"}/>}
                             {relations.quadruple &&
-                                <DetailledPokemonRelation title="4"
+                                <DetailledPokemonRelation pokemon={pokemon} title="4"
                                                  typeList={relations.quadruple.map(x => types[x.toString()].name)}
                                                  orientation={"horizontal"}/>}
 

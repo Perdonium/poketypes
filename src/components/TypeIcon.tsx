@@ -23,13 +23,13 @@ function TypeIcon({type, additionalClass, useClick = true, showName = false}:{ty
     let typeString = typeof type !== "string" ? type.name : type;
     let typeName = typeof type !== "string" ? type.names[lang] : type;
     return (
-        <div className={"relative flex flex-col items-center"}>
+        <div className={"relative flex flex-col items-center text-[0.6rem] sm:text-[0.8rem]"}>
             <img
                 data-type={typeString}
                 src={`./types-icons/${typeString}.png`} alt="Logo"
                  className={cn("aspect-square", additionalClass)}
             onClick={() => OnClick()}/>
-            {showName && <div className={"font-mono font-extrabold text-[0.8rem] mt-1"}>{Capitalize(typeName)}</div>}
+            {showName && <div className={"font-mono font-extrabold mt-1"}>{Capitalize(typeName)}</div>}
         </div>
     )
 }

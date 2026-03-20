@@ -2,6 +2,8 @@
 import type {Pokemon, Type, VersionGroup} from "@/assets/types.ts";
 import {persist} from "zustand/middleware";
 
+const possibleLanguages: string[] = ["en","fr","es","de"];
+
 interface PokedexState {
     national: boolean,
     setNational: (n: boolean) => void,
@@ -15,6 +17,20 @@ interface PokedexState {
     setHighlightedPokemon: (pokemon: Pokemon | undefined) => void,
 }
 
+function GetDefaultLang(){
+    const defaultLang = "en";
+    const navLang = navigator.language;
+    console.log(navLang);
+    let navCode = defaultLang;
+    if(navLang.split("-").length != 2)
+        navCode = navLang;
+    else 
+        navCode = navLang.split("-")[0];
+    if(possibleLanguages.includes(navCode))
+        return navCode;
+    else
+        return defaultLang;
+}
 export const usePokedex = create<PokedexState>()(
     persist(
         (set) => ({
@@ -24,7 +40,7 @@ export const usePokedex = create<PokedexState>()(
             setVersionGroup: (group: VersionGroup) => set({versionGroup: group}),
             currentType: undefined,
             setCurrentType: (type: Type) => set({currentType: type}),
-            lang: "fr",
+            lang: GetDefaultLang(),
             setLang: (lang: string) => set({lang: lang}),
             highlightedPokemon: undefined,
             setHighlightedPokemon: (pokemon: Pokemon | undefined) => set({highlightedPokemon: pokemon}),
